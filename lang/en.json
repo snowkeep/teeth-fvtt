@@ -125,8 +125,8 @@
     "Healing": "Healing",
 
     "Notes": "Notes",
-    "Expirience": {
-      "Title": "Expirience",
+    "Experience": {
+      "Title": "Experience",
       "HowItWorks": "At the end of each session, for these three items, mark 1 xp (in your playbook or an attribute) or 2 xp if that item occurred multiple times.",
       "DesperateRoll": "Every time you roll a desperate action, mark xp in that action's attribute.",
       "Character": "You expressed your beliefs, drives, heritage, or background.",
@@ -147,8 +147,8 @@
     "Playbook": {
       "Summary": "Describe this playbook briefly",
       "Exp": {
-        "Title": "Expirience Clue",
-        "Placeholder": "Expirience clue which depend on character's playbook"
+        "Title": "Experience Clue",
+        "Placeholder": "Experience clue which depend on character's playbook"
       },
       "Items": "Items"
     },
@@ -201,8 +201,8 @@
     "Turf": "Turf",
     "CrewExp": {
       "ShortTitle": "Xp",
-      "Title": "Expirience Clue",
-      "Placeholder": "Expirience clue which depend on crew's playbook",
+      "Title": "Experience Clue",
+      "Placeholder": "Experience clue which depend on crew's playbook",
       "HowItWorks": "Mark 1 xp for each item below, or 2 xp if it occurred multiple times.",
       "Tips": "<li>Contend with challenges above your current station.</li><li>Bolster your crew's reputation or develop a new one.</li><li>Express the goals, drives, inner conflict, or essential nature of the crew.</li>"
     },
