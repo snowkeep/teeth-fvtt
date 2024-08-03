@@ -1,8 +1,8 @@
 export const TEETH = {
   attributeLinks: {
-    insight: ["hunt", "study", "survey", "tinker"],
-    prowess: ["finesse", "prowl", "skirmish", "wreck"],
-    resolve: ["attune", "command", "consort", "sway"]
+    insight: ["scout", "doctor", "surveil", "devise"],
+    prowess: ["aim", "manoeuvre", "fight", "wreck"],
+    resolve: ["study", "command", "evoke", "persuade"]
   },
   defaultItems: {
     hunter: ["HZxYeBCQ4bZ632WU", "2H0lH4IeGq22kDyg", "cF0hFmTlXxI8CKSC", "FFNGcKvAeOjoGyI8", "jWTVSlCXWeOiGbfg", "vgMbINvoCQJAYp4q", "6NrhTvPbJTJJUn4s", "vrPi03rFguHYueWZ", "gnv9k4enWnR13mW4", "SapwXYuraydiNjej", "P95oe4AZgSomPqPs", "brU5pWiXWlG5o1Mi", "6cUx1jXXq4dx3wln", "oZOplJcmR6CjQZbO", "Wxoq19qr9LEuuNp4", "IDUBdq7KVd3dxC5W"],
@@ -86,18 +86,18 @@ export const TEETH = {
       resolve: "TEETH.Resolve"
     },
     actions: {
-      hunt: "TEETH.Hunt",
-      study: "TEETH.Study",
-      survey: "TEETH.Survey",
-      tinker: "TEETH.Tinker",
-      finesse: "TEETH.Finesse",
-      prowl: "TEETH.Prowl",
-      skirmish: "TEETH.Skirmish",
+      scout: "TEETH.Scout",
+      doctor: "TEETH.Doctor",
+      surveil: "TEETH.Surveil",
+      devise: "TEETH.Devise",
+      aim: "TEETH.Aim",
+      manoeuvre: "TEETH.Manoeuvre",
+      fight: "TEETH.Fight",
       wreck: "TEETH.Wreck",
-      attune: "TEETH.Attune",
+      study: "TEETH.Study",
       command: "TEETH.Command",
-      consort: "TEETH.Consort",
-      sway: "TEETH.Sway"
+      evoke: "TEETH.Evoke",
+      persuade: "TEETH.Persuade"
     },
     position: {
       controlled: "TEETH.Roll.Position.Controlled",

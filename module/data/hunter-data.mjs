@@ -73,31 +73,31 @@ export default class HunterData extends foundry.abstract.TypeDataModel {
       }),
 
       actions: new fields.SchemaField({
-        hunt: new fields.SchemaField({
+        scout: new fields.SchemaField({
           value: new fields.NumberField({requiredPositiveInteger, initial: 0 }),
           max: new fields.NumberField({requiredPositiveInteger, initial: 4 })
         }),
-        study: new fields.SchemaField({
+        doctor: new fields.SchemaField({
           value: new fields.NumberField({requiredPositiveInteger, initial: 0 }),
           max: new fields.NumberField({requiredPositiveInteger, initial: 4 })
         }),
-        survey: new fields.SchemaField({
+        surveil: new fields.SchemaField({
           value: new fields.NumberField({requiredPositiveInteger, initial: 0 }),
           max: new fields.NumberField({requiredPositiveInteger, initial: 4 })
         }),
-        tinker: new fields.SchemaField({
+        devise: new fields.SchemaField({
           value: new fields.NumberField({requiredPositiveInteger, initial: 0 }),
           max: new fields.NumberField({requiredPositiveInteger, initial: 4 })
         }),
-        finesse: new fields.SchemaField({
+        aim: new fields.SchemaField({
           value: new fields.NumberField({requiredPositiveInteger, initial: 0 }),
           max: new fields.NumberField({requiredPositiveInteger, initial: 4 })
         }),
-        prowl: new fields.SchemaField({
+        manoeuvre: new fields.SchemaField({
           value: new fields.NumberField({requiredPositiveInteger, initial: 0 }),
           max: new fields.NumberField({requiredPositiveInteger, initial: 4 })
         }),
-        skirmish: new fields.SchemaField({
+        fight: new fields.SchemaField({
           value: new fields.NumberField({requiredPositiveInteger, initial: 0 }),
           max: new fields.NumberField({requiredPositiveInteger, initial: 4 })
         }),
@@ -105,7 +105,7 @@ export default class HunterData extends foundry.abstract.TypeDataModel {
           value: new fields.NumberField({requiredPositiveInteger, initial: 0 }),
           max: new fields.NumberField({requiredPositiveInteger, initial: 4 })
         }),
-        attune: new fields.SchemaField({
+        study: new fields.SchemaField({
           value: new fields.NumberField({requiredPositiveInteger, initial: 0 }),
           max: new fields.NumberField({requiredPositiveInteger, initial: 4 })
         }),
@@ -113,11 +113,11 @@ export default class HunterData extends foundry.abstract.TypeDataModel {
           value: new fields.NumberField({requiredPositiveInteger, initial: 0 }),
           max: new fields.NumberField({requiredPositiveInteger, initial: 4 })
         }),
-        consort: new fields.SchemaField({
+        evoke: new fields.SchemaField({
           value: new fields.NumberField({requiredPositiveInteger, initial: 0 }),
           max: new fields.NumberField({requiredPositiveInteger, initial: 4 })
         }),
-        sway: new fields.SchemaField({
+        persuade: new fields.SchemaField({
           value: new fields.NumberField({requiredPositiveInteger, initial: 0 }),
           max: new fields.NumberField({requiredPositiveInteger, initial: 4 })
         })

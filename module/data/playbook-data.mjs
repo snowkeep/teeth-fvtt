@@ -7,18 +7,18 @@ export default class PlaybookData extends foundry.abstract.TypeDataModel {
 
     return {
       actions: new fields.SchemaField({
-        hunt: new fields.NumberField({requiredPositiveInteger, initial: 0 }),
-        study: new fields.NumberField({requiredPositiveInteger, initial: 0 }),
-        survey: new fields.NumberField({requiredPositiveInteger, initial: 0 }),
-        tinker: new fields.NumberField({requiredPositiveInteger, initial: 0 }),
-        finesse: new fields.NumberField({requiredPositiveInteger, initial: 0 }),
-        prowl: new fields.NumberField({requiredPositiveInteger, initial: 0 }),
-        skirmish: new fields.NumberField({requiredPositiveInteger, initial: 0 }),
+        scout: new fields.NumberField({requiredPositiveInteger, initial: 0 }),
+        doctor: new fields.NumberField({requiredPositiveInteger, initial: 0 }),
+        surveil: new fields.NumberField({requiredPositiveInteger, initial: 0 }),
+        devise: new fields.NumberField({requiredPositiveInteger, initial: 0 }),
+        aim: new fields.NumberField({requiredPositiveInteger, initial: 0 }),
+        manoeuvre: new fields.NumberField({requiredPositiveInteger, initial: 0 }),
+        fight: new fields.NumberField({requiredPositiveInteger, initial: 0 }),
         wreck: new fields.NumberField({requiredPositiveInteger, initial: 0 }),
-        attune: new fields.NumberField({requiredPositiveInteger, initial: 0 }),
+        study: new fields.NumberField({requiredPositiveInteger, initial: 0 }),
         command: new fields.NumberField({requiredPositiveInteger, initial: 0 }),
-        consort: new fields.NumberField({requiredPositiveInteger, initial: 0 }),
-        sway: new fields.NumberField({requiredPositiveInteger, initial: 0 })
+        evoke: new fields.NumberField({requiredPositiveInteger, initial: 0 }),
+        persuade: new fields.NumberField({requiredPositiveInteger, initial: 0 })
       }),
 
       abilities: new fields.ArrayField(new fields.SchemaField({
