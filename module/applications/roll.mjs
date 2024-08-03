@@ -32,7 +32,7 @@ export async function createRollDialog (type, sheet, note) {
     vice: indulgeVice
   }
 
-  const html = await renderTemplate("systems/bitd/templates/apps/rollDialog.hbs", rollConfig);
+  const html = await renderTemplate("systems/teeth/templates/apps/rollDialog.hbs", rollConfig);
 
   const dialog = new Dialog({
     title: game.i18n.localize("BITD.Roll.Title"),
@@ -375,7 +375,7 @@ async function indulgeVice(rollResult, sheet) {
 async function renderRoll(renderData, sheet) {
   renderData.renderDice = renderData.dice[0].results;
   const speaker = ChatMessage.getSpeaker({ actor: sheet });
-  const rollTemplate = await renderTemplate("systems/bitd/templates/apps/rollResult.hbs", renderData);
+  const rollTemplate = await renderTemplate("systems/teeth/templates/apps/rollResult.hbs", renderData);
   renderData.toMessage({
     speaker: speaker,
     content: rollTemplate

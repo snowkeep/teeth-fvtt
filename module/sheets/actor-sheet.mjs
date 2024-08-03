@@ -23,9 +23,9 @@ export class BitdActorSheet extends ActorSheet
 
   /** @override */
   get template() {
-    let sheetTemplate = `systems/bitd/templates/actor/${this.actor.type}-sheet.hbs`;
+    let sheetTemplate = `systems/teeth/templates/actor/${this.actor.type}-sheet.hbs`;
     if ( !game.user.isGM && this.actor.limited && this.actor.type == "faction" ) {
-      sheetTemplate = `systems/bitd/templates/actor/faction-limited-sheet.hbs`;
+      sheetTemplate = `systems/teeth/templates/actor/faction-limited-sheet.hbs`;
     }
 
     return sheetTemplate

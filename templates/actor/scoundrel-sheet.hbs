@@ -46,15 +46,15 @@
         </div>
       </div>
 
-      {{> "systems/bitd/templates/actor/parts/attributes.hbs"}}
-      {{> "systems/bitd/templates/actor/parts/stress-trauma.hbs"}}
+      {{> "systems/teeth/templates/actor/parts/attributes.hbs"}}
+      {{> "systems/teeth/templates/actor/parts/stress-trauma.hbs"}}
     </div>
 
     <div class="contacts items-block">
       <h3 class="item-header bitd-header contacts-title">{{localize 'BITD.Contact.Plural'}}</h3>
-      {{> "systems/bitd/templates/actor/parts/contacts.hbs"}}
+      {{> "systems/teeth/templates/actor/parts/contacts.hbs"}}
     </div>
-    {{> "systems/bitd/templates/actor/parts/harm.hbs"}}
+    {{> "systems/teeth/templates/actor/parts/harm.hbs"}}
 
   </header>
 
@@ -83,7 +83,7 @@
           </div>
           <ol class="items-list">
             {{#each specInventory as |item id|}}
-              {{> "systems/bitd/templates/actor/parts/inventory.hbs" item=item}}
+              {{> "systems/teeth/templates/actor/parts/inventory.hbs" item=item}}
             {{/each}}
           </ol>
         </div>
@@ -94,7 +94,7 @@
           </div>
           <ol class="items-list">
             {{#each inventory as |item id|}}
-              {{> "systems/bitd/templates/actor/parts/inventory.hbs" item=item}}
+              {{> "systems/teeth/templates/actor/parts/inventory.hbs" item=item}}
             {{/each}}
           </ol>
         </div>
@@ -109,14 +109,14 @@
               {{/numLoop}}
             </div>
           </div>
-          {{> "systems/bitd/templates/actor/parts/abilities.hbs"}}
+          {{> "systems/teeth/templates/actor/parts/abilities.hbs"}}
         </div>
       </div>
     </div>
 
     {{!-- Owned Notes Tab --}}
     <div class="tab notes" data-group="primary" data-tab="notes">
-      {{> "systems/bitd/templates/actor/parts/scoundrel-notes.hbs"}}
+      {{> "systems/teeth/templates/actor/parts/scoundrel-notes.hbs"}}
     </div>
 
   </section>

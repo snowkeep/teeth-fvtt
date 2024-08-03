@@ -22,7 +22,7 @@ export default class BitdItem extends Item {
       description: item.system.description
     };
 
-    const message = await renderTemplate("systems/bitd/templates/apps/rollItem.hbs", renderData);
+    const message = await renderTemplate("systems/teeth/templates/apps/rollItem.hbs", renderData);
     const chatData = {
       user: game.user.id,
       speaker: ChatMessage.getSpeaker({ actor: this.actor }),

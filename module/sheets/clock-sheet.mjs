@@ -16,7 +16,7 @@ export class BitdClockSheet extends ActorSheet
 
   /** @override */
   get template() {
-    return "systems/bitd/templates/actor/clock-sheet.hbs"
+    return "systems/teeth/templates/actor/clock-sheet.hbs"
   }
 
   /** @override */
@@ -46,7 +46,7 @@ export class BitdClockSheet extends ActorSheet
       progress.value = progress.max;
     }
 
-    const imagePath = `systems/bitd/assets/progress-clocks/black/size-${progress.max}/progress-${progress.value}.svg`;
+    const imagePath = `systems/teeth/assets/progress-clocks/black/size-${progress.max}/progress-${progress.value}.svg`;
     this.actor.update({"img" : imagePath});
     this.actor.update({"prototypeToken.texture.src" : imagePath});
 

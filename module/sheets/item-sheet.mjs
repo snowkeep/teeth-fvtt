@@ -20,7 +20,7 @@ export class BitdItemSheet extends ItemSheet {
 
   /** @override */
   get template() {
-    return `systems/bitd/templates/item/${this.item.type}-sheet.hbs`;
+    return `systems/teeth/templates/item/${this.item.type}-sheet.hbs`;
   }
 
   /* -------------------------------------------- */

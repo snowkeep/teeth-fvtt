@@ -104,7 +104,7 @@ export class BitdScoundrelSheet extends BitdActorSheet
     ];
     const filteredTraumas = defaultTraumas.filter(trauma => !currentTraumas.includes(trauma));
 
-    const template = await renderTemplate("systems/bitd/templates/apps/trauma.hbs", { currentTraumas, filteredTraumas });
+    const template = await renderTemplate("systems/teeth/templates/apps/trauma.hbs", { currentTraumas, filteredTraumas });
 
     const dialog = new Dialog({
       title: game.i18n.localize("BITD.ChooseTrauma"),
