@@ -1,4 +1,4 @@
-# Blades in the Dark for Foundry VTT
+# TEETH for Foundry VTT
 
 [![Foundry Shield]][Foundry URL]
 [![Version]][Version URL]
@@ -16,13 +16,13 @@ To install a system, follow these instructions:
 
 ## Documentation
 
-The TEETH Foundry VTT system is completely based on [GMonlineua's Blades-in-the-Dark](https://github.com/GMonlineua/blades-in-the-dark-fvtt) system and will attempt to track that module as much as possible.
+The TEETH Foundry VTT system is completely based on [GMonlineua's Blades-in-the-Dark](https://github.com/GMonlineua/blades-in-the-dark-fvtt) system and will attempt to track that module as much as possible.  It branched off of v0.5.
 
-[Changelog](https://github.com/snowkeep/blades-in-the-dark-fvtt/wiki/Changelog)
+[Changelog](https://github.com/snowkeep/teeth-fvtt/wiki/Changelog)
 
 [BitD Roadmap](https://github.com/GMonlineau/blades-in-the-dark-fvtt/wiki/Roadmap)
 
-[Data Structure](https://github.com/snowkeep/blades-in-the-dark-fvtt/wiki/Documentation#data-structure)
+[Data Structure](https://github.com/snowkeep/teeth-fvtt/wiki/Documentation#data-structure)
 
 ## Credits
 - This work is based on [Blades in the Dark](http://www.bladesinthedark.com), product of One Seven Design, developed and authored by John Harper, and licensed for our use under the [Creative Commons Attribution 3.0 Unported](http://creativecommons.org/licenses/by/3.0/) license.
