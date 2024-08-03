@@ -1,31 +1,27 @@
 {
-  "id": "bitd",
-  "title": "Blades in the Dark",
-  "description": "Blades in the Dark game system by GMonline",
-  "version": "0.5",
+  "id": "teeth",
+  "title": "TEETH",
+  "description": "TEETH game system by snowkeep, based on Blades in the Dark by GMonline",
+  "version": "0.1",
   "compatibility": {
     "minimum": "11",
     "verified": "12.328",
     "maximum": "12"
   },
+  "background": "systems/teeth/images/teeth_title.webp",
   "authors": [
     {
-      "name": "GMonline-ua",
-      "url": "https://github.com/GMonlineua",
-      "email": "gmonlineua@gmail.com",
-      "discord": "vlad_dracula"
-    },
-    {
-      "name": "Kem",
-      "url": "https://github.com/InqShanila",
-      "discord": "kemrian"
+      "name": "snowkeep",
+      "url": "https://github.com/snowkeep",
+      "email": "craig+teeth@snowkeep.com",
+      "discord": "snowkeep"
     }
   ],
   "esmodules": [
-    "module/bitd.mjs"
+    "module/teeth.mjs"
   ],
   "styles": [
-    "css/bitd.css"
+    "css/teeth.css"
   ],
   "languages": [
     {
@@ -40,7 +36,7 @@
       "type": "Actor",
       "name": "factions",
       "path": "packs/factions",
-      "system": "bitd",
+      "system": "teeth",
       "ownership": {
         "PLAYER": "LIMITED",
         "ASSISTANT": "OWNER"
@@ -51,7 +47,7 @@
       "type": "Actor",
       "name": "npcs",
       "path": "packs/npcs",
-      "system": "bitd",
+      "system": "teeth",
       "ownership": {
         "PLAYER": "LIMITED",
         "ASSISTANT": "OWNER"
@@ -62,7 +58,7 @@
       "type": "Item",
       "name": "playbooks",
       "path": "packs/playbooks",
-      "system": "bitd",
+      "system": "teeth",
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
@@ -73,7 +69,7 @@
       "type": "Item",
       "name": "crew-types",
       "path": "packs/crew-types",
-      "system": "bitd",
+      "system": "teeth",
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
@@ -84,7 +80,7 @@
       "type": "Item",
       "name": "claims",
       "path": "packs/claims",
-      "system": "bitd",
+      "system": "teeth",
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
@@ -95,7 +91,7 @@
       "type": "Item",
       "name": "cohorts",
       "path": "packs/cohorts",
-      "system": "bitd",
+      "system": "teeth",
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
@@ -106,7 +102,7 @@
       "type": "Item",
       "name": "items",
       "path": "packs/items",
-      "system": "bitd",
+      "system": "teeth",
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
@@ -117,7 +113,7 @@
       "type": "Item",
       "name": "scoundrel-abilities",
       "path": "packs/scoundrel-abilities",
-      "system": "bitd",
+      "system": "teeth",
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
@@ -128,7 +124,7 @@
       "type": "Item",
       "name": "crew-abilities",
       "path": "packs/crew-abilities",
-      "system": "bitd",
+      "system": "teeth",
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
@@ -139,7 +135,7 @@
       "type": "Item",
       "name": "upgrades",
       "path": "packs/upgrades",
-      "system": "bitd",
+      "system": "teeth",
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
@@ -148,10 +144,10 @@
   ],
   "packFolders": [],
   "socket": true,
-  "url": "https://github.com/GMonlineua/blades-in-the-dark-fvtt",
-  "manifest": "https://raw.githubusercontent.com/GMonlineua/blades-in-the-dark-fvtt/main/system.json",
-  "download": "https://github.com/GMonlineua/blades-in-the-dark-fvtt/releases/download/v0.5/foundry.zip",
-  "license": "https://github.com/GMonlineua/blades-in-the-dark-fvtt/blob/main/LICENSE.md",
-  "changelog": "https://github.com/GMonlineua/blades-in-the-dark-fvtt/wiki/Changelog",
-  "bugs": "https://github.com/MagpieRook/blades-in-the-dark/issues/new"
+  "url": "https://github.com/snowkeep/teeth-fvtt",
+  "manifest": "https://raw.githubusercontent.com/snowkeep/teeth-fvtt/main/system.json",
+  "download": "https://github.com/snowkeep/teeth-fvtt/releases/download/v0.5/foundry.zip",
+  "license": "https://github.com/snowkeep/teeth-fvtt/blob/main/LICENSE.md",
+  "changelog": "https://github.com/snowkeep/teeth-fvtt/wiki/Changelog",
+  "bugs": "https://github.com/snowkeep/teeth-fvtt/issues/new"
 }
