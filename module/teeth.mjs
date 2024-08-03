@@ -3,7 +3,7 @@ import { BitdActor, BitdItem } from "./documents/_module.mjs";
 
 // Import Actor Sheet
 import { BitdActorSheet } from "./sheets/actor-sheet.mjs";
-import { BitdScoundrelSheet } from "./sheets/scoundrel-sheet.mjs";
+import { BitdHunterSheet } from "./sheets/hunter-sheet.mjs";
 import { BitdCrewSheet } from "./sheets/crew-sheet.mjs";
 import { BitdFactionSheet } from "./sheets/faction-sheet.mjs";
 import { BitdClockSheet } from "./sheets/clock-sheet.mjs";
@@ -31,7 +31,7 @@ Hooks.once('init', async function() {
   // Define custom Entity classes and Data Models
   CONFIG.Actor.documentClass = BitdActor;
   CONFIG.Actor.dataModels = {
-    'scoundrel': models.ScoundrelData,
+    'hunter': models.HunterData,
     'crew': models.CrewData,
     'faction': models.FactionData,
     'npc': models.NpcData,
@@ -42,7 +42,7 @@ Hooks.once('init', async function() {
   CONFIG.Item.dataModels = {
     'playbook': models.PlaybookData,
     'crewType': models.CrewTypeData,
-    'abilityScoundrel': models.AbilityScoundrelData,
+    'abilityHunter': models.AbilityHunterData,
     'abilityCrew': models.AbilityCrewData,
     'claim': models.ClaimData,
     'cohort': models.CohortData,
@@ -54,7 +54,7 @@ Hooks.once('init', async function() {
   // Register sheet application classes
   Actors.unregisterSheet("core", ActorSheet);
   Actors.registerSheet("bitd", BitdActorSheet, { makeDefault: true });
-  Actors.registerSheet("bitd", BitdScoundrelSheet, { types: ["scoundrel"], makeDefault: true });
+  Actors.registerSheet("bitd", BitdHunterSheet, { types: ["hunter"], makeDefault: true });
   Actors.registerSheet("bitd", BitdCrewSheet, { types: ["crew"], makeDefault: true });
   Actors.registerSheet("bitd", BitdFactionSheet, { types: ["faction"], makeDefault: true });
   Actors.registerSheet("bitd", BitdClockSheet, { types: ["clock"], makeDefault: true });

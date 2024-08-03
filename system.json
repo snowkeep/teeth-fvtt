@@ -109,7 +109,7 @@
       }
     },
     {
-      "label": "Scoundrel Abilities",
+      "label": "Hunter Abilities",
       "type": "Item",
       "name": "scoundrel-abilities",
       "path": "packs/scoundrel-abilities",

@@ -13,7 +13,7 @@ export default class BitdActor extends Actor {
       disposition: CONST.TOKEN_DISPOSITIONS.NEUTRAL
     }
 
-    if (this.type === "scoundrel" || this.type === "crew") {
+    if (this.type === "hunter" || this.type === "crew") {
       prototypeToken.disposition = CONST.TOKEN_DISPOSITIONS.FRIENDLY;
     } else if (this.type === "clock") {
       prototypeToken.displayName = CONST.TOKEN_DISPLAY_MODES.ALWAYS;
@@ -31,8 +31,8 @@ export default class BitdActor extends Actor {
     const defaultItemsID = CONFIG.TEETH.defaultItems;
     const defaultItems = [];
 
-    if (this.type == "scoundrel") {
-      for (const id of defaultItemsID.scoundrel) {
+    if (this.type == "hunter") {
+      for (const id of defaultItemsID.hunter) {
         const uuid = "Compendium.bitd.items.Item." + id;
         const item = await fromUuid(uuid);
         defaultItems.push(item);
@@ -57,7 +57,7 @@ export default class BitdActor extends Actor {
 
     if (game.user.id === userId) {
       const target = {
-        actor: "scoundrel",
+        actor: "hunter",
         item: "playbook",
         forLoad: ["abilities", "inventory"]
       }

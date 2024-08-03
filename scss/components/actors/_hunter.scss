@@ -1,4 +1,4 @@
-.scoundrel {
+.hunter {
 
   .sheet-header {
     flex: 0 auto;
@@ -44,11 +44,11 @@
           padding: 0;
         }
 
-        .scoundrel-name {
+        .hunter-name {
           position: relative;
         }
 
-        .scoundrel-name::after {
+        .hunter-name::after {
           content: "";
           position: absolute;
           right: -5px;
@@ -57,7 +57,7 @@
           background-color: $light-black;
         }
 
-        .scoundrel-alias {
+        .hunter-alias {
           text-align: right;
           border-bottom: none;
 

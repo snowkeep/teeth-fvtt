@@ -1,6 +1,6 @@
 import { BitdActor, BitdItem } from "../documents/_module.mjs";
 
-export default class ScoundrelData extends foundry.abstract.TypeDataModel {
+export default class HunterData extends foundry.abstract.TypeDataModel {
   static defineSchema() {
     const fields = foundry.data.fields;
     const requiredInteger = {required: true, nullable: false, integer: true};

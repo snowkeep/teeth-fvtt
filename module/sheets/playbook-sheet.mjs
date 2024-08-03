@@ -42,7 +42,7 @@ export class BitdPlaybookSheet extends BitdItemSheet {
       let key = "";
 
       switch (item.type) {
-        case 'abilityScoundrel':
+        case 'abilityHunter':
           if (this.item.type == "playbook") key = "abilities";
           break;
         case 'tool':

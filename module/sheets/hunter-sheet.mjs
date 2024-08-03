@@ -4,13 +4,13 @@ import { BitdActorSheet } from "./actor-sheet.mjs";
  * Extend the BitdActorSheet
  * @extends {BitdActorSheet}
  */
-export class BitdScoundrelSheet extends BitdActorSheet
+export class BitdHunterSheet extends BitdActorSheet
 {
 
   /** @override */
   static get defaultOptions() {
     return foundry.utils.mergeObject(super.defaultOptions, {
-      classes: ["bitd", "sheet", "actor", "scoundrel"],
+      classes: ["bitd", "sheet", "actor", "hunter"],
       width: 750,
       height: 900,
       tabs: [{
@@ -25,7 +25,7 @@ export class BitdScoundrelSheet extends BitdActorSheet
   async getData() {
     const context = await super.getData();
 
-    // Prepare scoundrel data and items.
+    // Prepare hunter data and items.
     this._prepareItems(context);
 
     return context;
@@ -52,7 +52,7 @@ export class BitdScoundrelSheet extends BitdActorSheet
           playbook = i;
         }
       }
-      else if (i.type === 'abilityScoundrel') {
+      else if (i.type === 'abilityHunter') {
         abilities.push(i);
       }
       else if (i.type === 'contact') {

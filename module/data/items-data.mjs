@@ -1,4 +1,4 @@
-export class AbilityScoundrelData extends foundry.abstract.TypeDataModel {
+export class AbilityHunterData extends foundry.abstract.TypeDataModel {
   static defineSchema() {
     const fields = foundry.data.fields;
 

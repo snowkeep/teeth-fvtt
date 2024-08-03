@@ -1,7 +1,7 @@
 {
   "TYPES": {
     "Actor": {
-      "scoundrel": "Scoundrel",
+      "hunter": "Hunter",
       "crew": "Crew",
       "faction": "Faction",
       "npc": "NPC",
@@ -10,7 +10,7 @@
     "Item": {
       "playbook": "Playbook",
       "crewType": "Crew Type",
-      "abilityScoundrel": "Scoundrel's Ability",
+      "abilityHunter": "Hunters's Ability",
       "abilityCrew": "Crew's Ability",
       "claim": "Claim",
       "cohort": "Cohort",

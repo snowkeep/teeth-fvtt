@@ -10,7 +10,7 @@
     "systems/teeth/templates/actor/parts/contacts.hbs",
     "systems/teeth/templates/actor/parts/harm.hbs",
     "systems/teeth/templates/actor/parts/inventory.hbs",
-    "systems/teeth/templates/actor/parts/scoundrel-notes.hbs",
+    "systems/teeth/templates/actor/parts/hunter-notes.hbs",
     "systems/teeth/templates/actor/parts/stress-trauma.hbs",
     "systems/teeth/templates/actor/parts/upgrades.hbs",
 
