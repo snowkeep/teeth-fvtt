@@ -44,7 +44,7 @@ export class BitdActorSheet extends ActorSheet
     // Add the actor's data to context.data for easier access, as well as flags.
     context.system = context.actor.system;
     context.flags = context.actor.flags;
-    context.config = CONFIG.BITD;
+    context.config = CONFIG.TEETH;
 
     return context;
   }
@@ -68,7 +68,7 @@ export class BitdActorSheet extends ActorSheet
     // Calculate relationship
     html.find('.set-relationship').each(function () {
       const value = Number(this.dataset.value);
-      const classes = CONFIG.BITD.relationshipClasses;
+      const classes = CONFIG.TEETH.relationshipClasses;
       this.classList.add(classes[value]);
     });
 
@@ -183,7 +183,7 @@ export class BitdActorSheet extends ActorSheet
     const header = event.currentTarget;
     const type = header.dataset.type;
     const data = foundry.utils.duplicate(header.dataset);
-    const name = game.i18n.localize("BITD.Item.New");
+    const name = game.i18n.localize("TEETH.Item.New");
     // Prepare the item object.
     const itemData = {
       name: name,
@@ -273,7 +273,7 @@ export class BitdActorSheet extends ActorSheet
     const dataset = element.dataset;
     const currentValue = Number(dataset.value);
     const contacts = this.actor.system.contacts;
-    const classes = CONFIG.BITD.relationshipClasses;
+    const classes = CONFIG.TEETH.relationshipClasses;
 
     if (currentValue < 3) {
       contacts[dataset.index].relationship = currentValue + 1;

@@ -141,7 +141,7 @@ export default class ScoundrelData extends foundry.abstract.TypeDataModel {
   prepareDerivedData() {
     for (const [attrKey, attribute] of Object.entries(this.attributes)) {
       attribute.value = 0;
-      const linkedActions = CONFIG.BITD.attributeLinks[attrKey];
+      const linkedActions = CONFIG.TEETH.attributeLinks[attrKey];
       for (const key of linkedActions) {
         const action = this.actions[key];
         if (action.value > 0) attribute.value += 1;

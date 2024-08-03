@@ -78,10 +78,10 @@ export class BitdPlaybookSheet extends BitdItemSheet {
           container.push(link);
           await this.item.update({ [path]: container });
         } else {
-          ui.notifications.warn(game.i18n.localize("BITD.Errors.Item.ExistsId"));
+          ui.notifications.warn(game.i18n.localize("TEETH.Errors.Item.ExistsId"));
         }
       } else {
-        ui.notifications.warn(game.i18n.format("BITD.Errors.Item.NotSupported", {item: item.name}));
+        ui.notifications.warn(game.i18n.format("TEETH.Errors.Item.NotSupported", {item: item.name}));
       }
     } else if (data.type === "Actor") {
       const actor = await fromUuid(data.uuid);
@@ -101,10 +101,10 @@ export class BitdPlaybookSheet extends BitdItemSheet {
           container.push(link);
           await this.item.update({ "system.contacts": container });
         } else {
-          ui.notifications.warn(game.i18n.localize("BITD.Errors.Item.ExistsId"));
+          ui.notifications.warn(game.i18n.localize("TEETH.Errors.Item.ExistsId"));
         }
       } else {
-        ui.notifications.warn(game.i18n.format("BITD.Errors.Actor.NotSupported", {actor: actor.name}));
+        ui.notifications.warn(game.i18n.format("TEETH.Errors.Actor.NotSupported", {actor: actor.name}));
       }
     }
   }

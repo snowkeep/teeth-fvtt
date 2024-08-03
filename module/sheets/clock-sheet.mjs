@@ -32,7 +32,7 @@ export class BitdClockSheet extends ActorSheet
     // Add the actor's data to context.data for easier access, as well as flags.
     context.system = context.actor.system;
     context.flags = context.actor.flags;
-    context.config = CONFIG.BITD;
+    context.config = CONFIG.TEETH;
 
     this._prepareClock()
 

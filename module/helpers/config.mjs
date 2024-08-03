@@ -1,4 +1,4 @@
-export const BITD = {
+export const TEETH = {
   attributeLinks: {
     insight: ["hunt", "study", "survey", "tinker"],
     prowess: ["finesse", "prowl", "skirmish", "wreck"],
@@ -9,44 +9,44 @@ export const BITD = {
     crew: ["QYT0VHUnH7NvELXE", "0jzSjAD7aC7sTJWB", "JRUITBP7ejrAS7DE", "a78hFI8IrZ4GvmMO", "gwPjJVlyOdpHHkSZ", "iK5vthVkcbBjwl9W", "eOYEeQFnf0Lpflst", "sIzU9C2J8Ff888hZ", "LGG0DCb9qv2Pijy7", "BJG1pPeOQQHc4Sxb", "DYvuI3w5fSwLstvG", "LOPmlnXrAI5baXOx"]
   },
   load: {
-    "3": "BITD.Load.Light",
-    "5": "BITD.Load.Normal",
-    "6": "BITD.Load.Heavy"
+    "3": "TEETH.Load.Light",
+    "5": "TEETH.Load.Normal",
+    "6": "TEETH.Load.Heavy"
   },
-  holdTypes: {strong: "BITD.Hold.Strong", weak: "BITD.Hold.Weak"},
+  holdTypes: {strong: "TEETH.Hold.Strong", weak: "TEETH.Hold.Weak"},
   statusTypes: {
-    allies: "BITD.Status.Allies",
-    friendly: "BITD.Status.Friendly",
-    helpful: "BITD.Status.Helpful",
-    neutral: "BITD.Status.Neutral",
-    interfering: "BITD.Status.Interfering",
-    hostile: "BITD.Status.Hostile",
-    war: "BITD.Status.War"
+    allies: "TEETH.Status.Allies",
+    friendly: "TEETH.Status.Friendly",
+    helpful: "TEETH.Status.Helpful",
+    neutral: "TEETH.Status.Neutral",
+    interfering: "TEETH.Status.Interfering",
+    hostile: "TEETH.Status.Hostile",
+    war: "TEETH.Status.War"
   },
   cohort: {
     types: {
-      gang: "BITD.Cohort.Type.Gang",
-      expert: "BITD.Cohort.Type.Expert"
+      gang: "TEETH.Cohort.Type.Gang",
+      expert: "TEETH.Cohort.Type.Expert"
     },
     harm: {
-      0: "BITD.Cohort.Harm.NoHarm",
-      1: "BITD.Cohort.Harm.Weakened",
-      2: "BITD.Cohort.Harm.Impaired",
-      3: "BITD.Cohort.Harm.Broken",
-      4: "BITD.Cohort.Harm.Dead"
+      0: "TEETH.Cohort.Harm.NoHarm",
+      1: "TEETH.Cohort.Harm.Weakened",
+      2: "TEETH.Cohort.Harm.Impaired",
+      3: "TEETH.Cohort.Harm.Broken",
+      4: "TEETH.Cohort.Harm.Dead"
     }
   },
   toolType: {
-    common: "BITD.Tool.Common",
-    special: "BITD.Tool.Special"
+    common: "TEETH.Tool.Common",
+    special: "TEETH.Tool.Special"
   },
   toolType: {
-    common: "BITD.Tool.Common",
-    special: "BITD.Tool.Special"
+    common: "TEETH.Tool.Common",
+    special: "TEETH.Tool.Special"
   },
   upgradeType: {
-    common: "BITD.Upgrade.Common",
-    special: "BITD.Upgrade.Special"
+    common: "TEETH.Upgrade.Common",
+    special: "TEETH.Upgrade.Special"
   },
 
   supportedLinks: {
@@ -68,48 +68,48 @@ export const BITD = {
 
   rolls: {
     type: {
-      action: "BITD.Roll.Type.Action",
-      resistance: "BITD.Roll.Type.Resistance",
-      fortune: "BITD.Roll.Type.Fortune",
-      information: "BITD.Roll.Type.GatherInformation",
-      engagement: "BITD.Roll.Type.Engagement",
-      asset: "BITD.Roll.Type.AcquireAsset",
-      vice: "BITD.Roll.Type.IndulgeVice"
+      action: "TEETH.Roll.Type.Action",
+      resistance: "TEETH.Roll.Type.Resistance",
+      fortune: "TEETH.Roll.Type.Fortune",
+      information: "TEETH.Roll.Type.GatherInformation",
+      engagement: "TEETH.Roll.Type.Engagement",
+      asset: "TEETH.Roll.Type.AcquireAsset",
+      vice: "TEETH.Roll.Type.IndulgeVice"
     },
     rollAs: {
-      action: "BITD.Roll.Type.Action",
-      fortune: "BITD.Roll.Type.Fortune"
+      action: "TEETH.Roll.Type.Action",
+      fortune: "TEETH.Roll.Type.Fortune"
     },
     attributes: {
-      insight: "BITD.Insight",
-      prowess: "BITD.Prowess",
-      resolve: "BITD.Resolve"
+      insight: "TEETH.Insight",
+      prowess: "TEETH.Prowess",
+      resolve: "TEETH.Resolve"
     },
     actions: {
-      hunt: "BITD.Hunt",
-      study: "BITD.Study",
-      survey: "BITD.Survey",
-      tinker: "BITD.Tinker",
-      finesse: "BITD.Finesse",
-      prowl: "BITD.Prowl",
-      skirmish: "BITD.Skirmish",
-      wreck: "BITD.Wreck",
-      attune: "BITD.Attune",
-      command: "BITD.Command",
-      consort: "BITD.Consort",
-      sway: "BITD.Sway"
+      hunt: "TEETH.Hunt",
+      study: "TEETH.Study",
+      survey: "TEETH.Survey",
+      tinker: "TEETH.Tinker",
+      finesse: "TEETH.Finesse",
+      prowl: "TEETH.Prowl",
+      skirmish: "TEETH.Skirmish",
+      wreck: "TEETH.Wreck",
+      attune: "TEETH.Attune",
+      command: "TEETH.Command",
+      consort: "TEETH.Consort",
+      sway: "TEETH.Sway"
     },
     position: {
-      controlled: "BITD.Roll.Position.Controlled",
-      risky: "BITD.Roll.Position.Risky",
-      desperate: "BITD.Roll.Position.Desperate"
+      controlled: "TEETH.Roll.Position.Controlled",
+      risky: "TEETH.Roll.Position.Risky",
+      desperate: "TEETH.Roll.Position.Desperate"
     },
     effect: {
-      zero: "BITD.Roll.Effect.Zero",
-      limited: "BITD.Roll.Effect.Limited",
-      standard: "BITD.Roll.Effect.Standard",
-      great: "BITD.Roll.Effect.Great",
-      extreme: "BITD.Roll.Effect.Extreme"
+      zero: "TEETH.Roll.Effect.Zero",
+      limited: "TEETH.Roll.Effect.Limited",
+      standard: "TEETH.Roll.Effect.Standard",
+      great: "TEETH.Roll.Effect.Great",
+      extreme: "TEETH.Roll.Effect.Extreme"
     },
     fortuneRollResult: {
       fail: "Zero",

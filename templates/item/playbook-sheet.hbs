@@ -2,15 +2,15 @@
   <header class="items-header">
     <img class="item-img" src="{{item.img}}" data-edit="img" title="{{item.name}}"/>
     <div class="header-fields">
-      <h1 class="item-name"><input name="name" type="text" value="{{item.name}}" placeholder="{{localize 'BITD.ItemName'}}"/></h1>
-      <input class="summary all-width" name="system.summary" type="text" value="{{system.summary}}" placeholder="{{localize 'BITD.Playbook.Summary'}}" data-dtype="String"></input>
+      <h1 class="item-name"><input name="name" type="text" value="{{item.name}}" placeholder="{{localize 'TEETH.ItemName'}}"/></h1>
+      <input class="summary all-width" name="system.summary" type="text" value="{{system.summary}}" placeholder="{{localize 'TEETH.Playbook.Summary'}}" data-dtype="String"></input>
     </div>
   </header>
 
   {{!-- Sheet Tab Navigation --}}
   <nav class="sheet-tabs tabs flexrow" data-group="primary">
-    <a class="item" data-tab="general">{{localize 'BITD.General'}}</a>
-    <a class="item" data-tab="links">{{localize 'BITD.Link.Plural'}}</a>
+    <a class="item" data-tab="general">{{localize 'TEETH.General'}}</a>
+    <a class="item" data-tab="links">{{localize 'TEETH.Link.Plural'}}</a>
   </nav>
 
   {{!-- Sheet Body --}}
@@ -37,18 +37,18 @@
       </div>
 
       <div class="exp-clues">
-        <h3>{{localize 'BITD.Playbook.Exp.Title'}}:</h3>
-        <input class="all-width" name="system.exp" type="text" value="{{system.exp}}" placeholder="{{localize 'BITD.Playbook.Exp.Placeholder'}}" data-dtype="String"></input>
+        <h3>{{localize 'TEETH.Playbook.Exp.Title'}}:</h3>
+        <input class="all-width" name="system.exp" type="text" value="{{system.exp}}" placeholder="{{localize 'TEETH.Playbook.Exp.Placeholder'}}" data-dtype="String"></input>
       </div>
 
-      <h3>{{localize 'BITD.Description'}}</h3>
+      <h3>{{localize 'TEETH.Description'}}</h3>
       {{editor enrichedDescription target="system.description" rollData=rollData button=true engine="prosemirror" editable=editable collaborate=true}}
     </div>
 
     {{!-- Owned Notes Tab --}}
     <div class="tab links" data-group="primary" data-tab="links">
       <div class="abilities-block linked-items" data-array="abilities">
-        <h3>{{localize 'BITD.Ability.Plural'}}</h3>
+        <h3>{{localize 'TEETH.Ability.Plural'}}</h3>
         <div class="link-block">
           {{#each system.abilities}}
             {{> "systems/teeth/templates/item/parts/linked-item.hbs"}}
@@ -57,7 +57,7 @@
       </div>
 
       <div class="inventory-block linked-items" data-array="inventory">
-        <h3>{{localize 'BITD.Playbook.Items'}}</h3>
+        <h3>{{localize 'TEETH.Playbook.Items'}}</h3>
         <div class="link-block">
           {{#each system.inventory}}
             {{> "systems/teeth/templates/item/parts/linked-item.hbs"}}
@@ -66,7 +66,7 @@
       </div>
 
       <div class="contacts-block linked-items" data-array="contacts">
-        <h3>{{localize 'BITD.Contact.Plural'}}</h3>
+        <h3>{{localize 'TEETH.Contact.Plural'}}</h3>
         <div class="link-block">
           {{#each system.contacts}}
             {{> "systems/teeth/templates/item/parts/linked-item.hbs"}}

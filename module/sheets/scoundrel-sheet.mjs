@@ -93,25 +93,25 @@ export class BitdScoundrelSheet extends BitdActorSheet
   async _onAddTrauma(event) {
     const currentTraumas = (this.actor.system.trauma || []).filter(Boolean);
     const defaultTraumas = [
-      "BITD.Traumas.Cold",
-      "BITD.Traumas.Haunted",
-      "BITD.Traumas.Obsessed",
-      "BITD.Traumas.Paranoid",
-      "BITD.Traumas.Reckless",
-      "BITD.Traumas.Soft",
-      "BITD.Traumas.Unstable",
-      "BITD.Traumas.Vicious",
+      "TEETH.Traumas.Cold",
+      "TEETH.Traumas.Haunted",
+      "TEETH.Traumas.Obsessed",
+      "TEETH.Traumas.Paranoid",
+      "TEETH.Traumas.Reckless",
+      "TEETH.Traumas.Soft",
+      "TEETH.Traumas.Unstable",
+      "TEETH.Traumas.Vicious",
     ];
     const filteredTraumas = defaultTraumas.filter(trauma => !currentTraumas.includes(trauma));
 
     const template = await renderTemplate("systems/teeth/templates/apps/trauma.hbs", { currentTraumas, filteredTraumas });
 
     const dialog = new Dialog({
-      title: game.i18n.localize("BITD.ChooseTrauma"),
+      title: game.i18n.localize("TEETH.ChooseTrauma"),
       content: template,
       buttons: {
         add: {
-          label: game.i18n.localize("BITD.AddTrauma"),
+          label: game.i18n.localize("TEETH.AddTrauma"),
           callback: async (html) => {
             const elements = Array.from(html.find(".trauma.active"));
             const newTraumas = elements.map(el => el.dataset.value);

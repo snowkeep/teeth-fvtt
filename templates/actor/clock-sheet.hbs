@@ -2,7 +2,7 @@
   {{!-- Sheet Header --}}
   <header class="sheet-header">
     <h2 class="clock-name">
-      <input class="clear-input" name="name" type="text" value="{{actor.name}}" placeholder="{{localize 'BITD.Item.Name'}}"/>
+      <input class="clear-input" name="name" type="text" value="{{actor.name}}" placeholder="{{localize 'TEETH.Item.Name'}}"/>
     </h1>
 
     <div class="clock-img-block">
@@ -11,11 +11,11 @@
 
     <div class="clock-info grid-2col">
       <div class="filled">
-        <label for="system.progress.value">{{localize 'BITD.Clock.Filled'}}:</label>
+        <label for="system.progress.value">{{localize 'TEETH.Clock.Filled'}}:</label>
         <input class="clear-input" name="system.progress.value" type="number" max="{{system.progress.max}}" value="{{system.progress.value}}"/>
       </div>
       <div class="size">
-        <label for="system.progress.max">{{localize 'BITD.Clock.Size'}}:</label>
+        <label for="system.progress.max">{{localize 'TEETH.Clock.Size'}}:</label>
         <select class="clear-select" name="system.progress.max">
           {{selectOptions config.clockTypes selected=system.progress.max}}
         </select>

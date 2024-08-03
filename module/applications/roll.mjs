@@ -5,7 +5,7 @@ export async function createRollDialog (type, sheet, note) {
     sheet = canvas.tokens.controlled[0].actor;
   }
 
-  const rollConfig = CONFIG.BITD.rolls;
+  const rollConfig = CONFIG.TEETH.rolls;
   rollConfig.defaultType = type ? type : "fortune";
 
   if (type == "action") {
@@ -35,11 +35,11 @@ export async function createRollDialog (type, sheet, note) {
   const html = await renderTemplate("systems/teeth/templates/apps/rollDialog.hbs", rollConfig);
 
   const dialog = new Dialog({
-    title: game.i18n.localize("BITD.Roll.Title"),
+    title: game.i18n.localize("TEETH.Roll.Title"),
     content: html,
     buttons: {
       roll: {
-        label: game.i18n.localize("BITD.Roll.Submit"),
+        label: game.i18n.localize("TEETH.Roll.Submit"),
         icon: '<i class="fas fa-dice"></i>',
         callback: async (html) => {
           const formData = new FormData(html[0].querySelector("form"));
@@ -57,7 +57,7 @@ export async function createRollDialog (type, sheet, note) {
       },
       cancel: {
         icon: '<i class="fas fa-times"></i>',
-        label: game.i18n.localize("BITD.Roll.Cancel"),
+        label: game.i18n.localize("TEETH.Roll.Cancel"),
         callback: () => {},
       },
     },
@@ -188,14 +188,14 @@ function getRollData(rollResult, formData, diceToRoll) {
   if (formData.pushEffect) data.push.count++;
   if (formData.pushDice) data.push.count++;
 
-  const effectSequence = CONFIG.BITD.rolls.effectSequence;
+  const effectSequence = CONFIG.TEETH.rolls.effectSequence;
   if (data.push.effect) {
     const index = effectSequence.indexOf(data.effect.key);
     data.effect.key = effectSequence[index + 1];
   }
 
   data.push.stress = data.push.count * 2;
-  data.push.description = game.i18n.format("BITD.Roll.BonusDescription.Push", {stress: data.push.stress});
+  data.push.description = game.i18n.format("TEETH.Roll.BonusDescription.Push", {stress: data.push.stress});
 
   let numSixes = 0;
   rollResult.terms.map(t => t.results.map(
@@ -240,11 +240,11 @@ function getRollData(rollResult, formData, diceToRoll) {
   }
 
   data.countAs.localizeKey = getLokalizeKey(data.countAs.key);
-  data.countAs.localize = game.i18n.localize("BITD.Roll.Result." + data.countAs.localizeKey);
+  data.countAs.localize = game.i18n.localize("TEETH.Roll.Result." + data.countAs.localizeKey);
   data.position.localizeKey = getLokalizeKey(data.position.key);
-  data.position.localize = game.i18n.localize("BITD.Roll.Position." + data.position.localizeKey);
+  data.position.localize = game.i18n.localize("TEETH.Roll.Position." + data.position.localizeKey);
   data.effect.localizeKey = getLokalizeKey(data.effect.key);
-  data.effect.localize = game.i18n.localize("BITD.Roll.Effect." + data.effect.localizeKey);
+  data.effect.localize = game.i18n.localize("TEETH.Roll.Effect." + data.effect.localizeKey);
 
   Object.assign(data, rollResult.data);
 
@@ -262,12 +262,12 @@ function actionRoll(rollResult, sheet, formData) {
   rollData.position.show = true;
   rollData.action = formData.action;
   const actionKey = rollData.action.charAt(0).toUpperCase() + rollData.action.slice(1);
-  rollResult.name += ": " + game.i18n.localize("BITD." + actionKey);
+  rollResult.name += ": " + game.i18n.localize("TEETH." + actionKey);
 
-  rollData.description = game.i18n.localize("BITD.Roll.Action." + rollData.position.localizeKey + "." + rollData.countAs.localizeKey);
+  rollData.description = game.i18n.localize("TEETH.Roll.Action." + rollData.position.localizeKey + "." + rollData.countAs.localizeKey);
 
   if (rollData.countAs.key != "fail") {
-    rollData.effect.description = game.i18n.localize("BITD.Roll.EffectDescription." + rollData.effect.localizeKey);
+    rollData.effect.description = game.i18n.localize("TEETH.Roll.EffectDescription." + rollData.effect.localizeKey);
   }
 
   return rollResult
@@ -278,15 +278,15 @@ async function resistanceRoll(rollResult, sheet, formData) {
 
   rollData.countAs.show = false;
   const attributeKey = formData.attribute.charAt(0).toUpperCase() + formData.attribute.slice(1);
-  rollResult.name += ": " + game.i18n.localize("BITD." + attributeKey);
-  rollData.description = game.i18n.localize("BITD.Roll.Resistance.Result");
+  rollResult.name += ": " + game.i18n.localize("TEETH." + attributeKey);
+  rollData.description = game.i18n.localize("TEETH.Roll.Resistance.Result");
 
   let addStress = 6 - rollResult.total;
   if (rollData.countAs.key == "critical") {
-    rollData.description += game.i18n.localize("BITD.Roll.Resistance.Critical");
+    rollData.description += game.i18n.localize("TEETH.Roll.Resistance.Critical");
     addStress = -1;
   } else {
-    rollData.description += game.i18n.format("BITD.Roll.Resistance.Regular", {stress: addStress});
+    rollData.description += game.i18n.format("TEETH.Roll.Resistance.Regular", {stress: addStress});
   }
   sufferStress(sheet, addStress);
 
@@ -296,10 +296,10 @@ async function resistanceRoll(rollResult, sheet, formData) {
 function fortuneRoll(rollResult) {
   const rollData = rollResult.data;
 
-  rollData.description = game.i18n.localize("BITD.Roll.Fortune." + rollData.countAs.localizeKey);
+  rollData.description = game.i18n.localize("TEETH.Roll.Fortune." + rollData.countAs.localizeKey);
 
-  const rollEffect = CONFIG.BITD.rolls.fortuneRollResult[rollData.countAs.key];
-  rollData.effect.description = game.i18n.localize("BITD.Roll.EffectDescription." + rollEffect);
+  const rollEffect = CONFIG.TEETH.rolls.fortuneRollResult[rollData.countAs.key];
+  rollData.effect.description = game.i18n.localize("TEETH.Roll.EffectDescription." + rollEffect);
 
   return rollResult
 }
@@ -311,42 +311,42 @@ function gatherInformation(rollResult, sheet, formData) {
     key: formData.rollAs,
     localizeKey: getLokalizeKey(formData.rollAs)
   };
-  rollData.rollAs.localize = game.i18n.localize("BITD.Roll.Type." + rollData.rollAs.localizeKey);
+  rollData.rollAs.localize = game.i18n.localize("TEETH.Roll.Type." + rollData.rollAs.localizeKey);
 
   if (rollData.rollAs.key == "action") {
     rollData.effectShow = true;
     rollData.positionShow = true;
     rollData.action = formData.action;
-    rollData.rollAs.localize = game.i18n.localize("BITD.Roll.Type.Action");
+    rollData.rollAs.localize = game.i18n.localize("TEETH.Roll.Type.Action");
 
-    rollData.description = game.i18n.localize("BITD.Roll.Action." + rollData.position.localizeKey + "." + rollData.countAs.localizeKey);
+    rollData.description = game.i18n.localize("TEETH.Roll.Action." + rollData.position.localizeKey + "." + rollData.countAs.localizeKey);
 
     switch (rollData.countAs.key) {
       case "critical":
       case "success":
       case "mixed":
-        rollData.effect.description = game.i18n.localize("BITD.Roll.GatherInformation." + rollData.effect.localizeKey);
+        rollData.effect.description = game.i18n.localize("TEETH.Roll.GatherInformation." + rollData.effect.localizeKey);
         break;
       case "fail":
-        rollData.effect.description = game.i18n.localize("BITD.Roll.GatherInformation.Zero");
+        rollData.effect.description = game.i18n.localize("TEETH.Roll.GatherInformation.Zero");
     }
   } else if (rollData.rollAs.key == "fortune") {
-    const rollEffect = CONFIG.BITD.rolls.fortuneRollResult[rollData.countAs.key];
-    rollData.effect.description = game.i18n.localize("BITD.Roll.GatherInformation." + rollEffect);
+    const rollEffect = CONFIG.TEETH.rolls.fortuneRollResult[rollData.countAs.key];
+    rollData.effect.description = game.i18n.localize("TEETH.Roll.GatherInformation." + rollEffect);
   }
 
   return rollResult
 }
 
 function engagementRoll(rollResult) {
-  rollResult.data.description = game.i18n.localize("BITD.Roll.Engagement." + rollResult.data.countAs.localizeKey);
+  rollResult.data.description = game.i18n.localize("TEETH.Roll.Engagement." + rollResult.data.countAs.localizeKey);
 
   return rollResult
 }
 
 function acquireAsset(rollResult) {
   rollResult.data.countAs.show = false;
-  rollResult.data.description = game.i18n.localize("BITD.Roll.AcquireAsset." + rollResult.data.countAs.localizeKey);
+  rollResult.data.description = game.i18n.localize("TEETH.Roll.AcquireAsset." + rollResult.data.countAs.localizeKey);
 
   return rollResult
 }
@@ -360,11 +360,11 @@ async function indulgeVice(rollResult, sheet) {
     const stress = sheet.system.stress.value - clearStress;
 
     if (stress < 0) {
-      rollResult.data.description = game.i18n.localize("BITD.Roll.IndulgeVice.Overindulgence");
-      rollResult.data.description += "<ul>" + game.i18n.localize("BITD.Roll.IndulgeVice.Trouble") + game.i18n.localize("BITD.Roll.IndulgeVice.Brag") + game.i18n.localize("BITD.Roll.IndulgeVice.Lost") + game.i18n.localize("BITD.Roll.IndulgeVice.Trapped") + "</ul>";
+      rollResult.data.description = game.i18n.localize("TEETH.Roll.IndulgeVice.Overindulgence");
+      rollResult.data.description += "<ul>" + game.i18n.localize("TEETH.Roll.IndulgeVice.Trouble") + game.i18n.localize("TEETH.Roll.IndulgeVice.Brag") + game.i18n.localize("TEETH.Roll.IndulgeVice.Lost") + game.i18n.localize("TEETH.Roll.IndulgeVice.Trapped") + "</ul>";
       await sheet.update({ "system.stress.value": 0 });
     } else {
-      rollResult.data.description = game.i18n.format("BITD.Roll.IndulgeVice.Regular", {stress: clearStress});
+      rollResult.data.description = game.i18n.format("TEETH.Roll.IndulgeVice.Regular", {stress: clearStress});
       await sheet.update({ "system.stress.value": stress });
     }
   }
@@ -390,7 +390,7 @@ async function sufferStress(sheet, addStress) {
     await sheet.update({ "system.stress.value": stress });
   } else {
     rollResult.data.trauma.suffer = true;
-    rollResult.data.trauma.description = game.i18n.format("BITD.Roll.SufferTrauma.Description", {stress: stress});
+    rollResult.data.trauma.description = game.i18n.format("TEETH.Roll.SufferTrauma.Description", {stress: stress});
     await sheet.update({ "system.stress.value": 0 });
   }
 }
@@ -407,7 +407,7 @@ async function giveExp(rollData, sheet) {
   if (rollData.position.key != "desperate" || !supported) return;
 
   let conAttribute = "???";
-  for (const [attribute, actions] of Object.entries(CONFIG.BITD.attributeLinks)) {
+  for (const [attribute, actions] of Object.entries(CONFIG.TEETH.attributeLinks)) {
     if (actions.includes(rollData.action)) {
       conAttribute = attribute;
       break;
@@ -415,7 +415,7 @@ async function giveExp(rollData, sheet) {
   }
 
   const actorName = speaker.actor ? speaker.alias : "???";
-  const message = game.i18n.format("BITD.Roll.Result.Exp", {actor: actorName, attribute: conAttribute});
+  const message = game.i18n.format("TEETH.Roll.Result.Exp", {actor: actorName, attribute: conAttribute});
   const chatData = {
     user: game.user.id,
     speaker: speaker,

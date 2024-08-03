@@ -2,21 +2,21 @@
   <header class="items-header">
     <img class="item-img" src="{{item.img}}" data-edit="img" title="{{item.name}}"/>
     <div class="header-fields">
-      <h1 class="item-name"><input name="name" type="text" value="{{item.name}}" placeholder="{{localize 'BITD.ItemName'}}"/></h1>
+      <h1 class="item-name"><input name="name" type="text" value="{{item.name}}" placeholder="{{localize 'TEETH.ItemName'}}"/></h1>
       <div class="brief-info">
         <select class="prop clear-select" name="system.type">
           {{selectOptions config.toolType selected=system.type localize=true}}
         </select>
         <div class="prop">
-          <label class="prop-label" for="system.loadout">{{localize 'BITD.Tool.Loadout'}}:</label>
+          <label class="prop-label" for="system.loadout">{{localize 'TEETH.Tool.Loadout'}}:</label>
           <input class="prop-input clear-input" type="number" name="system.loadout" value="{{system.loadout}}"></input>
         </div>
         <div class="prop">
-          <label class="prop-label" for="system.equipped">{{localize 'BITD.Tool.Equipped'}}</label>
+          <label class="prop-label" for="system.equipped">{{localize 'TEETH.Tool.Equipped'}}</label>
           <input class="prop-input" type="checkbox" name="system.equipped" {{checked system.equipped}}></input>
         </div>
         <div class="prop">
-          <label class="prop-label" for="system.broken">{{localize 'BITD.Tool.Broken'}}</label>
+          <label class="prop-label" for="system.broken">{{localize 'TEETH.Tool.Broken'}}</label>
           <input class="prop-input" type="checkbox" name="system.broken" {{checked system.broken}}></input>
         </div>
       </div>

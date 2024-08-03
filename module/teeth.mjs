@@ -17,7 +17,7 @@ import { preprocessChatMessage, renderChatMessage } from "./applications/chat-po
 import { createRollDialog } from "./applications/roll.mjs";
 import { preloadHandlebarsTemplates } from "./helpers/templates.mjs";
 import { registerHandlebarsHelpers } from "./helpers/handlebars-helpers.mjs";
-import { BITD } from './helpers/config.mjs';
+import { TEETH } from './helpers/config.mjs';
 
 Hooks.once('init', async function() {
 
@@ -26,7 +26,7 @@ Hooks.once('init', async function() {
     BitdItem
   };
 
-  CONFIG.BITD = BITD;
+  CONFIG.TEETH = TEETH;
 
   // Define custom Entity classes and Data Models
   CONFIG.Actor.documentClass = BitdActor;

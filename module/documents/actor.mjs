@@ -28,7 +28,7 @@ export default class BitdActor extends Actor {
     this.prototypeToken.actorLink = true;
 
     // Load default items
-    const defaultItemsID = CONFIG.BITD.defaultItems;
+    const defaultItemsID = CONFIG.TEETH.defaultItems;
     const defaultItems = [];
 
     if (this.type == "scoundrel") {
@@ -95,7 +95,7 @@ export default class BitdActor extends Actor {
         if (!this.items.find(i => i.name === item.name && i.type === item.type)) {
           toCreate.push(item)
         } else {
-          ui.notifications.warn(game.i18n.localize("BITD.Errors.Item.ExistsName"));
+          ui.notifications.warn(game.i18n.localize("TEETH.Errors.Item.ExistsName"));
         }
       }
     }
@@ -121,21 +121,21 @@ export default class BitdActor extends Actor {
     if (!actor) return;
 
     const localizeType = game.i18n.localize("TYPES.Actor." + actor.type);
-    const supported = CONFIG.BITD.supportedLinks[this.type];
+    const supported = CONFIG.TEETH.supportedLinks[this.type];
     const key = supported[actor.type];
 
-    if (!key) return ui.notifications.error(game.i18n.format("BITD.Errors.Actor.NotSupported", { type: localizeType, actor: actor.name }));
+    if (!key) return ui.notifications.error(game.i18n.format("TEETH.Errors.Actor.NotSupported", { type: localizeType, actor: actor.name }));
 
     const container = this.system[key];
 
     const idExist = container.some(existingActor => existingActor.id === actor.id);
     const nameExist = container.some(existingActor => existingActor.name === actor.name);
 
-    if (idExist) return ui.notifications.error(game.i18n.localize("BITD.Errors.Actor.ExistsId"));
-    if (nameExist) ui.notifications.warn(game.i18n.localize("BITD.Errors.Actor.ExistsName"));
+    if (idExist) return ui.notifications.error(game.i18n.localize("TEETH.Errors.Actor.ExistsId"));
+    if (nameExist) ui.notifications.warn(game.i18n.localize("TEETH.Errors.Actor.ExistsName"));
 
     if (actor.pack) {
-      ui.notifications.warn(game.i18n.localize("BITD.Errors.Actor.InPack"));
+      ui.notifications.warn(game.i18n.localize("TEETH.Errors.Actor.InPack"));
       return this.importActor(actor, key);
     }
 
@@ -153,11 +153,11 @@ export default class BitdActor extends Actor {
 
   async importActor(sourceActor) {
     const dialog = new Dialog({
-      title: game.i18n.localize("BITD.ImportActor.Title"),
-      content: game.i18n.format("BITD.ImportActor.Description", { actor: sourceActor.name }),
+      title: game.i18n.localize("TEETH.ImportActor.Title"),
+      content: game.i18n.format("TEETH.ImportActor.Description", { actor: sourceActor.name }),
       buttons: {
         import: {
-          label: game.i18n.localize("BITD.ImportActor.Submit"),
+          label: game.i18n.localize("TEETH.ImportActor.Submit"),
           icon: '<i class="fas fa-check"></i>',
           callback: async () => {
             const actor = await BitdActor.create(sourceActor);
@@ -166,7 +166,7 @@ export default class BitdActor extends Actor {
         },
         cancel: {
           icon: '<i class="fas fa-times"></i>',
-          label: game.i18n.localize("BITD.Roll.Cancel"),
+          label: game.i18n.localize("TEETH.Roll.Cancel"),
           callback: () => {},
         },
       },

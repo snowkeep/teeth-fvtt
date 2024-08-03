@@ -62,7 +62,7 @@ export const registerHandlebarsHelpers = function() {
   });
 
   Handlebars.registerHelper("getLocalizeName", function (key) {
-    const name = "BITD." + key.charAt(0).toUpperCase() + key.slice(1);
+    const name = "TEETH." + key.charAt(0).toUpperCase() + key.slice(1);
     const localizeName = game.i18n.localize(name);
 
     return localizeName;
@@ -73,10 +73,10 @@ export const registerHandlebarsHelpers = function() {
     let name;
     switch (type) {
       case "attribute":
-        name = "BITD.AttributeDescription." + localizeKey;
+        name = "TEETH.AttributeDescription." + localizeKey;
         break;
       case "action":
-        name = "BITD.ActionDescription." + localizeKey;
+        name = "TEETH.ActionDescription." + localizeKey;
         break;
     }
     const localizeName = game.i18n.localize(name);
@@ -102,7 +102,7 @@ export const registerHandlebarsHelpers = function() {
   });
 
   Handlebars.registerHelper("getCohorHarm", function (key) {
-    const name = CONFIG.BITD.cohort.harm[key];
+    const name = CONFIG.TEETH.cohort.harm[key];
     const localizeName = game.i18n.localize(name);
 
     return localizeName;
