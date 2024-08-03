@@ -1,8 +1,8 @@
 import * as models from './data/_module.mjs';
-import { BitdActor, BitdItem } from "./documents/_module.mjs";
+import { TeethActor, BitdItem } from "./documents/_module.mjs";
 
 // Import Actor Sheet
-import { BitdActorSheet } from "./sheets/actor-sheet.mjs";
+import { TeethActorSheet } from "./sheets/actor-sheet.mjs";
 import { BitdHunterSheet } from "./sheets/hunter-sheet.mjs";
 import { BitdCrewSheet } from "./sheets/crew-sheet.mjs";
 import { BitdFactionSheet } from "./sheets/faction-sheet.mjs";
@@ -22,14 +22,14 @@ import { TEETH } from './helpers/config.mjs';
 Hooks.once('init', async function() {
 
   game.bitd = {
-    BitdActor,
+    TeethActor,
     BitdItem
   };
 
   CONFIG.TEETH = TEETH;
 
   // Define custom Entity classes and Data Models
-  CONFIG.Actor.documentClass = BitdActor;
+  CONFIG.Actor.documentClass = TeethActor;
   CONFIG.Actor.dataModels = {
     'hunter': models.HunterData,
     'crew': models.CrewData,
@@ -53,7 +53,7 @@ Hooks.once('init', async function() {
 
   // Register sheet application classes
   Actors.unregisterSheet("core", ActorSheet);
-  Actors.registerSheet("bitd", BitdActorSheet, { makeDefault: true });
+  Actors.registerSheet("bitd", TeethActorSheet, { makeDefault: true });
   Actors.registerSheet("bitd", BitdHunterSheet, { types: ["hunter"], makeDefault: true });
   Actors.registerSheet("bitd", BitdCrewSheet, { types: ["crew"], makeDefault: true });
   Actors.registerSheet("bitd", BitdFactionSheet, { types: ["faction"], makeDefault: true });

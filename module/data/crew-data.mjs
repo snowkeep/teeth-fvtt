@@ -1,4 +1,4 @@
-import { BitdActor, BitdItem } from "../documents/_module.mjs";
+import { TeethActor, BitdItem } from "../documents/_module.mjs";
 
 export default class CrewData extends foundry.abstract.TypeDataModel {
   static defineSchema() {
@@ -48,24 +48,24 @@ export default class CrewData extends foundry.abstract.TypeDataModel {
 
       playbook: new fields.ForeignDocumentField(BitdItem, {idOnly: true}),
       members: new fields.ArrayField(new fields.SchemaField({
-        id: new fields.ForeignDocumentField(BitdActor, {idOnly: true}),
+        id: new fields.ForeignDocumentField(TeethActor, {idOnly: true}),
         uuid: new fields.StringField(),
         name: new fields.StringField()
       })),
       contacts: new fields.ArrayField(new fields.SchemaField({
-        id: new fields.ForeignDocumentField(BitdActor, {idOnly: true}),
+        id: new fields.ForeignDocumentField(TeethActor, {idOnly: true}),
         uuid: new fields.StringField(),
         name: new fields.StringField(),
         relationship: new fields.NumberField({requiredPositiveInteger, max: 3, initial: 1 })
       })),
       relatedFactions: new fields.ArrayField(new fields.SchemaField({
-        id: new fields.ForeignDocumentField(BitdActor, {idOnly: true}),
+        id: new fields.ForeignDocumentField(TeethActor, {idOnly: true}),
         uuid: new fields.StringField(),
         name: new fields.StringField(),
         status: new fields.StringField({initial: "neutral"})
       })),
       goals: new fields.ArrayField(new fields.SchemaField({
-        id: new fields.ForeignDocumentField(BitdActor, {idOnly: true}),
+        id: new fields.ForeignDocumentField(TeethActor, {idOnly: true}),
         uuid: new fields.StringField(),
         name: new fields.StringField(),
         progress: new fields.SchemaField({

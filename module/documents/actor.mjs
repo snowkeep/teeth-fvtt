@@ -2,7 +2,7 @@
  * Extend the base Actor entity by defining a custom roll data structure which is ideal for the Simple system.
  * @extends {Actor}
  */
-export default class BitdActor extends Actor {
+export default class TeethActor extends Actor {
 
   /** @inheritdoc */
   async _preCreate(data, options, user) {
@@ -160,7 +160,7 @@ export default class BitdActor extends Actor {
           label: game.i18n.localize("TEETH.ImportActor.Submit"),
           icon: '<i class="fas fa-check"></i>',
           callback: async () => {
-            const actor = await BitdActor.create(sourceActor);
+            const actor = await TeethActor.create(sourceActor);
             this.addLinkedActor(actor)
           },
         },

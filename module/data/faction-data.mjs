@@ -1,4 +1,4 @@
-import { BitdActor, BitdItem } from "../documents/_module.mjs";
+import { TeethActor, BitdItem } from "../documents/_module.mjs";
 
 export default class FactionData extends foundry.abstract.TypeDataModel {
   static defineSchema() {
@@ -32,14 +32,14 @@ export default class FactionData extends foundry.abstract.TypeDataModel {
 
       showMembers: new fields.BooleanField({ initial: false }),
       members: new fields.ArrayField(new fields.SchemaField({
-        id: new fields.ForeignDocumentField(BitdActor, {idOnly: true}),
+        id: new fields.ForeignDocumentField(TeethActor, {idOnly: true}),
         uuid: new fields.StringField(),
         name: new fields.StringField()
       })),
 
       showFactions: new fields.BooleanField({ initial: false }),
       relatedFactions: new fields.ArrayField(new fields.SchemaField({
-        id: new fields.ForeignDocumentField(BitdActor, {idOnly: true}),
+        id: new fields.ForeignDocumentField(TeethActor, {idOnly: true}),
         uuid: new fields.StringField(),
         name: new fields.StringField(),
         status: new fields.StringField({initial: "neutral"})
@@ -47,7 +47,7 @@ export default class FactionData extends foundry.abstract.TypeDataModel {
 
       showGoals: new fields.BooleanField({ initial: false }),
       goals: new fields.ArrayField(new fields.SchemaField({
-        id: new fields.ForeignDocumentField(BitdActor, {idOnly: true}),
+        id: new fields.ForeignDocumentField(TeethActor, {idOnly: true}),
         uuid: new fields.StringField(),
         name: new fields.StringField(),
         progress: new fields.SchemaField({

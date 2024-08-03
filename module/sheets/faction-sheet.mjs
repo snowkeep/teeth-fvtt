@@ -1,10 +1,10 @@
-import { BitdActorSheet } from "./actor-sheet.mjs";
+import { TeethActorSheet } from "./actor-sheet.mjs";
 
 /**
- * Extend the BitdActorSheet
- * @extends {BitdActorSheet}
+ * Extend the TeethActorSheet
+ * @extends {TeethActorSheet}
  */
-export class BitdFactionSheet extends BitdActorSheet
+export class BitdFactionSheet extends TeethActorSheet
 {
 
   /** @override */
