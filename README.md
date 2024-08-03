@@ -6,6 +6,10 @@
 
 Unofficial system for [TEETH](https://https://teethrpg.itch.io/teeth-rpg) 
 
+## WARNING: THIS IS NOT YET USEABLE FOR TEETH
+
+It is currently all BitD, other than the top level names.
+
 ## Install
 
 To install a system, follow these instructions:
