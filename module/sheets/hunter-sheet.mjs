@@ -5,7 +5,7 @@ import { TEETH } from "../helpers/config.mjs";
  * Extend the TeethActorSheet
  * @extends {TeethActorSheet}
  */
-export class BitdHunterSheet extends TeethActorSheet
+export class TeethHunterSheet extends TeethActorSheet
 {
 
   /** @override */

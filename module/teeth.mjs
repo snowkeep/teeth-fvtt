@@ -3,7 +3,7 @@ import { TeethActor, BitdItem } from "./documents/_module.mjs";
 
 // Import Actor Sheet
 import { TeethActorSheet } from "./sheets/actor-sheet.mjs";
-import { BitdHunterSheet } from "./sheets/hunter-sheet.mjs";
+import { TeethHunterSheet } from "./sheets/hunter-sheet.mjs";
 import { BitdCrewSheet } from "./sheets/crew-sheet.mjs";
 import { BitdFactionSheet } from "./sheets/faction-sheet.mjs";
 import { BitdClockSheet } from "./sheets/clock-sheet.mjs";
@@ -54,7 +54,7 @@ Hooks.once('init', async function() {
   // Register sheet application classes
   Actors.unregisterSheet("core", ActorSheet);
   Actors.registerSheet("bitd", TeethActorSheet, { makeDefault: true });
-  Actors.registerSheet("bitd", BitdHunterSheet, { types: ["hunter"], makeDefault: true });
+  Actors.registerSheet("bitd", TeethHunterSheet, { types: ["hunter"], makeDefault: true });
   Actors.registerSheet("bitd", BitdCrewSheet, { types: ["crew"], makeDefault: true });
   Actors.registerSheet("bitd", BitdFactionSheet, { types: ["faction"], makeDefault: true });
   Actors.registerSheet("bitd", BitdClockSheet, { types: ["clock"], makeDefault: true });
