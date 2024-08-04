@@ -326,7 +326,7 @@ select.clear-select {
 .window-content input[type="text"] {
   width: auto; }
 
-.bitd-header, .bitd-header > h3 {
+.teeth-header, .teeth-header > h3 {
   margin: 0;
   padding: 0 3px;
   background-color: #222;
@@ -336,7 +336,7 @@ select.clear-select {
   font-weight: bold;
   font-family: "Spectral SC", serif;
   border: none; }
-  .bitd-header input, .bitd-header > h3 input {
+  .teeth-header input, .teeth-header > h3 input {
     color: #eee; }
 
 .bitd-subheader {
@@ -393,7 +393,7 @@ select.clear-select {
   .bitd .rollable:hover, .bitd .rollable:focus {
     color: black;
     cursor: pointer; }
-  .bitd .bitd-header.rollable:hover, .bitd .bitd-header.rollable:focus {
+  .bitd .teeth-header.rollable:hover, .bitd .teeth-header.rollable:focus {
     color: white; }
   .bitd .value-step-block {
     display: inline-block; }
@@ -730,7 +730,7 @@ select.clear-select {
         right: 5px; }
   .bitd.actor .hunter .sheet-body .notes-container {
     row-gap: 10px; }
-    .bitd.actor .hunter .sheet-body .notes-container .bitd-header {
+    .bitd.actor .hunter .sheet-body .notes-container .teeth-header {
       padding: 3px; }
     .bitd.actor .hunter .sheet-body .notes-container .rules ul {
       margin-top: 0; }
@@ -747,7 +747,7 @@ select.clear-select {
         font-family: "Spectral SC", serif; }
       .bitd.actor .hunter .sheet-body .notes-container .description .brief-info .prop .prop-input {
         border-bottom: 1px solid #b5b3a4; }
-    .bitd.actor .hunter .sheet-body .notes-container .description .bitd-header {
+    .bitd.actor .hunter .sheet-body .notes-container .description .teeth-header {
       margin-top: 5px; }
 
 .bitd.actor .crew .sheet-header {
@@ -808,7 +808,7 @@ select.clear-select {
       align-items: flex-start;
       justify-content: space-between;
       border-top: 2px solid black; }
-      .bitd.actor .crew .sheet-header .header-fields .reputation-block .turf > h3, .bitd.actor .crew .sheet-header .header-fields .reputation-block .bitd-header, .bitd.actor .crew .sheet-header .header-fields .reputation-block .value-step-block {
+      .bitd.actor .crew .sheet-header .header-fields .reputation-block .turf > h3, .bitd.actor .crew .sheet-header .header-fields .reputation-block .teeth-header, .bitd.actor .crew .sheet-header .header-fields .reputation-block .value-step-block {
         display: inline-block; }
       .bitd.actor .crew .sheet-header .header-fields .reputation-block .reputation {
         display: flex;
@@ -826,7 +826,7 @@ select.clear-select {
       right: 5px; }
     .bitd.actor .crew .sheet-header .exp-block .bitd-subheader, .bitd.actor .crew .sheet-header .exp-block .exp-tips {
       font-size: small; }
-  .bitd.actor .crew .sheet-header h3.bitd-header {
+  .bitd.actor .crew .sheet-header h3.teeth-header {
     padding-top: 0; }
 
 .bitd.actor .crew .sheet-header > div {
@@ -905,10 +905,10 @@ select.clear-select {
 
 .bitd.actor .faction .sheet-body .general .npcs {
   margin: 5px 0; }
-  .bitd.actor .faction .sheet-body .general .npcs .grid-2col .bitd-header {
+  .bitd.actor .faction .sheet-body .general .npcs .grid-2col .teeth-header {
     margin-top: 3px;
     font-size: small; }
-    .bitd.actor .faction .sheet-body .general .npcs .grid-2col .bitd-header h3 {
+    .bitd.actor .faction .sheet-body .general .npcs .grid-2col .teeth-header h3 {
       padding: 0;
       font-size: small; }
 
@@ -917,7 +917,7 @@ select.clear-select {
   .bitd.actor .faction .sheet-body .general .related-faction .clear-input {
     border-bottom: 1px solid #b5b3a4; }
 
-.bitd.actor .faction .sheet-body .notes .bitd-header {
+.bitd.actor .faction .sheet-body .notes .teeth-header {
   padding: 3px; }
 
 .bitd.actor .faction .sheet-body .notes .situation {

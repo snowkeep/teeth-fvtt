@@ -38,7 +38,7 @@
 
       {{#if system.showGoals}}
         <div class="goals items-block prop-field">
-          <h3 class="bitd-header">{{localize 'TEETH.Goals'}}</h3>
+          <h3 class="teeth-header">{{localize 'TEETH.Goals'}}</h3>
           <ol class="items-list" data-array="goals">
             {{#each system.goals as |goal|}}
               <li class="item npc" data-id="{{goal.id}}">
@@ -77,7 +77,7 @@
 
       {{#if system.showTurf}}
         <div class="turf prop-field items-block full-size">
-          <div class="item-header bitd-header">
+          <div class="item-header teeth-header">
             <h3>{{localize 'TEETH.Turf'}}</h3>
           </div>
           <ol class="items-list">
@@ -99,7 +99,7 @@
 
       {{#if system.showMembers}}
         <div class="members items-block prop-field">
-          <h3 class="bitd-header">{{localize 'TEETH.Members'}}</h3>
+          <h3 class="teeth-header">{{localize 'TEETH.Members'}}</h3>
           <ol class="items-list" data-array="members">
             {{#each system.members as |member|}}
               <li class="item npc" data-id="{{member.id}}">
@@ -117,7 +117,7 @@
 
       {{#if system.showFactions}}
         <div class="related-faction prop-block items-block">
-          <h3 class="bitd-header">{{localize 'TEETH.Factions'}}</h3>
+          <h3 class="teeth-header">{{localize 'TEETH.Factions'}}</h3>
           <ol class="items-list" data-array="relatedFactions">
             {{#each system.relatedFactions as |faction|}}
               <li class="item faction" data-id="{{faction.id}}">
@@ -141,11 +141,11 @@
     {{!-- Owned Notes Tab --}}
     <div class="tab notes" data-group="primary" data-tab="notes">
       <div class="situation">
-        <h3 class="bitd-header">{{localize 'TEETH.Situation'}}</h3>
+        <h3 class="teeth-header">{{localize 'TEETH.Situation'}}</h3>
         {{editor enrichedSituation target="system.situation" rollData=rollData button=true engine="prosemirror" editable=editable collaborate=true}}
       </div>
       <div class="description">
-        <h3 class="bitd-header">{{localize 'TEETH.Description'}}</h3>
+        <h3 class="teeth-header">{{localize 'TEETH.Description'}}</h3>
         {{editor enrichedDescription target="system.description" rollData=rollData button=true engine="prosemirror" editable=editable collaborate=true}}
       </div>
     </div>
