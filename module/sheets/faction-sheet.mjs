@@ -10,7 +10,7 @@ export class BitdFactionSheet extends TeethActorSheet
   /** @override */
   static get defaultOptions() {
     return foundry.utils.mergeObject(super.defaultOptions, {
-      classes: ["bitd", "sheet", "actor", "faction"],
+      classes: ["teeth", "sheet", "actor", "faction"],
       width: 550,
       height: 650,
       tabs: [{

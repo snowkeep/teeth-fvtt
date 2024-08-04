@@ -8,14 +8,14 @@
 @import 'global/window';
 
 /* Styles limited to system sheets */
-.bitd {
+.teeth {
   font-family: $font-primary;
 
   @import 'components/forms';
   @import 'components/item-list';
 }
 
-.bitd.actor {
+.teeth.actor {
   @import 'components/actor';
   @import 'components/actors/hunter';
   @import 'components/actors/crew';
@@ -24,6 +24,6 @@
   @import 'components/actors/clock';
 }
 
-.bitd.item {
+.teeth.item {
   @import 'components/item';
 }

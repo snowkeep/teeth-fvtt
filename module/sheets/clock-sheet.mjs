@@ -8,7 +8,7 @@ export class BitdClockSheet extends ActorSheet
   /** @override */
   static get defaultOptions() {
     return foundry.utils.mergeObject(super.defaultOptions, {
-      classes: ["bitd", "sheet", "actor", "clock"],
+      classes: ["teeth", "sheet", "actor", "clock"],
       width: 300,
       height: 400
     });

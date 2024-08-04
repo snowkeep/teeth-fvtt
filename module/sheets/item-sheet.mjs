@@ -7,7 +7,7 @@ export class BitdItemSheet extends ItemSheet {
   /** @override */
   static get defaultOptions() {
     return foundry.utils.mergeObject(super.defaultOptions, {
-      classes: ["bitd", "sheet", "item"],
+      classes: ["teeth", "sheet", "item"],
       width: 550,
       height: 550,
       tabs: [{

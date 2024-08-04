@@ -79,7 +79,7 @@ export async function createRollDialog (type, sheet, note) {
     }
   },
   {
-    classes: ["dialog", "bitd-roll-dialog"],
+    classes: ["dialog", "teeth-roll-dialog"],
     width: 400,
     height: 200
   });

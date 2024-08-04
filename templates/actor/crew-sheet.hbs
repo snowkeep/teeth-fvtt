@@ -101,12 +101,12 @@
 
     <div class="contacts items-block">
       <h3 class="item-header teeth-header contacts-title">{{localize 'TEETH.Contact.Plural'}}</h3>
-      {{> "systems/bitd/templates/actor/parts/contacts.hbs"}}
+      {{> "systems/teeth/templates/actor/parts/contacts.hbs"}}
     </div>
 
     <div class="exp-block">
       <h3 class="teeth-header">{{localize 'TEETH.CrewExp.ShortTitle'}}</h3>
-      <p class="bitd-subheader">{{localize 'TEETH.CrewExp.HowItWorks'}}</p>
+      <p class="teeth-subheader">{{localize 'TEETH.CrewExp.HowItWorks'}}</p>
       <div class="value-step-block" data-value="{{system.exp.value}}" data-key="system.exp.value">
         {{#numLoop system.exp.max}}
           <span class="value-step value-tooth simple-red-tooth" data-index="{{this}}"></span>
@@ -141,7 +141,7 @@
           </div>
           <ol class="items-list">
             {{#each specUpgrades as |item id|}}
-              {{> "systems/bitd/templates/actor/parts/upgrades.hbs" item=item}}
+              {{> "systems/teeth/templates/actor/parts/upgrades.hbs" item=item}}
             {{/each}}
           </ol>
         </div>
@@ -153,7 +153,7 @@
           </div>
           <ol class="items-list">
             {{#each upgrades as |item id|}}
-              {{> "systems/bitd/templates/actor/parts/upgrades.hbs" item=item}}
+              {{> "systems/teeth/templates/actor/parts/upgrades.hbs" item=item}}
             {{/each}}
           </ol>
         </div>
@@ -163,7 +163,7 @@
             <a class="item-create" title="{{localize 'TEETH.Item.Add'}}" data-type="abilityCrew"><i class="fas fa-plus"></i></a>
             <h3>{{localize 'TEETH.Ability.Plural'}}</h3>
           </div>
-          {{> "systems/bitd/templates/actor/parts/abilities.hbs"}}
+          {{> "systems/teeth/templates/actor/parts/abilities.hbs"}}
         </div>
 
       </div>
@@ -172,8 +172,8 @@
     {{!-- Owned Playbook Tab --}}
     <div class="tab claim" data-group="primary" data-tab="claim">
       <div class="claims-container grid-2col">
-        {{> "systems/bitd/templates/actor/parts/claims.hbs"}}
-        {{> "systems/bitd/templates/actor/parts/cohorts.hbs"}}
+        {{> "systems/teeth/templates/actor/parts/claims.hbs"}}
+        {{> "systems/teeth/templates/actor/parts/cohorts.hbs"}}
       </div>
     </div>
 

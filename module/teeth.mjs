@@ -77,7 +77,7 @@ Hooks.on("renderChatMessage", renderChatMessage);
 // Add scene controls
 Hooks.on("renderSceneControls", async (app, html) => {
   const diceRollButton = $(`
-    <li class="scene-control" data-control="bitd-dice" title="BitD Dice Roller">
+    <li class="scene-control" data-control="teeth-dice" title="BitD Dice Roller">
     <i class="fas fa-dice"></i>
     </li>
   `);

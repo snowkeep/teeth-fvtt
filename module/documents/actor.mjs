@@ -174,7 +174,7 @@ export default class TeethActor extends Actor {
       close: () => {}
     },
     {
-      classes: ["dialog", "bitd-import-dialog"],
+      classes: ["dialog", "teeth-import-dialog"],
       width: 400,
       height: 100
     });
