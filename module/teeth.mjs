@@ -21,7 +21,7 @@ import { TEETH } from './helpers/config.mjs';
 
 Hooks.once('init', async function() {
 
-  game.bitd = {
+  game.teeth = {
     TeethActor,
     BitdItem
   };
@@ -53,14 +53,14 @@ Hooks.once('init', async function() {
 
   // Register sheet application classes
   Actors.unregisterSheet("core", ActorSheet);
-  Actors.registerSheet("bitd", TeethActorSheet, { makeDefault: true });
-  Actors.registerSheet("bitd", TeethHunterSheet, { types: ["hunter"], makeDefault: true });
-  Actors.registerSheet("bitd", BitdCrewSheet, { types: ["crew"], makeDefault: true });
-  Actors.registerSheet("bitd", BitdFactionSheet, { types: ["faction"], makeDefault: true });
-  Actors.registerSheet("bitd", BitdClockSheet, { types: ["clock"], makeDefault: true });
+  Actors.registerSheet("teeth", TeethActorSheet, { makeDefault: true });
+  Actors.registerSheet("teeth", TeethHunterSheet, { types: ["hunter"], makeDefault: true });
+  Actors.registerSheet("teeth", BitdCrewSheet, { types: ["crew"], makeDefault: true });
+  Actors.registerSheet("teeth", BitdFactionSheet, { types: ["faction"], makeDefault: true });
+  Actors.registerSheet("teeth", BitdClockSheet, { types: ["clock"], makeDefault: true });
   Items.unregisterSheet("core", ItemSheet);
-  Items.registerSheet("bitd", BitdItemSheet, { makeDefault: true });
-  Items.registerSheet("bitd", BitdPlaybookSheet, { types: ["playbook", "crewType"], makeDefault: true });
+  Items.registerSheet("teeth", BitdItemSheet, { makeDefault: true });
+  Items.registerSheet("teeth", BitdPlaybookSheet, { types: ["playbook", "crewType"], makeDefault: true });
 
   registerHandlebarsHelpers();
 
