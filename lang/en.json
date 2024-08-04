@@ -38,8 +38,21 @@
     "Drives": "Drives",
     "Belives": "Belives",
     "Heritage": "Heritage",
+
+    "Hunter": "Hunter Class",
+    "ChooseClass": "Choose Hunter Class",
+    "SetClass": "Set Hunter Class",
+    "Hunters": {
+      "Bruiser": "Bruiser",
+      "Captain": "Captain",
+      "Keeper": "Keeper",
+      "Outrider": "Outrider",
+      "Sapper": "Sapper"
+    },
+
     "Background": "Background",
     "ChooseBackground": "Choose Background",
+    "SetBackground": "Set Background",
     "Backgrounds": {
       "NewMoney": "New Money",
       "OldBlood": "Old Blood",

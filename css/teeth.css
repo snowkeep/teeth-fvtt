@@ -25,6 +25,26 @@
   .set-vice-form .vice.active {
     text-shadow: 0 0 8px red; }
 
+.set-background-form {
+  margin-bottom: 5px;
+  font-size: medium;
+  font-family: "Spectral SC", serif;
+  text-align: center; }
+  .set-background-form .background {
+    display: block; }
+  .set-background-form .background.active {
+    text-shadow: 0 0 8px red; }
+
+.set-hunter-form {
+  margin-bottom: 5px;
+  font-size: medium;
+  font-family: "Spectral SC", serif;
+  text-align: center; }
+  .set-hunter-form .hunter {
+    display: block; }
+  .set-hunter-form .hunter.active {
+    text-shadow: 0 0 8px red; }
+
 .bitd-roll-dialog {
   height: auto; }
   .bitd-roll-dialog .window-content {

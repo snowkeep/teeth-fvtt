@@ -66,6 +66,23 @@ export const TEETH = {
 
   relationshipClasses: ["rival", "neutral", "friend", "special"],
 
+  hunterClasses: {
+    bruiser: "TEETH.Hunters.Bruiser",
+    captain: "TEETH.Hunters.Captain",
+    keeper: "TEETH.Hunters.Keeper",
+    outrider: "TEETH.Hunters.Outrider",
+    sapper: "TEETH.Hunters.Sapper"
+  },
+
+  backgrounds: {
+    NewMoney: "TEETH.Backgrounds.NewMoney",
+    OldBlood: "TEETH.Backgrounds.OldBlood",
+    Soldiery: "TEETH.Backgrounds.Soldiery",
+    Peasantfolk: "TEETH.Backgrounds.Peasantfolk",
+    Scholastic: "TEETH.Backgrounds.Scholastic",
+    Traveller: "TEETH.Backgrounds.Traveller"
+  },
+
   vices: {
     faith: "TEETH.Vices.Faith",
     gambling: "TEETH.Vices.Gambling",

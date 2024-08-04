@@ -84,14 +84,91 @@ export class BitdHunterSheet extends TeethActorSheet
     html.find('.add-trauma').click(this._onAddTrauma.bind(this));
     // select Vice
     html.find(".set-vice").click(this._onSetVice.bind(this));
+    // select Background
+    html.find(".set-background").click(this._onSetBackground.bind(this));
+    // select HunterClass
+    html.find(".set-hunter").click(this._onSetHunterClass.bind(this));
   }
 
   /* -------------------------------------------- */
 
   /**
+   * Handle background selection.
+   * @param {Event} the originating click event
+   * @private
+   */
+  async _onSetHunterClass(event) {
+    const myHunters = TEETH.hunterClasses;
+    const template = await renderTemplate("systems/teeth/templates/apps/hunter.hbs", {myHunters});
+
+    const dialog = new Dialog({
+      title: game.i18n.localize("TEETH.ChooseClass"),
+      content: template,
+      buttons: {
+        set: {
+          label: game.i18n.localize("TEETH.SetClass"),
+          callback: async (html) => {
+            const element = Array.from(html.find(".hunter.active"));
+            const  hunter= element.map(el => el.dataset.value);
+            await this.actor.update({ "system.hunterClass": hunter });
+          }
+        }
+      },
+      default: "set",
+      close: () =>  {},
+      render: (html) => {
+        html.find(".hunter").on("click", function() {
+          $(this).toggleClass("active");
+        });
+      }
+    },
+    {
+      width: 220
+    });
+
+    dialog.render(true);
+  }
+  /**
+   * Handle background selection.
+   * @param {Event} the originating click event
+   * @private
+   */
+  async _onSetBackground(event) {
+    const myBackgrounds  = TEETH.backgrounds;
+    const template = await renderTemplate("systems/teeth/templates/apps/background.hbs", {myBackgrounds});
+
+    const dialog = new Dialog({
+      title: game.i18n.localize("TEETH.ChooseBackground"),
+      content: template,
+      buttons: {
+        set: {
+          label: game.i18n.localize("TEETH.SetBackground"),
+          callback: async (html) => {
+            const element = Array.from(html.find(".background.active"));
+            const background = element.map(el => el.dataset.value);
+            await this.actor.update({ "system.background": background });
+          }
+        }
+      },
+      default: "set",
+      close: () =>  {},
+      render: (html) => {
+        html.find(".background").on("click", function() {
+          $(this).toggleClass("active");
+        });
+      }
+    },
+    {
+      width: 220
+    });
+
+    dialog.render(true);
+  }
+
+  /**
    * Handle vice selection.
    * @param {Event} the originating click event
-   * @prevrivate
+   * @private
    */
   async _onSetVice(event) {
     const myVices  = TEETH.vices;
@@ -123,7 +200,6 @@ export class BitdHunterSheet extends TeethActorSheet
     });
 
     dialog.render(true);
-
   }
 
 

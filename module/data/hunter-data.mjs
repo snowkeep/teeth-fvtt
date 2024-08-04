@@ -8,12 +8,10 @@ export default class HunterData extends foundry.abstract.TypeDataModel {
 
     return {
       alias: new fields.StringField(),
+      hunterClass: new fields.StringField(),
+      background: new fields.StringField(),
       vice: new fields.StringField(),
       look: new fields.StringField(),
-      belives: new fields.StringField(),
-      drives: new fields.StringField(),
-      heritage: new fields.StringField(),
-      background: new fields.StringField(),
       stress: new fields.SchemaField({
         value: new fields.NumberField({requiredPositiveInteger, initial: 0 }),
         max: new fields.NumberField({requiredPositiveInteger, initial: 9 })

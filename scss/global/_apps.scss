@@ -34,6 +34,36 @@
   }
 }
 
+.set-background-form {
+  margin-bottom: 5px;
+  font-size: medium;
+  font-family: $font-secondary;
+  text-align: center;
+
+  .background {
+    display: block;
+  }
+
+  .background.active {
+    text-shadow: $shadow;
+  }
+}
+
+.set-hunter-form {
+  margin-bottom: 5px;
+  font-size: medium;
+  font-family: $font-secondary;
+  text-align: center;
+
+  .hunter {
+    display: block;
+  }
+
+  .hunter.active {
+    text-shadow: $shadow;
+  }
+}
+
 .bitd-roll-dialog {
   height: auto;
 
