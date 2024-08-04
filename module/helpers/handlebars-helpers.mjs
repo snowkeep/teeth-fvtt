@@ -107,4 +107,8 @@ export const registerHandlebarsHelpers = function() {
 
     return localizeName;
   });
+
+  Handlebars.registerHelper("log", function(something) {
+    console.log(something);
+  });
 }

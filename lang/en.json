@@ -39,7 +39,29 @@
     "Belives": "Belives",
     "Heritage": "Heritage",
     "Background": "Background",
+    "ChooseBackground": "Choose Background",
+    "Backgrounds": {
+      "NewMoney": "New Money",
+      "OldBlood": "Old Blood",
+      "Soldiery": "Soldiery",
+      "Peasantfolk": "Peasantfolk",
+      "Scholastic": "Scholastic",
+      "Traveller": "Traveller"
+    },
+
     "Vice": "Vice",
+    "ChooseVice": "Choose Vice",
+    "SetVice": "Set Vice",
+    "Vices": {
+      "Faith": "Faith",
+      "Gambling": "Gambling",
+      "Luxury": "Luxury",
+      "Obligation": "Obligation",
+      "Pleasure": "Pleasure",
+      "Stupor": "Stupor",
+      "Weird": "Weird"
+    },
+
     "Look": "Look",
     "Contact": {
       "Plural": "Contacts",
@@ -77,6 +99,7 @@
     },
     "Coins": "Coins",
     "Stash": "Stash",
+
 
     "Attribute": "Attribute",
     "Insight": "Insight",

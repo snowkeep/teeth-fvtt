@@ -1,4 +1,5 @@
 import { TeethActorSheet } from "./actor-sheet.mjs";
+import { TEETH } from "../helpers/config.mjs";
 
 /**
  * Extend the TeethActorSheet
@@ -81,9 +82,50 @@ export class BitdHunterSheet extends TeethActorSheet
     super.activateListeners(html);
     // Add Trauma
     html.find('.add-trauma').click(this._onAddTrauma.bind(this));
+    // select Vice
+    html.find(".set-vice").click(this._onSetVice.bind(this));
   }
 
   /* -------------------------------------------- */
+
+  /**
+   * Handle vice selection.
+   * @param {Event} the originating click event
+   * @prevrivate
+   */
+  async _onSetVice(event) {
+    const myVices  = TEETH.vices;
+    const template = await renderTemplate("systems/teeth/templates/apps/vice.hbs", {myVices});
+
+    const dialog = new Dialog({
+      title: game.i18n.localize("TEETH.ChooseVice"),
+      content: template,
+      buttons: {
+        set: {
+          label: game.i18n.localize("TEETH.SetVice"),
+          callback: async (html) => {
+            const element = Array.from(html.find(".vice.active"));
+            const vice = element.map(el => el.dataset.value);
+            await this.actor.update({ "system.vice": vice });
+          }
+        }
+      },
+      default: "set",
+      close: () =>  {},
+      render: (html) => {
+        html.find(".vice").on("click", function() {
+          $(this).toggleClass("active");
+        });
+      }
+    },
+    {
+      width: 220
+    });
+
+    dialog.render(true);
+
+  }
+
 
   /**
    * Handle adding traumas.

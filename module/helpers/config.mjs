@@ -66,6 +66,16 @@ export const TEETH = {
 
   relationshipClasses: ["rival", "neutral", "friend", "special"],
 
+  vices: {
+    faith: "TEETH.Vices.Faith",
+    gambling: "TEETH.Vices.Gambling",
+    luxury: "TEETH.Vices.Luxury",
+    Obligation: "TEETH.Vices.Obligation",
+    Pleasure: "TEETH.Vices.Pleasure",
+    Stupor: "TEETH.Vices.Stupor",
+    Weird: "TEETH.Vices.Weird"
+  },
+
   rolls: {
     type: {
       action: "TEETH.Roll.Type.Action",

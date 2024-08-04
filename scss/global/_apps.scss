@@ -19,6 +19,21 @@
   }
 }
 
+.set-vice-form {
+  margin-bottom: 5px;
+  font-size: medium;
+  font-family: $font-secondary;
+  text-align: center;
+
+  .vice {
+    display: block;
+  }
+
+  .vice.active {
+    text-shadow: $shadow;
+  }
+}
+
 .bitd-roll-dialog {
   height: auto;
 
