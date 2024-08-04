@@ -1,0 +1,11 @@
+<form class="add-trauma-form">
+  {{#each currentMethods as |trauma|}}
+    <a class="trauma active" data-value={{trauma}}>{{localize trauma}}</a>
+  {{/each}}
+
+  {{#each filteredMethods as |trauma|}}
+    <a class="trauma" data-value={{trauma}}>{{localize trauma}}</a>
+  {{/each}}
+
+  <input class="trauma custom-trauma" type="text" data-dtype="String" placeholder="{{localize 'TEETH.Methods.Custom'}}"/>
+</form>

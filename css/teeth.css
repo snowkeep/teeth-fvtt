@@ -45,6 +45,26 @@
   .set-hunter-form .hunter.active {
     text-shadow: 0 0 8px red; }
 
+.add-discipline-form {
+  margin-bottom: 5px;
+  font-size: medium;
+  font-family: "Spectral SC", serif;
+  text-align: center; }
+  .add-discipline-form .discipline {
+    display: block; }
+  .add-discipline-form .discipline.active {
+    text-shadow: 0 0 8px red; }
+
+.add-method-form {
+  margin-bottom: 5px;
+  font-size: medium;
+  font-family: "Spectral SC", serif;
+  text-align: center; }
+  .add-method-form .method {
+    display: block; }
+  .add-method-form .method.active {
+    text-shadow: 0 0 8px red; }
+
 .bitd-roll-dialog {
   height: auto; }
   .bitd-roll-dialog .window-content {

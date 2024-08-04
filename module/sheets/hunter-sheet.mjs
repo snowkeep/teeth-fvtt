@@ -80,14 +80,18 @@ export class TeethHunterSheet extends TeethActorSheet
   /** @override */
   activateListeners(html) {
     super.activateListeners(html);
-    // Add Trauma
-    html.find('.add-trauma').click(this._onAddTrauma.bind(this));
     // select Vice
     html.find(".set-vice").click(this._onSetVice.bind(this));
     // select Background
     html.find(".set-background").click(this._onSetBackground.bind(this));
     // select HunterClass
     html.find(".set-hunter").click(this._onSetHunterClass.bind(this));
+    // Add Magic Discipline
+    html.find('.add-discipline').click(this._onAddDiscipline.bind(this));
+    // Add Magic Method
+    html.find('.add-method').click(this._onAddMethod.bind(this));
+    // Add Trauma
+    html.find('.add-trauma').click(this._onAddTrauma.bind(this));
   }
 
   /* -------------------------------------------- */
@@ -165,6 +169,97 @@ export class TeethHunterSheet extends TeethActorSheet
     dialog.render(true);
   }
 
+  /**
+   * Handle adding traumas.
+   * @param {Event} the originating click event
+   * @private
+   */
+  async _onAddDiscipline(event) {
+    const currentDisciplines = (this.actor.system.magicDisciplines || []).filter(Boolean);
+    const defaultDisciplines = Object.values(TEETH.disciplines);
+    const filteredDisciplines = defaultDisciplines.filter(discipline => !currentDisciplines.includes(discipline));
+
+    const template = await renderTemplate("systems/teeth/templates/apps/discipline.hbs", { currentDisciplines, filteredDisciplines });
+
+    const dialog = new Dialog({
+      title: game.i18n.localize("TEETH.ChooseDiscipline"),
+      content: template,
+      buttons: {
+        add: {
+          label: game.i18n.localize("TEETH.AddDiscipline"),
+          callback: async (html) => {
+            const elements = Array.from(html.find(".discipline.active"));
+            const newDisciplines = elements.map(el => el.dataset.value);
+
+            const customDiscipline = html.find("input.custom-discipline")[0].value;
+            if (customDiscipline) {
+              newDisciplines.push(customDiscipline);
+            }
+
+            await this.actor.update({ "system.magicDisciplines": newDisciplines });
+          }
+        }
+      },
+      default: "add",
+      close: () => {},
+      render: (html) => {
+        html.find(".discipline").on("click", function() {
+          $(this).toggleClass("active");
+        });
+      }
+    },
+    {
+      width: 220
+    });
+
+    dialog.render(true);
+  }
+
+  /**
+   * Handle adding traumas.
+   * @param {Event} the originating click event
+   * @private
+   */
+  async _onAddMethod(event) {
+    const currentMethods = (this.actor.system.magicMethods || []).filter(Boolean);
+    const defaultMethods = Object.values(TEETH.methods);
+    const filteredMethods = defaultMethods.filter(method => !currentMethods.includes(method));
+
+    const template = await renderTemplate("systems/teeth/templates/apps/method.hbs", { currentMethods, filteredMethods });
+
+    const dialog = new Dialog({
+      title: game.i18n.localize("TEETH.ChooseMethod"),
+      content: template,
+      buttons: {
+        add: {
+          label: game.i18n.localize("TEETH.AddMethod"),
+          callback: async (html) => {
+            const elements = Array.from(html.find(".method.active"));
+            const newMethods = elements.map(el => el.dataset.value);
+
+            const customMethod = html.find("input.custom-method")[0].value;
+            if (customMethod) {
+              newMethods.push(customMethod);
+            }
+
+            await this.actor.update({ "system.magicMethods": newMethods });
+          }
+        }
+      },
+      default: "add",
+      close: () => {},
+      render: (html) => {
+        html.find(".method").on("click", function() {
+          $(this).toggleClass("active");
+        });
+      }
+    },
+    {
+      width: 220
+    });
+
+    dialog.render(true);
+  }
   /**
    * Handle vice selection.
    * @param {Event} the originating click event

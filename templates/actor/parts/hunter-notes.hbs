@@ -1,6 +1,6 @@
 <div class="actor-grid notes-container">
   <div class="rules">
-    <div class="expirience">
+    <div class="experience">
       <h3 class="bitd-header">{{localize 'TEETH.Experience.Title'}}</h3>
       <p>{{localize 'TEETH.Experience.DesperateRoll'}}</p>
       <p>{{localize 'TEETH.Experience.HowItWorks'}}</p>
@@ -27,12 +27,20 @@
   <div class="description">
     <div class="brief-info">
       <div class="prop">
-        <label class="prop-label" for="system.belives">{{localize 'TEETH.Belives'}}:</label>
-        <input class="prop-input clear-input all-width" type="text" name="system.belives" value="{{system.belives}}"/>
+        <label class="prop-label" for="system.magicDisciplines"><a class="item-control add-discipline">{{localize 'TEETH.Discipline'}}</a>:</label>
+        <div class="discipline-list">
+          {{#each system.magicDisciplines}}
+            <span class="discipline">{{localize this}}</span>
+          {{/each}}
+        </div>
       </div>
       <div class="prop">
-        <label class="prop-label" for="system.drives">{{localize 'TEETH.Drives'}}:</label>
-        <input class="prop-input clear-input all-width" type="text" name="system.drives" value="{{system.drives}}"/>
+        <label class="prop-label" for="system.magicMethods"><a class="item-control add-method">{{localize 'TEETH.Method'}}</a>:</label>
+        <div class="method-list">
+          {{#each system.magicMethods}}
+            <span class="method">{{localize this}}</span>
+          {{/each}}
+        </div>
       </div>
       <div class="prop">
         <label class="prop-label" for="system.heritage">{{localize 'TEETH.Heritage'}}:</label>

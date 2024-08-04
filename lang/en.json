@@ -75,7 +75,30 @@
       "Weird": "Weird"
     },
 
-    "Look": "Look",
+    "Magic": "Magic",
+    "Discipline": "Discipline",
+    "Method": "Method",
+    "ChooseDiscipline": "Choose Magic Discipline",
+    "ChooseMethod": "Choose Magic Method",
+    "AddDiscipline": "Add Magic Discipline",
+    "AddMethod": "Add Magic Method",
+    "Disciplines": {
+      "Elementalism": "Elementalism",
+      "Mesmerism": "Mesmerism",
+      "Transmogrification": "Transmogrification",
+      "Cosmism": "Cosmism",
+      "Conjuration": "Conjuration",
+      "Custom": "Custom"
+    },
+    "Methods": {
+      "Touch": "Touch",
+      "Memento": "Memento",
+      "Device": "Device",
+      "Encircle": "Encircle",
+      "Concoction": "Concoction",
+      "Custom": "Custom"
+    },
+
     "Contact": {
       "Plural": "Contacts",
       "Types": {

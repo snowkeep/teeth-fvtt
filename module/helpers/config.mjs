@@ -93,6 +93,21 @@ export const TEETH = {
     Weird: "TEETH.Vices.Weird"
   },
 
+  disciplines: {
+    elementalism: "TEETH.Disciplines.Elementalism",
+    mesmerism: "TEETH.Disciplines.Mesmerism",
+    transmogrification: "TEETH.Disciplines.Transmogrification",
+    cosmism: "TEETH.Disciplines.Cosmism",
+    conjuration: "TEETH.Disciplines.Conjuration"
+  },
+  methods: {
+    touch: "TEETH.Methods.Touch",
+    memento: "TEETH.Methods.Memento",
+    device: "TEETH.Methods.Device",
+    encircle: "TEETH.Methods.Encircle",
+    concoction: "TEETH.Methods.Concoction"
+  },
+
   rolls: {
     type: {
       action: "TEETH.Roll.Type.Action",

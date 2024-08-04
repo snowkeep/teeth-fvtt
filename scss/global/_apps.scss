@@ -64,6 +64,36 @@
   }
 }
 
+.add-discipline-form {
+  margin-bottom: 5px;
+  font-size: medium;
+  font-family: $font-secondary;
+  text-align: center;
+
+  .discipline {
+    display: block;
+  }
+
+  .discipline.active {
+    text-shadow: $shadow;
+  }
+}
+
+.add-method-form {
+  margin-bottom: 5px;
+  font-size: medium;
+  font-family: $font-secondary;
+  text-align: center;
+
+  .method {
+    display: block;
+  }
+
+  .method.active {
+    text-shadow: $shadow;
+  }
+}
+
 .bitd-roll-dialog {
   height: auto;
 

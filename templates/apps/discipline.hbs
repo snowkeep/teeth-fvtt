@@ -1,0 +1,11 @@
+<form class="add-discipline-form">
+  {{#each currentDisciplines as |discipline|}}
+    <a class="discipline active" data-value={{discipline}}>{{localize discipline}}</a>
+  {{/each}}
+
+  {{#each filteredDisciplines as |discipline|}}
+    <a class="discipline" data-value={{discipline}}>{{localize discipline}}</a>
+  {{/each}}
+
+  <input class="discipline custom-discipline" type="text" data-dtype="String" placeholder="{{localize 'TEETH.Disciplines.Custom'}}"/>
+</form>
