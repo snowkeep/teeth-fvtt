@@ -94,18 +94,18 @@ export const TEETH = {
   },
 
   disciplines: {
-    elementalism: "TEETH.Disciplines.Elementalism",
-    mesmerism: "TEETH.Disciplines.Mesmerism",
-    transmogrification: "TEETH.Disciplines.Transmogrification",
-    cosmism: "TEETH.Disciplines.Cosmism",
-    conjuration: "TEETH.Disciplines.Conjuration"
+    elementalism: "TEETH.DisciplineList.Elementalism",
+    mesmerism: "TEETH.DisciplineList.Mesmerism",
+    transmogrification: "TEETH.DisciplineList.Transmogrification",
+    cosmism: "TEETH.DisciplineList.Cosmism",
+    conjuration: "TEETH.DisciplineList.Conjuration"
   },
   methods: {
-    touch: "TEETH.Methods.Touch",
-    memento: "TEETH.Methods.Memento",
-    device: "TEETH.Methods.Device",
-    encircle: "TEETH.Methods.Encircle",
-    concoction: "TEETH.Methods.Concoction"
+    touch: "TEETH.MethodList.Touch",
+    memento: "TEETH.MethodList.Memento",
+    device: "TEETH.MethodList.Device",
+    encircle: "TEETH.MethodList.Encircle",
+    concoction: "TEETH.MethodList.Concoction"
   },
 
   rolls: {

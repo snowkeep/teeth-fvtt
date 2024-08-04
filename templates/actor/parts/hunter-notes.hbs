@@ -26,8 +26,9 @@
   </div>
   <div class="description">
     <div class="brief-info">
+      <h3 class="bitd-header">{{localize 'TEETH.Magic'}}</h3>
       <div class="prop">
-        <label class="prop-label" for="system.magicDisciplines"><a class="item-control add-discipline">{{localize 'TEETH.Discipline'}}</a>:</label>
+        <label class="prop-label" for="system.magicDisciplines"><a class="item-control add-discipline">{{localize 'TEETH.Disciplines'}}</a>:</label>
         <div class="discipline-list">
           {{#each system.magicDisciplines}}
             <span class="discipline">{{localize this}}</span>
@@ -35,20 +36,12 @@
         </div>
       </div>
       <div class="prop">
-        <label class="prop-label" for="system.magicMethods"><a class="item-control add-method">{{localize 'TEETH.Method'}}</a>:</label>
+        <label class="prop-label" for="system.magicMethods"><a class="item-control add-method">{{localize 'TEETH.Methods'}}</a>:</label>
         <div class="method-list">
           {{#each system.magicMethods}}
             <span class="method">{{localize this}}</span>
           {{/each}}
         </div>
-      </div>
-      <div class="prop">
-        <label class="prop-label" for="system.heritage">{{localize 'TEETH.Heritage'}}:</label>
-        <input class="prop-input clear-input all-width" type="text" name="system.heritage" value="{{system.heritage}}"/>
-      </div>
-      <div class="prop">
-        <label class="prop-label" for="system.background">{{localize 'TEETH.Background'}}:</label>
-        <input class="prop-input clear-input all-width" type="text" name="system.background" value="{{system.background}}"/>
       </div>
     </div>
     <h3 class="bitd-header">{{localize 'TEETH.Notes'}}</h3>

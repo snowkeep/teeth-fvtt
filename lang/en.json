@@ -76,13 +76,13 @@
     },
 
     "Magic": "Magic",
-    "Discipline": "Discipline",
-    "Method": "Method",
+    "Disciplines": "Disciplines",
+    "Methods": "Methods",
     "ChooseDiscipline": "Choose Magic Discipline",
     "ChooseMethod": "Choose Magic Method",
     "AddDiscipline": "Add Magic Discipline",
     "AddMethod": "Add Magic Method",
-    "Disciplines": {
+    "DisciplineList": {
       "Elementalism": "Elementalism",
       "Mesmerism": "Mesmerism",
       "Transmogrification": "Transmogrification",
@@ -90,7 +90,7 @@
       "Conjuration": "Conjuration",
       "Custom": "Custom"
     },
-    "Methods": {
+    "MethodList": {
       "Touch": "Touch",
       "Memento": "Memento",
       "Device": "Device",
