@@ -1,0 +1,22 @@
+{
+  "name": "Captain",
+  "sorting": "a",
+  "folder": null,
+  "type": "Actor",
+  "_id": "9OqTY0g4gMPxBdHO",
+  "description": "",
+  "sort": 0,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.330",
+    "systemId": "bitd",
+    "systemVersion": "0.3",
+    "createdTime": 1720035443534,
+    "modifiedTime": 1722816131351,
+    "lastModifiedBy": "78NHFd7NStjLGK2G"
+  },
+  "_key": "!folders!9OqTY0g4gMPxBdHO"
+}

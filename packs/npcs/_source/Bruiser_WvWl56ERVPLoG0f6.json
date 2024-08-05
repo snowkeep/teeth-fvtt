@@ -1,0 +1,22 @@
+{
+  "name": "Bruiser",
+  "sorting": "a",
+  "folder": null,
+  "type": "Actor",
+  "_id": "WvWl56ERVPLoG0f6",
+  "description": "",
+  "sort": 0,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.330",
+    "systemId": "bitd",
+    "systemVersion": "0.4",
+    "createdTime": 1721137799026,
+    "modifiedTime": 1722815913675,
+    "lastModifiedBy": "78NHFd7NStjLGK2G"
+  },
+  "_key": "!folders!WvWl56ERVPLoG0f6"
+}

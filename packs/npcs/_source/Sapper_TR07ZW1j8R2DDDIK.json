@@ -1,0 +1,22 @@
+{
+  "name": "Sapper",
+  "sorting": "a",
+  "folder": null,
+  "type": "Actor",
+  "_id": "TR07ZW1j8R2DDDIK",
+  "description": "",
+  "sort": 0,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.330",
+    "systemId": "bitd",
+    "systemVersion": "0.4",
+    "createdTime": 1721138209140,
+    "modifiedTime": 1722816828744,
+    "lastModifiedBy": "78NHFd7NStjLGK2G"
+  },
+  "_key": "!folders!TR07ZW1j8R2DDDIK"
+}

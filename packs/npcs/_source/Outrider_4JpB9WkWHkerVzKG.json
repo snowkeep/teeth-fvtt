@@ -1,0 +1,22 @@
+{
+  "name": "Outrider",
+  "sorting": "a",
+  "folder": null,
+  "type": "Actor",
+  "_id": "4JpB9WkWHkerVzKG",
+  "description": "",
+  "sort": 0,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.330",
+    "systemId": "bitd",
+    "systemVersion": "0.3",
+    "createdTime": 1720035744722,
+    "modifiedTime": 1722816584279,
+    "lastModifiedBy": "78NHFd7NStjLGK2G"
+  },
+  "_key": "!folders!4JpB9WkWHkerVzKG"
+}

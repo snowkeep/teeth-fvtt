@@ -55,7 +55,14 @@
     </div>
 
     <div class="contacts items-block">
-      <h3 class="item-header teeth-header contacts-title">{{localize 'TEETH.Contact.Plural'}}</h3>
+      <div class="contacts-flex">
+        <div class="flex-item">
+          <h3 class="item-header teeth-header contacts-title">{{localize 'TEETH.Contact.Plural'}}</h3>
+        </div>
+        <div class="flex-item">
+          <h3 class="item-header teeth-header contacts-title"><a class="import-acquaintances" data-tooltip="{{localize 'TEETH.Contact.Import'}}"><i class="fa-solid fa-file-import"></i></a></h3>
+        </div>
+      </div>
       {{> "systems/teeth/templates/actor/parts/contacts.hbs"}}
     </div>
     {{> "systems/teeth/templates/actor/parts/harm.hbs"}}

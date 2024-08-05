@@ -100,7 +100,8 @@
     },
 
     "Contact": {
-      "Plural": "Contacts",
+      "Plural": "Dangerous Acquaintances",
+      "Import": "Import Playbook Acquaintances",
       "Types": {
         "Friend": "Friend",
         "Rival": "Rival",

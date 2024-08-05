@@ -661,6 +661,11 @@ select.clear-select {
     align-self: start; }
     .teeth.actor .hunter .sheet-header .contacts .contacts-title {
       margin-bottom: 3px; }
+    .teeth.actor .hunter .sheet-header .contacts .contacts-flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      background-color: #999; }
   .teeth.actor .hunter .sheet-header .harm {
     position: relative; }
     .teeth.actor .hunter .sheet-header .harm .healing {
