@@ -100,7 +100,8 @@
     },
 
     "Contact": {
-      "Plural": "Dangerous Acquaintances",
+      "Plural": "Acquaintances",
+      "Tooltip": "Dangerous Acquaintances",
       "Import": "Import Playbook Acquaintances",
       "Types": {
         "Friend": "Friend",
@@ -115,6 +116,7 @@
     "Trauma": "Trauma",
     "ChooseTrauma": "Choose Trauma",
     "AddTrauma": "Add Trauma",
+    "AddBehaviour": "Add Erratic Behaviour",
     "Traumas": {
       "Cold": "Cold",
       "Haunted": "Haunted",

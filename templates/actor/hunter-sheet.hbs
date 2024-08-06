@@ -37,15 +37,15 @@
 
       <div class="brief-info">
         <div class="prop">
-          <label class="prop-label" for="system.hunter"><a class="item-control set-hunter">{{localize 'TEETH.Hunter'}}</a>:</label>
+          <label class="prop-label" for="system.hunter"><a class="item-control set-hunter" data-tooltip="{{localize 'TEETH.SetClass'}}">{{localize 'TEETH.Hunter'}}</a>:</label>
           <input class="prop-input clear-input" type="text" name="system.hunterClass" value="{{localize system.hunterClass}}" placeholder="{{localize 'TEETH.Hunter'}}"/>
         </div>
         <div class="prop">
-          <label class="prop-label" for="system.background"><a class="item-control set-background">{{localize 'TEETH.Background'}}</a>:</label>
+          <label class="prop-label" for="system.background"><a class="item-control set-background" data-tooltip="{{localize 'TEETH.SetBackground'}}">{{localize 'TEETH.Background'}}</a>:</label>
           <input class="prop-input clear-input" type="text" name="system.background" value="{{localize system.background}}" placeholder="{{localize 'TEETH.Background'}}"/>
         </div>
         <div class="prop">
-          <label class="prop-label" for="system.vice"><a class="item-control set-vice">{{localize 'TEETH.Vice'}}</a>:</label>
+          <label class="prop-label" for="system.vice"><a class="item-control set-vice" data-tooltip="{{localize 'TEETH.SetVice'}}">{{localize 'TEETH.Vice'}}</a>:</label>
           <input class="prop-input clear-input" type="text" name="system.vice" value="{{localize system.vice}}" placeholder="{{localize 'TEETH.Vice'}}"/>
         </div>
       </div>
@@ -57,7 +57,7 @@
     <div class="contacts items-block">
       <div class="contacts-flex">
         <div class="flex-item">
-          <h3 class="item-header teeth-header contacts-title">{{localize 'TEETH.Contact.Plural'}}</h3>
+          <h3 class="item-header teeth-header contacts-title" data.tooltip="{{localize 'TEETH.Contact.Tooltip'}}">{{localize 'TEETH.Contact.Plural'}}</h3>
         </div>
         <div class="flex-item">
           <h3 class="item-header teeth-header contacts-title"><a class="import-acquaintances" data-tooltip="{{localize 'TEETH.Contact.Import'}}"><i class="fa-solid fa-file-import"></i></a></h3>
@@ -90,7 +90,7 @@
         <div class="spec-inventory items-block">
           <div class="item-header teeth-header">
             <h3>{{localize 'TEETH.InventorySpecial'}}</h3>
-            <a class="item-create" title="{{localize 'TEETH.Item.Add'}}" data-type="tool"><i class="fas fa-plus"></i></a>
+            <a class="item-create" title="{{localize 'TEETH.Item.Add'}}" data-type="tool" data-tooltip="{{localize 'TEETH.AddBehaviour'}}"><i class="fas fa-plus"></i></a>
           </div>
           <ol class="items-list">
             {{#each specInventory as |item id|}}

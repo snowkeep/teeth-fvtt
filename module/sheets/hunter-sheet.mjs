@@ -90,6 +90,8 @@ export class TeethHunterSheet extends TeethActorSheet
     html.find('.add-discipline').click(this._onAddDiscipline.bind(this));
     // Add Magic Method
     html.find('.add-method').click(this._onAddMethod.bind(this));
+    // Import Dangerous Acquaintances
+    html.find('.import-acquaintances').click(this._onImportAcquaintances.bind(this));
     // Add Trauma
     html.find('.add-trauma').click(this._onAddTrauma.bind(this));
   }
@@ -260,6 +262,7 @@ export class TeethHunterSheet extends TeethActorSheet
 
     dialog.render(true);
   }
+
   /**
    * Handle vice selection.
    * @param {Event} the originating click event
@@ -297,6 +300,21 @@ export class TeethHunterSheet extends TeethActorSheet
     dialog.render(true);
   }
 
+  /**
+   * Handled importing acquaintances for playbook from NPCs pack
+   * @param {Event} the originating click event
+   * @private
+   */
+  async _onImportAcquaintances(event) {
+    const hunterClass = this.actor.system.hunterClass.split(".").at(-1)
+
+    const npcPack = game.packs.get('teeth.npcs');
+    await npcPack.getIndex()
+    const npcFolder = npcPack.folders.find(p => p.name === hunterClass)._id;
+    const classNpcs = npcPack.index.filter(p => p.folder === npcFolder);
+
+    await this.actor.update({ "system.contacts" : classNpcs });
+  }
 
   /**
    * Handle adding traumas.
