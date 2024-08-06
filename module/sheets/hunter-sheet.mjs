@@ -92,6 +92,8 @@ export class TeethHunterSheet extends TeethActorSheet
     html.find('.add-method').click(this._onAddMethod.bind(this));
     // Import Dangerous Acquaintances
     html.find('.import-acquaintances').click(this._onImportAcquaintances.bind(this));
+    // remove a Dangerous Acquaintance
+    html.find('.remove-acquaintance').click(this._onRemoveAcquaintance.bind(this));
     // Add Trauma
     html.find('.add-trauma').click(this._onAddTrauma.bind(this));
   }
@@ -314,6 +316,19 @@ export class TeethHunterSheet extends TeethActorSheet
     const classNpcs = npcPack.index.filter(p => p.folder === npcFolder);
 
     await this.actor.update({ "system.contacts" : classNpcs });
+  }
+
+  /**
+   * Handled removing an acquaintance
+   * @param {Event} the originating click event
+   * @private
+   */
+  async _onRemoveAcquaintance(event) {
+    const rmUuid = $(event.currentTarget).data("uuid");
+    const currentAcqs = this.actor.system.contacts;
+    const newAcqs = currentAcqs.filter(acq => acq.uuid != rmUuid);
+
+    await this.actor.update({ "system.contacts" : newAcqs });
   }
 
   /**
