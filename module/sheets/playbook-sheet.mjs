@@ -1,10 +1,10 @@
-import { BitdItemSheet } from "./item-sheet.mjs";
+import { TeethItemSheet } from "./item-sheet.mjs";
 
 /**
- * Extend the basic BitdItemSheet
- * @extends {BitdItemSheet}
+ * Extend the basic TeethItemSheet
+ * @extends {TeethItemSheet}
  */
-export class BitdPlaybookSheet extends BitdItemSheet {
+export class BitdPlaybookSheet extends TeethItemSheet {
 
   /** @override */
   static get defaultOptions() {

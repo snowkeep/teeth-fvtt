@@ -1,2 +1,2 @@
 export {default as TeethActor} from "./actor.mjs";
-export {default as BitdItem} from "./item.mjs";
+export {default as TeethItem} from "./item.mjs";

@@ -1,5 +1,5 @@
 import * as models from './data/_module.mjs';
-import { TeethActor, BitdItem } from "./documents/_module.mjs";
+import { TeethActor, TeethItem } from "./documents/_module.mjs";
 
 // Import Actor Sheet
 import { TeethActorSheet } from "./sheets/actor-sheet.mjs";
@@ -9,7 +9,7 @@ import { BitdFactionSheet } from "./sheets/faction-sheet.mjs";
 import { BitdClockSheet } from "./sheets/clock-sheet.mjs";
 
 // Import Item Sheet
-import { BitdItemSheet } from "./sheets/item-sheet.mjs";
+import { TeethItemSheet } from "./sheets/item-sheet.mjs";
 import { BitdPlaybookSheet } from "./sheets/playbook-sheet.mjs";
 
 // Import modules
@@ -23,7 +23,7 @@ Hooks.once('init', async function() {
 
   game.teeth = {
     TeethActor,
-    BitdItem
+    TeethItem
   };
 
   CONFIG.TEETH = TEETH;
@@ -38,7 +38,7 @@ Hooks.once('init', async function() {
     'clock': models.ClockData
   };
 
-  CONFIG.Item.documentClass = BitdItem;
+  CONFIG.Item.documentClass = TeethItem;
   CONFIG.Item.dataModels = {
     'playbook': models.PlaybookData,
     'crewType': models.CrewTypeData,
@@ -59,7 +59,7 @@ Hooks.once('init', async function() {
   Actors.registerSheet("teeth", BitdFactionSheet, { types: ["faction"], makeDefault: true });
   Actors.registerSheet("teeth", BitdClockSheet, { types: ["clock"], makeDefault: true });
   Items.unregisterSheet("core", ItemSheet);
-  Items.registerSheet("teeth", BitdItemSheet, { makeDefault: true });
+  Items.registerSheet("teeth", TeethItemSheet, { makeDefault: true });
   Items.registerSheet("teeth", BitdPlaybookSheet, { types: ["playbook", "crewType"], makeDefault: true });
 
   registerHandlebarsHelpers();

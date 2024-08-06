@@ -3,7 +3,7 @@
  * Extend the basic Item with some very simple modifications.
  * @extends {Item}
  */
-export default class BitdItem extends Item {
+export default class TeethItem extends Item {
   prepareData() {
     super.prepareData();
   }

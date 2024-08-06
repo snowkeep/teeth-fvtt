@@ -1,4 +1,4 @@
-import { TeethActor, BitdItem } from "../documents/_module.mjs";
+import { TeethActor, TeethItem } from "../documents/_module.mjs";
 
 export default class FactionData extends foundry.abstract.TypeDataModel {
   static defineSchema() {

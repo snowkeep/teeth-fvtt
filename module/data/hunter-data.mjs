@@ -1,4 +1,4 @@
-import { TeethActor, BitdItem } from "../documents/_module.mjs";
+import { TeethActor, TeethItem } from "../documents/_module.mjs";
 
 export default class HunterData extends foundry.abstract.TypeDataModel {
   static defineSchema() {
@@ -122,7 +122,7 @@ export default class HunterData extends foundry.abstract.TypeDataModel {
         })
       }),
 
-      playbook: new fields.ForeignDocumentField(BitdItem, {idOnly: true}),
+      playbook: new fields.ForeignDocumentField(TeethItem, {idOnly: true}),
       contacts: new fields.ArrayField(new fields.SchemaField({
         id: new fields.ForeignDocumentField(TeethActor, {idOnly: true}),
         uuid: new fields.StringField(),

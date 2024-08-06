@@ -2,7 +2,7 @@
  * Extend the basic ItemSheet with some very simple modifications
  * @extends {ItemSheet}
  */
-export class BitdItemSheet extends ItemSheet {
+export class TeethItemSheet extends ItemSheet {
 
   /** @override */
   static get defaultOptions() {
