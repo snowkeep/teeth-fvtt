@@ -2,7 +2,7 @@
  * Extend the basic ActorSheet with some very simple modifications
  * @extends {ActorSheet}
  */
-export class BitdClockSheet extends ActorSheet
+export class TeethClockSheet extends ActorSheet
 {
 
   /** @override */

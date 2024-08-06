@@ -4,7 +4,7 @@ import { TeethItemSheet } from "./item-sheet.mjs";
  * Extend the basic TeethItemSheet
  * @extends {TeethItemSheet}
  */
-export class BitdPlaybookSheet extends TeethItemSheet {
+export class TeethPlaybookSheet extends TeethItemSheet {
 
   /** @override */
   static get defaultOptions() {

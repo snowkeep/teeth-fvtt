@@ -6,11 +6,11 @@ import { TeethActorSheet } from "./sheets/actor-sheet.mjs";
 import { TeethHunterSheet } from "./sheets/hunter-sheet.mjs";
 import { BitdCrewSheet } from "./sheets/crew-sheet.mjs";
 import { BitdFactionSheet } from "./sheets/faction-sheet.mjs";
-import { BitdClockSheet } from "./sheets/clock-sheet.mjs";
+import { TeethClockSheet } from "./sheets/clock-sheet.mjs";
 
 // Import Item Sheet
 import { TeethItemSheet } from "./sheets/item-sheet.mjs";
-import { BitdPlaybookSheet } from "./sheets/playbook-sheet.mjs";
+import { TeethPlaybookSheet } from "./sheets/playbook-sheet.mjs";
 
 // Import modules
 import { preprocessChatMessage, renderChatMessage } from "./applications/chat-portraits.mjs";
@@ -57,10 +57,10 @@ Hooks.once('init', async function() {
   Actors.registerSheet("teeth", TeethHunterSheet, { types: ["hunter"], makeDefault: true });
   Actors.registerSheet("teeth", BitdCrewSheet, { types: ["crew"], makeDefault: true });
   Actors.registerSheet("teeth", BitdFactionSheet, { types: ["faction"], makeDefault: true });
-  Actors.registerSheet("teeth", BitdClockSheet, { types: ["clock"], makeDefault: true });
+  Actors.registerSheet("teeth", TeethClockSheet, { types: ["clock"], makeDefault: true });
   Items.unregisterSheet("core", ItemSheet);
   Items.registerSheet("teeth", TeethItemSheet, { makeDefault: true });
-  Items.registerSheet("teeth", BitdPlaybookSheet, { types: ["playbook", "crewType"], makeDefault: true });
+  Items.registerSheet("teeth", TeethPlaybookSheet, { types: ["playbook", "crewType"], makeDefault: true });
 
   registerHandlebarsHelpers();
 
