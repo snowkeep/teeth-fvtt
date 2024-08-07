@@ -137,6 +137,29 @@
         }
       }
 
+      .corruption-mutation {
+        display: flex;
+        align-items: flex-start;
+        margin-top: $padding-sm;
+        border-top: $border-hard;
+        font-size: medium;
+
+        .corruption {
+          display: flex;
+
+          .add-trauma {
+            margin: 0 3px;
+          }
+
+          .corruption-title {
+            &:hover,
+            &:focus {
+              color: white;
+            }
+          }
+        }
+      }
+
       .value-step-block {
         min-width: fit-content;
       }
@@ -144,7 +167,12 @@
       .trauma-list {
         padding-left: 3px;
       }
+
+      .mutation-list {
+        padding-left: 3px;
+      }
     }
+
 
     .contacts {
       align-self: start;

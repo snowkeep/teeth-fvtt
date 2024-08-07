@@ -112,6 +112,10 @@
       }
     },
 
+    "Corruption": "Corruption",
+    "Mutation": "Mutation",
+    "RollMutation": "Roll for Mutation",
+
     "Stress": "Stress",
     "Trauma": "Trauma",
     "ChooseTrauma": "Choose Trauma",
@@ -221,6 +225,7 @@
       "IsActive": "Active"
     },
 
+    "AddItem": "Add special item",
     "Inventory": "Items",
     "InventorySpecial": "Special Items",
     "Tool": {

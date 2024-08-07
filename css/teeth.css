@@ -653,9 +653,23 @@ select.clear-select {
           margin: 0 3px; }
         .teeth.actor .hunter .sheet-header .header-fields .stress-trauma .stress .stress-title:hover, .teeth.actor .hunter .sheet-header .header-fields .stress-trauma .stress .stress-title:focus {
           color: white; }
+    .teeth.actor .hunter .sheet-header .header-fields .corruption-mutation {
+      display: flex;
+      align-items: flex-start;
+      margin-top: 5px;
+      border-top: 2px solid black;
+      font-size: medium; }
+      .teeth.actor .hunter .sheet-header .header-fields .corruption-mutation .corruption {
+        display: flex; }
+        .teeth.actor .hunter .sheet-header .header-fields .corruption-mutation .corruption .add-trauma {
+          margin: 0 3px; }
+        .teeth.actor .hunter .sheet-header .header-fields .corruption-mutation .corruption .corruption-title:hover, .teeth.actor .hunter .sheet-header .header-fields .corruption-mutation .corruption .corruption-title:focus {
+          color: white; }
     .teeth.actor .hunter .sheet-header .header-fields .value-step-block {
       min-width: fit-content; }
     .teeth.actor .hunter .sheet-header .header-fields .trauma-list {
+      padding-left: 3px; }
+    .teeth.actor .hunter .sheet-header .header-fields .mutation-list {
       padding-left: 3px; }
   .teeth.actor .hunter .sheet-header .contacts {
     align-self: start; }

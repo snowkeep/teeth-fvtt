@@ -18,6 +18,11 @@ export default class HunterData extends foundry.abstract.TypeDataModel {
         max: new fields.NumberField({requiredPositiveInteger, initial: 9 })
       }),
       trauma: new fields.ArrayField(new fields.StringField()),
+      corruption: new fields.SchemaField({
+        value: new fields.NumberField({requiredPositiveInteger, initial: 0 }),
+        max: new fields.NumberField({requiredPositiveInteger, initial: 16 })
+      }),
+      mutations: new fields.ArrayField(new fields.StringField()),
       coins: new fields.SchemaField({
         value: new fields.NumberField({requiredPositiveInteger, initial: 0 }),
         max: new fields.NumberField({requiredPositiveInteger, initial: 4 })

@@ -140,6 +140,17 @@
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
       }
+    },
+    {
+      "label": "Teeth Tables",
+      "type": "RollTable",
+      "name": "teeth-tables",
+      "path": "packs/teeth-tables",
+      "system": "teeth",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
     }
   ],
   "packFolders": [],

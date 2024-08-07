@@ -1,0 +1,18 @@
+<div class="corruption-mutation">
+  <div class="corruption teeth-header">
+    <a class="item-control add-mutation" data-tooltip="{{localize 'TEETH.RollMutation'}}"><i class="fa-solid fa-plus"></i></a>
+    <h3 class="corruption-title">{{localize 'TEETH.Corruption'}}</h3>
+  </div>
+
+  <div class="value-step-block" data-value="{{system.corruption.value}}" data-key="system.corruption.value">
+    {{#numLoop system.corruption.max}}
+      <span class="value-step value-tooth red-tooth" data-index="{{this}}"></span>
+    {{/numLoop}}
+  </div>
+
+  <div class="mutation-list">
+    {{#each system.mutation}}
+      <span class="mutation">{{localize this}}</span>
+    {{/each}}
+  </div>
+</div>
