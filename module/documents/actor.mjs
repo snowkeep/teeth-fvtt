@@ -28,26 +28,17 @@ export default class TeethActor extends Actor {
     this.prototypeToken.actorLink = true;
 
     // Load default items
-    const defaultItemsID = CONFIG.TEETH.defaultItems;
-    const defaultItems = [];
-
-    if (this.type == "hunter") {
-      for (const id of defaultItemsID.hunter) {
-        const uuid = "Compendium.bitd.items.Item." + id;
-        const item = await fromUuid(uuid);
-        defaultItems.push(item);
-      }
-    } else if (this.type == "crew") {
-      for (const id of defaultItemsID.crew) {
-        const uuid = "Compendium.bitd.upgrades.Item." + id;
-        const item = await fromUuid(uuid);
-        defaultItems.push(item);
-      }
-    }
+    const itemPack = game.packs.get('teeth.items');
+    await itemPack.getIndex();
+    const defaultFolder = itemPack.folders.find(p => p.name === "Default")._id;
+    const defaultItems = itemPack.index.filter(p => p.folder === defaultFolder);
 
     for (const [ownerId, permissions] of Object.entries(this.ownership)) {
       if (permissions === 3 && game.userId === ownerId) {
-        this.createEmbeddedDocuments('Item', defaultItems)
+        for (const item of defaultItems) {
+          const addItem = await itemPack.getDocument(item._id);
+          this.createEmbeddedDocuments('Item', [addItem]);
+        }
       }
     }
   }
