@@ -1,0 +1,32 @@
+{
+  "name": "Heavy Leathers (armour)",
+  "type": "tool",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "type": "common",
+    "loadout": 2,
+    "equipped": false,
+    "broken": false,
+    "description": ""
+  },
+  "effects": [],
+  "folder": "j6PcS1oBoB5PNV9v",
+  "ownership": {
+    "default": 0,
+    "hzjhFMblPzYeVvdR": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.330",
+    "systemId": "teeth",
+    "systemVersion": "0.1",
+    "createdTime": 1721139547717,
+    "modifiedTime": 1722982939240,
+    "lastModifiedBy": "78NHFd7NStjLGK2G"
+  },
+  "_id": "gqeIGtv61FdaPNOU",
+  "sort": -100000,
+  "_key": "!items!gqeIGtv61FdaPNOU"
+}

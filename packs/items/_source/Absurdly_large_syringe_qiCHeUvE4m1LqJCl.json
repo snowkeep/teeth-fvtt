@@ -1,0 +1,32 @@
+{
+  "folder": "NcgbA8U9Rw40owzs",
+  "name": "Absurdly large syringe",
+  "type": "tool",
+  "_id": "qiCHeUvE4m1LqJCl",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "type": "common",
+    "loadout": 1,
+    "equipped": false,
+    "broken": false,
+    "description": ""
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "78NHFd7NStjLGK2G": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.330",
+    "systemId": "teeth",
+    "systemVersion": "0.1",
+    "createdTime": 1722987020569,
+    "modifiedTime": 1722989205598,
+    "lastModifiedBy": "78NHFd7NStjLGK2G"
+  },
+  "_key": "!items!qiCHeUvE4m1LqJCl"
+}

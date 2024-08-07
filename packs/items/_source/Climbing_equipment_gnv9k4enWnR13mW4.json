@@ -1,0 +1,33 @@
+{
+  "folder": "AzTyk3TIlIdvteXi",
+  "name": "Climbing equipment",
+  "type": "tool",
+  "_id": "gnv9k4enWnR13mW4",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "type": "common",
+    "loadout": 1,
+    "equipped": false,
+    "broken": false,
+    "description": "<p data-block-id=\"Oqh8xgdQ\" data-spacing=\"double\" data-pm-slice=\"1 1 []\">A large coil of rope. A small coil of rope. Grappling hooks. A small pouch of chalk dust. A climbing harness with loops and metal rings. A set of iron pitons and a small mallet.</p>",
+    "used": false
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "W4k8v0qPm2DYyec3": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "teeth",
+    "systemVersion": "0.1",
+    "coreVersion": "12.330",
+    "createdTime": 1714570865465,
+    "modifiedTime": 1722982632610,
+    "lastModifiedBy": "78NHFd7NStjLGK2G",
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "_key": "!items!gnv9k4enWnR13mW4"
+}

@@ -1,0 +1,22 @@
+{
+  "name": "Bruiser",
+  "sorting": "a",
+  "folder": null,
+  "type": "Item",
+  "_id": "j6PcS1oBoB5PNV9v",
+  "description": "",
+  "sort": 0,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.330",
+    "systemId": "bitd",
+    "systemVersion": "0.4",
+    "createdTime": 1721137446482,
+    "modifiedTime": 1722982298299,
+    "lastModifiedBy": "78NHFd7NStjLGK2G"
+  },
+  "_key": "!folders!j6PcS1oBoB5PNV9v"
+}

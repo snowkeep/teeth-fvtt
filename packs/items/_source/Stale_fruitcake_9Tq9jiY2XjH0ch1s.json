@@ -1,0 +1,32 @@
+{
+  "folder": "vcxdzkdMhc0XJwXl",
+  "name": "Stale fruitcake",
+  "type": "tool",
+  "_id": "9Tq9jiY2XjH0ch1s",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "type": "common",
+    "loadout": 1,
+    "equipped": false,
+    "broken": false,
+    "description": ""
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "78NHFd7NStjLGK2G": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.330",
+    "systemId": "teeth",
+    "systemVersion": "0.1",
+    "createdTime": 1722986460067,
+    "modifiedTime": 1722986461774,
+    "lastModifiedBy": "78NHFd7NStjLGK2G"
+  },
+  "_key": "!items!9Tq9jiY2XjH0ch1s"
+}

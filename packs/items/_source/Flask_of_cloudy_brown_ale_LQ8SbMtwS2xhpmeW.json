@@ -1,0 +1,32 @@
+{
+  "folder": "vcxdzkdMhc0XJwXl",
+  "name": "Flask of cloudy brown ale",
+  "type": "tool",
+  "_id": "LQ8SbMtwS2xhpmeW",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "type": "common",
+    "loadout": 1,
+    "equipped": false,
+    "broken": false,
+    "description": "<p>Gortree’s Black Tooth Ale - A pint of the black is favoured by the labouring classes. So high in iron you won’t shit for a full week.</p>"
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "78NHFd7NStjLGK2G": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.330",
+    "systemId": "teeth",
+    "systemVersion": "0.1",
+    "createdTime": 1722986493210,
+    "modifiedTime": 1722986548475,
+    "lastModifiedBy": "78NHFd7NStjLGK2G"
+  },
+  "_key": "!items!LQ8SbMtwS2xhpmeW"
+}

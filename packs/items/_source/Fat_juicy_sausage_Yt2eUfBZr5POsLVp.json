@@ -1,0 +1,34 @@
+{
+  "folder": "j6PcS1oBoB5PNV9v",
+  "name": "Fat juicy sausage",
+  "type": "tool",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "type": "common",
+    "loadout": 1,
+    "equipped": false,
+    "broken": false,
+    "description": ""
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0,
+    "bW1YGBs3gkfq5X1D": 3
+  },
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "teeth",
+    "systemVersion": "0.1",
+    "coreVersion": "12.330",
+    "createdTime": 1716402652856,
+    "modifiedTime": 1722983200163,
+    "lastModifiedBy": "78NHFd7NStjLGK2G",
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "_id": "Yt2eUfBZr5POsLVp",
+  "sort": 550000,
+  "_key": "!items!Yt2eUfBZr5POsLVp"
+}

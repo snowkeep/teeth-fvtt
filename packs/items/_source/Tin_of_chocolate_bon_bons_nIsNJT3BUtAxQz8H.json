@@ -1,0 +1,32 @@
+{
+  "folder": "zDzNvinFP0vf66jw",
+  "name": "Tin of chocolate bon-bons",
+  "type": "tool",
+  "_id": "nIsNJT3BUtAxQz8H",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "type": "common",
+    "loadout": 1,
+    "equipped": false,
+    "broken": false,
+    "description": ""
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "78NHFd7NStjLGK2G": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.330",
+    "systemId": "teeth",
+    "systemVersion": "0.1",
+    "createdTime": 1722985265842,
+    "modifiedTime": 1722985268356,
+    "lastModifiedBy": "78NHFd7NStjLGK2G"
+  },
+  "_key": "!items!nIsNJT3BUtAxQz8H"
+}

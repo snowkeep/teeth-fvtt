@@ -1,0 +1,22 @@
+{
+  "name": "Sapper",
+  "sorting": "a",
+  "folder": null,
+  "type": "Item",
+  "_id": "NcgbA8U9Rw40owzs",
+  "description": "",
+  "sort": 0,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.330",
+    "systemId": "bitd",
+    "systemVersion": "0.4",
+    "createdTime": 1721138925499,
+    "modifiedTime": 1722982356061,
+    "lastModifiedBy": "78NHFd7NStjLGK2G"
+  },
+  "_key": "!folders!NcgbA8U9Rw40owzs"
+}

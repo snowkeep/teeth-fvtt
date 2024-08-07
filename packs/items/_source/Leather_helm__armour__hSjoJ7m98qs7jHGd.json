@@ -1,0 +1,32 @@
+{
+  "folder": "vcxdzkdMhc0XJwXl",
+  "name": "Leather helm (armour)",
+  "type": "tool",
+  "_id": "hSjoJ7m98qs7jHGd",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "type": "common",
+    "loadout": 1,
+    "equipped": false,
+    "broken": false,
+    "description": ""
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "78NHFd7NStjLGK2G": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.330",
+    "systemId": "teeth",
+    "systemVersion": "0.1",
+    "createdTime": 1722986191631,
+    "modifiedTime": 1722986199801,
+    "lastModifiedBy": "78NHFd7NStjLGK2G"
+  },
+  "_key": "!items!hSjoJ7m98qs7jHGd"
+}

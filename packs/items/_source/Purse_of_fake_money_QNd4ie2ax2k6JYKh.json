@@ -1,0 +1,32 @@
+{
+  "folder": "zDzNvinFP0vf66jw",
+  "name": "Purse of fake money",
+  "type": "tool",
+  "_id": "QNd4ie2ax2k6JYKh",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "type": "common",
+    "loadout": 1,
+    "equipped": false,
+    "broken": false,
+    "description": ""
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "78NHFd7NStjLGK2G": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.330",
+    "systemId": "teeth",
+    "systemVersion": "0.1",
+    "createdTime": 1722985385240,
+    "modifiedTime": 1722989061514,
+    "lastModifiedBy": "78NHFd7NStjLGK2G"
+  },
+  "_key": "!items!QNd4ie2ax2k6JYKh"
+}

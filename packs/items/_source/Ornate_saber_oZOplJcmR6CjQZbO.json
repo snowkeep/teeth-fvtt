@@ -1,0 +1,33 @@
+{
+  "folder": "zDzNvinFP0vf66jw",
+  "name": "Ornate saber",
+  "type": "tool",
+  "_id": "oZOplJcmR6CjQZbO",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "type": "common",
+    "loadout": 2,
+    "equipped": false,
+    "broken": false,
+    "description": "",
+    "used": false
+  },
+  "effects": [],
+  "sort": 350000,
+  "ownership": {
+    "default": 0,
+    "W4k8v0qPm2DYyec3": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "teeth",
+    "systemVersion": "0.1",
+    "coreVersion": "12.330",
+    "createdTime": 1714570955554,
+    "modifiedTime": 1722989038641,
+    "lastModifiedBy": "78NHFd7NStjLGK2G",
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "_key": "!items!oZOplJcmR6CjQZbO"
+}

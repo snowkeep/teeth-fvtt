@@ -1,0 +1,22 @@
+{
+  "name": "Keeper",
+  "sorting": "a",
+  "folder": null,
+  "type": "Item",
+  "_id": "hq0JkxJrdViPPT7i",
+  "sort": 0,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "systemId": "bitd",
+    "systemVersion": "0.2",
+    "coreVersion": "12.330",
+    "createdTime": 1718348176416,
+    "modifiedTime": 1722982328613,
+    "lastModifiedBy": "78NHFd7NStjLGK2G",
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "description": "",
+  "_key": "!folders!hq0JkxJrdViPPT7i"
+}

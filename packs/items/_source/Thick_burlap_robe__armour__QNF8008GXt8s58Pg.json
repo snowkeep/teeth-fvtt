@@ -1,0 +1,35 @@
+{
+  "name": "Thick burlap robe (armour)",
+  "type": "tool",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "type": "common",
+    "loadout": 1,
+    "equipped": false,
+    "broken": false,
+    "description": ""
+  },
+  "effects": [],
+  "folder": "hq0JkxJrdViPPT7i",
+  "ownership": {
+    "default": 0,
+    "Ju8yezmBg1vWHw54": 3,
+    "bW1YGBs3gkfq5X1D": 3
+  },
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "teeth",
+    "systemVersion": "0.1",
+    "coreVersion": "12.330",
+    "createdTime": 1718291751841,
+    "modifiedTime": 1722985517558,
+    "lastModifiedBy": "78NHFd7NStjLGK2G",
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "_id": "QNF8008GXt8s58Pg",
+  "sort": 0,
+  "_key": "!items!QNF8008GXt8s58Pg"
+}

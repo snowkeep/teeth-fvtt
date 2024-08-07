@@ -1,0 +1,32 @@
+{
+  "name": "Favorite chisel",
+  "type": "tool",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "type": "common",
+    "loadout": 0,
+    "equipped": false,
+    "broken": false,
+    "description": ""
+  },
+  "effects": [],
+  "folder": "NcgbA8U9Rw40owzs",
+  "ownership": {
+    "default": 0,
+    "hzjhFMblPzYeVvdR": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.330",
+    "systemId": "teeth",
+    "systemVersion": "0.1",
+    "createdTime": 1721139091327,
+    "modifiedTime": 1722986619560,
+    "lastModifiedBy": "78NHFd7NStjLGK2G"
+  },
+  "_id": "m2i27g0zVr8gleH7",
+  "sort": 0,
+  "_key": "!items!m2i27g0zVr8gleH7"
+}

@@ -1,0 +1,32 @@
+{
+  "folder": "vcxdzkdMhc0XJwXl",
+  "name": "Huge runed arquebus",
+  "type": "tool",
+  "_id": "DKSIv6HZGT52ujPI",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "type": "common",
+    "loadout": 2,
+    "equipped": false,
+    "broken": false,
+    "description": ""
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "78NHFd7NStjLGK2G": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.330",
+    "systemId": "teeth",
+    "systemVersion": "0.1",
+    "createdTime": 1722986263649,
+    "modifiedTime": 1722986269257,
+    "lastModifiedBy": "78NHFd7NStjLGK2G"
+  },
+  "_key": "!items!DKSIv6HZGT52ujPI"
+}

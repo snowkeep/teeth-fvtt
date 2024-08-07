@@ -1,0 +1,32 @@
+{
+  "folder": "vcxdzkdMhc0XJwXl",
+  "name": "Much-battered fiddle",
+  "type": "tool",
+  "_id": "OApRT19XUL0AaG4l",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "type": "common",
+    "loadout": 1,
+    "equipped": false,
+    "broken": false,
+    "description": ""
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "78NHFd7NStjLGK2G": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.330",
+    "systemId": "teeth",
+    "systemVersion": "0.1",
+    "createdTime": 1722986583133,
+    "modifiedTime": 1722986585521,
+    "lastModifiedBy": "78NHFd7NStjLGK2G"
+  },
+  "_key": "!items!OApRT19XUL0AaG4l"
+}

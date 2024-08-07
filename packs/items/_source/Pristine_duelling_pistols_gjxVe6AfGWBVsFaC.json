@@ -1,0 +1,32 @@
+{
+  "folder": "zDzNvinFP0vf66jw",
+  "name": "Pristine duelling pistols",
+  "type": "tool",
+  "_id": "gjxVe6AfGWBVsFaC",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "type": "common",
+    "loadout": 1,
+    "equipped": false,
+    "broken": false,
+    "description": ""
+  },
+  "effects": [],
+  "sort": 100000,
+  "ownership": {
+    "default": 0,
+    "bW1YGBs3gkfq5X1D": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "teeth",
+    "systemVersion": "0.1",
+    "coreVersion": "12.330",
+    "createdTime": 1716402652856,
+    "modifiedTime": 1722989048122,
+    "lastModifiedBy": "78NHFd7NStjLGK2G",
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "_key": "!items!gjxVe6AfGWBVsFaC"
+}

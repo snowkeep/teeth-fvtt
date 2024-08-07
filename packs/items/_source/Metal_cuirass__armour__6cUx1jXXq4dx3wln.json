@@ -1,0 +1,33 @@
+{
+  "folder": "zDzNvinFP0vf66jw",
+  "name": "Metal cuirass (armour)",
+  "type": "tool",
+  "_id": "6cUx1jXXq4dx3wln",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "type": "common",
+    "loadout": 2,
+    "equipped": false,
+    "broken": false,
+    "description": "",
+    "used": false
+  },
+  "effects": [],
+  "sort": 50000,
+  "ownership": {
+    "default": 0,
+    "W4k8v0qPm2DYyec3": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "teeth",
+    "systemVersion": "0.1",
+    "coreVersion": "12.330",
+    "createdTime": 1714571044472,
+    "modifiedTime": 1722984864851,
+    "lastModifiedBy": "78NHFd7NStjLGK2G",
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "_key": "!items!6cUx1jXXq4dx3wln"
+}

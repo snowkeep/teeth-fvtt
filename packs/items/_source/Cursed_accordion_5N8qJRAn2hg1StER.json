@@ -1,0 +1,32 @@
+{
+  "folder": "hq0JkxJrdViPPT7i",
+  "name": "Cursed accordion",
+  "type": "tool",
+  "_id": "5N8qJRAn2hg1StER",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "type": "common",
+    "loadout": 2,
+    "equipped": false,
+    "broken": false,
+    "description": ""
+  },
+  "effects": [],
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "78NHFd7NStjLGK2G": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.330",
+    "systemId": "teeth",
+    "systemVersion": "0.1",
+    "createdTime": 1722985614673,
+    "modifiedTime": 1722989128576,
+    "lastModifiedBy": "78NHFd7NStjLGK2G"
+  },
+  "_key": "!items!5N8qJRAn2hg1StER"
+}

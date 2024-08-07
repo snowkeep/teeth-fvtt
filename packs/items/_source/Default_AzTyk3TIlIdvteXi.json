@@ -1,0 +1,19 @@
+{
+  "name": "Default",
+  "sorting": "a",
+  "folder": null,
+  "type": "Item",
+  "_id": "AzTyk3TIlIdvteXi",
+  "sort": 0,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "systemId": "bitd",
+    "systemVersion": "0.1-alpha",
+    "coreVersion": "11.315",
+    "createdTime": 1714570159164,
+    "modifiedTime": 1714570159164,
+    "lastModifiedBy": "W4k8v0qPm2DYyec3"
+  },
+  "_key": "!folders!AzTyk3TIlIdvteXi"
+}

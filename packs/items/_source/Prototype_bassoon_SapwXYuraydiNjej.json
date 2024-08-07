@@ -1,0 +1,33 @@
+{
+  "folder": "j6PcS1oBoB5PNV9v",
+  "name": "Prototype bassoon",
+  "type": "tool",
+  "_id": "SapwXYuraydiNjej",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "type": "common",
+    "loadout": 2,
+    "equipped": false,
+    "broken": false,
+    "description": "",
+    "used": false
+  },
+  "effects": [],
+  "sort": 500000,
+  "ownership": {
+    "default": 0,
+    "W4k8v0qPm2DYyec3": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "teeth",
+    "systemVersion": "0.1",
+    "coreVersion": "12.330",
+    "createdTime": 1714570991181,
+    "modifiedTime": 1722989000869,
+    "lastModifiedBy": "78NHFd7NStjLGK2G",
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "_key": "!items!SapwXYuraydiNjej"
+}

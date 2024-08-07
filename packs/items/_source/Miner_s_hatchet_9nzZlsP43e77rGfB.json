@@ -1,0 +1,32 @@
+{
+  "name": "Miner's hatchet",
+  "type": "tool",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "type": "common",
+    "loadout": 1,
+    "equipped": false,
+    "broken": false,
+    "description": ""
+  },
+  "effects": [],
+  "folder": "NcgbA8U9Rw40owzs",
+  "ownership": {
+    "default": 0,
+    "hzjhFMblPzYeVvdR": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.330",
+    "systemId": "teeth",
+    "systemVersion": "0.1",
+    "createdTime": 1721138963878,
+    "modifiedTime": 1722986659622,
+    "lastModifiedBy": "78NHFd7NStjLGK2G"
+  },
+  "_id": "9nzZlsP43e77rGfB",
+  "sort": 300000,
+  "_key": "!items!9nzZlsP43e77rGfB"
+}

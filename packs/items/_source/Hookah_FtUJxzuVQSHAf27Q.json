@@ -1,0 +1,32 @@
+{
+  "name": "Hookah",
+  "type": "tool",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "type": "common",
+    "loadout": 1,
+    "equipped": false,
+    "broken": false,
+    "description": ""
+  },
+  "effects": [],
+  "folder": "zDzNvinFP0vf66jw",
+  "ownership": {
+    "default": 0,
+    "hzjhFMblPzYeVvdR": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.330",
+    "systemId": "teeth",
+    "systemVersion": "0.1",
+    "createdTime": 1721139578028,
+    "modifiedTime": 1722985175622,
+    "lastModifiedBy": "78NHFd7NStjLGK2G"
+  },
+  "_id": "FtUJxzuVQSHAf27Q",
+  "sort": 312500,
+  "_key": "!items!FtUJxzuVQSHAf27Q"
+}
