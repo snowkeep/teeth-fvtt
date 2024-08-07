@@ -117,8 +117,27 @@ export class TeethHunterSheet extends TeethActorSheet
           label: game.i18n.localize("TEETH.SetClass"),
           callback: async (html) => {
             const element = Array.from(html.find(".hunter.active"));
-            const  hunter= element.map(el => el.dataset.value);
+            const hunter= element.map(el => el.dataset.value);
             await this.actor.update({ "system.hunterClass": hunter });
+
+            const itemPack = game.packs.get('teeth.items');
+            await itemPack.getIndex();
+            const defaultFolder = itemPack.folders.find(p => p.name === "Default")._id;
+            const classFolder = itemPack.folders.find(p => p.name === this.actor.system.hunterClass.split(".").at(-1))._id;
+            const classItems = itemPack.index.filter(p => p.folder === classFolder);
+
+            // clear out old class items
+            for (const item of this.actor.items) {
+              if (item._source.folder != defaultFolder && item._source.folder != null) { 
+                item.delete();
+              }
+            }
+
+            // add new class items
+            for (const item of classItems) {
+              const addItem = await itemPack.getDocument(item._id);
+              this.actor.createEmbeddedDocuments('Item', [addItem]);
+            }
           }
         }
       },
