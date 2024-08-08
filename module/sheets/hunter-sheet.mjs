@@ -92,8 +92,10 @@ export class TeethHunterSheet extends TeethActorSheet
     html.find('.add-method').click(this._onAddMethod.bind(this));
     // Import Dangerous Acquaintances
     html.find('.import-acquaintances').click(this._onImportAcquaintances.bind(this));
-    // remove a Dangerous Acquaintance
+    // Remove a Dangerous Acquaintance
     html.find('.remove-acquaintance').click(this._onRemoveAcquaintance.bind(this));
+    // Roll and add mutation
+    html.find('.add-mutation').click(this._onAddMutation.bind(this));
     // Add Trauma
     html.find('.add-trauma').click(this._onAddTrauma.bind(this));
   }
@@ -348,6 +350,27 @@ export class TeethHunterSheet extends TeethActorSheet
     const newAcqs = currentAcqs.filter(acq => acq.uuid != rmUuid);
 
     await this.actor.update({ "system.contacts" : newAcqs });
+  }
+
+  /**
+   * Handle adding mutations.
+   * @param {Event} the originating click event
+   * @private
+   */
+  async _onAddMutation(event) {
+    const tablePack = game.packs.get('teeth.teeth-tables');
+    const table_id = tablePack.index.find(e => e.name === "Mutations")._id;
+    const table = await tablePack.getDocument(table_id);
+    const rolled = await table.roll();
+    const newMutation = rolled.results[0].text;
+
+    let currentMutations = (this.actor.system.mutations || []).filter(Boolean);
+    currentMutations.push(newMutation);
+
+    await this.actor.update({ "system.mutations" : currentMutations });
+
+    console.log(currentMutations);
+
   }
 
   /**

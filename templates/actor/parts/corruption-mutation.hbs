@@ -9,10 +9,13 @@
       <span class="value-step value-tooth red-tooth" data-index="{{this}}"></span>
     {{/numLoop}}
   </div>
+</div>
 
   <div class="mutation-list">
-    {{#each system.mutation}}
-      <span class="mutation">{{localize this}}</span>
+    <ol>
+    {{#each system.mutations}}
+      {{log this}}
+      <li class="mutation">{{this}}</li>
     {{/each}}
+    </ol>
   </div>
-</div>

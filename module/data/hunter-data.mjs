@@ -22,7 +22,10 @@ export default class HunterData extends foundry.abstract.TypeDataModel {
         value: new fields.NumberField({requiredPositiveInteger, initial: 0 }),
         max: new fields.NumberField({requiredPositiveInteger, initial: 16 })
       }),
-      mutations: new fields.ArrayField(new fields.StringField()),
+      mutations: new fields.ArrayField(new fields.StringField(), {
+        validate: v => v.length <= 4,
+        validationError: "must have 4 or less Mutations"
+      }),
       coins: new fields.SchemaField({
         value: new fields.NumberField({requiredPositiveInteger, initial: 0 }),
         max: new fields.NumberField({requiredPositiveInteger, initial: 4 })
