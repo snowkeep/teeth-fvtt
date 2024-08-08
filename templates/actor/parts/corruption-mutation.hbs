@@ -14,8 +14,14 @@
   <div class="mutation-list">
     <ol>
     {{#each system.mutations}}
-      {{log this}}
-      <li class="mutation">{{this}}</li>
+      <li class="mutation" data-index="{{this.idx}}">
+        <div class="mutation-text">
+          {{this.text}}
+        </div>
+        <div class="mutation-controls">
+          <a class="mutation-control delete-mutation" title="{{localize 'TEETH.DeleteMutation'}}"><i class="fas fa-trash"></i></a>
+        </div>
+      </li>
     {{/each}}
     </ol>
   </div>

@@ -96,6 +96,8 @@ export class TeethHunterSheet extends TeethActorSheet
     html.find('.remove-acquaintance').click(this._onRemoveAcquaintance.bind(this));
     // Roll and add mutation
     html.find('.add-mutation').click(this._onAddMutation.bind(this));
+    // Delete mutation
+    html.find('.delete-mutation').click(this._onDelMutation.bind(this));
     // Add Trauma
     html.find('.add-trauma').click(this._onAddTrauma.bind(this));
   }
@@ -364,13 +366,26 @@ export class TeethHunterSheet extends TeethActorSheet
     const rolled = await table.roll();
     const newMutation = rolled.results[0].text;
 
+
     let currentMutations = (this.actor.system.mutations || []).filter(Boolean);
-    currentMutations.push(newMutation);
+    const mutationIdx = currentMutations.length;
+    currentMutations.push({idx: mutationIdx, text: newMutation});
 
     await this.actor.update({ "system.mutations" : currentMutations });
 
-    console.log(currentMutations);
+  }
 
+  /**
+   * Handle removeing mutations.
+   * @param {Event} the originating click event
+   * @private
+   */
+  async _onDelMutation(event) {
+    const rmIdx = $(event.currentTarget).data("idx");
+    let currentMutations = (this.actor.system.mutations || []).filter(Boolean);
+    currentMutations.splice(rmIdx, 1);
+
+    await this.actor.update({ "system.mutations" : currentMutations });
   }
 
   /**
