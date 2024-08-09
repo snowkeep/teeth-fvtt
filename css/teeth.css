@@ -641,17 +641,17 @@ select.clear-select {
           width: 1px;
           height: 20px;
           background-color: #222; }
-    .teeth.actor .hunter .sheet-header .header-fields .stress-trauma {
+    .teeth.actor .hunter .sheet-header .header-fields .stress-behaviour {
       display: flex;
       align-items: flex-start;
       margin-top: 5px;
       border-top: 2px solid black;
       font-size: medium; }
-      .teeth.actor .hunter .sheet-header .header-fields .stress-trauma .stress {
+      .teeth.actor .hunter .sheet-header .header-fields .stress-behaviour .stress {
         display: flex; }
-        .teeth.actor .hunter .sheet-header .header-fields .stress-trauma .stress .add-trauma {
+        .teeth.actor .hunter .sheet-header .header-fields .stress-behaviour .stress .add-trauma {
           margin: 0 3px; }
-        .teeth.actor .hunter .sheet-header .header-fields .stress-trauma .stress .stress-title:hover, .teeth.actor .hunter .sheet-header .header-fields .stress-trauma .stress .stress-title:focus {
+        .teeth.actor .hunter .sheet-header .header-fields .stress-behaviour .stress .stress-title:hover, .teeth.actor .hunter .sheet-header .header-fields .stress-behaviour .stress .stress-title:focus {
           color: white; }
     .teeth.actor .hunter .sheet-header .header-fields .corruption-mutation {
       display: flex;
