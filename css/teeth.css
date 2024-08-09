@@ -678,30 +678,30 @@ select.clear-select {
       justify-content: space-between;
       align-items: flex-end;
       background-color: #999; }
-  .teeth.actor .hunter .sheet-header .harm {
+  .teeth.actor .hunter .sheet-header .injury {
     position: relative; }
-    .teeth.actor .hunter .sheet-header .harm .healing {
+    .teeth.actor .hunter .sheet-header .injury .healing {
       display: flex;
       position: absolute;
       top: 0;
       right: 0; }
-      .teeth.actor .hunter .sheet-header .harm .healing .healing-input {
+      .teeth.actor .hunter .sheet-header .injury .healing .healing-input {
         height: 24px;
         max-width: 20px; }
-    .teeth.actor .hunter .sheet-header .harm .harm-table {
+    .teeth.actor .hunter .sheet-header .injury .injury-table {
       display: grid;
       grid-template-columns: auto auto auto auto;
       border: 1px solid #222;
       text-align: center;
       font-family: "Spectral SC", serif; }
-      .teeth.actor .hunter .sheet-header .harm .harm-table div {
+      .teeth.actor .hunter .sheet-header .injury .injury-table div {
         border: 1px solid #222;
         padding: 0.25em; }
-      .teeth.actor .hunter .sheet-header .harm .harm-table .harm-name.full-with {
+      .teeth.actor .hunter .sheet-header .injury .injury-table .injury-name.full-with {
         grid-column: 2 / 4; }
-        .teeth.actor .hunter .sheet-header .harm .harm-table .harm-name.full-with input {
+        .teeth.actor .hunter .sheet-header .injury .injury-table .injury-name.full-with input {
           width: 100%; }
-      .teeth.actor .hunter .sheet-header .harm .harm-table .harm-level, .teeth.actor .hunter .sheet-header .harm .harm-table .harm-effect {
+      .teeth.actor .hunter .sheet-header .injury .injury-table .injury-level, .teeth.actor .hunter .sheet-header .injury .injury-table .injury-effect {
         background: rgba(0, 0, 0, 0.05); }
 
 .teeth.actor .hunter .sheet-body {

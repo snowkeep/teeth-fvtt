@@ -142,6 +142,12 @@ export class TeethHunterSheet extends TeethActorSheet
               const addItem = await itemPack.getDocument(item._id);
               this.actor.createEmbeddedDocuments('Item', [addItem]);
             }
+
+            // playbook-specific experience
+            //const hunterType = this.actor.system.hunterClass.split(".").at(-1);
+            //const hunterExp =  game.i18n.localize("TEETH.Experience." + hunterType);
+            
+            //await this.actor.system.playbook.update({ "system.exp": hunterExp });
           }
         }
       },

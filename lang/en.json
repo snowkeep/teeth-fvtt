@@ -181,11 +181,16 @@
       "Wreck": "When players <strong>Wreck</strong>, they wield force with destructive intent. <em>They might charge a door with their shoulder to batter it down, cleave through the supports of a lookout tower, toss a wrench into the busy workings of a steam engine, or scuttle a boat with a bomb (but Devise might be more appropriate).</em>"
     },
 
-    "Harm": "Harm",
-    "HarmEffect": {
-      "Light": "Need Help",
-      "Medium": "-1 D",
-      "Heavy": "Less Effect"
+    "Injury": "Injury",
+    "InjuryType": {
+      "Minor": "Minor",
+      "Major": "Major",
+      "Mortal": "Mortal"
+    },
+    "InjuryEffect": {
+      "Minor": "Less Effect",
+      "Major": "-1 D",
+      "Mortal": "Stress/Assist"
     },
     "Healing": "Healing",
 
@@ -195,7 +200,12 @@
       "HowItWorks": "At the end of each session, for these three items, mark 1 xp (in your playbook or an attribute) or 2 xp if that item occurred multiple times.",
       "DesperateRoll": "Every time you roll a Desperate Action, mark XP in that Action's Attribute immediately.",
       "Character": "You expressed your beliefs, drives or background.",
-      "Vice": "Took Action demonstrating your Erratic Behaviour, if you have one"
+      "Vice": "Took Action demonstrating your Erratic Behaviour, if you have one",
+      "Bruiser": "Addressed a challenge with <b>violence</b> or <b>coercion</b>, successful or not.",
+      "Captain": "Addressed a challenge with <b>charm</b> or <b>authority</b>, successful or not.",
+      "Keeper": "Addressed a challenge with <b>research</b> or <b>mysticism</b>, successful or not.",
+      "Outrider": "Addressed a challenge by <b>reconnaissance</b> or <b>tracking</b>, successful or not.",
+      "Sapper": "Addressed a challenge with <b>technical nous</b> or <b>craft</b>, successful or not."
     },
     "RulesRef": {
       "Title": "Rules Reference",
@@ -404,20 +414,20 @@
         "Controlled": {
           "Critical": "You do it with <strong>increased effect</strong>.",
           "Success": "You do it.",
-          "Mixed": "You hesitate. Withdraw and try a different approach, or else do it with a minor consequence: a minor <strong>complication</strong> occurs, you have <strong>reduced effect</strong>, you suffer <strong>lesser harm</strong>, you end up in a <strong>risky</strong> position.",
+          "Mixed": "You hesitate. Withdraw and try a different approach, or else do it with a minor consequence: a minor <strong>complication</strong> occurs, you have <strong>reduced effect</strong>, you suffer <strong>minor injury</strong>, you end up in a <strong>risky</strong> position.",
           "Fail": "You falter. Press on by seizing a <strong>risky</strong> opportunity, or withdraw and try a different approach."
         },
         "Risky": {
           "Critical": "You do it with <strong>increased effect</strong>.",
           "Success": "You do it.",
-          "Mixed": "You do it, but there’s a consequence: you suffer <strong>harm</strong>, a <strong>complication</strong> occurs, you have <strong>reduced effect</strong>, you end up in a <strong>desperate</strong> position.",
-          "Fail": "Things go badly. You suffer <strong>harm</strong>, a <strong>complication</strong> occurs, you end up in a <strong>desperate</strong> position, you <strong>lose this opportunity</strong>."
+          "Mixed": "You do it, but there’s a consequence: you suffer <strong>injury</strong>, a <strong>complication</strong> occurs, you have <strong>reduced effect</strong>, you end up in a <strong>desperate</strong> position.",
+          "Fail": "Things go badly. You suffer <strong>injury</strong>, a <strong>complication</strong> occurs, you end up in a <strong>desperate</strong> position, you <strong>lose this opportunity</strong>."
         },
         "Desperate": {
           "Critical": "You do it with <strong>increased effect</strong>.",
           "Success": "You do it.",
-          "Mixed": "You do it, but there’s a consequence: you suffer <strong>severe harm</strong>, a <strong>serious complication</strong> occurs, you have <strong>reduced effect</strong>.",
-          "Fail": "It’s the worst outcome. You suffer <strong>severe harm</strong>, a <strong>serious complication</strong> occurs, you <strong>lose this opportunity</strong> for action."
+          "Mixed": "You do it, but there’s a consequence: you suffer <strong>mortal injury</strong>, a <strong>serious complication</strong> occurs, you have <strong>reduced effect</strong>.",
+          "Fail": "It’s the worst outcome. You suffer <strong>mortal injury</strong>, a <strong>serious complication</strong> occurs, you <strong>lose this opportunity</strong> for action."
         }
       },
       "Resistance": {
@@ -460,7 +470,7 @@
         "Overindulgence": "<p>You <strong>overindulge</strong>. Clear <strong>all stress</strong> and choose <strong>one</strong> of the following consequences:</p>",
         "Trouble": "<li><strong>Attract Trouble.</strong> Select or roll an additional <strong>entanglement.</strong></li>",
         "Brag": "<li><strong>Brag</strong> about your exploits. <strong>+2 Heat</strong></li>",
-        "Lost": "<li><strong>Lost.</strong> Your character vanishes for a few weeks. Play a different character until this one returns from their bender. When your character returns, they've also healed any harm they had.</li>",
+        "Lost": "<li><strong>Lost.</strong> Your character vanishes for a few weeks. Play a different character until this one returns from their bender. When your character returns, they've also healed any injury they had.</li>",
         "Trapped": "<li><strong>Tapped.</strong> Your current purveyor cuts you off. Find a new source for your vice.</li>"
       }
     },

@@ -8,7 +8,7 @@
     "systems/teeth/templates/actor/parts/claims.hbs",
     "systems/teeth/templates/actor/parts/cohorts.hbs",
     "systems/teeth/templates/actor/parts/contacts.hbs",
-    "systems/teeth/templates/actor/parts/harm.hbs",
+    "systems/teeth/templates/actor/parts/injury.hbs",
     "systems/teeth/templates/actor/parts/inventory.hbs",
     "systems/teeth/templates/actor/parts/hunter-notes.hbs",
     "systems/teeth/templates/actor/parts/corruption-mutation.hbs",

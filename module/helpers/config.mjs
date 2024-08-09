@@ -24,12 +24,12 @@ export const TEETH = {
       gang: "TEETH.Cohort.Type.Gang",
       expert: "TEETH.Cohort.Type.Expert"
     },
-    harm: {
-      0: "TEETH.Cohort.Harm.NoHarm",
-      1: "TEETH.Cohort.Harm.Weakened",
-      2: "TEETH.Cohort.Harm.Impaired",
-      3: "TEETH.Cohort.Harm.Broken",
-      4: "TEETH.Cohort.Harm.Dead"
+    injury: {
+      0: "TEETH.Cohort.Injury.NoInjury",
+      1: "TEETH.Cohort.Injury.Weakened",
+      2: "TEETH.Cohort.Injury.Impaired",
+      3: "TEETH.Cohort.Injury.Broken",
+      4: "TEETH.Cohort.Injury.Dead"
     }
   },
   toolType: {

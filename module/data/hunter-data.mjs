@@ -46,16 +46,16 @@ export default class HunterData extends foundry.abstract.TypeDataModel {
         value: new fields.NumberField({requiredPositiveInteger, initial: 0 }),
         max: new fields.NumberField({requiredPositiveInteger, initial: 4 })
       }),
-      harm: new fields.SchemaField({
-        lesser: new fields.ArrayField(new fields.StringField(), {
+      injury: new fields.SchemaField({
+        minor: new fields.ArrayField(new fields.StringField(), {
           validate: v => v.length <= 2,
-          validationError: "must only have 2 Lesser harms"
+          validationError: "must only have 2 Minor harms"
         }),
-        moderate: new fields.ArrayField(new fields.StringField(), {
+        major: new fields.ArrayField(new fields.StringField(), {
           validate: v => v.length <= 2,
-          validationError: "must only have 2 Moderate harms"
+          validationError: "must only have 2 Major harms"
         }),
-        severe: new fields.StringField()
+        mortal: new fields.StringField()
       }),
 
       attributes: new fields.SchemaField({

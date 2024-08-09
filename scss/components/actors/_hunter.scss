@@ -185,7 +185,7 @@
       }
     }
 
-    .harm {
+    .injury {
       position: relative;
 
       .healing {
@@ -200,7 +200,7 @@
         }
       }
 
-      .harm-table {
+      .injury-table {
         display: grid;
         grid-template-columns: auto auto auto auto;
         border: $border-black;
@@ -212,7 +212,7 @@
           padding: 0.25em;
         }
 
-        .harm-name.full-with {
+        .injury-name.full-with {
           grid-column: 2 / 4;
 
           input {
@@ -220,7 +220,7 @@
           }
         }
 
-        .harm-level, .harm-effect {
+        .injury-level, .injury-effect {
           background: rgba(0, 0, 0, 0.05);
         }
       }

@@ -14,9 +14,9 @@
             <span class="specialisation">{{item.system.specialisation}}</span>{{/if}}
           </div>
           <div class="condition">
-            {{#if item.system.harm}}
-              <label>{{localize 'TEETH.Harm'}}:</label>
-              <span>{{getCohorHarm item.system.harm}}</span>,
+            {{#if item.system.injury}}
+              <label>{{localize 'TEETH.Injury'}}:</label>
+              <span>{{getCohorInjury item.system.injury}}</span>,
             {{/if}}
             <label>{{localize 'TEETH.Cohort.Armor'}}:</label>
             {{#if item.system.armor}}

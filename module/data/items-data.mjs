@@ -41,7 +41,7 @@ export class CohortData extends foundry.abstract.TypeDataModel {
       specialisation: new fields.StringField(),
       elite: new fields.BooleanField({initial: false}),
       armor: new fields.BooleanField({initial: false}),
-      harm: new fields.NumberField({required: true, nullable: false, integer: true, min: 0, initial: 0 }),
+      injury: new fields.NumberField({required: true, nullable: false, integer: true, min: 0, initial: 0 }),
       edges: new fields.StringField(),
       flaws: new fields.StringField(),
       description: new fields.HTMLField()
