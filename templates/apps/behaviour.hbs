@@ -1,0 +1,11 @@
+<form class="add-behaviour-form">
+  {{#each currentBehaviours as |behaviour|}}
+    <a class="behaviour active" data-value={{behaviour}}>{{localize behaviour}}</a>
+  {{/each}}
+
+  {{#each filteredBehaviours as |behaviour|}}
+    <a class="behaviour" data-value={{behaviour}}>{{localize behaviour}}</a>
+  {{/each}}
+
+  <input class="behaviour custom-behaviour" type="text" data-dtype="String" placeholder="{{localize 'TEETH.CustomBehaviour'}}"/>
+</form>

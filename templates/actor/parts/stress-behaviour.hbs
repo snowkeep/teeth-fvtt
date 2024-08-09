@@ -1,6 +1,6 @@
 <div class="stress-behaviour">
   <div class="stress teeth-header">
-    <a class="item-control add-trauma" data-tooltip="{{localize 'TEETH.AddBehaviour'}}"><i class="fa-solid fa-plus"></i></a>
+    <a class="item-control add-behaviour" data-tooltip="{{localize 'TEETH.AddBehaviour'}}"><i class="fa-solid fa-plus"></i></a>
     <h3 class="stress-title rollable" data-roll-type="vice">{{localize 'TEETH.Stress'}}</h3>
   </div>
 
@@ -10,9 +10,9 @@
     {{/numLoop}}
   </div>
 
-  <div class="trauma-list">
-    {{#each system.trauma}}
-      <span class="trauma">{{localize this}}</span>
+  <div class="behaviour-list">
+    {{#each system.behaviour}}
+      <span class="behaviour">{{localize this}}</span>
     {{/each}}
   </div>
 </div>

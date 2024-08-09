@@ -5,14 +5,14 @@
   border-width: 0;
   margin-right: 5px; }
 
-.add-trauma-form {
+.add-behaviour-form {
   margin-bottom: 5px;
   font-size: medium;
   font-family: "Spectral SC", serif;
   text-align: center; }
-  .add-trauma-form .trauma {
+  .add-behaviour-form .behaviour {
     display: block; }
-  .add-trauma-form .trauma.active {
+  .add-behaviour-form .behaviour.active {
     text-shadow: 0 0 8px red; }
 
 .set-vice-form {
@@ -649,7 +649,7 @@ select.clear-select {
       font-size: medium; }
       .teeth.actor .hunter .sheet-header .header-fields .stress-behaviour .stress {
         display: flex; }
-        .teeth.actor .hunter .sheet-header .header-fields .stress-behaviour .stress .add-trauma {
+        .teeth.actor .hunter .sheet-header .header-fields .stress-behaviour .stress .add-behaviour {
           margin: 0 3px; }
         .teeth.actor .hunter .sheet-header .header-fields .stress-behaviour .stress .stress-title:hover, .teeth.actor .hunter .sheet-header .header-fields .stress-behaviour .stress .stress-title:focus {
           color: white; }
@@ -661,13 +661,13 @@ select.clear-select {
       font-size: medium; }
       .teeth.actor .hunter .sheet-header .header-fields .corruption-mutation .corruption {
         display: flex; }
-        .teeth.actor .hunter .sheet-header .header-fields .corruption-mutation .corruption .add-trauma {
+        .teeth.actor .hunter .sheet-header .header-fields .corruption-mutation .corruption .add-mutation {
           margin: 0 3px; }
         .teeth.actor .hunter .sheet-header .header-fields .corruption-mutation .corruption .corruption-title:hover, .teeth.actor .hunter .sheet-header .header-fields .corruption-mutation .corruption .corruption-title:focus {
           color: white; }
     .teeth.actor .hunter .sheet-header .header-fields .value-step-block {
       min-width: fit-content; }
-    .teeth.actor .hunter .sheet-header .header-fields .trauma-list {
+    .teeth.actor .hunter .sheet-header .header-fields .behaviour-list {
       padding-left: 3px; }
   .teeth.actor .hunter .sheet-header .contacts {
     align-self: start; }

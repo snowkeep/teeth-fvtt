@@ -115,22 +115,21 @@
     "Corruption": "Corruption",
     "Mutation": "Mutation",
     "RollMutation": "Roll for Mutation",
+    "DeleteMutation": "Delete Mutation",
 
     "Stress": "Stress",
-    "Trauma": "Trauma",
-    "ChooseTrauma": "Choose Trauma",
-    "AddTrauma": "Add Trauma",
+    "Behaviour": "Erratic Behaviour",
+    "ChooseBehaviour": "Choose Erratic Behaviour",
     "AddBehaviour": "Add Erratic Behaviour",
-    "Traumas": {
-      "Cold": "Cold",
-      "Haunted": "Haunted",
-      "Obsessed": "Obsessed",
-      "Paranoid": "Paranoid",
-      "Reckless": "Reckless",
-      "Soft": "Soft",
-      "Unstable": "Unstable",
-      "Vicious": "Vicious",
-      "Custom": "Custom"
+    "CustomBehaviour": "Custom",
+    "Behaviours": {
+      "Singing": "Inappropiate folk-signing",
+      "Indignance": "Frothing indignance",
+      "Dancing": "Compulsive dancing",
+      "Grovelling": "Grovelling penitence",
+      "Horror": "Wide-eyed horror",
+      "Misery": "Abject misery",
+      "Rancour": "Violent rancour"
     },
 
     "Load": {
@@ -194,9 +193,9 @@
     "Experience": {
       "Title": "Experience",
       "HowItWorks": "At the end of each session, for these three items, mark 1 xp (in your playbook or an attribute) or 2 xp if that item occurred multiple times.",
-      "DesperateRoll": "Every time you roll a desperate action, mark xp in that action's attribute.",
-      "Character": "You expressed your beliefs, drives, heritage, or background.",
-      "Vice": "You struggled with issues from your vice or traumas during the session."
+      "DesperateRoll": "Every time you roll a Desperate Action, mark XP in that Action's Attribute immediately.",
+      "Character": "You expressed your beliefs, drives or background.",
+      "Vice": "Took Action demonstrating your Erratic Behaviour, if you have one"
     },
     "RulesRef": {
       "Title": "Rules Reference",
@@ -390,9 +389,9 @@
         "DevilsBargain": "The Devil’s Bargain occurs regardless of the outcome of the roll.",
         "Assistance": "Character who helps suffer 1 stress and might also suffer any consequences that occur because of the roll."
       },
-      "SufferTrauma": {
-        "Title": "Suffer Trauma",
-        "Description": "You get {stress} stress, so you suffer a level of <b>trauma</b>. You’re <i>left for dead</i> or otherwise dropped out of the current conflict, only to come back later, shaken and drained. When you return, you have <b>zero stress</b> and your vice has been satisfied for the next downtime (see <b>Vice</b> on page 156)."
+      "ManifestBehaviour": {
+        "Title": "Gain Erratic Behaviour",
+        "Description": "You get {stress} stress, so manifest an <b>Erratic Behaviour</b> and cannot perform Actions that incur Stress until they have reduced Stress during an Aftermath phase."
       },
       "Result": {
         "Exp": "{actor} gains 1 experiences in {attribute}",

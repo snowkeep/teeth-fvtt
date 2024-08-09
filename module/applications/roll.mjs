@@ -180,7 +180,7 @@ function getRollData(rollResult, formData, diceToRoll) {
     effect: {
       key: formData.effect
     },
-    trauma: {
+    behaviour: {
       suffer: false
     }
   };
@@ -389,8 +389,8 @@ async function sufferStress(sheet, addStress) {
   if (stress < 9) {
     await sheet.update({ "system.stress.value": stress });
   } else {
-    rollResult.data.trauma.suffer = true;
-    rollResult.data.trauma.description = game.i18n.format("TEETH.Roll.SufferTrauma.Description", {stress: stress});
+    rollResult.data.behaviour.manifest = true;
+    rollResult.data.behaviour.description = game.i18n.format("TEETH.Roll.ManifestBehaviour.Description", {stress: stress});
     await sheet.update({ "system.stress.value": 0 });
   }
 }

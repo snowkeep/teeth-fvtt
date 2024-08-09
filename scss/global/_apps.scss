@@ -4,17 +4,17 @@
   margin-right: 5px;
 }
 
-.add-trauma-form {
+.add-behaviour-form {
   margin-bottom: 5px;
   font-size: medium;
   font-family: $font-secondary;
   text-align: center;
 
-  .trauma {
+  .behaviour {
     display: block;
   }
 
-  .trauma.active {
+  .behaviour.active {
     text-shadow: $shadow;
   }
 }

@@ -100,6 +100,16 @@ export const TEETH = {
     concoction: "TEETH.MethodList.Concoction"
   },
 
+  erraticBehaviours: [
+      "TEETH.Behaviours.Singing",
+      "TEETH.Behaviours.Indignance",
+      "TEETH.Behaviours.Dancing",
+      "TEETH.Behaviours.Grovelling",
+      "TEETH.Behaviours.Horror",
+      "TEETH.Behaviours.Misery",
+      "TEETH.Behaviours.Rancour"
+  ],
+
   rolls: {
     type: {
       action: "TEETH.Roll.Type.Action",

@@ -98,8 +98,8 @@ export class TeethHunterSheet extends TeethActorSheet
     html.find('.add-mutation').click(this._onAddMutation.bind(this));
     // Delete mutation
     html.find('.delete-mutation').click(this._onDelMutation.bind(this));
-    // Add Trauma
-    html.find('.add-trauma').click(this._onAddTrauma.bind(this));
+    // Add Erratice Behaviour
+    html.find('.add-behaviour').click(this._onAddBehaviour.bind(this));
   }
 
   /* -------------------------------------------- */
@@ -197,7 +197,7 @@ export class TeethHunterSheet extends TeethActorSheet
   }
 
   /**
-   * Handle adding traumas.
+   * Handle adding Magic Disciplines.
    * @param {Event} the originating click event
    * @private
    */
@@ -243,7 +243,7 @@ export class TeethHunterSheet extends TeethActorSheet
   }
 
   /**
-   * Handle adding traumas.
+   * Handle adding Magic Methods.
    * @param {Event} the originating click event
    * @private
    */
@@ -389,49 +389,43 @@ export class TeethHunterSheet extends TeethActorSheet
   }
 
   /**
-   * Handle adding traumas.
+   * Handle adding Erratic Behaviours.
    * @param {Event} the originating click event
    * @private
    */
-  async _onAddTrauma(event) {
-    const currentTraumas = (this.actor.system.trauma || []).filter(Boolean);
-    const defaultTraumas = [
-      "TEETH.Traumas.Cold",
-      "TEETH.Traumas.Haunted",
-      "TEETH.Traumas.Obsessed",
-      "TEETH.Traumas.Paranoid",
-      "TEETH.Traumas.Reckless",
-      "TEETH.Traumas.Soft",
-      "TEETH.Traumas.Unstable",
-      "TEETH.Traumas.Vicious",
-    ];
-    const filteredTraumas = defaultTraumas.filter(trauma => !currentTraumas.includes(trauma));
+  async _onAddBehaviour(event) {
+    const currentBehaviours = (this.actor.system.behaviour || []).filter(Boolean);
+    const defaultBehaviours = TEETH.erraticBehaviours;
+    console.log(defaultBehaviours);
 
-    const template = await renderTemplate("systems/teeth/templates/apps/trauma.hbs", { currentTraumas, filteredTraumas });
+    const filteredBehaviours = defaultBehaviours.filter(behaviour => !currentBehaviours.includes(behaviour));
+    console.log(filteredBehaviours);
+
+    const template = await renderTemplate("systems/teeth/templates/apps/behaviour.hbs", { currentBehaviours, filteredBehaviours });
 
     const dialog = new Dialog({
-      title: game.i18n.localize("TEETH.ChooseTrauma"),
+      title: game.i18n.localize("TEETH.ChooseBehaviour"),
       content: template,
       buttons: {
         add: {
-          label: game.i18n.localize("TEETH.AddTrauma"),
+          label: game.i18n.localize("TEETH.AddBehaviour"),
           callback: async (html) => {
-            const elements = Array.from(html.find(".trauma.active"));
-            const newTraumas = elements.map(el => el.dataset.value);
+            const elements = Array.from(html.find(".behaviour.active"));
+            const newBehaviours = elements.map(el => el.dataset.value);
 
-            const customTrauma = html.find("input.custom-trauma")[0].value;
-            if (customTrauma) {
-              newTraumas.push(customTrauma);
+            const customBehaviour = html.find("input.custom-behaviour")[0].value;
+            if (customBehaviour) {
+              newBehaviours.push(customBehaviour);
             }
 
-            await this.actor.update({ "system.trauma": newTraumas });
+            await this.actor.update({ "system.behaviour": newBehaviours });
           }
         }
       },
       default: "add",
       close: () => {},
       render: (html) => {
-        html.find(".trauma").on("click", function() {
+        html.find(".behaviour").on("click", function() {
           $(this).toggleClass("active");
         });
       }
