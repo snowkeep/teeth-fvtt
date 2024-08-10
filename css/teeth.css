@@ -851,9 +851,9 @@ select.clear-select {
 
 .teeth.actor .crew .sheet-body .general-container {
   grid-template-areas: "1 main" "2 main"; }
-  .teeth.actor .crew .sheet-body .general-container .spec-upgrades {
+  .teeth.actor .crew .sheet-body .general-container .spec-purchases {
     grid-area: 1; }
-  .teeth.actor .crew .sheet-body .general-container .upgrades {
+  .teeth.actor .crew .sheet-body .general-container .purchases {
     grid-area: 2; }
   .teeth.actor .crew .sheet-body .general-container .abilities {
     grid-area: main; }

@@ -40,8 +40,8 @@ export class BitdCrewSheet extends TeethActorSheet
     const abilities = [];
     const claims = [];
     const cohorts = [];
-    const upgrades = [];
-    const specUpgrades = [];
+    const purchases = [];
+    const specPurchases = [];
 
     const playbookId = this.actor.system.playbook;
 
@@ -62,11 +62,11 @@ export class BitdCrewSheet extends TeethActorSheet
       else if (i.type === 'cohort') {
         cohorts.push(i);
       }
-      else if (i.type === 'upgrade') {
+      else if (i.type === 'purchase') {
         if (i.system.type === 'common') {
-          upgrades.push(i);
+          purchases.push(i);
         } else {
-          specUpgrades.push(i);
+          specPurchases.push(i);
         }
       }
     }
@@ -75,8 +75,8 @@ export class BitdCrewSheet extends TeethActorSheet
     context.claims = claims;
     context.cohorts = cohorts;
     context.playbook = playbook;
-    context.upgrades = upgrades;
-    context.specUpgrades = specUpgrades;
+    context.purchases = purchases;
+    context.specPurchases = specPurchases;
   }
 
   /** @override */

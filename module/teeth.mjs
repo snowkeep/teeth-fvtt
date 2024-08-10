@@ -47,7 +47,7 @@ Hooks.once('init', async function() {
     'claim': models.ClaimData,
     'cohort': models.CohortData,
     'tool': models.ToolData,
-    'upgrade': models.UpgradeData
+    'purchase': models.PurchaseData
   };
 
 

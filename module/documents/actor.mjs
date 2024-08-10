@@ -56,7 +56,7 @@ export default class TeethActor extends Actor {
       if (this.type == "crew") {
         target.actor = "crew",
         target.item = "crewType",
-        target.forLoad = ["abilities", "claims", "cohorts", "upgrades"]
+        target.forLoad = ["abilities", "claims", "cohorts", "purchases"]
       }
 
       for (const dataItem of data) {

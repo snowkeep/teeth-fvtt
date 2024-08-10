@@ -36,9 +36,9 @@ export const TEETH = {
     common: "TEETH.Tool.Common",
     special: "TEETH.Tool.Special"
   },
-  upgradeType: {
-    common: "TEETH.Upgrade.Common",
-    special: "TEETH.Upgrade.Special"
+  purchaseType: {
+    common: "TEETH.Purchase.Common",
+    special: "TEETH.Purchase.Special"
   },
 
   supportedLinks: {

@@ -13,7 +13,7 @@
     "systems/teeth/templates/actor/parts/hunter-notes.hbs",
     "systems/teeth/templates/actor/parts/corruption-mutation.hbs",
     "systems/teeth/templates/actor/parts/stress-behaviour.hbs",
-    "systems/teeth/templates/actor/parts/upgrades.hbs",
+    "systems/teeth/templates/actor/parts/purchases.hbs",
 
     "systems/teeth/templates/item/parts/linked-item.hbs",
   ]);

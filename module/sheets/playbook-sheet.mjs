@@ -57,8 +57,8 @@ export class TeethPlaybookSheet extends TeethItemSheet {
         case 'cohort':
           if (this.item.type == "crewType") key = "cohorts";
           break;
-        case 'upgrade':
-          if (this.item.type == "crewType") key = "upgrades";
+        case 'purchase':
+          if (this.item.type == "crewType") key = "purchases";
       }
 
       if (key && this.item.system[key]) {

@@ -5,14 +5,14 @@
       <h1 class="item-name"><input name="name" type="text" value="{{item.name}}" placeholder="{{localize 'TEETH.ItemName'}}"/></h1>
       <div class="brief-info">
         <select class="prop clear-select" name="system.type">
-          {{selectOptions config.upgradeType selected=system.type localize=true}}
+          {{selectOptions config.purchaseType selected=system.type localize=true}}
         </select>
         <div class="prop">
-          <label class="prop-label" for="system.active">{{localize 'TEETH.Upgrade.IsActive'}}</label>
+          <label class="prop-label" for="system.active">{{localize 'TEETH.Purchase.IsActive'}}</label>
           <input class="prop-input" type="checkbox" name="system.active" {{checked system.active}}></input>
         </div>
         <div class="prop">
-          <label class="prop-label" for="system.price">{{localize 'TEETH.Upgrade.Price'}}:</label>
+          <label class="prop-label" for="system.price">{{localize 'TEETH.Purchase.Price'}}:</label>
           <input class="prop-input clear-input" type="number" name="system.price"  value="{{system.price}}"></input>
         </div>
       </div>

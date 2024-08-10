@@ -16,7 +16,7 @@
       "claim": "Claim",
       "cohort": "Cohort",
       "tool": "Tool",
-      "upgrade": "Upgrade"
+      "purchase": "Purchase"
     }
   },
   "TEETH": {
@@ -300,9 +300,9 @@
       "Effect": "Claim Effect"
     },
 
-    "Upgrade": {
-      "Plural": "Upgrades",
-      "SpecialPlural": "Special Upgrades",
+    "Purchase": {
+      "Plural": "Purchases",
+      "SpecialPlural": "Special Purchases",
       "Common": "Common",
       "Special": "Special",
       "IsActive": "Active",

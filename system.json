@@ -131,10 +131,10 @@
       }
     },
     {
-      "label": "Upgrades",
+      "label": "Purchases",
       "type": "Item",
-      "name": "upgrades",
-      "path": "packs/upgrades",
+      "name": "purchases",
+      "path": "packs/purchases",
       "system": "teeth",
       "ownership": {
         "PLAYER": "OBSERVER",

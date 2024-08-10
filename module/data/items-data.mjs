@@ -63,7 +63,7 @@ export class ToolData extends foundry.abstract.TypeDataModel {
   }
 }
 
-export class UpgradeData extends foundry.abstract.TypeDataModel {
+export class PurchaseData extends foundry.abstract.TypeDataModel {
   static defineSchema() {
     const fields = foundry.data.fields;
 
