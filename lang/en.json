@@ -8,6 +8,7 @@
       "clock": "Clock"
     },
     "Item": {
+      "setPlaybook": "Drag a Playbook from the Compendium",
       "playbook": "Playbook",
       "crewType": "Crew Type",
       "abilityHunter": "Hunters's Ability",

@@ -85,7 +85,7 @@ export class TeethHunterSheet extends TeethActorSheet
     // select Background
     html.find(".set-background").click(this._onSetBackground.bind(this));
     // select HunterClass
-    html.find(".set-hunter").click(this._onSetHunterClass.bind(this));
+    //html.find(".set-hunter").click(this._onSetHunterClass.bind(this));
     // Add Magic Discipline
     html.find('.add-discipline').click(this._onAddDiscipline.bind(this));
     // Add Magic Method
@@ -122,6 +122,8 @@ export class TeethHunterSheet extends TeethActorSheet
           callback: async (html) => {
             const element = Array.from(html.find(".hunter.active"));
             const hunter= element.map(el => el.dataset.value);
+
+            /*
             await this.actor.update({ "system.hunterClass": hunter });
 
             const itemPack = game.packs.get('teeth.items');
@@ -148,6 +150,7 @@ export class TeethHunterSheet extends TeethActorSheet
             //const hunterExp =  game.i18n.localize("TEETH.Experience." + hunterType);
             
             //await this.actor.system.playbook.update({ "system.exp": hunterExp });
+            */
           }
         }
       },
