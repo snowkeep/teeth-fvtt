@@ -111,8 +111,8 @@
     {
       "label": "Hunter Abilities",
       "type": "Item",
-      "name": "scoundrel-abilities",
-      "path": "packs/scoundrel-abilities",
+      "name": "hunter-abilities",
+      "path": "packs/hunter-abilities",
       "system": "teeth",
       "ownership": {
         "PLAYER": "OBSERVER",
