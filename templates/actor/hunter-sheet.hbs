@@ -36,9 +36,13 @@
       </div>
 
       <div class="brief-info">
-        <div class="prop">
+        <div class="prop"
           <label class="prop-label" for="system.hunter"><a class="item-control set-hunter" data-tooltip="{{localize 'TEETH.SetClass'}}">{{localize 'TEETH.Hunter'}}</a>:</label>
-          <input class="prop-input clear-input" type="text" name="system.hunterClass" value="{{localize system.hunterClass}}" placeholder="{{localize 'TEETH.Hunter'}}"/>
+        {{#if playbook}}
+          {{playbook.name}}
+        {{else}}
+          {{localize 'TYPES.Item.playbook'}}
+        {{/if}}
         </div>
         <div class="prop">
           <label class="prop-label" for="system.background"><a class="item-control set-background" data-tooltip="{{localize 'TEETH.SetBackground'}}">{{localize 'TEETH.Background'}}</a>:</label>
@@ -60,9 +64,9 @@
         <div class="flex-item">
           <h3 class="item-header teeth-header contacts-title" data.tooltip="{{localize 'TEETH.Contact.Tooltip'}}">{{localize 'TEETH.Contact.Plural'}}</h3>
         </div>
-        <div class="flex-item">
+<!--        <div class="flex-item">
           <h3 class="item-header teeth-header contacts-title"><a class="import-acquaintances" data-tooltip="{{localize 'TEETH.Contact.Import'}}"><i class="fa-solid fa-file-import"></i></a></h3>
-        </div>
+        </div> -->
       </div>
       {{> "systems/teeth/templates/actor/parts/contacts.hbs"}}
     </div>

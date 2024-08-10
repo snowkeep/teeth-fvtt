@@ -91,9 +91,9 @@ export class TeethHunterSheet extends TeethActorSheet
     // Add Magic Method
     html.find('.add-method').click(this._onAddMethod.bind(this));
     // Import Dangerous Acquaintances
-    html.find('.import-acquaintances').click(this._onImportAcquaintances.bind(this));
+    //html.find('.import-acquaintances').click(this._onImportAcquaintances.bind(this));
     // Remove a Dangerous Acquaintance
-    html.find('.remove-acquaintance').click(this._onRemoveAcquaintance.bind(this));
+    //html.find('.remove-acquaintance').click(this._onRemoveAcquaintance.bind(this));
     // Roll and add mutation
     html.find('.add-mutation').click(this._onAddMutation.bind(this));
     // Delete mutation
