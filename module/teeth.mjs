@@ -5,7 +5,7 @@ import { TeethActor, TeethItem } from "./documents/_module.mjs";
 import { TeethActorSheet } from "./sheets/actor-sheet.mjs";
 import { TeethHunterSheet } from "./sheets/hunter-sheet.mjs";
 import { TeethOutfitSheet } from "./sheets/outfit-sheet.mjs";
-import { BitdFactionSheet } from "./sheets/faction-sheet.mjs";
+import { TeethFactionSheet } from "./sheets/faction-sheet.mjs";
 import { TeethClockSheet } from "./sheets/clock-sheet.mjs";
 
 // Import Item Sheet
@@ -54,7 +54,7 @@ Hooks.once('init', async function() {
   Actors.registerSheet("teeth", TeethActorSheet, { makeDefault: true });
   Actors.registerSheet("teeth", TeethHunterSheet, { types: ["hunter"], makeDefault: true });
   Actors.registerSheet("teeth", TeethOutfitSheet, { types: ["outfit"], makeDefault: true });
-  Actors.registerSheet("teeth", BitdFactionSheet, { types: ["faction"], makeDefault: true });
+  Actors.registerSheet("teeth", TeethFactionSheet, { types: ["faction"], makeDefault: true });
   Actors.registerSheet("teeth", TeethClockSheet, { types: ["clock"], makeDefault: true });
   Items.unregisterSheet("core", ItemSheet);
   Items.registerSheet("teeth", TeethItemSheet, { makeDefault: true });
@@ -75,7 +75,7 @@ Hooks.on("renderChatMessage", renderChatMessage);
 // Add scene controls
 Hooks.on("renderSceneControls", async (app, html) => {
   const diceRollButton = $(`
-    <li class="scene-control" data-control="teeth-dice" title="BitD Dice Roller">
+    <li class="scene-control" data-control="teeth-dice" title="TEETH Dice Roller">
     <i class="fas fa-dice"></i>
     </li>
   `);

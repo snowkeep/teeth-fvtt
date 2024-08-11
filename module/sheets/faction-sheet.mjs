@@ -4,7 +4,7 @@ import { TeethActorSheet } from "./actor-sheet.mjs";
  * Extend the TeethActorSheet
  * @extends {TeethActorSheet}
  */
-export class BitdFactionSheet extends TeethActorSheet
+export class TeethFactionSheet extends TeethActorSheet
 {
 
   /** @override */
