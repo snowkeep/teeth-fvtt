@@ -858,15 +858,6 @@ select.clear-select {
   .teeth.actor .crew .sheet-body .general-container .abilities {
     grid-area: main; }
 
-.teeth.actor .crew .sheet-body .cohorts .item-name {
-  font-weight: bold; }
-
-.teeth.actor .crew .sheet-body .cohorts .specialisation {
-  text-transform: lowercase; }
-
-.teeth.actor .crew .sheet-body .cohorts .condition {
-  font-style: italic; }
-
 .teeth.actor .faction .sheet-header {
   flex: 100px auto;
   overflow: hidden;
@@ -997,15 +988,6 @@ select.clear-select {
 
 .teeth.item input.all-width {
   width: 100%; }
-
-.teeth.item .cohort .specialisation {
-  display: flex;
-  flex-direction: row;
-  width: 100%; }
-  .teeth.item .cohort .specialisation .prop-input {
-    width: 100%;
-    margin-left: 5px;
-    border-bottom: 1px solid #b5b3a4; }
 
 .teeth.item .brief-info {
   display: flex;

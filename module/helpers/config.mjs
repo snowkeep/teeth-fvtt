@@ -19,19 +19,6 @@ export const TEETH = {
     hostile: "TEETH.Status.Hostile",
     war: "TEETH.Status.War"
   },
-  cohort: {
-    types: {
-      gang: "TEETH.Cohort.Type.Gang",
-      expert: "TEETH.Cohort.Type.Expert"
-    },
-    injury: {
-      0: "TEETH.Cohort.Injury.NoInjury",
-      1: "TEETH.Cohort.Injury.Weakened",
-      2: "TEETH.Cohort.Injury.Impaired",
-      3: "TEETH.Cohort.Injury.Broken",
-      4: "TEETH.Cohort.Injury.Dead"
-    }
-  },
   toolType: {
     common: "TEETH.Tool.Common",
     special: "TEETH.Tool.Special"

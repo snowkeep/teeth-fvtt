@@ -45,7 +45,6 @@ Hooks.once('init', async function() {
     'abilityHunter': models.AbilityHunterData,
     'abilityCrew': models.AbilityCrewData,
     'boon': models.BoonData,
-    'cohort': models.CohortData,
     'tool': models.ToolData,
     'purchase': models.PurchaseData
   };

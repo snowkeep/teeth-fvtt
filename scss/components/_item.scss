@@ -2,20 +2,6 @@ input.all-width {
   width: 100%;
 }
 
-.cohort {
-  .specialisation {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-
-    .prop-input {
-      width: 100%;
-      margin-left: 5px;
-      border-bottom: $border;
-    }
-  }
-}
-
 .brief-info {
   display: flex;
   flex-direction: row;

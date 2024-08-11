@@ -87,17 +87,6 @@
       }
     },
     {
-      "label": "Cohorts",
-      "type": "Item",
-      "name": "cohorts",
-      "path": "packs/cohorts",
-      "system": "teeth",
-      "ownership": {
-        "PLAYER": "OBSERVER",
-        "ASSISTANT": "OWNER"
-      }
-    },
-    {
       "label": "Items",
       "type": "Item",
       "name": "items",

@@ -101,13 +101,6 @@ export const registerHandlebarsHelpers = function() {
     return classes
   });
 
-  Handlebars.registerHelper("getCohorInjury", function (key) {
-    const name = CONFIG.TEETH.cohort.injury[key];
-    const localizeName = game.i18n.localize(name);
-
-    return localizeName;
-  });
-
   Handlebars.registerHelper("log", function(something) {
     console.log(something);
   });

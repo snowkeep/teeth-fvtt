@@ -6,7 +6,6 @@
     "systems/teeth/templates/actor/parts/abilities.hbs",
     "systems/teeth/templates/actor/parts/attributes.hbs",
     "systems/teeth/templates/actor/parts/boons.hbs",
-    "systems/teeth/templates/actor/parts/cohorts.hbs",
     "systems/teeth/templates/actor/parts/contacts.hbs",
     "systems/teeth/templates/actor/parts/injury.hbs",
     "systems/teeth/templates/actor/parts/inventory.hbs",

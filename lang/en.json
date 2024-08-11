@@ -14,7 +14,6 @@
       "abilityHunter": "Hunters's Ability",
       "abilityCrew": "Crew's Ability",
       "boon": "Boon",
-      "cohort": "Cohort",
       "tool": "Tool",
       "purchase": "Purchase"
     }
@@ -306,28 +305,6 @@
       "Special": "Special",
       "IsActive": "Active",
       "Price": "Price"
-    },
-
-    "Cohort": {
-      "Plural": "Cohorts",
-      "Type": {
-        "Title": "Type",
-        "Gang": "Gang",
-        "Expert": "Expert"
-      },
-      "Elite": "Elite",
-      "Specializations": "Specializations",
-      "Armor": "Armor",
-      "Edges": "Edges",
-      "Flaws": "Flaws",
-      "Harm": {
-        "Title": "Harm",
-        "NoHarm": "None",
-        "Weakened": "Weakened",
-        "Impaired": "Impaired",
-        "Broken": "Broken",
-        "Dead": "Dead"
-      }
     },
 
     "ShowForPlayers": {
