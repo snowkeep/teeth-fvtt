@@ -9,17 +9,6 @@ export class AbilityHunterData extends foundry.abstract.TypeDataModel {
   }
 }
 
-export class AbilityCrewData extends foundry.abstract.TypeDataModel {
-  static defineSchema() {
-    const fields = foundry.data.fields;
-
-    return {
-      active: new fields.BooleanField({initial: false}),
-      description: new fields.HTMLField()
-    }
-  }
-}
-
 export class BoonData extends foundry.abstract.TypeDataModel {
   static defineSchema() {
     const fields = foundry.data.fields;

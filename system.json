@@ -109,17 +109,6 @@
       }
     },
     {
-      "label": "Crew Abilities",
-      "type": "Item",
-      "name": "crew-abilities",
-      "path": "packs/crew-abilities",
-      "system": "teeth",
-      "ownership": {
-        "PLAYER": "OBSERVER",
-        "ASSISTANT": "OWNER"
-      }
-    },
-    {
       "label": "Purchases",
       "type": "Item",
       "name": "purchases",

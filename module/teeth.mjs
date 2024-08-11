@@ -43,7 +43,6 @@ Hooks.once('init', async function() {
     'playbook': models.PlaybookData,
     'crewType': models.CrewTypeData,
     'abilityHunter': models.AbilityHunterData,
-    'abilityCrew': models.AbilityCrewData,
     'boon': models.BoonData,
     'tool': models.ToolData,
     'purchase': models.PurchaseData
