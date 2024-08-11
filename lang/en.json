@@ -32,7 +32,7 @@
     "Available": "Available",
     "Used": "Used",
 
-    "OutfitName": "Name",
+    "OutfitName": "Outfit Name",
     "ItemName": "Name",
 
     "Drives": "Drives",
@@ -141,6 +141,7 @@
     },
     "Coins": "Coins",
     "Stash": "Stash",
+    "Vault": "Vault",
 
 
     "Attribute": "Attribute",
@@ -276,14 +277,19 @@
     "WantedLvl": "Wanted Level",
     "Turf": "Turf",
     "OutfitAdvance": {
-      "ShortTitle": "Advance",
-      "Title": "Earn Agenda Points",
+      "ShortTitle": "The Agenda Track",
+      "Title": "Advance as you gain Agenda Points",
       "OnePt": "1 point",
       "TwoPt": "2 points",
       "Placeholder1": "Gain 1 agenda point which depend on outfit's playbook",
       "Placeholder2": "Gain 2 agenda points which depend on outfit's playbook",
-      "HowItWorks": "Mark 1 xp for each item below, or 2 xp if it occurred multiple times.",
-      "Tips": "<li>Contend with challenges above your current station.</li><li>Bolster your outfit's reputation or develop a new one.</li><li>Express the goals, drives, inner conflict, or essential nature of the outfit.</li>"
+      "HowItWorks": "Advance as you gain Agenda Points",
+      "Methods": {
+        "One": "1 Agenda Point if players improved their cover as Hunters by slaying a monster.",
+        "Two": "1 Agenda Point if players acted in ways fitting for their Secret Agenda.",
+        "Three": "2 Agenda Point if players achieved something specific to bring their Secret Agenda closer to fulfilment."
+      },
+      "Example": "For example:"
     },
 
     "Goals": "Goals",

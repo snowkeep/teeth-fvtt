@@ -32,7 +32,7 @@ export default class HunterData extends foundry.abstract.TypeDataModel {
       }),
       stash: new fields.SchemaField({
         value: new fields.NumberField({requiredPositiveInteger, initial: 0 }),
-        max: new fields.NumberField({requiredPositiveInteger, initial: 30 })
+        max: new fields.NumberField({requiredPositiveInteger, initial: 20 })
       }),
       exp: new fields.SchemaField({
         value: new fields.NumberField({requiredPositiveInteger, initial: 0 }),

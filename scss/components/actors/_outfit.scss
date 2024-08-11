@@ -5,7 +5,6 @@
     .type-container {
       display: grid;
       column-gap: $padding-md;
-      grid-template-columns: 60px 1fr;
       height: -webkit-fill-available;
 
       .profile-img {

@@ -772,7 +772,6 @@ select.clear-select {
   .teeth.actor .outfit .sheet-header .type-container {
     display: grid;
     column-gap: 10px;
-    grid-template-columns: 60px 1fr;
     height: -webkit-fill-available; }
     .teeth.actor .outfit .sheet-header .type-container .profile-img {
       width: 100%;
