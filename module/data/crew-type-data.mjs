@@ -21,7 +21,7 @@ export default class CrewTypeData extends foundry.abstract.TypeDataModel {
         title: new fields.StringField(),
         docType: new fields.StringField({initial: "Item"})
       })),
-      claims: new fields.ArrayField(new fields.SchemaField({
+      boons: new fields.ArrayField(new fields.SchemaField({
         id: new fields.ForeignDocumentField(TeethItem, {idOnly: true}),
         uuid: new fields.StringField(),
         name: new fields.StringField(),

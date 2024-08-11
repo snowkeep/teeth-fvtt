@@ -13,7 +13,7 @@
       "crewType": "Crew Type",
       "abilityHunter": "Hunters's Ability",
       "abilityCrew": "Crew's Ability",
-      "claim": "Claim",
+      "boon": "Boon",
       "cohort": "Cohort",
       "tool": "Tool",
       "purchase": "Purchase"
@@ -293,11 +293,10 @@
     "Quirks": "Quirks",
     "Situation": "Situation",
 
-    "ClaimCohort": "Claims and Cohorts",
-    "Claim": {
-      "Title": "Claim Map",
-      "Plural": "Claims",
-      "Effect": "Claim Effect"
+    "Boon": {
+      "Plural": "Boons",
+      "Effect": "Boon Effect",
+      "Tier": "Tier"
     },
 
     "Purchase": {

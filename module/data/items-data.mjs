@@ -20,14 +20,15 @@ export class AbilityCrewData extends foundry.abstract.TypeDataModel {
   }
 }
 
-export class ClaimData extends foundry.abstract.TypeDataModel {
+export class BoonData extends foundry.abstract.TypeDataModel {
   static defineSchema() {
     const fields = foundry.data.fields;
 
     return {
       active: new fields.BooleanField({initial: false}),
       effect: new fields.StringField(),
-      description: new fields.HTMLField()
+      description: new fields.HTMLField(),
+      tier: new fields.NumberField({required: true, nullable: false, integer: true, min: 0, initial: 1})
     }
   }
 }
@@ -75,3 +76,4 @@ export class PurchaseData extends foundry.abstract.TypeDataModel {
     }
   }
 }
+

@@ -1,10 +1,10 @@
-<div class="claims items-block full-size">
+<div class="boons items-block full-size">
   <div class="item-header teeth-header">
-    <a class="item-create" title="{{localize 'TEETH.Item.Add'}}" data-type="claim"><i class="fas fa-plus"></i></a>
-    <h3>{{localize 'TEETH.Claim.Plural'}}</h3>
+    <a class="item-create" title="{{localize 'TEETH.Item.Add'}}" data-type="boon"><i class="fas fa-plus"></i></a>
+    <h3>{{localize 'TEETH.Boon.Plural'}}</h3>
   </div>
   <ol class="items-list">
-    {{#each claims as |item id|}}
+    {{#each boons as |item id|}}
       <li class="item {{item.type}} {{#if item.system.active}}active{{/if}}" data-item-id="{{item._id}}">
         <div class="item-description">
           <input class="item-checkbox" data-key="active" type="checkbox" name="item.system.active" data-dtype="Boolean" {{checked item.system.active}}></input>
@@ -12,7 +12,7 @@
         </div>
 
         <div class="item-summary">
-          <p class="effect"><b>{{localize 'TEETH.Claim.Effect'}}:</b> {{system.effect}}</p>
+          <p class="effect"><b>{{localize 'TEETH.Boon.Effect'}}:</b> {{system.effect}}</p>
           {{{item.system.description}}}
         </div>
 

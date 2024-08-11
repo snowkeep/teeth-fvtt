@@ -81,14 +81,14 @@
             <h3>{{localize 'TEETH.Turf'}}</h3>
           </div>
           <ol class="items-list">
-            {{#each claims as |item id|}}
+            {{#each boons as |item id|}}
               <li class="item {{item.type}}" data-item-id="{{item._id}}">
                 <div class="item-description">
                   <span class="item-name">{{item.name}}</span>
                 </div>
 
                 <div class="item-summary">
-                  <p class="effect"><b>{{localize 'TEETH.Claim.Effect'}}:</b> {{system.effect}}</p>
+                  <p class="effect"><b>{{localize 'TEETH.Boon.Effect'}}:</b> {{system.effect}}</p>
                   {{{item.system.description}}}
                 </div>
               </li>

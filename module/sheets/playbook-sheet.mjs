@@ -51,8 +51,8 @@ export class TeethPlaybookSheet extends TeethItemSheet {
         case 'abilityCrew':
           if (this.item.type == "crewType") key = "abilities";
           break;
-        case 'claim':
-          if (this.item.type == "crewType") key = "claims";
+        case 'boon':
+          if (this.item.type == "crewType") key = "boons";
           break;
         case 'cohort':
           if (this.item.type == "crewType") key = "cohorts";

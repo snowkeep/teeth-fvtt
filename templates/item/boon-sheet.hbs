@@ -8,6 +8,10 @@
           <label class="prop-label" for="system.active">{{localize 'TEETH.Ability.IsActive'}}</label>
           <input class="prop-input" type="checkbox" name="system.active" data-dtype="Boolean" {{checked system.active}}></input>
         </div>
+        <div class="prop">
+          <label class="prop-label" for="system.tier">{{localize 'TEETH.Boon.Tier'}}:</label>
+          <input class="prop-input clear-input" type="number" name="system.tier"  value="{{system.tier}}"></input>
+        </div>
       </div>
     </div>
   </header>
@@ -16,7 +20,7 @@
   <section class="sheet-body">
     <hr>
     <div class="effect">
-      <h3>{{localize 'TEETH.Claim.Effect'}}:</h3>
+      <h3>{{localize 'TEETH.Boon.Effect'}}:</h3>
       <textarea name="system.effect">{{system.effect}}</textarea>
     </div>
 

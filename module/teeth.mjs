@@ -44,7 +44,7 @@ Hooks.once('init', async function() {
     'crewType': models.CrewTypeData,
     'abilityHunter': models.AbilityHunterData,
     'abilityCrew': models.AbilityCrewData,
-    'claim': models.ClaimData,
+    'boon': models.BoonData,
     'cohort': models.CohortData,
     'tool': models.ToolData,
     'purchase': models.PurchaseData

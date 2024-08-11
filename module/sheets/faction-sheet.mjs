@@ -45,17 +45,17 @@ export class BitdFactionSheet extends TeethActorSheet
    * @return {undefined}
    */
   _prepareItems(context) {
-    const claims = [];
+    const boons = [];
 
     for (const i of context.items) {
       i.img = i.img || DEFAULT_TOKEN;
 
-      if (i.type === 'claim') {
-        claims.push(i);
+      if (i.type === 'boon') {
+        boons.push(i);
       }
     }
 
-    context.claims = claims;
+    context.boons = boons;
   }
 
   /* -------------------------------------------- */

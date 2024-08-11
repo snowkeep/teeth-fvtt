@@ -38,7 +38,7 @@ export class BitdCrewSheet extends TeethActorSheet
   _prepareItems(context) {
     let playbook;
     const abilities = [];
-    const claims = [];
+    const boons = [];
     const cohorts = [];
     const purchases = [];
     const specPurchases = [];
@@ -56,8 +56,8 @@ export class BitdCrewSheet extends TeethActorSheet
       else if (i.type === 'abilityCrew') {
         abilities.push(i);
       }
-      else if (i.type === 'claim') {
-        claims.push(i);
+      else if (i.type === 'boon') {
+        boons.push(i);
       }
       else if (i.type === 'cohort') {
         cohorts.push(i);
@@ -72,7 +72,7 @@ export class BitdCrewSheet extends TeethActorSheet
     }
 
     context.abilities = abilities;
-    context.claims = claims;
+    context.boons = boons;
     context.cohorts = cohorts;
     context.playbook = playbook;
     context.purchases = purchases;
