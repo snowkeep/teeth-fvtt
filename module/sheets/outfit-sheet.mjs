@@ -4,13 +4,13 @@ import { TeethActorSheet } from "./actor-sheet.mjs";
  * Extend the TeethActorSheet
  * @extends {TeethActorSheet}
  */
-export class BitdCrewSheet extends TeethActorSheet
+export class TeethOutfitSheet extends TeethActorSheet
 {
 
   /** @override */
   static get defaultOptions() {
     return foundry.utils.mergeObject(super.defaultOptions, {
-      classes: ["teeth", "sheet", "actor", "crew"],
+      classes: ["teeth", "sheet", "actor", "outfit"],
       width: 750,
       height: 900,
       tabs: [{
@@ -25,7 +25,7 @@ export class BitdCrewSheet extends TeethActorSheet
   async getData() {
     const context = await super.getData();
 
-    // Prepare crew data and items.
+    // Prepare outfit data and items.
     this._prepareItems(context);
 
     return context;
@@ -46,7 +46,7 @@ export class BitdCrewSheet extends TeethActorSheet
     for (const i of context.items) {
       i.img = i.img || DEFAULT_TOKEN;
 
-      if (i.type === 'crewType') {
+      if (i.type === 'outfitType') {
         if (i._id === playbookId) {
           playbook = i;
         }

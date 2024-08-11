@@ -352,7 +352,7 @@ select.clear-select {
   min-width: 750px;
   min-height: 500px; }
 
-.teeth.sheet.actor.crew {
+.teeth.sheet.actor.outfit {
   min-width: 750px; }
 
 .teeth.sheet.actor.faction {
@@ -767,95 +767,95 @@ select.clear-select {
     .teeth.actor .hunter .sheet-body .notes-container .description .teeth-header {
       margin-top: 5px; }
 
-.teeth.actor .crew .sheet-header {
+.teeth.actor .outfit .sheet-header {
   row-gap: 5px; }
-  .teeth.actor .crew .sheet-header .type-container {
+  .teeth.actor .outfit .sheet-header .type-container {
     display: grid;
     column-gap: 10px;
     grid-template-columns: 60px 1fr;
     height: -webkit-fill-available; }
-    .teeth.actor .crew .sheet-header .type-container .profile-img {
+    .teeth.actor .outfit .sheet-header .type-container .profile-img {
       width: 100%;
       border: none; }
-    .teeth.actor .crew .sheet-header .type-container .crew-type {
+    .teeth.actor .outfit .sheet-header .type-container .outfit-type {
       font-family: "Spectral SC", serif; }
-      .teeth.actor .crew .sheet-header .type-container .crew-type .playbook-description {
+      .teeth.actor .outfit .sheet-header .type-container .outfit-type .playbook-description {
         margin: 0;
         font-size: medium; }
-  .teeth.actor .crew .sheet-header .name-container .crew-name {
+  .teeth.actor .outfit .sheet-header .name-container .outfit-name {
     margin: 0; }
-    .teeth.actor .crew .sheet-header .name-container .crew-name input {
+    .teeth.actor .outfit .sheet-header .name-container .outfit-name input {
       height: 90%;
       margin: 0;
       padding: 0; }
-  .teeth.actor .crew .sheet-header .name-container .brief-info {
+  .teeth.actor .outfit .sheet-header .name-container .brief-info {
     row-gap: 0; }
-    .teeth.actor .crew .sheet-header .name-container .brief-info .prop {
+    .teeth.actor .outfit .sheet-header .name-container .brief-info .prop {
       display: block;
       font-family: "Spectral SC", serif; }
-      .teeth.actor .crew .sheet-header .name-container .brief-info .prop .prop-label {
+      .teeth.actor .outfit .sheet-header .name-container .brief-info .prop .prop-label {
         display: block;
         font-size: medium; }
-      .teeth.actor .crew .sheet-header .name-container .brief-info .prop .prop-input {
+      .teeth.actor .outfit .sheet-header .name-container .brief-info .prop .prop-input {
         padding: 0;
         font-size: small; }
-  .teeth.actor .crew .sheet-header .hunting-ground .clear-input {
+  .teeth.actor .outfit .sheet-header .hunting-ground .clear-input {
     padding: 0; }
-  .teeth.actor .crew .sheet-header .hunting-ground .operation-header {
+  .teeth.actor .outfit .sheet-header .hunting-ground .operation-header {
     font-family: "Spectral SC", serif; }
-  .teeth.actor .crew .sheet-header .header-fields {
+  .teeth.actor .outfit .sheet-header .header-fields {
     display: grid;
     column-gap: 10px;
     row-gap: 5px;
     grid-template-columns: auto 1fr;
     font-family: "Spectral SC", serif; }
-    .teeth.actor .crew .sheet-header .header-fields .heat-block {
+    .teeth.actor .outfit .sheet-header .header-fields .heat-block {
       display: flex;
       align-items: flex-start;
       justify-content: space-between;
       border-top: 2px solid black; }
-      .teeth.actor .crew .sheet-header .header-fields .heat-block .wanted-lvl {
+      .teeth.actor .outfit .sheet-header .header-fields .heat-block .wanted-lvl {
         font-size: small; }
-      .teeth.actor .crew .sheet-header .header-fields .heat-block .flexrow {
+      .teeth.actor .outfit .sheet-header .header-fields .heat-block .flexrow {
         align-items: flex-start; }
-    .teeth.actor .crew .sheet-header .header-fields .tier-block .hold .clear-select {
+    .teeth.actor .outfit .sheet-header .header-fields .tier-block .hold .clear-select {
       padding: 0; }
-    .teeth.actor .crew .sheet-header .header-fields .reputation-block {
+    .teeth.actor .outfit .sheet-header .header-fields .reputation-block {
       display: flex;
       align-items: flex-start;
       justify-content: space-between;
       border-top: 2px solid black; }
-      .teeth.actor .crew .sheet-header .header-fields .reputation-block .turf > h3, .teeth.actor .crew .sheet-header .header-fields .reputation-block .teeth-header, .teeth.actor .crew .sheet-header .header-fields .reputation-block .value-step-block {
+      .teeth.actor .outfit .sheet-header .header-fields .reputation-block .turf > h3, .teeth.actor .outfit .sheet-header .header-fields .reputation-block .teeth-header, .teeth.actor .outfit .sheet-header .header-fields .reputation-block .value-step-block {
         display: inline-block; }
-      .teeth.actor .crew .sheet-header .header-fields .reputation-block .reputation {
+      .teeth.actor .outfit .sheet-header .header-fields .reputation-block .reputation {
         display: flex;
         align-items: flex-start; }
-      .teeth.actor .crew .sheet-header .header-fields .reputation-block .turf input {
+      .teeth.actor .outfit .sheet-header .header-fields .reputation-block .turf input {
         max-width: 20px;
         padding: 0; }
-  .teeth.actor .crew .sheet-header .header-fields > div {
+  .teeth.actor .outfit .sheet-header .header-fields > div {
     background: rgba(0, 0, 0, 0.1); }
-  .teeth.actor .crew .sheet-header .exp-block {
+  .teeth.actor .outfit .sheet-header .exp-block {
     position: relative; }
-    .teeth.actor .crew .sheet-header .exp-block .value-step-block {
+    .teeth.actor .outfit .sheet-header .exp-block .value-step-block {
       position: absolute;
       top: 0;
       right: 5px; }
-    .teeth.actor .crew .sheet-header .exp-block .teeth-subheader, .teeth.actor .crew .sheet-header .exp-block .exp-tips {
+    .teeth.actor .outfit .sheet-header .exp-block .teeth-subheader, .teeth.actor .outfit .sheet-header .exp-block .exp-tips {
       font-size: small; }
-  .teeth.actor .crew .sheet-header h3.teeth-header {
+  .teeth.actor .outfit .sheet-header h3.teeth-header {
     padding-top: 0; }
 
-.teeth.actor .crew .sheet-header > div {
+.teeth.actor .outfit .sheet-header > div {
   height: 100%; }
 
-.teeth.actor .crew .sheet-body .general-container {
+.teeth.actor .outfit .sheet-body .general-container {
   grid-template-areas: "1 main" "2 main"; }
-  .teeth.actor .crew .sheet-body .general-container .spec-purchases {
+  .teeth.actor .outfit .sheet-body .general-container .spec-purchases {
     grid-area: 1; }
-  .teeth.actor .crew .sheet-body .general-container .purchases {
+  .teeth.actor .outfit .sheet-body .general-container .purchases {
     grid-area: 2; }
-  .teeth.actor .crew .sheet-body .general-container .abilities {
+  .teeth.actor .outfit .sheet-body .general-container .abilities {
     grid-area: main; }
 
 .teeth.actor .faction .sheet-header {
@@ -1028,13 +1028,13 @@ select.clear-select {
 .teeth.item .sheet-body .editor-block {
   flex: auto; }
 
-.teeth.item .playbook .summary, .teeth.item .crewType .summary {
+.teeth.item .playbook .summary, .teeth.item .outfitType .summary {
   margin-top: 10px;
   margin-bottom: 0; }
 
-.teeth.item .playbook .linked-items, .teeth.item .crewType .linked-items {
+.teeth.item .playbook .linked-items, .teeth.item .outfitType .linked-items {
   margin-bottom: 10px; }
-  .teeth.item .playbook .linked-items .link-block, .teeth.item .crewType .linked-items .link-block {
+  .teeth.item .playbook .linked-items .link-block, .teeth.item .outfitType .linked-items .link-block {
     line-height: 1.5; }
 
 .teeth.item .playbook .attribute-block {

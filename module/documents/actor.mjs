@@ -13,7 +13,7 @@ export default class TeethActor extends Actor {
       disposition: CONST.TOKEN_DISPOSITIONS.NEUTRAL
     }
 
-    if (this.type === "hunter" || this.type === "crew") {
+    if (this.type === "hunter" || this.type === "outfit") {
       prototypeToken.disposition = CONST.TOKEN_DISPOSITIONS.FRIENDLY;
     } else if (this.type === "clock") {
       prototypeToken.displayName = CONST.TOKEN_DISPLAY_MODES.ALWAYS;
@@ -53,9 +53,9 @@ export default class TeethActor extends Actor {
         forLoad: ["abilities", "inventory"]
       }
 
-      if (this.type == "crew") {
-        target.actor = "crew",
-        target.item = "crewType",
+      if (this.type == "outfit") {
+        target.actor = "outfit",
+        target.item = "outfitType",
         target.forLoad = ["abilities", "boons", "purchases"]
       }
 

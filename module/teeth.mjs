@@ -4,7 +4,7 @@ import { TeethActor, TeethItem } from "./documents/_module.mjs";
 // Import Actor Sheet
 import { TeethActorSheet } from "./sheets/actor-sheet.mjs";
 import { TeethHunterSheet } from "./sheets/hunter-sheet.mjs";
-import { BitdCrewSheet } from "./sheets/crew-sheet.mjs";
+import { TeethOutfitSheet } from "./sheets/outfit-sheet.mjs";
 import { BitdFactionSheet } from "./sheets/faction-sheet.mjs";
 import { TeethClockSheet } from "./sheets/clock-sheet.mjs";
 
@@ -32,7 +32,7 @@ Hooks.once('init', async function() {
   CONFIG.Actor.documentClass = TeethActor;
   CONFIG.Actor.dataModels = {
     'hunter': models.HunterData,
-    'crew': models.CrewData,
+    'outfit': models.OutfitData,
     'faction': models.FactionData,
     'npc': models.NpcData,
     'clock': models.ClockData
@@ -41,7 +41,7 @@ Hooks.once('init', async function() {
   CONFIG.Item.documentClass = TeethItem;
   CONFIG.Item.dataModels = {
     'playbook': models.PlaybookData,
-    'crewType': models.CrewTypeData,
+    'outfitType': models.OutfitTypeData,
     'abilityHunter': models.AbilityHunterData,
     'boon': models.BoonData,
     'tool': models.ToolData,
@@ -53,12 +53,12 @@ Hooks.once('init', async function() {
   Actors.unregisterSheet("core", ActorSheet);
   Actors.registerSheet("teeth", TeethActorSheet, { makeDefault: true });
   Actors.registerSheet("teeth", TeethHunterSheet, { types: ["hunter"], makeDefault: true });
-  Actors.registerSheet("teeth", BitdCrewSheet, { types: ["crew"], makeDefault: true });
+  Actors.registerSheet("teeth", TeethOutfitSheet, { types: ["outfit"], makeDefault: true });
   Actors.registerSheet("teeth", BitdFactionSheet, { types: ["faction"], makeDefault: true });
   Actors.registerSheet("teeth", TeethClockSheet, { types: ["clock"], makeDefault: true });
   Items.unregisterSheet("core", ItemSheet);
   Items.registerSheet("teeth", TeethItemSheet, { makeDefault: true });
-  Items.registerSheet("teeth", TeethPlaybookSheet, { types: ["playbook", "crewType"], makeDefault: true });
+  Items.registerSheet("teeth", TeethPlaybookSheet, { types: ["playbook", "outfitType"], makeDefault: true });
 
   registerHandlebarsHelpers();
 

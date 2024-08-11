@@ -65,10 +65,10 @@
       }
     },
     {
-      "label": "Crew Types",
+      "label": "Outfit Types",
       "type": "Item",
-      "name": "crew-types",
-      "path": "packs/crew-types",
+      "name": "outfit-types",
+      "path": "packs/outfit-types",
       "system": "teeth",
       "ownership": {
         "PLAYER": "OBSERVER",

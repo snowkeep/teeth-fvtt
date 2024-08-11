@@ -2,7 +2,7 @@
   "TYPES": {
     "Actor": {
       "hunter": "Hunter",
-      "crew": "Crew",
+      "outfit": "Outfit",
       "faction": "Faction",
       "npc": "NPC",
       "clock": "Clock"
@@ -10,9 +10,9 @@
     "Item": {
       "setPlaybook": "Drag a Playbook from the Compendium",
       "playbook": "Playbook",
-      "crewType": "Crew Type",
+      "outfitType": "Outfit Type",
       "abilityHunter": "Hunters's Ability",
-      "abilityCrew": "Crew's Ability",
+      "abilityOutfit": "Outfit's Ability",
       "boon": "Boon",
       "tool": "Tool",
       "purchase": "Purchase"
@@ -32,7 +32,7 @@
     "Available": "Available",
     "Used": "Used",
 
-    "CrewName": "Name",
+    "OutfitName": "Name",
     "ItemName": "Name",
 
     "Drives": "Drives",
@@ -245,7 +245,7 @@
       "Broken": "Broken/Lost"
     },
 
-    "CrewType": "Crew Type",
+    "OutfitType": "Outfit Type",
     "Lair": "Lair",
     "HuntingGround": {
       "Title": "Hunting Grounds",
@@ -270,17 +270,20 @@
     },
     "Rep": "Rep",
     "RepType": "Reputation",
-    "RepDescription": "What initial reputation crew have?",
+    "RepDescription": "What initial reputation outfit have?",
     "Vaults": "Vaults",
     "Heat": "Heat",
     "WantedLvl": "Wanted Level",
     "Turf": "Turf",
-    "CrewExp": {
-      "ShortTitle": "Xp",
-      "Title": "Experience Clue",
-      "Placeholder": "Experience clue which depend on crew's playbook",
+    "OutfitAdvance": {
+      "ShortTitle": "Advance",
+      "Title": "Earn Agenda Points",
+      "OnePt": "1 point",
+      "TwoPt": "2 points",
+      "Placeholder1": "Gain 1 agenda point which depend on outfit's playbook",
+      "Placeholder2": "Gain 2 agenda points which depend on outfit's playbook",
       "HowItWorks": "Mark 1 xp for each item below, or 2 xp if it occurred multiple times.",
-      "Tips": "<li>Contend with challenges above your current station.</li><li>Bolster your crew's reputation or develop a new one.</li><li>Express the goals, drives, inner conflict, or essential nature of the crew.</li>"
+      "Tips": "<li>Contend with challenges above your current station.</li><li>Bolster your outfit's reputation or develop a new one.</li><li>Express the goals, drives, inner conflict, or essential nature of the outfit.</li>"
     },
 
     "Goals": "Goals",

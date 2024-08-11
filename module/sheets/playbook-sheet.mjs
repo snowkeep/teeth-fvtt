@@ -11,7 +11,7 @@ export class TeethPlaybookSheet extends TeethItemSheet {
     return foundry.utils.mergeObject(super.defaultOptions, {
       dragDrop: [
         {dragSelector: ".item", dropSelector: ".playbook"},
-        {dragSelector: ".item", dropSelector: ".crewType"}
+        {dragSelector: ".item", dropSelector: ".outfitType"}
       ]
     });
   }
@@ -49,10 +49,10 @@ export class TeethPlaybookSheet extends TeethItemSheet {
           if (this.item.type == "playbook") key = "inventory";
           break;
         case 'boon':
-          if (this.item.type == "crewType") key = "boons";
+          if (this.item.type == "outfitType") key = "boons";
           break;
         case 'purchase':
-          if (this.item.type == "crewType") key = "purchases";
+          if (this.item.type == "outfitType") key = "purchases";
       }
 
       if (key && this.item.system[key]) {

@@ -3,12 +3,12 @@
   <header class="sheet-header actor-grid">
     <div class="type-container">
       <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="100" width="100"/>
-      <div class="crew-type">
+      <div class="outfit-type">
         <h1>
           {{#if playbook}}
             {{playbook.name}}
           {{else}}
-            {{localize 'TEETH.CrewType'}}
+            {{localize 'TEETH.OutfitType'}}
           {{/if}}
         </h1>
         {{#if playbook}}
@@ -18,8 +18,8 @@
     </div>
 
     <div class="name-container">
-      <h1 class="crew-name">
-        <input class="clear-input" name="name" type="text" value="{{actor.name}}" placeholder="{{localize 'TEETH.CrewName'}}"/>
+      <h1 class="outfit-name">
+        <input class="clear-input" name="name" type="text" value="{{actor.name}}" placeholder="{{localize 'TEETH.OutfitName'}}"/>
       </h1>
 
       <div class="brief-info grid-2col">
@@ -105,8 +105,8 @@
     </div>
 
     <div class="exp-block">
-      <h3 class="teeth-header">{{localize 'TEETH.CrewExp.ShortTitle'}}</h3>
-      <p class="teeth-subheader">{{localize 'TEETH.CrewExp.HowItWorks'}}</p>
+      <h3 class="teeth-header">{{localize 'TEETH.OutfitExp.ShortTitle'}}</h3>
+      <p class="teeth-subheader">{{localize 'TEETH.OutfitExp.HowItWorks'}}</p>
       <div class="value-step-block" data-value="{{system.exp.value}}" data-key="system.exp.value">
         {{#numLoop system.exp.max}}
           <span class="value-step value-tooth simple-red-tooth" data-index="{{this}}"></span>
@@ -114,7 +114,7 @@
       </div>
       <ul class="exp-tips">
         <li>{{playbook.system.exp}}</li>
-        {{{localize 'TEETH.CrewExp.Tips'}}}
+        {{{localize 'TEETH.OutfitExp.Tips'}}}
       </ul>
     </div>
 
@@ -169,7 +169,7 @@
     </div>
 
     {{!-- Owned Notes Tab --}}
-    <div class="tab crew-notes" data-group="primary" data-tab="notes">
+    <div class="tab outfit-notes" data-group="primary" data-tab="notes">
       <div class="notes-container actor-grid">
         <div class="related-faction items-block">
           <h3 class="teeth-header">{{localize 'TEETH.Factions'}}</h3>

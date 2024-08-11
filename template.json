@@ -2,7 +2,7 @@
   "Actor": {
     "types": [
       "hunter",
-      "crew",
+      "outfit",
       "faction",
       "npc",
       "clock"
@@ -12,7 +12,7 @@
   "Item": {
     "types": [
       "playbook",
-      "crewType",
+      "outfitType",
       "abilityHunter",
       "boon",
       "tool",

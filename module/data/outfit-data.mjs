@@ -1,6 +1,6 @@
 import { TeethActor, TeethItem } from "../documents/_module.mjs";
 
-export default class CrewData extends foundry.abstract.TypeDataModel {
+export default class OutfitData extends foundry.abstract.TypeDataModel {
   static defineSchema() {
     const fields = foundry.data.fields;
     const requiredInteger = {required: true, nullable: false, integer: true};

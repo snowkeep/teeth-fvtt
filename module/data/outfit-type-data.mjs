@@ -1,6 +1,6 @@
 import { TeethActor, TeethItem } from "../documents/_module.mjs";
 
-export default class CrewTypeData extends foundry.abstract.TypeDataModel {
+export default class OutfitTypeData extends foundry.abstract.TypeDataModel {
   static defineSchema() {
     const fields = foundry.data.fields;
 
@@ -39,7 +39,8 @@ export default class CrewTypeData extends foundry.abstract.TypeDataModel {
       })),
 
       summary: new fields.StringField(),
-      exp: new fields.StringField(),
+      adv1: new fields.StringField(),
+      adv2: new fields.StringField(),
       description: new fields.HTMLField()
     }
   }

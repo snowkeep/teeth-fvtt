@@ -1,4 +1,4 @@
-.crew {
+.outfit {
   .sheet-header {
     row-gap: 5px;
 
@@ -13,7 +13,7 @@
         border: none;
       }
 
-      .crew-type {
+      .outfit-type {
         font-family: $font-secondary;
 
         .playbook-description {
@@ -24,7 +24,7 @@
     }
 
     .name-container {
-      .crew-name {
+      .outfit-name {
         margin: 0;
 
         input {
@@ -164,7 +164,7 @@
       }
     }
 
-    .crew-notes {
+    .outfit-notes {
       .related-faction {
         .set-status {
 

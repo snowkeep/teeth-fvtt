@@ -30,7 +30,7 @@ export const TEETH = {
 
   supportedLinks: {
     hunter: {npc: "contacts"},
-    crew: {
+    outfit: {
       hunter: "members",
       npc: "contacts",
       faction: "relatedFactions",

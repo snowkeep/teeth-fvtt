@@ -18,9 +18,10 @@
 
     {{!-- Owned Playbook Tab --}}
     <div class="tab general" data-group="primary" data-tab="general">
-      <div class="exp-clues">
-        <h3>{{localize 'TEETH.CrewExp.Title'}}:</h3>
-        <input class="all-width" name="system.exp" type="text" value="{{system.exp}}" placeholder="{{localize 'TEETH.CrewExp.Placeholder'}}" data-dtype="String"></input>
+      <div class="adv-clues">
+        <h3>{{localize 'TEETH.OutfitAdvance.Title'}}:</h3>
+        {{localize 'TEETH.OutfitAdvance.OnePt'}}:<input class="all-width" name="system.adv1" type="text" value="{{system.adv1}}" placeholder="{{localize 'TEETH.OutfitAdvance.Placeholder1'}}" data-dtype="String"></input>
+        {{localize 'TEETH.OutfitAdvance.TwoPt'}}:<input class="all-width" name="system.adv2" type="text" value="{{system.adv2}}" placeholder="{{localize 'TEETH.OutfitAdvance.Placeholder2'}}" data-dtype="String"></input>
       </div>
 
       <h3>{{localize 'TEETH.Description'}}</h3>
