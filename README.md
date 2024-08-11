@@ -6,9 +6,9 @@
 
 Unofficial system for [TEETH](https://https://teethrpg.itch.io/teeth-rpg) 
 
-## WARNING: THIS IS NOT YET USEABLE FOR TEETH
+## WARNING: THIS IS NOT YET USABLE FOR TEETH
 
-The hunter playbooks are approaching completeness.  Everything else is still BitD.
+The hunter playbooks are ready.  Systems not used by Teeth have been removed.  Outfit conversion from Crew has just started.
 
 ## Install
 
