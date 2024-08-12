@@ -32,7 +32,7 @@ export default class OutfitData extends foundry.abstract.TypeDataModel {
         name: new fields.StringField(),
         relationship: new fields.NumberField({requiredPositiveInteger, max: 3, initial: 1 })
       })),
-      goals: new fields.ArrayField(new fields.SchemaField({
+      /*goals: new fields.ArrayField(new fields.SchemaField({
         id: new fields.ForeignDocumentField(TeethActor, {idOnly: true}),
         uuid: new fields.StringField(),
         name: new fields.StringField(),
@@ -40,16 +40,11 @@ export default class OutfitData extends foundry.abstract.TypeDataModel {
           value: new fields.NumberField({requiredPositiveInteger, initial: 0 }),
           max: new fields.NumberField({requiredPositiveInteger, initial: 4 }),
         })
-      })),
+      })),*/
 
       description: new fields.HTMLField()
     };
   }
 
-  /* -------------------------------------------- */
 
-  /** @inheritdoc */
-  prepareDerivedData() {
-    this.reputation.max = 12 - this.turf.value;
-  }
 }

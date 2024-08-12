@@ -27,20 +27,6 @@ export default class TeethActor extends Actor {
 
     this.prototypeToken.actorLink = true;
 
-    // Load default items
-    const itemPack = game.packs.get('teeth.items');
-    await itemPack.getIndex();
-    const defaultFolder = itemPack.folders.find(p => p.name === "Default")._id;
-    const defaultItems = itemPack.index.filter(p => p.folder === defaultFolder);
-
-    for (const [ownerId, permissions] of Object.entries(this.ownership)) {
-      if (permissions === 3 && game.userId === ownerId) {
-        for (const item of defaultItems) {
-          const addItem = await itemPack.getDocument(item._id);
-          this.createEmbeddedDocuments('Item', [addItem]);
-        }
-      }
-    }
   }
 
   _onCreateDescendantDocuments(parent, collection, documents, data, options, userId) {
@@ -80,6 +66,53 @@ export default class TeethActor extends Actor {
     const toCreate = [];
 
     for (const array of forLoad) {
+      if (array === "inventory") {
+        // Load default items
+        const itemPack = game.packs.get('teeth.items');
+        await itemPack.getIndex();
+        const defaultFolder = itemPack.folders.find(p => p.name === "Default")._id;
+        const defaultItems = itemPack.index.filter(p => p.folder === defaultFolder);
+
+        for (const [ownerId, permissions] of Object.entries(this.ownership)) {
+          if (permissions === 3 && game.userId === ownerId) {
+            for (const item of defaultItems) {
+              const addItem = await itemPack.getDocument(item._id);
+              this.createEmbeddedDocuments('Item', [addItem]);
+            }
+          }
+        }
+      }
+      if (array === "purchases") {
+        // Load purchases
+        const purchasePack = game.packs.get('teeth.purchases');
+        const purchases = await purchasePack.getDocuments();
+        for (const [ownerId, permissions] of Object.entries(this.ownership)) {
+          if (permissions === 3 && game.userId === ownerId) {
+            for (const purchase of purchases) {
+              console.log(purchase._id);
+              const addPurchase = await purchasePack.getDocument(purchase._id);
+              this.createEmbeddedDocuments('Item', [addPurchase]);
+            }
+          }
+        }
+      }
+      if (array === "boons") {
+        // Load default items
+        const boonPack = game.packs.get('teeth.boons');
+        await boonPack.getIndex();
+        const defaultFolder = boonPack.folders.find(p => p.name === "Default")._id;
+        const defaultBoons = boonPack.index.filter(p => p.folder === defaultFolder);
+
+        for (const [ownerId, permissions] of Object.entries(this.ownership)) {
+          if (permissions === 3 && game.userId === ownerId) {
+            for (const boon of defaultBoons) {
+              const addBoon = await boonPack.getDocument(boon._id);
+              this.createEmbeddedDocuments('Item', [addBoon]);
+            }
+          }
+        }
+      }
+
       const idArr = container.system[array];
       for (const itemData of idArr) {
         const item = await fromUuid(itemData.uuid);
