@@ -145,7 +145,7 @@ async function roll(formData, sheet) {
   let diceToRoll = formData.diceNumber + formData.modifier;
 
   if (formData.assistance) diceToRoll++;
-  if (formData.pushDice || formData.devisBargain)diceToRoll++;
+  if (formData.pushDice || formData.strangersBargain)diceToRoll++;
 
   let formula = "2d6kl"
   if (diceToRoll > 0) {
@@ -173,7 +173,7 @@ function getRollData(rollResult, formData, diceToRoll) {
       effect: formData.pushEffect,
       dice: formData.pushDice
     },
-    devisBargain: formData.devisBargain,
+    strangersBargain: formData.strangersBargain,
     position: {
       key: formData.position
     },

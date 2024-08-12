@@ -377,12 +377,12 @@
         "AddDice": "Get bonus dice",
         "Push": "Push Yourself",
         "PushEffect": "+1 level to effect",
-        "DevilsBargain": "Devil’s Bargain",
+        "StrangersBargain": "Stranger’s Bargain",
         "Assistance": "Assistance"
       },
       "BonusDescription": {
         "Push": "You suffer {stress} stress.",
-        "DevilsBargain": "The Devil’s Bargain occurs regardless of the outcome of the roll.",
+        "StrangersBargain": "The Stranger’s Bargain applies regardles of success or failure.",
         "Assistance": "Character who helps suffer 1 stress and might also suffer any consequences that occur because of the roll."
       },
       "ManifestBehaviour": {
