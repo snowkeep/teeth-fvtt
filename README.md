@@ -6,9 +6,9 @@
 
 Unofficial system for [TEETH](https://https://teethrpg.itch.io/teeth-rpg) 
 
-## WARNING: THIS IS NOT YET USABLE FOR TEETH
+## WARNING:
 
-The hunter playbooks are ready.  Systems not used by Teeth have been removed.  Outfit conversion from Crew has just started.
+This is usable, but incomplete. The hunter and outfit playbooks are ready. Wilderness rolls are still needed and the Outfit sheet needs usability improvements.
 
 ## Install
 
