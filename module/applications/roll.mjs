@@ -9,11 +9,11 @@ export async function createRollDialog (type, sheet, note) {
   rollConfig.defaultType = type ? type : "fortune";
 
   if (type == "action") {
-    rollConfig.defaultAction = note ? note : "hunt";
+    rollConfig.defaultAction = note ? note : "scout";
   } else if (type == "resistance") {
     rollConfig.defaultAttribute = note ? note : "insight";
   } else {
-    rollConfig.defaultAction = "hunt";
+    rollConfig.defaultAction = "scout";
     rollConfig.defaultAttribute = "insight";
     if (!isNaN(note)) {
       rollConfig.diceNumber = parseInt(note, 10);

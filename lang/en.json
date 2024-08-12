@@ -357,20 +357,20 @@
         "Desperate": "Desperate"
       },
       "Effect": {
-        "Title": "Effcet",
+        "Title": "Effect",
         "Zero": "Zero",
+        "Poor": "Poor",
         "Limited": "Limited",
-        "Standard": "Standard",
-        "Great": "Great",
-        "Extreme": "Extreme"
+        "Reasonable": "Reasonable",
+        "Superb": "Superb"
       },
       "EffectDescription": {
-        "Title": "Effcet",
+        "Title": "Effect",
         "Zero": "This action has poor, little or even zero effect. 0 Tick",
-        "Limited": "You achieve a partial or weak effect. How is your impact diminished? What effort remains to achieve your goal? 1 Tick",
-        "Standard": "You achieve what we’d expect as “normal” with this action. Is that enough, or is there more left to do? 2 Ticks",
-        "Great": "You achieve more than usual. How does the extra effort manifest? What additional benefit do you enjoy? 3 Ticks",
-        "Extreme": "Extreme Effect! 5 Ticks"
+        "Poor": "You achieve a very weak effect. 1 Tick",
+        "Limited": "You achieve a partial or weak effect. 2 Tick",
+        "Reasonable": "You achieve what we’d expect as “normal” with this action. 3 Ticks",
+        "Suberb": "You achieve more than usual. 4 Ticks"
       },
       "Bonus": {
         "or": "or",

@@ -137,18 +137,18 @@ export const TEETH = {
     },
     effect: {
       zero: "TEETH.Roll.Effect.Zero",
+      poor: "TEETH.Roll.Effect.Poor",
       limited: "TEETH.Roll.Effect.Limited",
-      standard: "TEETH.Roll.Effect.Standard",
-      great: "TEETH.Roll.Effect.Great",
-      extreme: "TEETH.Roll.Effect.Extreme"
+      reasonable: "TEETH.Roll.Effect.Reasonable",
+      suberb: "TEETH.Roll.Effect.Superb"
     },
     fortuneRollResult: {
       fail: "Zero",
       mixed: "Limited",
-      success: "Standard",
-      critical: "Great"
+      success: "Reasonable",
+      critical: "Superb"
     },
-    effectSequence: ["zero", "limited", "standard", "great", "extreme"]
+    effectSequence: ["zero", "poor", "limited", "reasonable", "superb"]
   },
 
   clockTypes: {
@@ -156,6 +156,7 @@ export const TEETH = {
     6: 6,
     8: 8,
     10: 10,
-    12: 12
+    12: 12,
+    16: 16
   }
 };
