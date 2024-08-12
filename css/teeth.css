@@ -768,7 +768,8 @@ select.clear-select {
       margin-top: 5px; }
 
 .teeth.actor .outfit .sheet-header {
-  row-gap: 5px; }
+  row-gap: 5px;
+  margin-bottom: 10px; }
   .teeth.actor .outfit .sheet-header .type-container {
     display: grid;
     column-gap: 10px;
