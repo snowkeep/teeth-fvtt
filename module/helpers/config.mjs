@@ -106,10 +106,6 @@ export const TEETH = {
       asset: "TEETH.Roll.Type.AcquireAsset",
       vice: "TEETH.Roll.Type.IndulgeVice"
     },
-    rollAs: {
-      action: "TEETH.Roll.Type.Action",
-      fortune: "TEETH.Roll.Type.Fortune"
-    },
     attributes: {
       insight: "TEETH.Insight",
       prowess: "TEETH.Prowess",

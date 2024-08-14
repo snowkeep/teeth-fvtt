@@ -26,7 +26,6 @@ export async function createRollDialog (type, sheet, note) {
     action: actionRoll,
     resistance: resistanceRoll,
     fortune: fortuneRoll,
-    information: gatherInformation,
     engagement: engagementRoll,
     asset: acquireAsset,
     vice: indulgeVice
@@ -68,12 +67,12 @@ export async function createRollDialog (type, sheet, note) {
 
       if (sheet) {
         getDiceNumber(html, sheet);
-        html.find("#roll-type, #roll-as, #attribute, #action").on("change", function() {
+        html.find("#roll-type, #attribute, #action").on("change", function() {
           getDiceNumber(html, sheet);
         });
       }
 
-      html.find("#roll-type, #roll-as").on("change", function() {
+      html.find("#roll-type").on("change", function() {
         optionalBlocks(html);
       });
     }
@@ -106,7 +105,6 @@ function optionalBlocks(html) {
     const supportedType = block.dataset.connected.split(',');
 
     if (supportedType.includes(type)) block.classList.add("active");
-    if (type == "information" && supportedType.includes(rollAs)) block.classList.add("active");
   }
 }
 
@@ -114,10 +112,9 @@ function getDiceNumber(html, sheet) {
   const formData = new FormData(html[0].querySelector("form"));
   const data = toIntData(Object.fromEntries(formData.entries()));
   const type = data.rollType;
-  const rollAs = data.rollAs;
 
   let diceNumber;
-  const targetType = type == "information" ? rollAs : type;
+  const targetType = type;
   switch (targetType) {
     case 'action':
       const action = data.action;
@@ -303,27 +300,6 @@ function fortuneRoll(rollResult) {
   return rollResult
 }
 
-function gatherInformation(rollResult, sheet, formData) {
-  const rollData = rollResult.data;
-
-  rollData.rollAs = {
-    key: formData.rollAs,
-    localizeKey: getLokalizeKey(formData.rollAs)
-  };
-  rollData.rollAs.localize = game.i18n.localize("TEETH.Roll.Type." + rollData.rollAs.localizeKey);
-
-  if (rollData.rollAs.key == "action") {
-    rollData.effectShow = true;
-    rollData.positionShow = true;
-    rollData.action = formData.action;
-    rollData.rollAs.localize = game.i18n.localize("TEETH.Roll.Type.Action");
-
-    rollData.description = game.i18n.localize("TEETH.Roll.Action." + rollData.position.localizeKey + "." + rollData.countAs.localizeKey);
-
-  } 
-  return rollResult
-}
-
 function engagementRoll(rollResult) {
   rollResult.data.description = game.i18n.localize("TEETH.Roll.Engagement." + rollResult.data.countAs.localizeKey);
 
@@ -383,12 +359,7 @@ async function sufferStress(sheet, addStress) {
 
 async function giveExp(rollData, sheet) {
   const speaker = ChatMessage.getSpeaker({ actor: sheet });
-  let supported;
-  if (rollData.rollAs) {
-    supported = rollData.type == "action" || rollData.rollAs.key == "action";
-  } else {
-    supported = rollData.type == "action";
-  }
+  const supported = rollData.type == "action";
 
   if (rollData.position.key != "desperate" || !supported) return;
 
