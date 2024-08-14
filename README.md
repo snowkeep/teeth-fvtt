@@ -24,13 +24,15 @@ The TEETH Foundry VTT system is completely based on [GMonlineua's Blades-in-the-
 
 [Changelog](https://github.com/snowkeep/teeth-fvtt/wiki/Changelog)
 
+[Todo](https://github.com/snowkeep/teeth-fvtt/wiki/Teeth)
+
 [BitD Roadmap](https://github.com/GMonlineau/blades-in-the-dark-fvtt/wiki/Roadmap)
 
 [Data Structure](https://github.com/snowkeep/teeth-fvtt/wiki/Documentation#data-structure)
 
 ## Credits
 - This work is based on [Blades in the Dark](http://www.bladesinthedark.com), product of One Seven Design, developed and authored by John Harper, and licensed for our use under the [Creative Commons Attribution 3.0 Unported](http://creativecommons.org/licenses/by/3.0/) license.
-- It is also based on [TEETH](https://teethrpg.itch.io/teeth-rpg), created by Jim Rossignal and Marsh Davies.
+- It is also based on [TEETH](https://teethrpg.itch.io/teeth-rpg), created by Jim Rossignal and Marsh Davies, alos licensed under the [Creative Commons Attribution 3.0 Unported](http://creativecommons.org/licenses/by/3.0/) license.
 
 [Foundry Shield]: https://img.shields.io/badge/Foundry-12-informational?style=flat-square
 [Foundry URL]: https://foundryvtt.com
