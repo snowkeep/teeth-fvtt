@@ -27,7 +27,7 @@ export async function createRollDialog (type, sheet, note) {
     resistance: resistanceRoll,
     fortune: fortuneRoll,
     engagement: engagementRoll,
-    asset: acquireAsset,
+    wilderness: wildernessRoll,
     vice: indulgeVice
   }
 
@@ -306,9 +306,9 @@ function engagementRoll(rollResult) {
   return rollResult
 }
 
-function acquireAsset(rollResult) {
+function wildernessRoll(rollResult) {
   rollResult.data.countAs.show = false;
-  rollResult.data.description = game.i18n.localize("TEETH.Roll.AcquireAsset." + rollResult.data.countAs.localizeKey);
+  rollResult.data.description = game.i18n.localize("TEETH.Roll.Wilderness." + rollResult.data.countAs.localizeKey);
 
   return rollResult
 }

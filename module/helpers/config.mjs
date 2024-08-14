@@ -103,7 +103,7 @@ export const TEETH = {
       resistance: "TEETH.Roll.Type.Resistance",
       fortune: "TEETH.Roll.Type.Fortune",
       engagement: "TEETH.Roll.Type.Engagement",
-      asset: "TEETH.Roll.Type.AcquireAsset",
+      wilderness: "TEETH.Roll.Type.Wilderness",
       vice: "TEETH.Roll.Type.IndulgeVice"
     },
     attributes: {
