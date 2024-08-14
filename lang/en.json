@@ -35,10 +35,6 @@
     "OutfitName": "Outfit Name",
     "ItemName": "Name",
 
-    "Drives": "Drives",
-    "Belives": "Belives",
-    "Heritage": "Heritage",
-
     "Hunter": "Hunter Class",
     "ChooseClass": "Choose Hunter Class",
     "SetClass": "Set Hunter Class",
@@ -154,6 +150,8 @@
       "Resolve": "Consequences from mental strain or willpower."
     },
 
+    "Investigation": "Investigation",
+
     "Action": "Action",
     "Scout": "Scout",
     "Doctor": "Doctor",
@@ -168,18 +166,18 @@
     "Evoke": "Evoke",
     "Persuade": "Persuade",
     "ActionDescription": {
-      "Aim": "When players <strong>Aim</strong>, they use poise, keen perception or sometimes patience to achieve precision. <em>They might nail a pheasant with a crossbow, flick a pebble into a bucket to distract a foe, deliver a paralysing chop to a guard's pressure point or toss a grapple up to catch on a parapet (but Manoeuvre might be more appropriate)</em>",
-      "Command": "When players <strong>Command</strong>, they compel and intimidate. <em>They might threaten a servant to spill their master’s secrets, rally a mob of villagers to descend upon the witch’s hut, or rely on their air of authority to garner preferential treatment at the pub (but Persuade might be more appropriate)</em>",
-      "Devise": "When players <strong>Devise</strong>, they fabricate a plan or construct. <em>They might rig up traps, manufacture explosives, manipulate complex mechanisms, compose music or determine a secret point of entry from the ancient plans of a manor (but Study might be more appropriate).</em>",
-      "Doctor": "When players <strong>Doctor</strong>, they use training and rationality to overcome cerebral challenges. <em>They might try to staunch blood flowing from a wound, explain a phenomena to a perplexed noble, treat a fever, or analyse a fungus to develop an anti-toxin (but Study might be more appropriate).</em>",
-      "Evoke": "When players <strong>Evoke</strong>, they employ words or symbols which have otherworldly power. <em>They might instil acolytes with zealous fervour, summon forth the dead to reveal the manner of their sad demise, control and exploit their own hideous mutation, or perform a conjuration by reading an evil tome (but Study might be more appropriate).</em>",
-      "Fight": "When players <strong>Fight</strong>, they employ martial skill in close quarters. <em>They might try to put a knife through an enemy’s ribs, wrestle a pig, tie a struggling tax collector to a chair, or simply annihilate an opponent with a headbutt (but Wreck might be more appropriate).</em>",
-      "Manoeuvre": "When players <strong>Manoeuvre</strong>, they perform or orchestrate a feat of physical prowess. <em>They might give someone a boost over a cemetery wall, make a quick escape by sliding across a slippery rooftop, amaze a crowd with a juggling act or launch into combat on the end of a rope (but Fight might be more appropriate).</em>",
-      "Persuade": "When players <strong>Persuade</strong>, they convince or win over with words and gestures. <em>They might deploy flattery to change a truculent bargeman’s attitude, concoct an elaborate but compelling lie, or pressure a noble into giving them a magical heirloom (but Command might be more appropriate).</em>",
-      "Scout": "When players <strong>Scout</strong>, they move warily and with stealth. <em>They might infiltrate a bank vault unseen, stalk silently through woodland, or emerge from the shadows to subdue a guard (but Fight might be more appropriate).</em>",
-      "Study": "When players <strong>Study</strong>, they probe, cogitate and analyse. <em>They might spend time researching in the library, glean evidence from a pile of bones, practise the mannerisms of someone they intend to impersonate, or contemplate the scuff marks on a desk to pinpoint a secret switch (but Surveil might be more appropriate).</em>",
-      "Surveil": "When players <strong>Surveil</strong>, they observe and interpret what can be seen and heard. <em>They might watch a crowd for signs of trouble, examine the landscape for evidence of a creature’s passage, look for hidden traps or keep an eye on the road in anticipation of ambush (but Scout might be more appropriate).</em>",
-      "Wreck": "When players <strong>Wreck</strong>, they wield force with destructive intent. <em>They might charge a door with their shoulder to batter it down, cleave through the supports of a lookout tower, toss a wrench into the busy workings of a steam engine, or scuttle a boat with a bomb (but Devise might be more appropriate).</em>"
+      "Aim": "When you <strong>Aim</strong>, you use poise, keen perception or sometimes patience to achieve precision. <em>You might nail a pheasant with a crossbow, flick a pebble into a bucket to distract a foe, deliver a paralysing chop to a guard's pressure point or toss a grapple up to catch on a parapet (but Manoeuvre might be more appropriate)</em>",
+      "Command": "When you <strong>Command</strong>, you compel and intimidate. <em>You might threaten a servant to spill their master’s secrets, rally a mob of villagers to descend upon the witch’s hut, or rely on your air of authority to garner preferential treatment at the pub (but Persuade might be more appropriate)</em>",
+      "Devise": "When you <strong>Devise</strong>, you fabricate a plan or construct. <em>You might rig up traps, manufacture explosives, manipulate complex mechanisms, compose music or determine a secret point of entry from the ancient plans of a manor (but Study might be more appropriate).</em>",
+      "Doctor": "When you <strong>Doctor</strong>, you use training and rationality to overcome cerebral challenges. <em>You might try to staunch blood flowing from a wound, explain a phenomena to a perplexed noble, treat a fever, or analyse a fungus to develop an anti-toxin (but Study might be more appropriate).</em>",
+      "Evoke": "When you <strong>Evoke</strong>, you employ words or symbols which have otherworldly power. <em>You might instil acolytes with zealous fervour, summon forth the dead to reveal the manner of their sad demise, control and exploit your own hideous mutation, or perform a conjuration by reading an evil tome (but Study might be more appropriate).</em>",
+      "Fight": "When you <strong>Fight</strong>, you employ martial skill in close quarters. <em>You might try to put a knife through an enemy’s ribs, wrestle a pig, tie a struggling tax collector to a chair, or simply annihilate an opponent with a headbutt (but Wreck might be more appropriate).</em>",
+      "Manoeuvre": "When you <strong>Manoeuvre</strong>, you perform or orchestrate a feat of physical prowess. <em>You might give someone a boost over a cemetery wall, make a quick escape by sliding across a slippery rooftop, amaze a crowd with a juggling act or launch into combat on the end of a rope (but Fight might be more appropriate).</em>",
+      "Persuade": "When you <strong>Persuade</strong>, you convince or win over with words and gestures. <em>You might deploy flattery to change a truculent bargeman’s attitude, concoct an elaborate but compelling lie, or pressure a noble into giving them a magical heirloom (but Command might be more appropriate).</em>",
+      "Scout": "When you <strong>Scout</strong>, you move warily and with stealth. <em>You might infiltrate a bank vault unseen, stalk silently through woodland, or emerge from the shadows to subdue a guard (but Fight might be more appropriate).</em>",
+      "Study": "When you <strong>Study</strong>, you probe, cogitate and analyse. <em>You might spend time researching in the library, glean evidence from a pile of bones, practise the mannerisms of someone you intend to impersonate, or contemplate the scuff marks on a desk to pinpoint a secret switch (but Surveil might be more appropriate).</em>",
+      "Surveil": "When you <strong>Surveil</strong>, you observe and interpret what can be seen and heard. <em>You might watch a crowd for signs of trouble, examine the landscape for evidence of a creature’s passage, look for hidden traps or keep an eye on the road in anticipation of ambush (but Scout might be more appropriate).</em>",
+      "Wreck": "When you <strong>Wreck</strong>, you wield force with destructive intent. <em>You might charge a door with your shoulder to batter it down, cleave through the supports of a lookout tower, toss a wrench into the busy workings of a steam engine, or scuttle a boat with a bomb (but Devise might be more appropriate).</em>"
     },
 
     "Injury": "Injury",
@@ -198,10 +196,10 @@
     "Notes": "Notes",
     "Experience": {
       "Title": "Experience",
-      "HowItWorks": "At the end of each session, for these three items, mark 1 xp (in your playbook or an attribute) or 2 xp if that item occurred multiple times.",
-      "DesperateRoll": "Every time you roll a Desperate Action, mark XP in that Action's Attribute immediately.",
-      "Character": "You expressed your beliefs, drives or background.",
-      "Vice": "Took Action demonstrating your Erratic Behaviour, if you have one",
+      "HowItWorks": "You earn an Experience point when...",
+      "DesperateRoll": "You roll for an <b>Action</b> (or lead a Group Action) in a <b>Desperate Position</b>. You can only use this Experience to advance the <b>Attribute</b> encompassing that same Action.",
+      "Character": " Youexpress your beliefs, drives or background. (max 2)",
+      "Vice": "Took Action demonstrating your Erratic Behaviour, if you have one. (max 2)",
       "Bruiser": "Addressed a challenge with <b>violence</b> or <b>coercion</b>, successful or not.",
       "Captain": "Addressed a challenge with <b>charm</b> or <b>authority</b>, successful or not.",
       "Keeper": "Addressed a challenge with <b>research</b> or <b>mysticism</b>, successful or not.",
@@ -210,21 +208,17 @@
     },
     "RulesRef": {
       "Title": "Rules Reference",
-      "GatherInfo": {
-        "Title": "Gather Information",
-        "Tips": "<li>What do they intend to do?</li><li>How can I get them to [X]?</li><li>What should I look out for?</li><li>What's the best way in?</li><li>Where can I hide here?</li><li>How can I find [X]?</li><li>What's really going on here?</li>"
-      },
       "Teamwork": {
         "Title": "Teamwork",
-        "Tips": "<span><b>Assist</b> a teammate</span><span><b>Protect</b> a teammate</span><span>Lead a <b>group action</b></span><span><b>Set up</b> a teammate</span>"
+        "Tips": "<span>Take someone else's <b>consequenses</b></span><span>Lead a <b>group action</b></span><span><b>Assist</b> another player</span>"
       }
     },
 
     "Playbook": {
       "Summary": "Describe this playbook briefly",
       "Exp": {
-        "Title": "Experience Clue",
-        "Placeholder": "Experience clue which depend on character's playbook"
+        "Title": "Character Advancement",
+        "Placeholder": "Character-specific Action to gain experience"
       },
       "Items": "Items"
     },
@@ -247,35 +241,9 @@
     },
 
     "OutfitType": "Outfit Type",
-    "Lair": "Lair",
-    "HuntingGround": {
-      "Title": "Hunting Grounds",
-      "Operation": "Operation Type",
-      "Tips": "<p>Get +1d to any gather information rolls when prepare to operation of your prefer type.</p><p>Free additional downtime activity to contribute to that operation.</p>"
-    },
     "Tier": "Tier",
-    "Hold": {
-      "Title": "Hold",
-      "Weak": "Weak",
-      "Strong": "Strong"
-    },
-    "Status": {
-      "Title": "Status",
-      "Allies": "Allies (+3)",
-      "Friendly": "Friendly (+2)",
-      "Helpful": "Helpful (+1)",
-      "Neutral": "Neutral",
-      "Interfering": "Interfering (-1)",
-      "Hostile": "Hostile (-2)",
-      "War": "War (-3)"
-    },
-    "Rep": "Rep",
-    "RepType": "Reputation",
-    "RepDescription": "What initial reputation outfit have?",
     "Vaults": "Vaults",
     "Heat": "Heat",
-    "WantedLvl": "Wanted Level",
-    "Turf": "Turf",
     "OutfitAdvance": {
       "ShortTitle": "The Agenda Track",
       "Title": "Advance as you gain Agenda Points",
@@ -285,9 +253,9 @@
       "Placeholder2": "Gain 2 agenda points which depend on outfit's playbook",
       "HowItWorks": "Advance as you gain Agenda Points",
       "Methods": {
-        "One": "1 Agenda Point if players improved their cover as Hunters by slaying a monster.",
-        "Two": "1 Agenda Point if players acted in ways fitting for their Secret Agenda.",
-        "Three": "2 Agenda Point if players achieved something specific to bring their Secret Agenda closer to fulfilment."
+        "One": "1 Agenda Point if you improved your cover as Hunters by slaying a monster.",
+        "Two": "1 Agenda Point if you acted in ways fitting for your Secret Agenda.",
+        "Three": "2 Agenda Point if you achieved something specific to bring your Secret Agenda closer to fulfilment."
       },
       "Example": "For example:"
     },
@@ -344,10 +312,9 @@
         "Action": "Action Roll",
         "Resistance": "Resistance Roll",
         "Fortune": "Fortune Roll",
-        "GatherInformation": "Gather Information",
+        "Wilderness": "Wilderness Roll",
         "Engagement": "Engagement Roll",
-        "IndulgeVice": "Indulge Vice",
-        "AcquireAsset": "Acquire Asset"
+        "IndulgeVice": "Indulge Vice"
       },
       "PositionEffect": "Position & Effect",
       "Position": {
@@ -385,9 +352,12 @@
         "StrangersBargain": "The Stranger’s Bargain applies regardles of success or failure.",
         "Assistance": "Character who helps suffer 1 stress and might also suffer any consequences that occur because of the roll."
       },
+      "Investigation": {
+        "Title": "Investigation Result:"
+      },
       "ManifestBehaviour": {
         "Title": "Gain Erratic Behaviour",
-        "Description": "You get {stress} stress, so manifest an <b>Erratic Behaviour</b> and cannot perform Actions that incur Stress until they have reduced Stress during an Aftermath phase."
+        "Description": "You get {stress} stress, so manifest an <b>Erratic Behaviour</b> and cannot perform Actions that incur Stress until you have reduced Stress during an Aftermath phase."
       },
       "Result": {
         "Exp": "{actor} gains 1 experiences in {attribute}",
@@ -427,37 +397,26 @@
         "Mixed": "Mixed result / Limited, partial effect.",
         "Fail": "Bad result / Poor, little effect."
       },
-      "GatherInformation": {
-        "RollAs": "Roll as",
-        "Zero": "You get little, incomplete information.",
-        "Limited": "You get incomplete or partial information. More information gathering will be needed to get all the answers.",
-        "Standard": "You get good details. Clarifying and follow-up questions are possible.",
-        "Great": "You get exceptional details. The information is complete and follow-up questions may expand into related areas or reveal more than you hoped for.",
-        "Extreme": "You get more than you ever dared to think."
+      "Wilderness": {
+        "Critical": "How do you shrug off the conditions?  What do you talk about on your journey?",
+        "Success": "How do you endure the conditions? You have an encounter.",
+        "Mixed": "How do you suffer the conditions?  One player suffers a Hardship.  You have an encounter.",
+        "Fail": "You are lost. How do you succumb to the conditions? Add one tick to the Season Clock. Two players suffer a Hardship. You have an encounter"
       },
       "Engagement": {
-        "Critical": "Exceptional result. <em>You’vealready overcome the first obstacle andyou’re in a controlled position for what’s next.</em>",
-        "Success": "Good result. <em>You’re in a controlled position when the action starts.</em>",
-        "Mixed": "Mixed result. <em>You’re in a risky position when the action starts.</em>",
-        "Fail": "Bad result. <em>You’re in a desperate position when the action starts.</em>",
-        "Operation": "Is this operation particularly bold or daring? Take <strong>+1d</strong>. Is this operation overly complex or contingent on many factors? Take <strong>-1d</strong>.",
-        "Plan": "Does the <strong>plan’s detail</strong> expose a vulnerability of the target or hit them where they’re weakest? Take <strong>+1d</strong>. Is the target strongest against this approach, or do they have particular defenses or special preparations? Take <strong>-1d</strong>.",
-        "Contact": "Can any of your <strong>friends</strong> or <strong>contacts</strong> provide aid or insight for this operation? Take <strong>+1d</strong>. Are any <strong>enemies</strong> or <strong>rivals</strong> interfering in the operation? Take <strong>-1d</strong>.",
-        "Other": "Are there any <strong>other elements</strong> that you want to consider? Maybe a lower-Tier target will give you +1d. Maybe a higher-Tier target will give you -1d. Maybe there’s a situation in the district that makes the operation more or less tricky."
-      },
-      "AcquireAsset": {
-        "Critical": "You acquire asset with quality <strong>Tier +2</strong>.<br>To raise the result beyond critical, you may spend <strong>2 coin</strong> per +1 Tier bonus.",
-        "Success": "You acquire asset with quality <strong>Tier +1</strong>",
-        "Mixed": "You acquire asset with quality <strong>Tier</strong>",
-        "Fail": "You acquire asset with quality <strong>Tier -1</strong>"
+        "Critical": "You have put initial obstacles behind you and are in a <b>Controlled Position</b> for what follows",
+        "Success": "You face the first obstacle in a <b>Controlled Position</b>",
+        "Mixed": "A complication places you in a <b>Risky Position</b>. Horrid things threaten to happen, but are not yet ruinous.",
+        "Fail": "Chaos reigns! The <b>Position</b> is immediately <b>Desperate</d>.",
+        "Operation": "Is this operation particularly bold or daring? Take <strong>+1d</strong>. Is this operation overly complex or contingent on many factors? Take <strong>-1d</strong>."
       },
       "IndulgeVice": {
         "Regular": "You indulge your vice. Clear <strong>{stress} stress</strong>.",
-        "Overindulgence": "<p>You <strong>overindulge</strong>. Clear <strong>all stress</strong> and choose <strong>one</strong> of the following consequences:</p>",
-        "Trouble": "<li><strong>Attract Trouble.</strong> Select or roll an additional <strong>entanglement.</strong></li>",
-        "Brag": "<li><strong>Brag</strong> about your exploits. <strong>+2 Heat</strong></li>",
-        "Lost": "<li><strong>Lost.</strong> Your character vanishes for a few weeks. Play a different character until this one returns from their bender. When your character returns, they've also healed any injury they had.</li>",
-        "Trapped": "<li><strong>Tapped.</strong> Your current purveyor cuts you off. Find a new source for your vice.</li>"
+        "Overindulgence": "<p>You <strong>overindulge</strong>. Clear <strong>all stress</strong> and choose an outcome:</p>",
+        "Trouble": "<li><strong>Attract Trouble</strong>: Face an additional <strong>complication.</strong></li>",
+        "Brag": "<li><strong>Go missing</strong>: Advance the <strong>Season Clock</strong>.  Other players gain 1 extar Aftermath activity.</li>",
+        "Offence": "<li><strong>Cause offense</strong>: Lose standing with a friendly <strong>Faction</strong>.</li>",
+        "Succumb": "<li><strong>Succumb to the Vale</strong>: Gain a point of <strong>Corruption</strong>.</li>"
       }
     },
 
