@@ -98,7 +98,6 @@ function toIntData(data) {
 
 function optionalBlocks(html) {
   const type = html.find("#roll-type")[0].value;
-  const rollAs = html.find("#roll-as")[0].value;
 
   const blocksArr = html.find(".optional");
   blocksArr.removeClass("active");
@@ -321,20 +320,7 @@ function gatherInformation(rollResult, sheet, formData) {
 
     rollData.description = game.i18n.localize("TEETH.Roll.Action." + rollData.position.localizeKey + "." + rollData.countAs.localizeKey);
 
-    switch (rollData.countAs.key) {
-      case "critical":
-      case "success":
-      case "mixed":
-        rollData.effect.description = game.i18n.localize("TEETH.Roll.GatherInformation." + rollData.effect.localizeKey);
-        break;
-      case "fail":
-        rollData.effect.description = game.i18n.localize("TEETH.Roll.GatherInformation.Zero");
-    }
-  } else if (rollData.rollAs.key == "fortune") {
-    const rollEffect = CONFIG.TEETH.rolls.fortuneRollResult[rollData.countAs.key];
-    rollData.effect.description = game.i18n.localize("TEETH.Roll.GatherInformation." + rollEffect);
-  }
-
+  } 
   return rollResult
 }
 
