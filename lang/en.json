@@ -422,7 +422,7 @@
         "Success": "You face the first obstacle in a <b>Controlled Position</b>",
         "Mixed": "A complication places you in a <b>Risky Position</b>. Horrid things threaten to happen, but are not yet ruinous.",
         "Fail": "Chaos reigns! The <b>Position</b> is immediately <b>Desperate</d>.",
-        "Operation": "Is this operation particularly bold or daring? Take <strong>+1d</strong>. Is this operation overly complex or contingent on many factors? Take <strong>-1d</strong>."
+        "Info": "Number of dice depends on the success of Actions in the Investigation Phase."
       },
       "IndulgeVice": {
         "Regular": "You indulge your vice. Clear <strong>{stress} stress</strong>.",
