@@ -12,6 +12,8 @@ export async function createRollDialog (type, sheet, note) {
     rollConfig.defaultAction = note ? note : "scout";
   } else if (type == "resistance") {
     rollConfig.defaultAttribute = note ? note : "insight";
+  } else if (type == "fortune") {
+    rollConfig.diceNumber = 1;
   } else {
     rollConfig.defaultAction = "scout";
     rollConfig.defaultAttribute = "insight";
@@ -26,8 +28,8 @@ export async function createRollDialog (type, sheet, note) {
     action: actionRoll,
     resistance: resistanceRoll,
     fortune: fortuneRoll,
-    engagement: engagementRoll,
     wilderness: wildernessRoll,
+    engagement: engagementRoll,
     vice: indulgeVice
   }
 
@@ -141,7 +143,13 @@ async function roll(formData, sheet) {
   let diceToRoll = formData.diceNumber + formData.modifier;
 
   if (formData.assistance) diceToRoll++;
-  if (formData.pushDice || formData.strangersBargain)diceToRoll++;
+  if (formData.pushDice || formData.strangersBargain) diceToRoll++;
+  if (formData.horses) diceToRoll++;
+  if (formData.preparation) diceToRoll++;
+  if (formData.cautious) diceToRoll++;
+  if (formData.winter) diceToRoll--;
+  if (formData.distance) diceToRoll--;
+  if (formData.forest) diceToRoll--;
 
   let formula = "2d6kl"
   if (diceToRoll > 0) {

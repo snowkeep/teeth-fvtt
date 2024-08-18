@@ -89,7 +89,6 @@ export default class TeethActor extends Actor {
         for (const [ownerId, permissions] of Object.entries(this.ownership)) {
           if (permissions === 3 && game.userId === ownerId) {
             for (const purchase of purchases) {
-              console.log(purchase._id);
               const addPurchase = await purchasePack.getDocument(purchase._id);
               this.createEmbeddedDocuments('Item', [addPurchase]);
             }

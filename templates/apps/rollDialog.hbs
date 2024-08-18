@@ -32,7 +32,7 @@
       <input id="dice-number" name="diceNumber" type="number" value="{{diceNumber}}" data-dtype="Number">
     </div>
 
-    <div>
+    <div class="optional" data-connected="action,resistance">
       <input id="assistance" name="assistance" type="checkbox" data-dtype="Boolean">
       <label class="checkbox-label" for="assistance">{{localize 'TEETH.Roll.Bonus.Assistance'}}</label>
     </div>
@@ -42,13 +42,13 @@
       <input id="modifier" name="modifier" type="number" value="0" data-dtype="Number">
     </div>
 
-    <div>
+    <div class="optional" data-connected="action">
       <input id="pushEffect" name="pushEffect" type="checkbox" data-dtype="Boolean">
       <label class="checkbox-label" for="pushEffect" data-tooltip="{{localize 'TEETH.Roll.Bonus.PushEffect'}}">{{localize 'TEETH.Roll.Bonus.Push'}}</label>
     </div>
   </div>
 
-  <div class="push-or-stranger">
+  <div class="push-or-stranger optional" data-connected="action,resistance">
     <h4 for="push-or-dice">{{localize 'TEETH.Roll.Bonus.AddDice'}}</h4>
 
     <div>
@@ -77,9 +77,38 @@
     <div class="effect optional" data-connected="action">
       <label>{{localize 'TEETH.Roll.Effect.Title'}}:</label>
       <select id="effect" class="clear-select" name="effect" data-type="Number">
-        {{selectOptions effect selected="standard" localize=true}}
+        {{selectOptions effect selected="reasonable" localize=true}}
       </select>
     </div>
+  </div>
+
+  <div class="useful-info optional" data-connected="wilderness">
+    <h4>{{localize 'TEETH.Roll.Wilderness.Add'}}</h4>
+    <p>
+      <input id="horses" name="horses" type="checkbox" data-dtype="Boolean">
+      <label class="checkbox-label" for="horses">{{localize 'TEETH.Roll.Wilderness.Horses'}}</label>
+    </p>
+    <p>
+      <input id="preparation" name="preparation" type="checkbox" data-dtype="Boolean">
+      <label class="checkbox-label" for="preparation">{{localize 'TEETH.Roll.Wilderness.Prepared'}}</label>
+    </p>
+    <p>
+      <input id="cautious" name="cautious" type="checkbox" data-dtype="Boolean">
+      <label class="checkbox-label" for="cautious">{{localize 'TEETH.Roll.Wilderness.Cautious'}}</label>
+    </p>
+
+    <h4>{{localize 'TEETH.Roll.Wilderness.Remove'}}</h4>
+    <p>
+      <input id="winter" name="winter" type="checkbox" data-dtype="Boolean">
+      <label class="checkbox-label" for="winter">{{localize 'TEETH.Roll.Wilderness.Winter'}}</label>
+    </p>
+    <p>
+      <input id="distance" name="distance" type="checkbox" data-dtype="Boolean">
+      <label class="checkbox-label" for="distance">{{localize 'TEETH.Roll.Wilderness.Distance'}}</label>
+    </p>
+    <p>
+      <input id="forest" name="forest" type="checkbox" data-dtype="Boolean">
+      <label class="checkbox-label" for="forest">{{localize 'TEETH.Roll.Wilderness.Forest'}}</label>
   </div>
 
   <div class="useful-info">

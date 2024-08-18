@@ -1,7 +1,5 @@
-2024/08/11-19:55:55.595708 755716c006c0 Recovering log #394
-2024/08/11-19:55:55.598196 755716c006c0 Delete type=3 #392
-2024/08/11-19:55:55.598230 755716c006c0 Delete type=0 #394
-2024/08/11-19:56:26.044701 7556f7c006c0 Level-0 table #399: started
-2024/08/11-19:56:26.044713 7556f7c006c0 Level-0 table #399: 0 bytes OK
-2024/08/11-19:56:26.045550 7556f7c006c0 Delete type=0 #397
-2024/08/11-19:56:26.046420 7556f7c006c0 Manual compaction at level-0 from '!items!4Pnbpsmd5QZjI2Vq' @ 72057594037927935 : 1 .. '!items!pWYxTMruSevPLyC1' @ 0 : 0; will stop at (end)
+2024/08/18-13:32:47.983929 764509c006c0 Log #417: 0 ops saved to Table #418 OK
+2024/08/18-13:32:47.984102 764509c006c0 Archiving /home/craig/.local/share/FoundryVTT/Data/systems/teeth/packs/playbooks/000417.log: OK
+2024/08/18-13:32:47.984291 764509c006c0 Table #391: 5 entries OK
+2024/08/18-13:32:47.984360 764509c006c0 Archiving /home/craig/.local/share/FoundryVTT/Data/systems/teeth/packs/playbooks/MANIFEST-000416: OK
+2024/08/18-13:32:47.985576 764509c006c0 **** Repaired leveldb /home/craig/.local/share/FoundryVTT/Data/systems/teeth/packs/playbooks; recovered 1 files; 13251 bytes. Some data may have been lost. ****

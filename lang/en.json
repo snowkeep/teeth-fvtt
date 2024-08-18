@@ -352,9 +352,6 @@
         "StrangersBargain": "The Stranger’s Bargain applies regardles of success or failure.",
         "Assistance": "Character who helps suffer 1 stress and might also suffer any consequences that occur because of the roll."
       },
-      "Investigation": {
-        "Title": "Investigation Result:"
-      },
       "ManifestBehaviour": {
         "Title": "Gain Erratic Behaviour",
         "Description": "You get {stress} stress, so manifest an <b>Erratic Behaviour</b> and cannot perform Actions that incur Stress until you have reduced Stress during an Aftermath phase."
@@ -399,9 +396,26 @@
       },
       "Wilderness": {
         "Critical": "How do you shrug off the conditions?  What do you talk about on your journey?",
-        "Success": "How do you endure the conditions? You have an encounter.",
-        "Mixed": "How do you suffer the conditions?  One player suffers a Hardship.  You have an encounter.",
-        "Fail": "You are lost. How do you succumb to the conditions? Add one tick to the Season Clock. Two players suffer a Hardship. You have an encounter"
+        "Success": "<p>How do you endure the conditions?</p> <p>You have an encounter.</p>",
+        "Mixed": "<p>How do you suffer the conditions?</p> <p>One player suffers a Hardship.</p>  <p>You have an encounter.</p>",
+        "Fail": "<p>You are lost.</p> <p>How do you succumb to the conditions? <p>Add one tick to the Season Clock.</p> <p>Two players suffer a Hardship.</p> <p>You have an encounter.</p>",
+        "Add": "Add a dice:",
+        "Horses": "Do you have Horses?",
+        "Prepared": "Spend 2 Coin to enhance preparation",
+        "Cautious": "Take 1 Stress each to represent caution and prudence.",
+        "Remove": "Remove a dice:",
+        "Winter": "Is it Winter?",
+        "Distance": "Is it a great distance?",
+        "Forest": "Are you travelling into the Great Voidal Forest?"
+      },
+      "WildernessDescription": {
+        "Horses": "+1d for Horses",
+        "Prepared": "+1d (and -2 Coin) for enhanced preparation",
+        "Cautious": "+1d (-1 Stress each) for extra caution and prudence.",
+        "Winter": "-1d for Winter.",
+        "Distance": "-1d for a great distance.",
+        "Forest": "-1d for travelling into the Great Voidal Forest."
+
       },
       "Engagement": {
         "Critical": "You have put initial obstacles behind you and are in a <b>Controlled Position</b> for what follows",

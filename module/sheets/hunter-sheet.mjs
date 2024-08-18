@@ -405,10 +405,7 @@ export class TeethHunterSheet extends TeethActorSheet
   async _onAddBehaviour(event) {
     const currentBehaviours = (this.actor.system.behaviour || []).filter(Boolean);
     const defaultBehaviours = TEETH.erraticBehaviours;
-    console.log(defaultBehaviours);
-
     const filteredBehaviours = defaultBehaviours.filter(behaviour => !currentBehaviours.includes(behaviour));
-    console.log(filteredBehaviours);
 
     const template = await renderTemplate("systems/teeth/templates/apps/behaviour.hbs", { currentBehaviours, filteredBehaviours });
 

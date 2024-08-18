@@ -1,8 +1,5 @@
-2024/08/11-19:55:55.616657 7557158006c0 Recovering log #46
-2024/08/11-19:55:55.619104 7557158006c0 Delete type=3 #44
-2024/08/11-19:55:55.619123 7557158006c0 Delete type=0 #46
-2024/08/11-19:56:26.050420 7556f7c006c0 Level-0 table #51: started
-2024/08/11-19:56:26.050438 7556f7c006c0 Level-0 table #51: 0 bytes OK
-2024/08/11-19:56:26.051886 7556f7c006c0 Delete type=0 #49
-2024/08/11-19:56:26.055983 7556f7c006c0 Manual compaction at level-0 from '!tables!p9fxj6Uhdz8zaQ07' @ 72057594037927935 : 1 .. '!tables.results!p9fxj6Uhdz8zaQ07.zIjbr6NFwW6ZgZLt' @ 0 : 0; will stop at (end)
-2024/08/11-19:56:26.056018 7556f7c006c0 Manual compaction at level-1 from '!tables!p9fxj6Uhdz8zaQ07' @ 72057594037927935 : 1 .. '!tables.results!p9fxj6Uhdz8zaQ07.zIjbr6NFwW6ZgZLt' @ 0 : 0; will stop at (end)
+2024/08/18-13:32:48.019025 764509c006c0 Log #69: 0 ops saved to Table #70 OK
+2024/08/18-13:32:48.019071 764509c006c0 Archiving /home/craig/.local/share/FoundryVTT/Data/systems/teeth/packs/teeth-tables/000069.log: OK
+2024/08/18-13:32:48.019244 764509c006c0 Table #5: 51 entries OK
+2024/08/18-13:32:48.019445 764509c006c0 Archiving /home/craig/.local/share/FoundryVTT/Data/systems/teeth/packs/teeth-tables/MANIFEST-000068: OK
+2024/08/18-13:32:48.020435 764509c006c0 **** Repaired leveldb /home/craig/.local/share/FoundryVTT/Data/systems/teeth/packs/teeth-tables; recovered 1 files; 8445 bytes. Some data may have been lost. ****
