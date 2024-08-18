@@ -145,7 +145,7 @@ async function roll(formData, sheet) {
   if (formData.assistance) diceToRoll++;
   if (formData.pushDice || formData.strangersBargain) diceToRoll++;
   if (formData.horses) diceToRoll++;
-  if (formData.preparation) diceToRoll++;
+  if (formData.prepared) diceToRoll++;
   if (formData.cautious) diceToRoll++;
   if (formData.winter) diceToRoll--;
   if (formData.distance) diceToRoll--;
@@ -181,7 +181,7 @@ function getRollData(rollResult, formData, diceToRoll) {
     strangersBargain: formData.strangersBargain,
     wilderness: {
       horses: formData.horses,
-      preparation: formData.preparation,
+      prepared: formData.prepared,
       cautious: formData.cautious,
       winter: formData.winter,
       distance: formData.distance,
