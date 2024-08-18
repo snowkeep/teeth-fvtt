@@ -42,6 +42,7 @@ export class TeethOutfitSheet extends TeethActorSheet
     const specPurchases = [];
 
     const playbookId = this.actor.system.playbook;
+    const tier = this.actor.system.tier.value;
 
     for (const i of context.items) {
       i.img = i.img || DEFAULT_TOKEN;
@@ -64,8 +65,9 @@ export class TeethOutfitSheet extends TeethActorSheet
     }
 
     const sortBoons = boons.sort((a,b) => a.system.tier - b.system.tier);
+    const filteredBoons = sortBoons.filter((a) => a.system.tier <= tier);
 
-    context.boons = sortBoons;
+    context.boons = filteredBoons;
     context.playbook = playbook;
     context.purchases = purchases;
     context.specPurchases = specPurchases;
