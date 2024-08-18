@@ -160,6 +160,7 @@ async function roll(formData, sheet) {
   await rollResult.evaluate();
 
   rollResult.data = getRollData(rollResult, formData, diceToRoll);
+  console.log(rollResult.data);
   sufferStress(sheet, rollResult.data.push.stress);
 
   return rollResult
@@ -178,6 +179,14 @@ function getRollData(rollResult, formData, diceToRoll) {
       dice: formData.pushDice
     },
     strangersBargain: formData.strangersBargain,
+    wilderness: {
+      horses: formData.horses,
+      preparation: formData.preparation,
+      cautious: formData.cautious,
+      winter: formData.winter,
+      distance: formData.distance,
+      forest: formData.forest
+    },
     position: {
       key: formData.position
     },

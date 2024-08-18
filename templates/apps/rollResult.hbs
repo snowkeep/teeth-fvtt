@@ -38,8 +38,23 @@
       <h5>{{localize "TEETH.Roll.ManifestBehaviour.Title"}}</h5>
       <p>{{{data.behaviour.description}}}</p>
     {{/if}}
-    {{#if data.horses}}
+    {{#if data.wilderness.horses}}
       <p>{{localize "TEETH.Roll.WildernessDescription.Horses"}}</p>
+    {{/if}}
+    {{#if data.wilderness.preparation}}
+      <p>{{localize "TEETH.Roll.WildernessDescription.Preparation"}}</p>
+    {{/if}}
+    {{#if data.wilderness.cautious}}
+      <p>{{localize "TEETH.Roll.WildernessDescription.Cautious"}}</p>
+    {{/if}}
+    {{#if data.wilderness.winter}}
+      <p>{{localize "TEETH.Roll.WildernessDescription.Winter"}}</p>
+    {{/if}}
+    {{#if data.wilderness.distance}}
+      <p>{{localize "TEETH.Roll.WildernessDescription.Distance"}}</p>
+    {{/if}}
+    {{#if data.wilderness.forest}}
+      <p>{{localize "TEETH.Roll.WildernessDescription.Forest"}}</p>
     {{/if}}
   </div>
 
