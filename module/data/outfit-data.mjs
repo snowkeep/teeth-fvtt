@@ -11,6 +11,10 @@ export default class OutfitData extends foundry.abstract.TypeDataModel {
         value: new fields.NumberField({requiredPositiveInteger, initial: 0 }),
         max: new fields.NumberField({requiredPositiveInteger, initial: 24 }),
       }),
+      tier: new fields.SchemaField({
+        value: new fields.NumberField({requiredPositiveInteger, initial: 1 }),
+        max: new fields.NumberField({requiredPositiveInteger, initial: 4 }),
+      }),
       coins: new fields.SchemaField({
         value: new fields.NumberField({requiredPositiveInteger, initial: 0 }),
         max: new fields.NumberField({requiredPositiveInteger, initial: 10 }),
@@ -44,6 +48,12 @@ export default class OutfitData extends foundry.abstract.TypeDataModel {
 
       description: new fields.HTMLField()
     };
+  }
+
+  /** @inheritdoc */
+  prepareDerivedData() {
+    // increase a tier every 4 agenda points
+    this.tier.value = Math.floor(this.agenda.value / 4);
   }
 
 

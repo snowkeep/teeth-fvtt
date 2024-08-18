@@ -63,7 +63,9 @@ export class TeethOutfitSheet extends TeethActorSheet
       }
     }
 
-    context.boons = boons;
+    const sortBoons = boons.sort((a,b) => a.system.tier - b.system.tier);
+
+    context.boons = sortBoons;
     context.playbook = playbook;
     context.purchases = purchases;
     context.specPurchases = specPurchases;
