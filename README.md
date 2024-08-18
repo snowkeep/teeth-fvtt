@@ -8,7 +8,7 @@ Unofficial system for [TEETH](https://https://teethrpg.itch.io/teeth-rpg)
 
 ## WARNING:
 
-This is usable, but incomplete. The hunter and outfit playbooks are ready. Wilderness rolls are still needed and the Outfit sheet needs usability improvements.
+This is usable, but incomplete. Character and outfit sheets look like BitD and need usability improvements.  But all mechanics are supported.
 
 ## Install
 
