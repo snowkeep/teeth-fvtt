@@ -9,15 +9,12 @@ export const TEETH = {
     "5": "TEETH.Load.Normal",
     "6": "TEETH.Load.Heavy"
   },
-  holdTypes: {strong: "TEETH.Hold.Strong", weak: "TEETH.Hold.Weak"},
   statusTypes: {
-    allies: "TEETH.Status.Allies",
+    allied: "TEETH.Status.Allied",
     friendly: "TEETH.Status.Friendly",
-    helpful: "TEETH.Status.Helpful",
     neutral: "TEETH.Status.Neutral",
-    interfering: "TEETH.Status.Interfering",
-    hostile: "TEETH.Status.Hostile",
-    war: "TEETH.Status.War"
+    unfriendly: "TEETH.Status.Unfriendly",
+    enemy: "TEETH.Status.Enemy"
   },
   toolType: {
     common: "TEETH.Tool.Common",

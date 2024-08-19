@@ -241,7 +241,16 @@
     },
 
     "OutfitType": "Outfit Type",
+    "Based": "Based",
     "Tier": "Tier",
+    "Status": {
+      "Title": "Status",
+      "Allied": "Allied (+2)",
+      "Friendly": "Friendly (+1)",
+      "Neutral": "Neutral",
+      "Unfriendly": "Unfriendly (-1)",
+      "Enemy": "Enemy (-2)"
+    },
     "Vaults": "Vaults",
     "Heat": "Heat",
     "OutfitAdvance": {

@@ -6,13 +6,6 @@
       <h1 class="character-name"><input name="name" type="text" value="{{actor.name}}" placeholder="{{localize 'TEETH.ItemName'}}"/></h1>
       <div class="brief-info">
         <div class="prop">
-          <label class="prop-label rollable" data-roll-type="fortune" data-roll-note="{{system.tier.value}}" for="system.tier.value">{{localize 'TEETH.Tier'}}:</label>
-          <input class="prop-input clear-input" type="number" name="system.tier.value" value="{{system.tier.value}}"></input>
-          <select class="clear-select" name="system.hold">
-            {{selectOptions config.holdTypes selected=system.hold localize=true}}
-          </select>
-        </div>
-        <div class="prop">
           <label class="prop-label" for="system.status">{{localize 'TEETH.Status.Title'}}:</label>
           <select class="clear-select" name="system.status">
             {{selectOptions config.statusTypes selected=system.status localize=true}}
@@ -40,38 +33,15 @@
         <div class="show-for-limited" data-tooltip="{{localize 'TEETH.ShowForPlayers.Tooltip'}}">
           <input class="show-checkbox" type="checkbox" name="system.showGoals" {{checked system.showGoals}}></input>
         </div>
-        <h3 class="teeth-header">{{localize 'TEETH.Goals'}}</h3>
-        <ol class="items-list" data-array="goals">
-          {{#each system.goals as |goal|}}
-            <li class="item npc" data-id="{{goal.id}}">
-              <div class="item-description">
-                <span class="item-name">{{goal.name}}</span>
-              </div>
-              <div class="item-controls">
-                <a class="item-control actor-open" title="{{localize 'TEETH.Link.Open'}}" data-uuid="{{goal.uuid}}"><i class="fa fa-external-link"></i></a>
-                <a class="item-control actor-delete" title="{{localize 'TEETH.Link.Delete'}}"><i class="fas fa-trash"></i></a>
-              </div>
-            </li>
-          {{/each}}
-        </ol>
       </div>
 
-      <div class="lair prop-field">
+      <div class="based prop-field">
         <div class="show-for-limited" data-tooltip="{{localize 'TEETH.ShowForPlayers.Tooltip'}}">
-          <label for="system.lair.show">{{localize 'TEETH.ShowForPlayers.Title'}}</label>
-          <input class="show-checkbox" type="checkbox" name="system.lair.show" {{checked system.lair.show}}></input>
+          <label for="system.based.show">{{localize 'TEETH.ShowForPlayers.Title'}}</label>
+          <input class="show-checkbox" type="checkbox" name="system.based.show" {{checked system.based.show}}></input>
         </div>
-        <label class="prop-lable" for="system.lair">{{localize 'TEETH.Lair'}}:</label>
-        <input class="all-width" name="system.lair.value" type="text" value="{{system.lair.value}}"></input>
-      </div>
-
-      <div class="notable-assets prop-field">
-        <div class="show-for-limited" data-tooltip="{{localize 'TEETH.ShowForPlayers.Tooltip'}}">
-          <label for="system.assets.show">{{localize 'TEETH.ShowForPlayers.Title'}}</label>
-          <input class="show-checkbox" type="checkbox" name="system.assets.show" {{checked system.assets.show}}></input>
-        </div>
-        <label class="prop-lable" for="system.assets">{{localize 'TEETH.NotableAssets'}}:</label>
-        <textarea name="system.assets.value">{{system.assets.value}}</textarea>
+        <label class="prop-lable" for="system.based">{{localize 'TEETH.Based'}}:</label>
+        <input class="all-width" name="system.based.value" type="text" value="{{system.based.value}}"></input>
       </div>
 
       <div class="quirks prop-field">
@@ -81,36 +51,6 @@
         </div>
         <label class="prop-lable" for="system.quirks">{{localize 'TEETH.Quirks'}}:</label>
         <textarea name="system.quirks.value">{{system.quirks.value}}</textarea>
-      </div>
-
-      <div class="turf prop-field items-block full-size">
-        <div class="show-for-limited" data-tooltip="{{localize 'TEETH.ShowForPlayers.Tooltip'}}">
-          <input class="show-checkbox" type="checkbox" name="system.turf.show" {{checked system.turf.show}}></input>
-        </div>
-        <div class="item-header teeth-header">
-          <a class="item-create" title="{{localize 'TEETH.Item.Add'}}" data-type="boon"><i class="fas fa-plus"></i></a>
-          <h3>{{localize 'TEETH.Turf'}}</h3>
-        </div>
-        <ol class="items-list">
-          {{#each boons as |item id|}}
-            <li class="item {{item.type}}" data-item-id="{{item._id}}">
-              <div class="item-description">
-                <span class="item-name">{{item.name}}</span>
-              </div>
-
-              <div class="item-summary">
-                <p class="effect"><b>{{localize 'TEETH.Boon.Effect'}}:</b> {{system.effect}}</p>
-                {{{item.system.description}}}
-              </div>
-
-              <div class="item-controls">
-                <a class="item-control item-show" title="{{localize 'TEETH.Item.Show'}}"><i class="fa fa-comment"></i></a>
-                <a class="item-control item-edit" title="{{localize 'TEETH.Item.Edit'}}"><i class="fas fa-edit"></i></a>
-                <a class="item-control item-delete" title="{{localize 'TEETH.Item.Delete'}}"><i class="fas fa-trash"></i></a>
-              </div>
-            </li>
-          {{/each}}
-        </ol>
       </div>
 
       <div class="members items-block prop-field">
