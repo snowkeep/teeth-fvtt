@@ -134,8 +134,8 @@
   "packFolders": [],
   "socket": true,
   "url": "https://github.com/snowkeep/teeth-fvtt",
-  "manifest": "https://raw.githubusercontent.com/snowkeep/teeth-fvtt/releases/download/v0.5.0/system.json",
-  "download": "https://github.com/snowkeep/teeth-fvtt/releases/download/v0.5.0/foundry.zip",
+  "manifest": "https://github.com/snowkeep/teeth-fvtt/releases/download/v0.5.0/system.json",
+  "download": "https://github.com/snowkeep/teeth-fvtt/archive/refs/tags/v0.5.0.zip",
   "license": "https://github.com/snowkeep/teeth-fvtt/blob/main/LICENSE.md",
   "changelog": "https://github.com/snowkeep/teeth-fvtt/blob/main/ChangeLog.md",
   "bugs": "https://github.com/snowkeep/teeth-fvtt/issues/new"
