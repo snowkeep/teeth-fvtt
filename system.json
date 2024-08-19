@@ -2,7 +2,7 @@
   "id": "teeth",
   "title": "TEETH",
   "description": "TEETH game system by snowkeep, based on Blades in the Dark by GMonline",
-  "version": "0.1",
+  "version": "0.5",
   "compatibility": {
     "minimum": "11",
     "verified": "12.331",
