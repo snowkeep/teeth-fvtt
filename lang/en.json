@@ -139,7 +139,6 @@
     "Stash": "Stash",
     "Vault": "Vault",
 
-
     "Attribute": "Attribute",
     "Insight": "Insight",
     "Prowess": "Prowess",
@@ -346,7 +345,7 @@
         "Poor": "You achieve a very weak effect. 1 Tick",
         "Limited": "You achieve a partial or weak effect. 2 Tick",
         "Reasonable": "You achieve what we’d expect as “normal” with this action. 3 Ticks",
-        "Suberb": "You achieve more than usual. 4 Ticks"
+        "Superb": "You achieve more than usual. 4 Ticks"
       },
       "Bonus": {
         "or": "or",
@@ -424,7 +423,6 @@
         "Winter": "-1d for Winter.",
         "Distance": "-1d for a great distance.",
         "Forest": "-1d for travelling into the Great Voidal Forest."
-
       },
       "Engagement": {
         "Critical": "You have put initial obstacles behind you and are in a <b>Controlled Position</b> for what follows",

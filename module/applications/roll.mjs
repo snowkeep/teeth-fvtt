@@ -1,4 +1,4 @@
-export async function createRollDialog (type, sheet, note) {
+export async function createRollDialog(type, sheet, note) {
   if (!sheet && game.user.character) {
     sheet = game.user.character;
   } else if (!sheet && canvas.tokens.controlled[0]) {
@@ -6,7 +6,7 @@ export async function createRollDialog (type, sheet, note) {
   }
 
   const rollConfig = CONFIG.TEETH.rolls;
-  rollConfig.defaultType = type ? type : "fortune";
+  rollConfig.defaultType = type ? type : "action";
 
   if (type == "action") {
     rollConfig.defaultAction = note ? note : "scout";
@@ -20,7 +20,7 @@ export async function createRollDialog (type, sheet, note) {
     if (!isNaN(note)) {
       rollConfig.diceNumber = parseInt(note, 10);
     } else {
-      rollConfig.diceNumber = 0;
+      rollConfig.diceNumber = 1;
     }
   }
 
@@ -30,60 +30,69 @@ export async function createRollDialog (type, sheet, note) {
     fortune: fortuneRoll,
     wilderness: wildernessRoll,
     engagement: engagementRoll,
-    vice: indulgeVice
-  }
+    vice: indulgeVice,
+  };
 
-  const html = await renderTemplate("systems/teeth/templates/apps/rollDialog.hbs", rollConfig);
+  const html = await renderTemplate(
+    "systems/teeth/templates/apps/rollDialog.hbs",
+    rollConfig,
+  );
 
-  const dialog = new Dialog({
-    title: game.i18n.localize("TEETH.Roll.Title"),
-    content: html,
-    buttons: {
-      roll: {
-        label: game.i18n.localize("TEETH.Roll.Submit"),
-        icon: '<i class="fas fa-dice"></i>',
-        callback: async (html) => {
-          const formData = new FormData(html[0].querySelector("form"));
-          const data = toIntData(Object.fromEntries(formData.entries()));
+  const dialog = new Dialog(
+    {
+      title: game.i18n.localize("TEETH.Roll.Title"),
+      content: html,
+      buttons: {
+        roll: {
+          label: game.i18n.localize("TEETH.Roll.Submit"),
+          icon: '<i class="fas fa-dice"></i>',
+          callback: async (html) => {
+            const formData = new FormData(html[0].querySelector("form"));
+            const data = toIntData(Object.fromEntries(formData.entries()));
 
-          const rollFunction = functions[data.rollType];
-          const rollResult = await roll(data, sheet);
-          rollResult.name = game.i18n.localize(rollConfig.type[data.rollType]);
+            const rollFunction = functions[data.rollType];
+            const rollResult = await roll(data, sheet);
+            rollResult.name = game.i18n.localize(
+              rollConfig.type[data.rollType],
+            );
 
-          rollFunction(rollResult, sheet, data);
-          console.log(rollResult);
-          await renderRoll(rollResult, sheet);
-          giveExp(rollResult.data, sheet);
+            rollFunction(rollResult, sheet, data);
+            console.log(rollResult);
+            await renderRoll(rollResult, sheet);
+            giveExp(rollResult.data, sheet);
+          },
+        },
+        cancel: {
+          icon: '<i class="fas fa-times"></i>',
+          label: game.i18n.localize("TEETH.Roll.Cancel"),
+          callback: () => {},
         },
       },
-      cancel: {
-        icon: '<i class="fas fa-times"></i>',
-        label: game.i18n.localize("TEETH.Roll.Cancel"),
-        callback: () => {},
+      default: "roll",
+      close: () => {},
+      render: (html) => {
+        optionalBlocks(html);
+
+        if (sheet) {
+          getDiceNumber(html, sheet);
+          html
+            .find("#roll-type, #attribute, #action")
+            .on("change", function () {
+              getDiceNumber(html, sheet);
+            });
+        }
+
+        html.find("#roll-type").on("change", function () {
+          optionalBlocks(html);
+        });
       },
     },
-    default: "roll",
-    close: () => {},
-    render: (html) => {
-      optionalBlocks(html);
-
-      if (sheet) {
-        getDiceNumber(html, sheet);
-        html.find("#roll-type, #attribute, #action").on("change", function() {
-          getDiceNumber(html, sheet);
-        });
-      }
-
-      html.find("#roll-type").on("change", function() {
-        optionalBlocks(html);
-      });
-    }
-  },
-  {
-    classes: ["dialog", "teeth-roll-dialog"],
-    width: 400,
-    height: 200
-  });
+    {
+      classes: ["dialog", "teeth-roll-dialog"],
+      width: 400,
+      height: 200,
+    },
+  );
   dialog.render(true);
 }
 
@@ -104,7 +113,7 @@ function optionalBlocks(html) {
   blocksArr.removeClass("active");
 
   for (const block of blocksArr) {
-    const supportedType = block.dataset.connected.split(',');
+    const supportedType = block.dataset.connected.split(",");
 
     if (supportedType.includes(type)) block.classList.add("active");
   }
@@ -118,25 +127,30 @@ function getDiceNumber(html, sheet) {
   let diceNumber;
   const targetType = type;
   switch (targetType) {
-    case 'action':
+    case "action":
       const action = data.action;
       if (sheet.system.actions) diceNumber = sheet.system.actions[action].value;
       break;
-    case 'resistance':
+    case "resistance":
       const attribute = data.attribute;
-      if (sheet.system.attributes) diceNumber = sheet.system.attributes[attribute].value;
+      if (sheet.system.attributes)
+        diceNumber = sheet.system.attributes[attribute].value;
       break;
-    case 'vice':
-      if (sheet.system.attributes) diceNumber = sheet.system.attributes.insight.value;
-      for (let [attrKey, attribute] of Object.entries(sheet.system.attributes)) {
+    case "vice":
+      if (sheet.system.attributes)
+        diceNumber = sheet.system.attributes.insight.value;
+      for (let [attrKey, attribute] of Object.entries(
+        sheet.system.attributes,
+      )) {
         if (attribute.value < diceNumber) {
-          diceNumber = attribute.value
+          diceNumber = attribute.value;
         }
       }
       break;
   }
 
-  if (diceNumber || diceNumber == 0) html.find("#dice-number")[0].value = diceNumber;
+  if (diceNumber || diceNumber == 0)
+    html.find("#dice-number")[0].value = diceNumber;
 }
 
 async function roll(formData, sheet) {
@@ -151,7 +165,7 @@ async function roll(formData, sheet) {
   if (formData.distance) diceToRoll--;
   if (formData.forest) diceToRoll--;
 
-  let formula = "2d6kl"
+  let formula = "2d6kl";
   if (diceToRoll > 0) {
     formula = diceToRoll + "d6kh";
   }
@@ -163,20 +177,20 @@ async function roll(formData, sheet) {
   console.log(rollResult.data);
   sufferStress(sheet, rollResult.data.push.stress);
 
-  return rollResult
+  return rollResult;
 }
 
 function getRollData(rollResult, formData, diceToRoll) {
   const data = {
     type: formData.rollType,
     countAs: {
-      show: true
+      show: true,
     },
     assistance: formData.assistance,
     push: {
       count: 0,
       effect: formData.pushEffect,
-      dice: formData.pushDice
+      dice: formData.pushDice,
     },
     strangersBargain: formData.strangersBargain,
     wilderness: {
@@ -185,17 +199,17 @@ function getRollData(rollResult, formData, diceToRoll) {
       cautious: formData.cautious,
       winter: formData.winter,
       distance: formData.distance,
-      forest: formData.forest
+      forest: formData.forest,
     },
     position: {
-      key: formData.position
+      key: formData.position,
     },
     effect: {
-      key: formData.effect
+      key: formData.effect,
     },
     behaviour: {
-      suffer: false
-    }
+      suffer: false,
+    },
   };
 
   if (formData.pushEffect) data.push.count++;
@@ -208,11 +222,13 @@ function getRollData(rollResult, formData, diceToRoll) {
   }
 
   data.push.stress = data.push.count * 2;
-  data.push.description = game.i18n.format("TEETH.Roll.BonusDescription.Push", {stress: data.push.stress});
+  data.push.description = game.i18n.format("TEETH.Roll.BonusDescription.Push", {
+    stress: data.push.stress,
+  });
 
   let numSixes = 0;
-  rollResult.terms.map(t => t.results.map(
-    r => {
+  rollResult.terms.map((t) =>
+    t.results.map((r) => {
       if (r.result <= 3) {
         r.classes = ["failure"];
       } else if (r.result <= 5) {
@@ -229,8 +245,8 @@ function getRollData(rollResult, formData, diceToRoll) {
       }
 
       r.classes = r.classes.join(" ");
-    }
-  ));
+    }),
+  );
 
   if (numSixes > 1 && diceToRoll > 1) {
     data.countAs.key = "critical";
@@ -253,19 +269,25 @@ function getRollData(rollResult, formData, diceToRoll) {
   }
 
   data.countAs.localizeKey = getLokalizeKey(data.countAs.key);
-  data.countAs.localize = game.i18n.localize("TEETH.Roll.Result." + data.countAs.localizeKey);
+  data.countAs.localize = game.i18n.localize(
+    "TEETH.Roll.Result." + data.countAs.localizeKey,
+  );
   data.position.localizeKey = getLokalizeKey(data.position.key);
-  data.position.localize = game.i18n.localize("TEETH.Roll.Position." + data.position.localizeKey);
+  data.position.localize = game.i18n.localize(
+    "TEETH.Roll.Position." + data.position.localizeKey,
+  );
   data.effect.localizeKey = getLokalizeKey(data.effect.key);
-  data.effect.localize = game.i18n.localize("TEETH.Roll.Effect." + data.effect.localizeKey);
+  data.effect.localize = game.i18n.localize(
+    "TEETH.Roll.Effect." + data.effect.localizeKey,
+  );
 
   Object.assign(data, rollResult.data);
 
-  return data
+  return data;
 }
 
 function getLokalizeKey(key) {
-  return key.charAt(0).toUpperCase() + key.slice(1)
+  return key.charAt(0).toUpperCase() + key.slice(1);
 }
 
 function actionRoll(rollResult, sheet, formData) {
@@ -274,60 +296,81 @@ function actionRoll(rollResult, sheet, formData) {
   rollData.effect.show = true;
   rollData.position.show = true;
   rollData.action = formData.action;
-  const actionKey = rollData.action.charAt(0).toUpperCase() + rollData.action.slice(1);
+  const actionKey =
+    rollData.action.charAt(0).toUpperCase() + rollData.action.slice(1);
   rollResult.name += ": " + game.i18n.localize("TEETH." + actionKey);
 
-  rollData.description = game.i18n.localize("TEETH.Roll.Action." + rollData.position.localizeKey + "." + rollData.countAs.localizeKey);
+  rollData.description = game.i18n.localize(
+    "TEETH.Roll.Action." +
+      rollData.position.localizeKey +
+      "." +
+      rollData.countAs.localizeKey,
+  );
 
   if (rollData.countAs.key != "fail") {
-    rollData.effect.description = game.i18n.localize("TEETH.Roll.EffectDescription." + rollData.effect.localizeKey);
+    rollData.effect.description = game.i18n.localize(
+      "TEETH.Roll.EffectDescription." + rollData.effect.localizeKey,
+    );
   }
 
-  return rollResult
+  return rollResult;
 }
 
 async function resistanceRoll(rollResult, sheet, formData) {
   const rollData = rollResult.data;
 
   rollData.countAs.show = false;
-  const attributeKey = formData.attribute.charAt(0).toUpperCase() + formData.attribute.slice(1);
+  const attributeKey =
+    formData.attribute.charAt(0).toUpperCase() + formData.attribute.slice(1);
   rollResult.name += ": " + game.i18n.localize("TEETH." + attributeKey);
   rollData.description = game.i18n.localize("TEETH.Roll.Resistance.Result");
 
   let addStress = 6 - rollResult.total;
   if (rollData.countAs.key == "critical") {
-    rollData.description += game.i18n.localize("TEETH.Roll.Resistance.Critical");
+    rollData.description += game.i18n.localize(
+      "TEETH.Roll.Resistance.Critical",
+    );
     addStress = -1;
   } else {
-    rollData.description += game.i18n.format("TEETH.Roll.Resistance.Regular", {stress: addStress});
+    rollData.description += game.i18n.format("TEETH.Roll.Resistance.Regular", {
+      stress: addStress,
+    });
   }
   sufferStress(sheet, addStress);
 
-  return rollResult
+  return rollResult;
 }
 
 function fortuneRoll(rollResult) {
   const rollData = rollResult.data;
 
-  rollData.description = game.i18n.localize("TEETH.Roll.Fortune." + rollData.countAs.localizeKey);
+  rollData.description = game.i18n.localize(
+    "TEETH.Roll.Fortune." + rollData.countAs.localizeKey,
+  );
 
   const rollEffect = CONFIG.TEETH.rolls.fortuneRollResult[rollData.countAs.key];
-  rollData.effect.description = game.i18n.localize("TEETH.Roll.EffectDescription." + rollEffect);
+  rollData.effect.description = game.i18n.localize(
+    "TEETH.Roll.EffectDescription." + rollEffect,
+  );
 
-  return rollResult
+  return rollResult;
 }
 
 function engagementRoll(rollResult) {
-  rollResult.data.description = game.i18n.localize("TEETH.Roll.Engagement." + rollResult.data.countAs.localizeKey);
+  rollResult.data.description = game.i18n.localize(
+    "TEETH.Roll.Engagement." + rollResult.data.countAs.localizeKey,
+  );
 
-  return rollResult
+  return rollResult;
 }
 
 function wildernessRoll(rollResult) {
   rollResult.data.countAs.show = false;
-  rollResult.data.description = game.i18n.localize("TEETH.Roll.Wilderness." + rollResult.data.countAs.localizeKey);
+  rollResult.data.description = game.i18n.localize(
+    "TEETH.Roll.Wilderness." + rollResult.data.countAs.localizeKey,
+  );
 
-  return rollResult
+  return rollResult;
 }
 
 async function indulgeVice(rollResult, sheet) {
@@ -339,25 +382,39 @@ async function indulgeVice(rollResult, sheet) {
     const stress = sheet.system.stress.value - clearStress;
 
     if (stress < 0) {
-      rollResult.data.description = game.i18n.localize("TEETH.Roll.IndulgeVice.Overindulgence");
-      rollResult.data.description += "<ul>" + game.i18n.localize("TEETH.Roll.IndulgeVice.Trouble") + game.i18n.localize("TEETH.Roll.IndulgeVice.Brag") + game.i18n.localize("TEETH.Roll.IndulgeVice.Lost") + game.i18n.localize("TEETH.Roll.IndulgeVice.Trapped") + "</ul>";
+      rollResult.data.description = game.i18n.localize(
+        "TEETH.Roll.IndulgeVice.Overindulgence",
+      );
+      rollResult.data.description +=
+        "<ul>" +
+        game.i18n.localize("TEETH.Roll.IndulgeVice.Trouble") +
+        game.i18n.localize("TEETH.Roll.IndulgeVice.Brag") +
+        game.i18n.localize("TEETH.Roll.IndulgeVice.Lost") +
+        game.i18n.localize("TEETH.Roll.IndulgeVice.Trapped") +
+        "</ul>";
       await sheet.update({ "system.stress.value": 0 });
     } else {
-      rollResult.data.description = game.i18n.format("TEETH.Roll.IndulgeVice.Regular", {stress: clearStress});
+      rollResult.data.description = game.i18n.format(
+        "TEETH.Roll.IndulgeVice.Regular",
+        { stress: clearStress },
+      );
       await sheet.update({ "system.stress.value": stress });
     }
   }
 
-  return rollResult
+  return rollResult;
 }
 
 async function renderRoll(renderData, sheet) {
   renderData.renderDice = renderData.dice[0].results;
   const speaker = ChatMessage.getSpeaker({ actor: sheet });
-  const rollTemplate = await renderTemplate("systems/teeth/templates/apps/rollResult.hbs", renderData);
+  const rollTemplate = await renderTemplate(
+    "systems/teeth/templates/apps/rollResult.hbs",
+    renderData,
+  );
   renderData.toMessage({
     speaker: speaker,
-    content: rollTemplate
+    content: rollTemplate,
   });
 }
 
@@ -369,7 +426,10 @@ async function sufferStress(sheet, addStress) {
     await sheet.update({ "system.stress.value": stress });
   } else {
     rollResult.data.behaviour.manifest = true;
-    rollResult.data.behaviour.description = game.i18n.format("TEETH.Roll.ManifestBehaviour.Description", {stress: stress});
+    rollResult.data.behaviour.description = game.i18n.format(
+      "TEETH.Roll.ManifestBehaviour.Description",
+      { stress: stress },
+    );
     await sheet.update({ "system.stress.value": 0 });
   }
 }
@@ -381,7 +441,9 @@ async function giveExp(rollData, sheet) {
   if (rollData.position.key != "desperate" || !supported) return;
 
   let conAttribute = "???";
-  for (const [attribute, actions] of Object.entries(CONFIG.TEETH.attributeLinks)) {
+  for (const [attribute, actions] of Object.entries(
+    CONFIG.TEETH.attributeLinks,
+  )) {
     if (actions.includes(rollData.action)) {
       conAttribute = attribute;
       break;
@@ -389,19 +451,22 @@ async function giveExp(rollData, sheet) {
   }
 
   const actorName = speaker.actor ? speaker.alias : "???";
-  const message = game.i18n.format("TEETH.Roll.Result.Exp", {actor: actorName, attribute: conAttribute});
+  const message = game.i18n.format("TEETH.Roll.Result.Exp", {
+    actor: actorName,
+    attribute: conAttribute,
+  });
   const chatData = {
     user: game.user.id,
     speaker: speaker,
-    content: message
+    content: message,
   };
   ChatMessage.create(chatData);
 
   if (sheet && sheet.system.attributes) {
     const exp = sheet.system.attributes[conAttribute].exp;
     if (exp.value < exp.max) {
-      exp.value++
-      const path = "system.attributes." + conAttribute + ".exp.value"
+      exp.value++;
+      const path = "system.attributes." + conAttribute + ".exp.value";
       await sheet.update({ [path]: exp.value });
     }
   }

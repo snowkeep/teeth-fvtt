@@ -1,4 +1,4 @@
-import * as models from './data/_module.mjs';
+import * as models from "./data/_module.mjs";
 import { TeethActor, TeethItem } from "./documents/_module.mjs";
 
 // Import Actor Sheet
@@ -13,17 +13,19 @@ import { TeethItemSheet } from "./sheets/item-sheet.mjs";
 import { TeethPlaybookSheet } from "./sheets/playbook-sheet.mjs";
 
 // Import modules
-import { preprocessChatMessage, renderChatMessage } from "./applications/chat-portraits.mjs";
+import {
+  preprocessChatMessage,
+  renderChatMessage,
+} from "./applications/chat-portraits.mjs";
 import { createRollDialog } from "./applications/roll.mjs";
 import { preloadHandlebarsTemplates } from "./helpers/templates.mjs";
 import { registerHandlebarsHelpers } from "./helpers/handlebars-helpers.mjs";
-import { TEETH } from './helpers/config.mjs';
+import { TEETH } from "./helpers/config.mjs";
 
-Hooks.once('init', async function() {
-
+Hooks.once("init", async function () {
   game.teeth = {
     TeethActor,
-    TeethItem
+    TeethItem,
   };
 
   CONFIG.TEETH = TEETH;
@@ -31,34 +33,48 @@ Hooks.once('init', async function() {
   // Define custom Entity classes and Data Models
   CONFIG.Actor.documentClass = TeethActor;
   CONFIG.Actor.dataModels = {
-    'hunter': models.HunterData,
-    'outfit': models.OutfitData,
-    'faction': models.FactionData,
-    'npc': models.NpcData,
-    'clock': models.ClockData
+    hunter: models.HunterData,
+    outfit: models.OutfitData,
+    faction: models.FactionData,
+    npc: models.NpcData,
+    clock: models.ClockData,
   };
 
   CONFIG.Item.documentClass = TeethItem;
   CONFIG.Item.dataModels = {
-    'playbook': models.PlaybookData,
-    'outfitType': models.OutfitTypeData,
-    'abilityHunter': models.AbilityHunterData,
-    'boon': models.BoonData,
-    'tool': models.ToolData,
-    'purchase': models.PurchaseData
+    playbook: models.PlaybookData,
+    outfitType: models.OutfitTypeData,
+    abilityHunter: models.AbilityHunterData,
+    boon: models.BoonData,
+    tool: models.ToolData,
+    purchase: models.PurchaseData,
   };
-
 
   // Register sheet application classes
   Actors.unregisterSheet("core", ActorSheet);
   Actors.registerSheet("teeth", TeethActorSheet, { makeDefault: true });
-  Actors.registerSheet("teeth", TeethHunterSheet, { types: ["hunter"], makeDefault: true });
-  Actors.registerSheet("teeth", TeethOutfitSheet, { types: ["outfit"], makeDefault: true });
-  Actors.registerSheet("teeth", TeethFactionSheet, { types: ["faction"], makeDefault: true });
-  Actors.registerSheet("teeth", TeethClockSheet, { types: ["clock"], makeDefault: true });
+  Actors.registerSheet("teeth", TeethHunterSheet, {
+    types: ["hunter"],
+    makeDefault: true,
+  });
+  Actors.registerSheet("teeth", TeethOutfitSheet, {
+    types: ["outfit"],
+    makeDefault: true,
+  });
+  Actors.registerSheet("teeth", TeethFactionSheet, {
+    types: ["faction"],
+    makeDefault: true,
+  });
+  Actors.registerSheet("teeth", TeethClockSheet, {
+    types: ["clock"],
+    makeDefault: true,
+  });
   Items.unregisterSheet("core", ItemSheet);
   Items.registerSheet("teeth", TeethItemSheet, { makeDefault: true });
-  Items.registerSheet("teeth", TeethPlaybookSheet, { types: ["playbook", "outfitType"], makeDefault: true });
+  Items.registerSheet("teeth", TeethPlaybookSheet, {
+    types: ["playbook", "outfitType"],
+    makeDefault: true,
+  });
 
   registerHandlebarsHelpers();
 
@@ -79,8 +95,8 @@ Hooks.on("renderSceneControls", async (app, html) => {
     <i class="fas fa-dice"></i>
     </li>
   `);
-  diceRollButton.click( async function() {
-    await createRollDialog("fortune");
+  diceRollButton.click(async function () {
+    await createRollDialog();
   });
-  html.children().first().append( diceRollButton );
+  html.children().first().append(diceRollButton);
 });

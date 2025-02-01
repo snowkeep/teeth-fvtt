@@ -1,5 +1,12 @@
-2024/08/18-13:32:48.019025 764509c006c0 Log #69: 0 ops saved to Table #70 OK
-2024/08/18-13:32:48.019071 764509c006c0 Archiving /home/craig/.local/share/FoundryVTT/Data/systems/teeth/packs/teeth-tables/000069.log: OK
-2024/08/18-13:32:48.019244 764509c006c0 Table #5: 51 entries OK
-2024/08/18-13:32:48.019445 764509c006c0 Archiving /home/craig/.local/share/FoundryVTT/Data/systems/teeth/packs/teeth-tables/MANIFEST-000068: OK
-2024/08/18-13:32:48.020435 764509c006c0 **** Repaired leveldb /home/craig/.local/share/FoundryVTT/Data/systems/teeth/packs/teeth-tables; recovered 1 files; 8445 bytes. Some data may have been lost. ****
+2025/01/31-20:38:30.415315 75d555d3d6c0 Delete type=3 #1
+2025/01/31-20:49:16.264771 75d549b616c0 Level-0 table #113: started
+2025/01/31-20:49:16.264789 75d549b616c0 Level-0 table #113: 0 bytes OK
+2025/01/31-20:49:16.265599 75d549b616c0 Delete type=0 #111
+2025/01/31-20:49:16.271295 75d549b616c0 Manual compaction at level-0 from '!tables!p9fxj6Uhdz8zaQ07' @ 72057594037927935 : 1 .. '!tables.results!p9fxj6Uhdz8zaQ07.zIjbr6NFwW6ZgZLt' @ 0 : 0; will stop at '!tables.results!p9fxj6Uhdz8zaQ07.zIjbr6NFwW6ZgZLt' @ 51 : 1
+2025/01/31-20:49:16.271300 75d549b616c0 Compacting 2@0 + 0@1 files
+2025/01/31-20:49:16.272282 75d549b616c0 Generated table #114@0: 51 keys, 10012 bytes
+2025/01/31-20:49:16.272290 75d549b616c0 Compacted 2@0 + 0@1 files => 10012 bytes
+2025/01/31-20:49:16.273081 75d549b616c0 compacted to: files[ 0 1 0 0 0 0 0 ]
+2025/01/31-20:49:16.273112 75d549b616c0 Delete type=2 #106
+2025/01/31-20:49:16.273140 75d549b616c0 Delete type=2 #5
+2025/01/31-20:49:16.273185 75d549b616c0 Manual compaction at level-0 from '!tables.results!p9fxj6Uhdz8zaQ07.zIjbr6NFwW6ZgZLt' @ 51 : 1 .. '!tables.results!p9fxj6Uhdz8zaQ07.zIjbr6NFwW6ZgZLt' @ 0 : 0; will stop at (end)

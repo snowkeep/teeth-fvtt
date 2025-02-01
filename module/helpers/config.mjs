@@ -2,42 +2,42 @@ export const TEETH = {
   attributeLinks: {
     insight: ["scout", "doctor", "surveil", "devise"],
     prowess: ["aim", "manoeuvre", "fight", "wreck"],
-    resolve: ["study", "command", "evoke", "persuade"]
+    resolve: ["study", "command", "evoke", "persuade"],
   },
   load: {
-    "3": "TEETH.Load.Light",
-    "5": "TEETH.Load.Normal",
-    "6": "TEETH.Load.Heavy"
+    3: "TEETH.Load.Light",
+    5: "TEETH.Load.Normal",
+    6: "TEETH.Load.Heavy",
   },
   statusTypes: {
     allied: "TEETH.Status.Allied",
     friendly: "TEETH.Status.Friendly",
     neutral: "TEETH.Status.Neutral",
     unfriendly: "TEETH.Status.Unfriendly",
-    enemy: "TEETH.Status.Enemy"
+    enemy: "TEETH.Status.Enemy",
   },
   toolType: {
     common: "TEETH.Tool.Common",
-    special: "TEETH.Tool.Special"
+    special: "TEETH.Tool.Special",
   },
   purchaseType: {
     common: "TEETH.Purchase.Common",
-    special: "TEETH.Purchase.Special"
+    special: "TEETH.Purchase.Special",
   },
 
   supportedLinks: {
-    hunter: {npc: "contacts"},
+    hunter: { npc: "contacts" },
     outfit: {
       hunter: "members",
       npc: "contacts",
       faction: "relatedFactions",
-      clock: "goals"
+      clock: "goals",
     },
     faction: {
       faction: "relatedFactions",
       npc: "members",
-      clock: "goals"
-    }
+      clock: "goals",
+    },
   },
 
   relationshipClasses: ["rival", "neutral", "friend", "special"],
@@ -47,7 +47,7 @@ export const TEETH = {
     captain: "TEETH.Hunters.Captain",
     keeper: "TEETH.Hunters.Keeper",
     outrider: "TEETH.Hunters.Outrider",
-    sapper: "TEETH.Hunters.Sapper"
+    sapper: "TEETH.Hunters.Sapper",
   },
 
   backgrounds: {
@@ -56,7 +56,7 @@ export const TEETH = {
     Soldiery: "TEETH.Backgrounds.Soldiery",
     Peasantfolk: "TEETH.Backgrounds.Peasantfolk",
     Scholastic: "TEETH.Backgrounds.Scholastic",
-    Traveller: "TEETH.Backgrounds.Traveller"
+    Traveller: "TEETH.Backgrounds.Traveller",
   },
 
   vices: {
@@ -66,7 +66,7 @@ export const TEETH = {
     Obligation: "TEETH.Vices.Obligation",
     Pleasure: "TEETH.Vices.Pleasure",
     Stupor: "TEETH.Vices.Stupor",
-    Weird: "TEETH.Vices.Weird"
+    Weird: "TEETH.Vices.Weird",
   },
 
   disciplines: {
@@ -74,24 +74,24 @@ export const TEETH = {
     mesmerism: "TEETH.DisciplineList.Mesmerism",
     transmogrification: "TEETH.DisciplineList.Transmogrification",
     cosmism: "TEETH.DisciplineList.Cosmism",
-    conjuration: "TEETH.DisciplineList.Conjuration"
+    conjuration: "TEETH.DisciplineList.Conjuration",
   },
   methods: {
     touch: "TEETH.MethodList.Touch",
     memento: "TEETH.MethodList.Memento",
     device: "TEETH.MethodList.Device",
     encircle: "TEETH.MethodList.Encircle",
-    concoction: "TEETH.MethodList.Concoction"
+    concoction: "TEETH.MethodList.Concoction",
   },
 
   erraticBehaviours: [
-      "TEETH.Behaviours.Singing",
-      "TEETH.Behaviours.Indignance",
-      "TEETH.Behaviours.Dancing",
-      "TEETH.Behaviours.Grovelling",
-      "TEETH.Behaviours.Horror",
-      "TEETH.Behaviours.Misery",
-      "TEETH.Behaviours.Rancour"
+    "TEETH.Behaviours.Singing",
+    "TEETH.Behaviours.Indignance",
+    "TEETH.Behaviours.Dancing",
+    "TEETH.Behaviours.Grovelling",
+    "TEETH.Behaviours.Horror",
+    "TEETH.Behaviours.Misery",
+    "TEETH.Behaviours.Rancour",
   ],
 
   rolls: {
@@ -101,12 +101,12 @@ export const TEETH = {
       fortune: "TEETH.Roll.Type.Fortune",
       wilderness: "TEETH.Roll.Type.Wilderness",
       engagement: "TEETH.Roll.Type.Engagement",
-      vice: "TEETH.Roll.Type.IndulgeVice"
+      vice: "TEETH.Roll.Type.IndulgeVice",
     },
     attributes: {
       insight: "TEETH.Insight",
       prowess: "TEETH.Prowess",
-      resolve: "TEETH.Resolve"
+      resolve: "TEETH.Resolve",
     },
     actions: {
       scout: "TEETH.Scout",
@@ -120,27 +120,27 @@ export const TEETH = {
       study: "TEETH.Study",
       command: "TEETH.Command",
       evoke: "TEETH.Evoke",
-      persuade: "TEETH.Persuade"
+      persuade: "TEETH.Persuade",
     },
     position: {
       controlled: "TEETH.Roll.Position.Controlled",
       risky: "TEETH.Roll.Position.Risky",
-      desperate: "TEETH.Roll.Position.Desperate"
+      desperate: "TEETH.Roll.Position.Desperate",
     },
     effect: {
       zero: "TEETH.Roll.Effect.Zero",
       poor: "TEETH.Roll.Effect.Poor",
       limited: "TEETH.Roll.Effect.Limited",
       reasonable: "TEETH.Roll.Effect.Reasonable",
-      suberb: "TEETH.Roll.Effect.Superb"
+      superb: "TEETH.Roll.Effect.Superb",
     },
     fortuneRollResult: {
       fail: "Zero",
       mixed: "Limited",
       success: "Reasonable",
-      critical: "Superb"
+      critical: "Superb",
     },
-    effectSequence: ["zero", "poor", "limited", "reasonable", "superb"]
+    effectSequence: ["zero", "poor", "limited", "reasonable", "superb"],
   },
 
   clockTypes: {
@@ -149,6 +149,6 @@ export const TEETH = {
     8: 8,
     10: 10,
     12: 12,
-    16: 16
-  }
+    16: 16,
+  },
 };

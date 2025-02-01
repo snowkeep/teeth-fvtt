@@ -1,5 +1,12 @@
-2024/08/18-13:32:47.983929 764509c006c0 Log #417: 0 ops saved to Table #418 OK
-2024/08/18-13:32:47.984102 764509c006c0 Archiving /home/craig/.local/share/FoundryVTT/Data/systems/teeth/packs/playbooks/000417.log: OK
-2024/08/18-13:32:47.984291 764509c006c0 Table #391: 5 entries OK
-2024/08/18-13:32:47.984360 764509c006c0 Archiving /home/craig/.local/share/FoundryVTT/Data/systems/teeth/packs/playbooks/MANIFEST-000416: OK
-2024/08/18-13:32:47.985576 764509c006c0 **** Repaired leveldb /home/craig/.local/share/FoundryVTT/Data/systems/teeth/packs/playbooks; recovered 1 files; 13251 bytes. Some data may have been lost. ****
+2025/01/31-20:38:30.377351 75d555d3d6c0 Delete type=3 #1
+2025/01/31-20:49:16.247380 75d549b616c0 Level-0 table #460: started
+2025/01/31-20:49:16.247419 75d549b616c0 Level-0 table #460: 0 bytes OK
+2025/01/31-20:49:16.250335 75d549b616c0 Delete type=0 #458
+2025/01/31-20:49:16.253380 75d549b616c0 Manual compaction at level-0 from '!items!4Pnbpsmd5QZjI2Vq' @ 72057594037927935 : 1 .. '!items!pWYxTMruSevPLyC1' @ 0 : 0; will stop at '!items!pWYxTMruSevPLyC1' @ 629 : 1
+2025/01/31-20:49:16.253388 75d549b616c0 Compacting 2@0 + 0@1 files
+2025/01/31-20:49:16.254484 75d549b616c0 Generated table #461@0: 5 keys, 13251 bytes
+2025/01/31-20:49:16.254496 75d549b616c0 Compacted 2@0 + 0@1 files => 13251 bytes
+2025/01/31-20:49:16.255203 75d549b616c0 compacted to: files[ 0 1 0 0 0 0 0 ]
+2025/01/31-20:49:16.255245 75d549b616c0 Delete type=2 #425
+2025/01/31-20:49:16.255276 75d549b616c0 Delete type=2 #391
+2025/01/31-20:49:16.261275 75d549b616c0 Manual compaction at level-0 from '!items!pWYxTMruSevPLyC1' @ 629 : 1 .. '!items!pWYxTMruSevPLyC1' @ 0 : 0; will stop at (end)
