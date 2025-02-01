@@ -1,8 +1,99 @@
-<form class="{{cssClass}} {{actor.type}}" autocomplete="off">
+  <div class="playbook">
+    <div class="playbook-sidebar flexbox">
+      <div>
+        <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="100" width="100"/>
+      </div>
+      {{> "systems/teeth/templates/actor/parts/attributes.hbs"}}
+
+    </div> <!-- class="playbook-sidebar" -->
+
+    <div class="playbook-header flexbox">
+      <div class="flexbox">
+        <h1 class="sheet-title"> 
+          {{#if playbook}}
+            {{playbook.name}}
+          {{else}}
+            {{localize 'TYPES.Item.setPlaybook'}}
+          {{/if}}
+        </h1> 
+        <h2 class="sheet-title"> 
+          ⬥
+          {{#if playbook}}
+            {{playbook.system.summary}}
+          {{/if}}
+          ⬥
+        </h1> 
+
+        <div class="hunter-header">
+          <div class="flexbox">
+            <h3 class="actor-name">
+              <label for="name">{{localize 'TEETH.Actor.Name'}}:</label> <input class="clear-input" name="name" type="text" value="{{actor.name}}" placeholder="{{localize 'TEETH.Actor.Name'}}"/>
+            </h3>
+            <h3>
+              <label for="system.background"><a class="item-control set-background" data-tooltip="{{localize 'TEETH.SetBackground'}}">{{localize 'TEETH.Background'}}</a>:</label>
+              <input class="prop-input clear-input" type="text" name="system.background" value="{{localize system.background}}" placeholder="{{localize 'TEETH.Background'}}"/>
+            </h3>
+          </div>
+          <div class="flexbox">
+            <h3 class="hunter-outfit">
+              <label for="system.outfit">{{localize 'TEETH.OutfitName'}}:</label>
+              <input class="clear-input" name="system.outfit" type="text" value="{{system.Outfit}}" placeholder="{{localize 'TEETH.OutfitName'}}"/>
+            </h3>
+            <h3>
+              <label for="system.vice"><a class="item-control set-vice" data-tooltip="{{localize 'TEETH.SetVice'}}">{{localize 'TEETH.Vice'}}</a>:</label>
+              <input class="prop-input clear-input" type="text" name="system.vice" value="{{localize system.vice}}" placeholder="{{localize 'TEETH.Vice'}}"/>
+            </h3>
+          </div>
+        </div>
+        <div class="flexbox">
+          <h3><label>Magic</label></h3>
+
+          <div class="magic">
+            <div class="magic column">
+              <label class="prop-label" for="system.magicDisciplines"><a class="item-control add-discipline">{{localize 'TEETH.Disciplines'}}</a>:</label>
+              <ul class="discipline-list">
+                {{#each system.magicDisciplines}}
+                  <li class="discipline">{{localize this}}</li>
+                {{/each}}
+              </ul>
+            </div>
+            <div class="magic column">
+              <label class="prop-label" for="system.magicMethods"><a class="item-control add-method">{{localize 'TEETH.Methods'}}</a>:</label>
+              <ul class="method-list">
+                {{#each system.magicMethods}}
+                  <li class="method">{{localize this}}</li>
+                {{/each}}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div> <!-- playbook-header -->
+  </div> <!-- playbook -->
+
+  
+    <div class="playbook playbook-body">
+      <div class="flexbox items-block">
+        <h3 class="item-header teeth-header contacts-title" data.tooltip="{{localize 'TEETH.Contact.Tooltip'}}">{{localize 'TEETH.Contact.Plural'}}</h3>
+        {{> "systems/teeth/templates/actor/parts/contacts.hbs"}}
+      </div>
+      <div class="flexbox">
+        <h3 class="item-header teeth-header contacts-title" data.tooltip="{{localize 'TEETH.Coins'}}">{{localize 'TEETH.Coins'}}</h3>
+          <label for="system.coins">{{localize 'TEETH.Coins'}}:</label>
+          <input class="clear-input" type="number" name="system.coins.value" value="{{system.coins.value}}"/>
+          <span>/{{system.coins.max}}</span>
+          <label for="system.stash">{{localize 'TEETH.Stash'}}:</label>
+          <input class="clear-input" type="number" name="system.stash.value" value="{{system.stash.value}}" data-dtype="Number"/>
+          <span>/{{system.stash.max}}</span>
+      </div>
+    </div>
+
+
+
   {{!-- Sheet Header --}}
   <header class="sheet-header actor-grid">
     <div class="img-block grid-2col">
-      <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="100" width="100"/>
 
       <div class="money">
         <div class="resource coins">
@@ -26,50 +117,20 @@
     </div>
 
     <div class="header-fields">
-      <div class="name-alias grid-2col">
-        <h1 class="hunter-name">
-          <input class="clear-input" name="name" type="text" value="{{actor.name}}" placeholder="{{localize 'TEETH.Actor.Name'}}"/>
-        </h1>
-        <h2 class="hunter-alias">
-          <input class="clear-input" name="system.alias" type="text" value="{{system.alias}}" placeholder="{{localize 'TEETH.Actor.Alias'}}"/>
-        </h2>
-      </div>
 
       <div class="brief-info">
         <div class="prop"
-          <label class="prop-label" for="system.hunter">{{localize 'TEETH.Hunter'}}:</label>
-        {{#if playbook}}
-          {{playbook.name}}
-        {{else}}
-          {{localize 'TYPES.Item.setPlaybook'}}
-        {{/if}}
         </div>
         <div class="prop">
-          <label class="prop-label" for="system.background"><a class="item-control set-background" data-tooltip="{{localize 'TEETH.SetBackground'}}">{{localize 'TEETH.Background'}}</a>:</label>
-          <input class="prop-input clear-input" type="text" name="system.background" value="{{localize system.background}}" placeholder="{{localize 'TEETH.Background'}}"/>
         </div>
         <div class="prop">
-          <label class="prop-label" for="system.vice"><a class="item-control set-vice" data-tooltip="{{localize 'TEETH.SetVice'}}">{{localize 'TEETH.Vice'}}</a>:</label>
-          <input class="prop-input clear-input" type="text" name="system.vice" value="{{localize system.vice}}" placeholder="{{localize 'TEETH.Vice'}}"/>
         </div>
       </div>
 
-      {{> "systems/teeth/templates/actor/parts/attributes.hbs"}}
       {{> "systems/teeth/templates/actor/parts/corruption-mutation.hbs"}}
       {{> "systems/teeth/templates/actor/parts/stress-behaviour.hbs"}}
     </div>
 
-    <div class="contacts items-block">
-      <div class="contacts-flex">
-        <div class="flex-item">
-          <h3 class="item-header teeth-header contacts-title" data.tooltip="{{localize 'TEETH.Contact.Tooltip'}}">{{localize 'TEETH.Contact.Plural'}}</h3>
-        </div>
-<!--        <div class="flex-item">
-          <h3 class="item-header teeth-header contacts-title"><a class="import-acquaintances" data-tooltip="{{localize 'TEETH.Contact.Import'}}"><i class="fa-solid fa-file-import"></i></a></h3>
-        </div> -->
-      </div>
-      {{> "systems/teeth/templates/actor/parts/contacts.hbs"}}
-    </div>
     {{> "systems/teeth/templates/actor/parts/injury.hbs"}}
 
   </header>

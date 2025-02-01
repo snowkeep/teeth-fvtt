@@ -1,12 +1,17 @@
 <div class="attribute-block grid-3col">
   {{#each config.attributeLinks as |attribute key|}}
     <div class="attribute {{key}}">
+      <div class="attribute-header">
         <h3 class="attribute-name teeth-header rollable" data-roll-type="resistance" data-roll-note="{{key}}" data-tooltip="{{getLocalizeDescription 'attribute' key}}">{{getLocalizeName key}}</h3>
-      <div class="value-step-block exp-block" data-value="{{getValue @root.system.attributes (concat key ".exp.value")}}" data-key="system.attributes.{{key}}.exp.value">
-        {{#numLoop (getValue @root.system.attributes (concat key ".exp.max"))}}
-          <span class="value-step value-tooth simple-red-tooth" data-index="{{this}}"></span>
-        {{/numLoop}}
+
+        <div class="value-step-block exp-block" data-value="{{getValue @root.system.attributes (concat key ".exp.value")}}" data-key="system.attributes.{{key}}.exp.value">
+          {{#numLoop (getValue @root.system.attributes (concat key ".exp.max"))}}
+            <span class="value-step value-tooth simple-red-tooth" data-index="{{this}}"></span>
+          {{/numLoop}}
+
+        </div>
       </div>
+      <div>
       {{#each attribute as |action|}}
         <div class="action {{action}}">
           <div class="value-step-block" data-value="{{getValue @root.system.actions (concat action ".value")}}" data-key="system.actions.{{action}}.value">
