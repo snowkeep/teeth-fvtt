@@ -82,21 +82,16 @@ Hooks.once("init", async function () {
   return preloadHandlebarsTemplates();
 });
 
-// Preprocess chat message before it is created hook
-Hooks.on("preCreateChatMessage", preprocessChatMessage);
-
-// Render chat message hook
-Hooks.on("renderChatMessage", renderChatMessage);
+Hooks.on("renderChatMessageHTML", renderChatMessage);
 
 // Add scene controls
-Hooks.on("renderSceneControls", async (app, html) => {
-  const diceRollButton = $(`
-    <li class="scene-control" data-control="teeth-dice" title="TEETH Dice Roller">
-    <i class="fas fa-dice"></i>
-    </li>
-  `);
-  diceRollButton.click(async function () {
-    await createRollDialog();
-  });
-  html.children().first().append(diceRollButton);
+Hooks.on("getSceneControlButtons", (controls) => {
+  controls.tokens.tools.DiceRoller = {
+    name: "DiceRoller",
+    title: "TEETH.Roll.Title",
+    icon: "fas fa-dice",
+    onChange: (event, active) => {
+      createRollDialog();
+    },
+  };
 });

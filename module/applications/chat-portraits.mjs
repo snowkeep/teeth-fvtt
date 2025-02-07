@@ -1,6 +1,8 @@
 // Create image or video element for portraits
 function createPortraitElement(src, isVideo) {
-  const element = isVideo ? document.createElement("video") : document.createElement("img");
+  const element = isVideo
+    ? document.createElement("video")
+    : document.createElement("img");
   element.src = src;
   element.width = 36;
   element.height = 36;
@@ -17,23 +19,24 @@ function isWebm(file) {
 }
 
 // Preprocess chat message before it is created
-export function preprocessChatMessage(messageData, options, userId, diff) {
+export function preprocessChatMessage(messageData, actor) {
   let portraitSource;
 
-  if (messageData.speaker.actor) {
-    const actor = game.actors.get(messageData.speaker.actor);
+  if (actor) {
     portraitSource = actor.img;
   } else {
     portraitSource = game.user.avatar;
   }
 
-  messageData.updateSource({ flags: { "portrait": { src: portraitSource } } });
-};
+  //messageData.updateSource({ flags: { portrait: { src: portraitSource } } });
+  return portraitSource;
+}
 
 // Render chat message
 export function renderChatMessage(message, html, data) {
   const { src: portraitSource } = message.flags?.["portrait"] || {};
   if (!portraitSource) return;
+  console.log(portraitSource);
 
   const isVideo = isWebm(portraitSource);
   const portraitElement = createPortraitElement(portraitSource, isVideo);
@@ -48,4 +51,4 @@ export function renderChatMessage(message, html, data) {
   if (senderElement) {
     senderElement.style.alignSelf = "center";
   }
-};
+}

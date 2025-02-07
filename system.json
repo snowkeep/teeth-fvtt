@@ -5,8 +5,8 @@
   "version": "0.6.1",
   "compatibility": {
     "minimum": "11",
-    "verified": "12.331",
-    "maximum": "12"
+    "verified": "13.335",
+    "maximum": "13"
   },
   "background": "systems/teeth/images/teeth_title.webp",
   "authors": [

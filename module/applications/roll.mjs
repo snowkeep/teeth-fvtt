@@ -1,3 +1,5 @@
+import { preprocessChatMessage } from "./chat-portraits.mjs";
+
 export async function createRollDialog(type, sheet, note) {
   if (!sheet && game.user.character) {
     sheet = game.user.character;
@@ -57,7 +59,6 @@ export async function createRollDialog(type, sheet, note) {
             );
 
             rollFunction(rollResult, sheet, data);
-            console.log(rollResult);
             await renderRoll(rollResult, sheet);
             giveExp(rollResult.data, sheet);
           },
@@ -412,6 +413,12 @@ async function renderRoll(renderData, sheet) {
     "systems/teeth/templates/apps/rollResult.hbs",
     renderData,
   );
+  console.log(speaker);
+  console.log(renderData);
+  console.log(rollTemplate);
+  const portrait = preprocessChatMessage(renderData, speaker.actor);
+
+  //messageData.updateSource({ flags: { portrait: { src: portraitSource } } });
   renderData.toMessage({
     speaker: speaker,
     content: rollTemplate,
