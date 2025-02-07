@@ -4,7 +4,7 @@
 [![Version]][Version URL]
 [![GNU License]][GNU URL]
 
-Unofficial system for [TEETH](https://https://teethrpg.itch.io/teeth-rpg) 
+Unofficial system for [TEETH](https://https://teethrpg.itch.io/teeth-rpg)
 
 ## WARNING:
 
@@ -15,7 +15,7 @@ This is usable, but incomplete. Character and outfit sheets look like BitD and n
 To install a system, follow these instructions:
 
 1. Start FVTT and browse to the Game Systems tab in the Configuration and Setup menu
-2. Select the Install System button and enter the following URL: `https://raw.githubusercontent.com/snowkeep/teeth-fvtt/main/system.json`
+2. Select the Install System button and search for "TEETH"
 3. Click Install and wait for installation to complete
 
 ## Documentation
