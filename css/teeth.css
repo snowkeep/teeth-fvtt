@@ -5,302 +5,383 @@
 .portrait {
   flex: none;
   border-width: 0;
-  margin-right: 5px; }
+  margin-right: 5px;
+}
 
 .add-behaviour-form {
   margin-bottom: 5px;
   font-size: medium;
   font-family: "Crimson Text", serif;
-  text-align: center; }
-  .add-behaviour-form .behaviour {
-    display: block; }
-  .add-behaviour-form .behaviour.active {
-    text-shadow: 0 0 8px red; }
+  text-align: center;
+}
+.add-behaviour-form .behaviour {
+  display: block;
+}
+.add-behaviour-form .behaviour.active {
+  text-shadow: 0 0 8px red;
+}
 
 .set-vice-form {
   margin-bottom: 5px;
   font-size: medium;
   font-family: "Crimson Text", serif;
-  text-align: center; }
-  .set-vice-form .vice {
-    display: block; }
-  .set-vice-form .vice.active {
-    text-shadow: 0 0 8px red; }
+  text-align: center;
+}
+.set-vice-form .vice {
+  display: block;
+}
+.set-vice-form .vice.active {
+  text-shadow: 0 0 8px red;
+}
 
 .set-background-form {
   margin-bottom: 5px;
   font-size: medium;
   font-family: "Crimson Text", serif;
-  text-align: center; }
-  .set-background-form .background {
-    display: block; }
-  .set-background-form .background.active {
-    text-shadow: 0 0 8px red; }
+  text-align: center;
+}
+.set-background-form .background {
+  display: block;
+}
+.set-background-form .background.active {
+  text-shadow: 0 0 8px red;
+}
 
 .set-hunter-form {
   margin-bottom: 5px;
   font-size: medium;
   font-family: "Crimson Text", serif;
-  text-align: center; }
-  .set-hunter-form .hunter {
-    display: block; }
-  .set-hunter-form .hunter.active {
-    text-shadow: 0 0 8px red; }
+  text-align: center;
+}
+.set-hunter-form .hunter {
+  display: block;
+}
+.set-hunter-form .hunter.active {
+  text-shadow: 0 0 8px red;
+}
 
 .add-discipline-form {
   margin-bottom: 5px;
   font-size: medium;
   font-family: "Crimson Text", serif;
-  text-align: center; }
-  .add-discipline-form .discipline {
-    display: block; }
-  .add-discipline-form .discipline.active {
-    text-shadow: 0 0 8px red; }
+  text-align: center;
+}
+.add-discipline-form .discipline {
+  display: block;
+}
+.add-discipline-form .discipline.active {
+  text-shadow: 0 0 8px red;
+}
 
 .add-method-form {
   margin-bottom: 5px;
   font-size: medium;
   font-family: "Crimson Text", serif;
-  text-align: center; }
-  .add-method-form .method {
-    display: block; }
-  .add-method-form .method.active {
-    text-shadow: 0 0 8px red; }
+  text-align: center;
+}
+.add-method-form .method {
+  display: block;
+}
+.add-method-form .method.active {
+  text-shadow: 0 0 8px red;
+}
 
 .teeth-roll-dialog {
-  height: auto; }
-  .teeth-roll-dialog .window-content {
-    overflow: visible; }
-  .teeth-roll-dialog .roll-dice-form {
-    font-family: "Crimson Text", serif; }
-    .teeth-roll-dialog .roll-dice-form .roll-type {
-      margin-bottom: 5px;
-      font-size: medium;
-      font-weight: bold;
-      text-align: center;
-      text-transform: uppercase; }
-      .teeth-roll-dialog .roll-dice-form .roll-type #roll-type {
-        font-weight: bold; }
-    .teeth-roll-dialog .roll-dice-form .roll-dice {
-      gap: 0; }
-      .teeth-roll-dialog .roll-dice-form .roll-dice input {
-        border: none;
-        background: none; }
-    .teeth-roll-dialog .roll-dice-form .push-or-stranger {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      margin-bottom: 5px; }
-    .teeth-roll-dialog .roll-dice-form .position-and-effect {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      margin-bottom: 5px; }
-    .teeth-roll-dialog .roll-dice-form .useful-info {
-      font-family: "Crimson Text", serif; }
-    .teeth-roll-dialog .roll-dice-form h4 {
-      width: 100%;
-      margin: 0.5rem 0 0 0;
-      text-align: center;
-      font-weight: bold; }
-    .teeth-roll-dialog .roll-dice-form .checkbox-label {
-      position: relative;
-      top: -5px; }
-    .teeth-roll-dialog .roll-dice-form .optional:not(.active) {
-      display: none; }
+  height: auto;
+}
+.teeth-roll-dialog .window-content {
+  overflow: visible;
+}
+.teeth-roll-dialog .roll-dice-form {
+  font-family: "Crimson Text", serif;
+}
+.teeth-roll-dialog .roll-dice-form .roll-type {
+  margin-bottom: 5px;
+  font-size: medium;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+}
+.teeth-roll-dialog .roll-dice-form .roll-type #roll-type {
+  font-weight: bold;
+}
+.teeth-roll-dialog .roll-dice-form .roll-dice {
+  gap: 0;
+}
+.teeth-roll-dialog .roll-dice-form .roll-dice input {
+  border: none;
+  background: none;
+}
+.teeth-roll-dialog .roll-dice-form .push-or-stranger {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+.teeth-roll-dialog .roll-dice-form .position-and-effect {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+.teeth-roll-dialog .roll-dice-form .useful-info {
+  font-family: "Crimson Text", serif;
+}
+.teeth-roll-dialog .roll-dice-form h4 {
+  width: 100%;
+  margin: 0.5rem 0 0 0;
+  text-align: center;
+  font-weight: bold;
+}
+.teeth-roll-dialog .roll-dice-form .checkbox-label {
+  position: relative;
+  top: -5px;
+}
+.teeth-roll-dialog .roll-dice-form .optional:not(.active) {
+  display: none;
+}
 
 .roll-message .roll-header {
-  margin-bottom: 10px; }
-  .roll-message .roll-header .roll-name {
-    margin: 0;
-    padding: 3px 5px 0 5px; }
-  .roll-message .roll-header .roll-subheader {
-    padding: 3px 5px 0 5px;
-    font-weight: bold; }
-    .roll-message .roll-header .roll-subheader h4 {
-      display: inline;
-      font-weight: bold; }
+  margin-bottom: 10px;
+}
+.roll-message .roll-header .roll-name {
+  margin: 0;
+  padding: 3px 5px 0 5px;
+}
+.roll-message .roll-header .roll-subheader {
+  padding: 3px 5px 0 5px;
+  font-weight: bold;
+}
+.roll-message .roll-header .roll-subheader h4 {
+  display: inline;
+  font-weight: bold;
+}
 
 .roll-message .roll-results h4 {
   text-transform: uppercase;
   font-family: "Crimson Text", serif;
   font-size: medium;
-  font-weight: bold; }
+  font-weight: bold;
+}
 
 .roll-message .roll-results h5 {
   margin: 10px 0 0 0;
   text-transform: uppercase;
   font-family: "Crimson Text", serif;
-  font-weight: bold; }
+  font-weight: bold;
+}
 
 .roll-message .roll-dice {
   list-style: none;
   margin: 5px 0;
   padding: 0;
-  overflow: hidden; }
-  .roll-message .roll-dice .dice {
-    min-width: 30px;
-    line-height: 30px;
-    float: left;
-    margin-right: 1px;
-    background-image: url(/icons/svg/d6-grey.svg);
-    background-repeat: no-repeat;
-    background-size: 30px 30px;
-    color: #222;
-    font-size: 16px;
-    font-weight: bold;
-    text-align: center; }
+  overflow: hidden;
+}
+.roll-message .roll-dice .dice {
+  min-width: 30px;
+  line-height: 30px;
+  float: left;
+  margin-right: 1px;
+  background-image: url(/icons/svg/d6-grey.svg);
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+  color: #222;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+}
 
 .flex-group-left {
   justify-content: flex-start;
-  text-align: left; }
+  text-align: left;
+}
 
 .flex-group-right {
   justify-content: flex-end;
-  text-align: right; }
+  text-align: right;
+}
 
 .flexshrink {
-  flex: 0; }
+  flex: 0;
+}
 
 .flex-between {
-  justify-content: space-between; }
+  justify-content: space-between;
+}
 
 .flexlarge {
-  flex: 2; }
+  flex: 2;
+}
 
 .align-left {
   justify-content: flex-start;
-  text-align: left; }
+  text-align: left;
+}
 
 .align-right {
   justify-content: flex-end;
-  text-align: right; }
+  text-align: right;
+}
 
 .align-center {
   justify-content: center;
-  text-align: center; }
+  text-align: center;
+}
 
 .grid-2col {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 10px; }
+  gap: 10px;
+}
 
 .grid-3col {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 10px; }
+  gap: 10px;
+}
 
 .grid-4col {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 10px; }
+  gap: 10px;
+}
 
 .grid-5col {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 10px; }
+  gap: 10px;
+}
 
 .grid-6col {
   display: grid;
   grid-template-columns: repeat(6, minmax(0, 1fr));
-  gap: 10px; }
+  gap: 10px;
+}
 
 .grid-7col {
   display: grid;
   grid-template-columns: repeat(7, minmax(0, 1fr));
-  gap: 10px; }
+  gap: 10px;
+}
 
 .grid-8col {
   display: grid;
   grid-template-columns: repeat(8, minmax(0, 1fr));
-  gap: 10px; }
+  gap: 10px;
+}
 
 .grid-9col {
   display: grid;
   grid-column: span 9 / span 9;
   grid-template-columns: repeat(9, minmax(0, 1fr));
-  gap: 10px; }
+  gap: 10px;
+}
 
 .grid-10col {
   display: grid;
   grid-template-columns: repeat(10, minmax(0, 1fr));
-  gap: 10px; }
+  gap: 10px;
+}
 
 .grid-11col {
   display: grid;
   grid-template-columns: repeat(11, minmax(0, 1fr));
-  gap: 10px; }
+  gap: 10px;
+}
 
 .grid-12col {
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
-  gap: 10px; }
+  gap: 10px;
+}
 
 .grid-start-2 {
-  grid-column-start: 2; }
+  grid-column-start: 2;
+}
 
 .grid-start-3 {
-  grid-column-start: 3; }
+  grid-column-start: 3;
+}
 
 .grid-start-4 {
-  grid-column-start: 4; }
+  grid-column-start: 4;
+}
 
 .grid-start-5 {
-  grid-column-start: 5; }
+  grid-column-start: 5;
+}
 
 .grid-start-6 {
-  grid-column-start: 6; }
+  grid-column-start: 6;
+}
 
 .grid-start-7 {
-  grid-column-start: 7; }
+  grid-column-start: 7;
+}
 
 .grid-start-8 {
-  grid-column-start: 8; }
+  grid-column-start: 8;
+}
 
 .grid-start-9 {
-  grid-column-start: 9; }
+  grid-column-start: 9;
+}
 
 .grid-start-10 {
-  grid-column-start: 10; }
+  grid-column-start: 10;
+}
 
 .grid-start-11 {
-  grid-column-start: 11; }
+  grid-column-start: 11;
+}
 
 .grid-start-12 {
-  grid-column-start: 12; }
+  grid-column-start: 12;
+}
 
 .grid-span-2 {
-  grid-column-end: span 2; }
+  grid-column-end: span 2;
+}
 
 .grid-span-3 {
-  grid-column-end: span 3; }
+  grid-column-end: span 3;
+}
 
 .grid-span-4 {
-  grid-column-end: span 4; }
+  grid-column-end: span 4;
+}
 
 .grid-span-5 {
-  grid-column-end: span 5; }
+  grid-column-end: span 5;
+}
 
 .grid-span-6 {
-  grid-column-end: span 6; }
+  grid-column-end: span 6;
+}
 
 .grid-span-7 {
-  grid-column-end: span 7; }
+  grid-column-end: span 7;
+}
 
 .grid-span-8 {
-  grid-column-end: span 8; }
+  grid-column-end: span 8;
+}
 
 .grid-span-9 {
-  grid-column-end: span 9; }
+  grid-column-end: span 9;
+}
 
 .grid-span-10 {
-  grid-column-end: span 10; }
+  grid-column-end: span 10;
+}
 
 .grid-span-11 {
-  grid-column-end: span 11; }
+  grid-column-end: span 11;
+}
 
 .grid-span-12 {
-  grid-column-end: span 12; }
+  grid-column-end: span 12;
+}
 
 input.clear-input {
   border-width: 0;
@@ -310,25 +391,32 @@ input.clear-input {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
-  --color-shadow-primary: none; }
+  --color-shadow-primary: none;
+}
 
 input.clear-input:focus {
-  outline: none; }
+  outline: none;
+}
 
 select.clear-select {
   border: none;
-  background: none; }
+  background: none;
+}
 
 .window-app {
-  font-family: "Crimson Text", serif; }
+  font-family: "Crimson Text", serif;
+}
 
 .window-content input[type="number"] {
-  max-width: 35px; }
+  max-width: 35px;
+}
 
 .window-content input[type="text"] {
-  width: auto; }
+  width: auto;
+}
 
-.teeth-header, .teeth-header > h3 {
+.teeth-header,
+.teeth-header > h3 {
   margin: 0;
   padding: 0 3px;
   background-color: #bbb;
@@ -337,377 +425,575 @@ select.clear-select {
   font-size: medium;
   font-weight: bold;
   font-family: "Crimson Text", serif;
-  border: none; }
-  .teeth-header input, .teeth-header > h3 input {
-    color: #eee; }
+  border: none;
+}
+.teeth-header input,
+.teeth-header > h3 input {
+  color: #eee;
+}
 
 .teeth-subheader {
   margin-top: 0;
   background-color: #bbb;
-  color: black; }
+  color: black;
+}
 
 .teeth.sheet.actor {
   min-width: 400px;
-  min-height: 375px; }
+  min-height: 375px;
+}
 
 .teeth.sheet.actor.hunter {
   aspect-ratio: 1.414 / 1;
 }
 
 .teeth.sheet.actor.outfit {
-  min-width: 750px; }
+  min-width: 750px;
+}
 
 .teeth.sheet.actor.faction {
-  min-width: 550px; }
+  min-width: 550px;
+}
 
 .teeth.sheet.actor.clock {
   min-width: 150px;
-  min-height: 200px; }
+  min-height: 200px;
+}
 
 .teeth.sheet.item {
   min-width: 450px;
-  min-height: 400px; }
+  min-height: 400px;
+}
 
 /* Styles limited to system sheets */
 .teeth {
-  font-family: "Crimson Text", serif; }
-  .teeth .brief-info {
-    font-size: medium; }
-    .teeth .brief-info .prop {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: flex-start;
-      align-items: center; }
-      .teeth .brief-info .prop .prop-label {
-        flex: 0 0 auto;
-        margin-right: 3px; }
-      .teeth .brief-info .prop .prop-input {
-        flex: 1;
-        text-transform: lowercase; }
-      .teeth .brief-info .prop .all-row {
-        flex: 100%;
-        padding: 0; }
-  .teeth .detail-window .detail-trigger {
-    cursor: pointer; }
-  .teeth .detail-window .detail-block:not(.active) {
-    display: none; }
-  .teeth .rollable:hover, .teeth .rollable:focus {
-    color: black;
-    cursor: pointer; }
-  .teeth .teeth-header.rollable:hover, .teeth .teeth-header.rollable:focus {
-    color: white; }
-  .teeth .value-step-block {
-    display: inline-block; }
-    .teeth .value-step-block .value-step {
-      display: inline-block;
-      cursor: pointer; }
-    .teeth .value-step-block .value-dot {
-      height: 14px;
-      width: 14px;
-      border: 1px solid black;
-      border-radius: 50%;
-      background: white; }
-    .teeth .value-step-block .value-dot.active {
-      background: black; }
-    .teeth .value-step-block .value-tooth {
-      height: 40px;
-      width: 14px;
-      background-image: url("../assets/tooth/tooth-black-white.svg");
-      background-size: 14px;
-      background-position: center;
-      background-repeat: no-repeat; }
-    .teeth .value-step-block .value-tooth.active {
-      background-image: url("../assets/diamond/tooth-black.svg"); }
-    .teeth .value-step-block .red-tooth.active {
-      background-image: url("../assets/tooth/tooth-black-red.svg"); }
-    .teeth .value-step-block .simple-tooth, .teeth .value-step-block .simple-red-tooth {
-      height: 20px;
-      width: 20px;
-      background-image: url("../assets/diamond/tooth-white.svg");
-      background-size: 20px; }
-    .teeth .value-step-block .simple-tooth.active {
-      background-image: url("../assets/diamond/tooth-black.svg"); }
-    .teeth .value-step-block .simple-red-tooth.active {
-      background-image: url("../assets/diamond/tooth-red.svg"); }
-    .teeth .value-step-block .small-tooth {
-      height: 20px;
-      background-image: url("../assets/tooth/tooth-small-grey.svg"); }
-    .teeth .value-step-block .small-tooth.active {
-      background-image: url("../assets/tooth/tooth-small-black.svg"); }
-    .teeth .value-step-block .value-box {
-      height: 12px;
-      width: 12px;
-      border: 1px solid black;
-      border-radius: 0;
-      background: white; }
-    .teeth .value-step-block .value-box.active {
-      background: black; }
-  .teeth h1, .teeth h2, .teeth h3 {
-    font-family: "Crimson Text", serif; }
-  .teeth .sheet-tabs {
-    font-family: "Crimson Text", serif;
-    font-size: medium; }
-    .teeth .sheet-tabs .item.active {
-      background: rgba(0, 0, 0, 0.1);
-      text-shadow: none; }
-  .teeth .window-content {
-    background: url("../ui/white-parchment.jpg") repeat; }
-  .teeth .tox {
-    min-height: 300px; }
-    .teeth .tox .tox-editor-container {
-      background: white; }
-    .teeth .tox .tox-edit-area {
-      padding: 0 5px; }
-  .teeth .editor {
-    min-height: 200px;
-    padding: 0 5px;
-    border: 1px solid #b5b3a4; }
-  .teeth .items-block {
-    position: relative; }
-    .teeth .items-block .item-create {
-      position: absolute;
-      top: 2px;
-      right: 5px; }
-    .teeth .items-block .items-list {
-      list-style: none;
-      margin: 0;
-      padding: 0; }
-      .teeth .items-block .items-list .item {
-        position: relative;
-        align-items: center;
-        margin-bottom: 5px; }
-        .teeth .items-block .items-list .item .item-description {
-          padding-right: 55px; }
-          .teeth .items-block .items-list .item .item-description .item-name.active {
-            font-weight: bold; }
-          .teeth .items-block .items-list .item .item-description .item-tags {
-            font-style: italic; }
-        .teeth .items-block .items-list .item .item-summary {
-          flex: auto;
-          margin: 0;
-          height: 0;
-          overflow: hidden;
-          transition: height 0.3s ease; }
-        .teeth .items-block .items-list .item .item-controls {
-          position: absolute;
-          top: 4px;
-          right: 0;
-          display: flex;
-          justify-content: flex-end; }
-          .teeth .items-block .items-list .item .item-controls a {
-            font-size: 12px;
-            text-align: center;
-            margin: 0 3px; }
-      .teeth .items-block .items-list .item.active .item-name {
-        font-weight: bold; }
-  .teeth .items-block.full-size .item-header {
-    display: flex; }
-    .teeth .items-block.full-size .item-header .item-create {
-      position: static;
-      margin: 0 3px; }
-  .teeth .items-block.full-size .items-list .item-checkbox {
-    position: relative;
-    top: 4px;
-    width: 15px;
-    margin: 0; }
-  .teeth .items-block.full-size .items-list .item-description .item-name {
-    cursor: pointer;
-    font-family: "Crimson Text", serif; }
-  .teeth .contacts.items-block .item {
-    margin: 0; }
-    .teeth .contacts.items-block .item .item-description .set-relationship {
-      display: inline-block;
-      width: 12px;
-      height: 16px;
-      vertical-align: middle;
-      cursor: pointer;
-      background-size: 12px;
-      background-position: center;
-      background-repeat: no-repeat; }
-    .teeth .contacts.items-block .item .item-description .set-relationship.rival {
-      background-image: url("/systems/teeth/ui/relationship-icons/caret-down.svg"); }
-    .teeth .contacts.items-block .item .item-description .set-relationship.neutral {
-      background-image: url("/systems/teeth/ui/relationship-icons/minus.svg"); }
-    .teeth .contacts.items-block .item .item-description .set-relationship.friend {
-      background-image: url("/systems/teeth/ui/relationship-icons/caret-up.svg"); }
-    .teeth .contacts.items-block .item .item-description .set-relationship.special {
-      background-image: url("/systems/teeth/ui/relationship-icons/dot-circle.svg"); }
-    .teeth .contacts.items-block .item .item-description .item-name {
-      font-weight: 700; }
-    .teeth .contacts.items-block .item .item-description .item-name:not(:last-child)::after {
-      content: ",";
-      font-weight: normal; }
-  .teeth .related-faction.items-block .item .item-description {
-    padding-right: 40px; }
-    .teeth .related-faction.items-block .item .item-description .item-name {
-      font-family: "Crimson Text", serif; }
-    .teeth .related-faction.items-block .item .item-description .set-status {
-      margin: 0;
-      padding: 0; }
+  font-family: "Crimson Text", serif;
+}
+.teeth .brief-info {
+  font-size: medium;
+}
+.teeth .brief-info .prop {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+.teeth .brief-info .prop .prop-label {
+  flex: 0 0 auto;
+  margin-right: 3px;
+}
+.teeth .brief-info .prop .prop-input {
+  flex: 1;
+  text-transform: lowercase;
+}
+.teeth .brief-info .prop .all-row {
+  flex: 100%;
+  padding: 0;
+}
+.teeth .detail-window .detail-trigger {
+  cursor: pointer;
+}
+.teeth .detail-window .detail-block:not(.active) {
+  display: none;
+}
+.teeth .rollable:hover,
+.teeth .rollable:focus {
+  color: black;
+  cursor: pointer;
+}
+.teeth .teeth-header.rollable:hover,
+.teeth .teeth-header.rollable:focus {
+  color: white;
+}
+.teeth .value-step-block {
+  display: inline-block;
+}
+.teeth .value-step-block .value-step {
+  display: inline-block;
+  cursor: pointer;
+}
+.teeth .value-step-block .value-dot {
+  height: 14px;
+  width: 14px;
+  border: 1px solid black;
+  border-radius: 50%;
+  background: white;
+}
+.teeth .value-step-block .value-dot.active {
+  background: black;
+}
+.teeth .value-step-block .value-tooth {
+  height: 40px;
+  width: 14px;
+  background-image: url("../assets/tooth/tooth-black-white.svg");
+  background-size: 14px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.teeth .value-step-block .value-tooth.active {
+  background-image: url("../assets/diamond/tooth-black.svg");
+}
+.teeth .value-step-block .red-tooth.active {
+  background-image: url("../assets/tooth/tooth-black-red.svg");
+}
+.teeth .value-step-block .simple-tooth,
+.teeth .value-step-block .simple-red-tooth {
+  height: 20px;
+  width: 20px;
+  background-image: url("../assets/diamond/tooth-white.svg");
+  background-size: 20px;
+}
+.teeth .value-step-block .simple-tooth.active {
+  background-image: url("../assets/diamond/tooth-black.svg");
+}
+.teeth .value-step-block .simple-red-tooth.active {
+  background-image: url("../assets/diamond/tooth-red.svg");
+}
+.teeth .value-step-block .small-tooth {
+  height: 20px;
+  background-image: url("../assets/tooth/tooth-small-grey.svg");
+}
+.teeth .value-step-block .small-tooth.active {
+  background-image: url("../assets/tooth/tooth-small-black.svg");
+}
+.teeth .value-step-block .value-box {
+  height: 12px;
+  width: 12px;
+  border: 1px solid black;
+  border-radius: 0;
+  background: white;
+}
+.teeth .value-step-block .value-box.active {
+  background: black;
+}
+.teeth h1,
+.teeth h2,
+.teeth h3 {
+  font-family: "Crimson Text", serif;
+}
+.teeth .sheet-tabs {
+  font-family: "Crimson Text", serif;
+  font-size: medium;
+}
+.teeth .sheet-tabs .item.active {
+  background: rgba(0, 0, 0, 0.1);
+  text-shadow: none;
+}
+.teeth .window-content {
+  background: url("../ui/white-parchment.jpg") repeat;
+}
+.teeth .tox {
+  min-height: 300px;
+}
+.teeth .tox .tox-editor-container {
+  background: white;
+}
+.teeth .tox .tox-edit-area {
+  padding: 0 5px;
+}
+.teeth .editor {
+  min-height: 200px;
+  padding: 0 5px;
+  border: 1px solid #b5b3a4;
+}
+.teeth .items-block {
+  position: relative;
+}
+.teeth .items-block .item-create {
+  position: absolute;
+  top: 2px;
+  right: 5px;
+}
+.teeth .items-block .items-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.teeth .items-block .items-list .item {
+  position: relative;
+  align-items: center;
+  margin-bottom: 5px;
+}
+.teeth .items-block .items-list .item .item-description {
+  padding-right: 55px;
+}
+.teeth .items-block .items-list .item .item-description .item-name.active {
+  font-weight: bold;
+}
+.teeth .items-block .items-list .item .item-description .item-tags {
+  font-style: italic;
+}
+.teeth .items-block .items-list .item .item-summary {
+  flex: auto;
+  margin: 0;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.3s ease;
+}
+.teeth .items-block .items-list .item .item-controls {
+  position: absolute;
+  top: 4px;
+  right: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+.teeth .items-block .items-list .item .item-controls a {
+  font-size: 12px;
+  text-align: center;
+  margin: 0 3px;
+}
+.teeth .items-block .items-list .item.active .item-name {
+  font-weight: bold;
+}
+.teeth .items-block.full-size .item-header {
+  display: flex;
+}
+.teeth .items-block.full-size .item-header .item-create {
+  position: static;
+  margin: 0 3px;
+}
+.teeth .items-block.full-size .items-list .item-checkbox {
+  position: relative;
+  top: 4px;
+  width: 15px;
+  margin: 0;
+}
+.teeth .items-block.full-size .items-list .item-description .item-name {
+  cursor: pointer;
+  font-family: "Crimson Text", serif;
+}
+.teeth .contacts.items-block .item {
+  margin: 0;
+}
+.teeth .contacts.items-block .item .item-description .set-relationship {
+  display: inline-block;
+  width: 12px;
+  height: 16px;
+  vertical-align: middle;
+  cursor: pointer;
+  background-size: 12px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.teeth .contacts.items-block .item .item-description .set-relationship.rival {
+  background-image: url("/systems/teeth/ui/relationship-icons/caret-down.svg");
+}
+.teeth .contacts.items-block .item .item-description .set-relationship.neutral {
+  background-image: url("/systems/teeth/ui/relationship-icons/minus.svg");
+}
+.teeth .contacts.items-block .item .item-description .set-relationship.friend {
+  background-image: url("/systems/teeth/ui/relationship-icons/caret-up.svg");
+}
+.teeth .contacts.items-block .item .item-description .set-relationship.special {
+  background-image: url("/systems/teeth/ui/relationship-icons/dot-circle.svg");
+}
+.teeth .contacts.items-block .item .item-description .item-name {
+  font-weight: 700;
+}
+.teeth
+  .contacts.items-block
+  .item
+  .item-description
+  .item-name:not(:last-child)::after {
+  content: ",";
+  font-weight: normal;
+}
+.teeth .related-faction.items-block .item .item-description {
+  padding-right: 40px;
+}
+.teeth .related-faction.items-block .item .item-description .item-name {
+  font-family: "Crimson Text", serif;
+}
+.teeth .related-faction.items-block .item .item-description .set-status {
+  margin: 0;
+  padding: 0;
+}
 
-.teeth.actor .sheet-title, .teeth.actor h2.sheet-title, .teeth.actor h1.sheet-title {
+.teeth.actor {
+  .sheet-title {
+    font-variant: small-caps;
+    text-align: center;
+    letter-spacing: 1px;
+    h1 {
+      margin: 0;
+      margin-top: 0.4em;
+      border-bottom-width: 0;
+      line-height: 1;
+      font-weight: bold;
+      font-size: 3em;
+    }
+    .strapline {
+      margin-top: 0;
+      line-height: 1;
+      font-weight: bold;
+      font-size: 2em;
+    }
+  }
+}
+
+.teeth.actor .sheet-title,
+.teeth.actor h2.sheet-title,
+.teeth.actor h1.sheet-title {
   font-weight: bold;
   font-variant: small-caps;
   text-align: center;
-  margin: 0; }
+  margin: 0;
+}
 
 .teeth.actor h1.sheet-title {
-  font-size: 500%; }
+  font-size: 500%;
+}
 
 .teeth.actor h2.sheet-title {
   font-size: 200%;
-  margin: -20px 0 10px 0; }
+  margin: -20px 0 10px 0;
+}
 
 .teeth.actor .playbook {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  align-items: flex-start; }
-  .teeth.actor .playbook h3 {
-    font-size: 200%;
-    white-space: nowrap;
-    background: #bbb;
-    margin-top: 15px;
-    margin-bottom: 0; }
-    .teeth.actor .playbook h3 label {
-      font-weight: bold;
-      font-variant: small-caps; }
+  align-items: flex-start;
+}
+.teeth.actor .playbook h3 {
+  font-size: 200%;
+  white-space: nowrap;
+  background: #bbb;
+  margin-top: 15px;
+  margin-bottom: 0;
+}
+.teeth.actor .playbook h3 label {
+  font-weight: bold;
+  font-variant: small-caps;
+}
 
 .teeth.actor .playbook-header {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  align-items: flex-start; }
-  .teeth.actor .playbook-header h1, .teeth.actor .playbook-header h2, .teeth.actor .playbook-header h3 {
-    border-bottom: none; }
-  .teeth.actor .playbook-header .flexbox {
-    margin-left: 10px;
-    margin-right: 10px; }
-  .teeth.actor .playbook-header .profile-img {
-    width: 100%;
-    height: 100%;
-    border: none; }
+  align-items: flex-start;
+}
+.teeth.actor .playbook-header h1,
+.teeth.actor .playbook-header h2,
+.teeth.actor .playbook-header h3 {
+  border-bottom: none;
+}
+.teeth.actor .playbook-header .flexbox {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.teeth.actor .playbook-header .profile-img {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
 
 .teeth.actor .hunter-header {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  align-items: center; }
+  align-items: center;
+}
 
 .teeth.actor .magic {
   display: flex;
-  align-items: baseline; }
-  .teeth.actor .magic .column {
-    flex: 50%;
-    font-size: 150%; }
-  .teeth.actor .magic li {
-    list-style-type: '⬥';
-    font-style: italic; }
+  align-items: baseline;
+}
+.teeth.actor .magic .column {
+  flex: 50%;
+  font-size: 150%;
+}
+.teeth.actor .magic li {
+  list-style-type: "⬥";
+  font-style: italic;
+}
 
 .teeth.actor .playbook-body {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  align-items: flex-start; }
+  align-items: flex-start;
+}
 
 .teeth.actor li.item {
-  white-space: nowrap; }
+  white-space: nowrap;
+}
 
 .teeth.actor .prop-label {
   font-weight: bold;
-  font-variant: small-caps; }
+  font-variant: small-caps;
+}
 
 .teeth.actor .outfit .sheet-header {
   row-gap: 5px;
-  margin-bottom: 10px; }
-  .teeth.actor .outfit .sheet-header .type-container {
-    display: grid;
-    column-gap: 10px;
-    height: -webkit-fill-available; }
-    .teeth.actor .outfit .sheet-header .type-container .profile-img {
-      width: 100%;
-      border: none; }
-    .teeth.actor .outfit .sheet-header .type-container .outfit-type {
-      font-family: "Crimson Text", serif; }
-      .teeth.actor .outfit .sheet-header .type-container .outfit-type .playbook-description {
-        margin: 0;
-        font-size: medium; }
-  .teeth.actor .outfit .sheet-header .name-container .outfit-name {
-    margin: 0; }
-    .teeth.actor .outfit .sheet-header .name-container .outfit-name input {
-      height: 90%;
-      margin: 0;
-      padding: 0; }
-  .teeth.actor .outfit .sheet-header .name-container .brief-info {
-    row-gap: 0; }
-    .teeth.actor .outfit .sheet-header .name-container .brief-info .prop {
-      display: block;
-      font-family: "Crimson Text", serif; }
-      .teeth.actor .outfit .sheet-header .name-container .brief-info .prop .prop-label {
-        display: block;
-        font-size: medium; }
-      .teeth.actor .outfit .sheet-header .name-container .brief-info .prop .prop-input {
-        padding: 0;
-        font-size: small; }
-  .teeth.actor .outfit .sheet-header .hunting-ground .clear-input {
-    padding: 0; }
-  .teeth.actor .outfit .sheet-header .hunting-ground .operation-header {
-    font-family: "Crimson Text", serif; }
-  .teeth.actor .outfit .sheet-header .header-fields {
-    display: grid;
-    column-gap: 10px;
-    row-gap: 5px;
-    grid-template-columns: auto 1fr;
-    font-family: "Crimson Text", serif; }
-    .teeth.actor .outfit .sheet-header .header-fields .heat-block {
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      border-top: 2px solid black; }
-      .teeth.actor .outfit .sheet-header .header-fields .heat-block .wanted-lvl {
-        font-size: small; }
-      .teeth.actor .outfit .sheet-header .header-fields .heat-block .flexrow {
-        align-items: flex-start; }
-    .teeth.actor .outfit .sheet-header .header-fields .tier-block .hold .clear-select {
-      padding: 0; }
-    .teeth.actor .outfit .sheet-header .header-fields .reputation-block {
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      border-top: 2px solid black; }
-      .teeth.actor .outfit .sheet-header .header-fields .reputation-block .turf > h3, .teeth.actor .outfit .sheet-header .header-fields .reputation-block .teeth-header, .teeth.actor .outfit .sheet-header .header-fields .reputation-block .value-step-block {
-        display: inline-block; }
-      .teeth.actor .outfit .sheet-header .header-fields .reputation-block .reputation {
-        display: flex;
-        align-items: flex-start; }
-      .teeth.actor .outfit .sheet-header .header-fields .reputation-block .turf input {
-        max-width: 20px;
-        padding: 0; }
-  .teeth.actor .outfit .sheet-header .header-fields > div {
-    background: rgba(0, 0, 0, 0.1); }
-  .teeth.actor .outfit .sheet-header .exp-block {
-    position: relative; }
-    .teeth.actor .outfit .sheet-header .exp-block .value-step-block {
-      position: absolute;
-      top: 0;
-      right: 5px; }
-    .teeth.actor .outfit .sheet-header .exp-block .teeth-subheader, .teeth.actor .outfit .sheet-header .exp-block .exp-tips {
-      font-size: small; }
-  .teeth.actor .outfit .sheet-header h3.teeth-header {
-    padding-top: 0; }
+  margin-bottom: 10px;
+}
+.teeth.actor .outfit .sheet-header .type-container {
+  display: grid;
+  column-gap: 10px;
+  height: -webkit-fill-available;
+}
+.teeth.actor .outfit .sheet-header .type-container .profile-img {
+  width: 100%;
+  border: none;
+}
+.teeth.actor .outfit .sheet-header .type-container .outfit-type {
+  font-family: "Crimson Text", serif;
+}
+.teeth.actor
+  .outfit
+  .sheet-header
+  .type-container
+  .outfit-type
+  .playbook-description {
+  margin: 0;
+  font-size: medium;
+}
+.teeth.actor .outfit .sheet-header .name-container .outfit-name {
+  margin: 0;
+}
+.teeth.actor .outfit .sheet-header .name-container .outfit-name input {
+  height: 90%;
+  margin: 0;
+  padding: 0;
+}
+.teeth.actor .outfit .sheet-header .name-container .brief-info {
+  row-gap: 0;
+}
+.teeth.actor .outfit .sheet-header .name-container .brief-info .prop {
+  display: block;
+  font-family: "Crimson Text", serif;
+}
+.teeth.actor
+  .outfit
+  .sheet-header
+  .name-container
+  .brief-info
+  .prop
+  .prop-label {
+  display: block;
+  font-size: medium;
+}
+.teeth.actor
+  .outfit
+  .sheet-header
+  .name-container
+  .brief-info
+  .prop
+  .prop-input {
+  padding: 0;
+  font-size: small;
+}
+.teeth.actor .outfit .sheet-header .hunting-ground .clear-input {
+  padding: 0;
+}
+.teeth.actor .outfit .sheet-header .hunting-ground .operation-header {
+  font-family: "Crimson Text", serif;
+}
+.teeth.actor .outfit .sheet-header .header-fields {
+  display: grid;
+  column-gap: 10px;
+  row-gap: 5px;
+  grid-template-columns: auto 1fr;
+  font-family: "Crimson Text", serif;
+}
+.teeth.actor .outfit .sheet-header .header-fields .heat-block {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  border-top: 2px solid black;
+}
+.teeth.actor .outfit .sheet-header .header-fields .heat-block .wanted-lvl {
+  font-size: small;
+}
+.teeth.actor .outfit .sheet-header .header-fields .heat-block .flexrow {
+  align-items: flex-start;
+}
+.teeth.actor
+  .outfit
+  .sheet-header
+  .header-fields
+  .tier-block
+  .hold
+  .clear-select {
+  padding: 0;
+}
+.teeth.actor .outfit .sheet-header .header-fields .reputation-block {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  border-top: 2px solid black;
+}
+.teeth.actor .outfit .sheet-header .header-fields .reputation-block .turf > h3,
+.teeth.actor
+  .outfit
+  .sheet-header
+  .header-fields
+  .reputation-block
+  .teeth-header,
+.teeth.actor
+  .outfit
+  .sheet-header
+  .header-fields
+  .reputation-block
+  .value-step-block {
+  display: inline-block;
+}
+.teeth.actor
+  .outfit
+  .sheet-header
+  .header-fields
+  .reputation-block
+  .reputation {
+  display: flex;
+  align-items: flex-start;
+}
+.teeth.actor
+  .outfit
+  .sheet-header
+  .header-fields
+  .reputation-block
+  .turf
+  input {
+  max-width: 20px;
+  padding: 0;
+}
+.teeth.actor .outfit .sheet-header .header-fields > div {
+  background: rgba(0, 0, 0, 0.1);
+}
+.teeth.actor .outfit .sheet-header .exp-block {
+  position: relative;
+}
+.teeth.actor .outfit .sheet-header .exp-block .value-step-block {
+  position: absolute;
+  top: 0;
+  right: 5px;
+}
+.teeth.actor .outfit .sheet-header .exp-block .teeth-subheader,
+.teeth.actor .outfit .sheet-header .exp-block .exp-tips {
+  font-size: small;
+}
+.teeth.actor .outfit .sheet-header h3.teeth-header {
+  padding-top: 0;
+}
 
 .teeth.actor .outfit .sheet-header > div {
-  height: 100%; }
+  height: 100%;
+}
 
 .teeth.actor .outfit .sheet-body .general-container {
-  grid-template-areas: "1 main" "2 main"; }
-  .teeth.actor .outfit .sheet-body .general-container .spec-purchases {
-    grid-area: 1; }
-  .teeth.actor .outfit .sheet-body .general-container .purchases {
-    grid-area: 2; }
-  .teeth.actor .outfit .sheet-body .general-container .abilities {
-    grid-area: main; }
+  grid-template-areas: "1 main" "2 main";
+}
+.teeth.actor .outfit .sheet-body .general-container .spec-purchases {
+  grid-area: 1;
+}
+.teeth.actor .outfit .sheet-body .general-container .purchases {
+  grid-area: 2;
+}
+.teeth.actor .outfit .sheet-body .general-container .abilities {
+  grid-area: main;
+}
 
 .teeth.actor .faction .sheet-header {
   flex: 100px auto;
@@ -716,71 +1002,96 @@ select.clear-select {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-start;
-  margin-bottom: 10px; }
-  .teeth.actor .faction .sheet-header .profile-img {
-    flex: 0 0 100px;
-    height: 100px;
-    border: none; }
-  .teeth.actor .faction .sheet-header .header-fields {
-    flex: 1; }
-    .teeth.actor .faction .sheet-header .header-fields .character-name {
-      height: 35px;
-      padding: 0px;
-      margin: 5px 0;
-      border-bottom: 0;
-      font-family: "Crimson Text", serif;
-      font-weight: 700; }
-      .teeth.actor .faction .sheet-header .header-fields .character-name input {
-        width: 100%;
-        height: 100%;
-        margin: 0; }
-    .teeth.actor .faction .sheet-header .header-fields .brief-info {
-      margin-top: 10px;
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      font-family: "Crimson Text", serif; }
-      .teeth.actor .faction .sheet-header .header-fields .brief-info .summary {
-        font-size: small; }
+  margin-bottom: 10px;
+}
+.teeth.actor .faction .sheet-header .profile-img {
+  flex: 0 0 100px;
+  height: 100px;
+  border: none;
+}
+.teeth.actor .faction .sheet-header .header-fields {
+  flex: 1;
+}
+.teeth.actor .faction .sheet-header .header-fields .character-name {
+  height: 35px;
+  padding: 0px;
+  margin: 5px 0;
+  border-bottom: 0;
+  font-family: "Crimson Text", serif;
+  font-weight: 700;
+}
+.teeth.actor .faction .sheet-header .header-fields .character-name input {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+.teeth.actor .faction .sheet-header .header-fields .brief-info {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-family: "Crimson Text", serif;
+}
+.teeth.actor .faction .sheet-header .header-fields .brief-info .summary {
+  font-size: small;
+}
 
 .teeth.actor .faction .sheet-body .general .prop-field {
-  position: relative; }
-  .teeth.actor .faction .sheet-body .general .prop-field .prop-lable {
-    font-family: "Crimson Text", serif;
-    font-weight: 700; }
-  .teeth.actor .faction .sheet-body .general .prop-field .show-for-limited {
-    position: absolute;
-    right: 0; }
-    .teeth.actor .faction .sheet-body .general .prop-field .show-for-limited .show-checkbox {
-      position: relative;
-      top: 2px;
-      margin: 0;
-      height: 15px;
-      width: 15px; }
+  position: relative;
+}
+.teeth.actor .faction .sheet-body .general .prop-field .prop-lable {
+  font-family: "Crimson Text", serif;
+  font-weight: 700;
+}
+.teeth.actor .faction .sheet-body .general .prop-field .show-for-limited {
+  position: absolute;
+  right: 0;
+}
+.teeth.actor
+  .faction
+  .sheet-body
+  .general
+  .prop-field
+  .show-for-limited
+  .show-checkbox {
+  position: relative;
+  top: 2px;
+  margin: 0;
+  height: 15px;
+  width: 15px;
+}
 
 .teeth.actor .faction .sheet-body .general .turf {
-  margin: 5px 0; }
+  margin: 5px 0;
+}
 
 .teeth.actor .faction .sheet-body .general .npcs {
-  margin: 5px 0; }
-  .teeth.actor .faction .sheet-body .general .npcs .grid-2col .teeth-header {
-    margin-top: 3px;
-    font-size: small; }
-    .teeth.actor .faction .sheet-body .general .npcs .grid-2col .teeth-header h3 {
-      padding: 0;
-      font-size: small; }
+  margin: 5px 0;
+}
+.teeth.actor .faction .sheet-body .general .npcs .grid-2col .teeth-header {
+  margin-top: 3px;
+  font-size: small;
+}
+.teeth.actor .faction .sheet-body .general .npcs .grid-2col .teeth-header h3 {
+  padding: 0;
+  font-size: small;
+}
 
 .teeth.actor .faction .sheet-body .general .related-faction {
-  margin: 5px 0; }
-  .teeth.actor .faction .sheet-body .general .related-faction .clear-input {
-    border-bottom: 1px solid #b5b3a4; }
+  margin: 5px 0;
+}
+.teeth.actor .faction .sheet-body .general .related-faction .clear-input {
+  border-bottom: 1px solid #b5b3a4;
+}
 
 .teeth.actor .faction .sheet-body .notes .teeth-header {
-  padding: 3px; }
+  padding: 3px;
+}
 
 .teeth.actor .faction .sheet-body .notes .situation {
-  margin-bottom: 5px; }
+  margin-bottom: 5px;
+}
 
 .teeth.actor .npc .sheet-header {
   flex: 100px auto;
@@ -789,63 +1100,78 @@ select.clear-select {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-start;
-  margin-bottom: 10px; }
-  .teeth.actor .npc .sheet-header .profile-img {
-    flex: 0 0 100px;
-    height: 100px;
-    margin-right: 10px;
-    border: none; }
-  .teeth.actor .npc .sheet-header .header-fields {
-    flex: 1; }
-    .teeth.actor .npc .sheet-header .header-fields .character-name {
-      height: 35px;
-      padding: 0px;
-      margin: 5px 0;
-      border-bottom: 0;
-      font-family: "Crimson Text", serif;
-      font-weight: 700; }
-      .teeth.actor .npc .sheet-header .header-fields .character-name input {
-        width: 100%;
-        height: 100%;
-        margin: 0;
-        padding-left: 0; }
-    .teeth.actor .npc .sheet-header .header-fields .character-aka {
-      font-family: "Crimson Text", serif; }
-    .teeth.actor .npc .sheet-header .header-fields .brief-info {
-      margin-top: 10px;
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      font-family: "Crimson Text", serif; }
+  margin-bottom: 10px;
+}
+.teeth.actor .npc .sheet-header .profile-img {
+  flex: 0 0 100px;
+  height: 100px;
+  margin-right: 10px;
+  border: none;
+}
+.teeth.actor .npc .sheet-header .header-fields {
+  flex: 1;
+}
+.teeth.actor .npc .sheet-header .header-fields .character-name {
+  height: 35px;
+  padding: 0px;
+  margin: 5px 0;
+  border-bottom: 0;
+  font-family: "Crimson Text", serif;
+  font-weight: 700;
+}
+.teeth.actor .npc .sheet-header .header-fields .character-name input {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding-left: 0;
+}
+.teeth.actor .npc .sheet-header .header-fields .character-aka {
+  font-family: "Crimson Text", serif;
+}
+.teeth.actor .npc .sheet-header .header-fields .brief-info {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-family: "Crimson Text", serif;
+}
 
 .teeth.actor .clock .sheet-header {
-  display: block; }
-  .teeth.actor .clock .sheet-header .clock-name {
-    text-align: center;
-    border: none; }
-  .teeth.actor .clock .sheet-header .clock-img-block {
-    width: 90%;
-    margin: 0 auto; }
-    .teeth.actor .clock .sheet-header .clock-img-block .clock-img {
-      width: 100%;
-      height: auto;
-      border: none; }
-  .teeth.actor .clock .sheet-header .clock-info {
-    text-align: center;
-    font-family: "Crimson Text", serif; }
-    .teeth.actor .clock .sheet-header .clock-info .clear-input {
-      max-width: 20px; }
+  display: block;
+}
+.teeth.actor .clock .sheet-header .clock-name {
+  text-align: center;
+  border: none;
+}
+.teeth.actor .clock .sheet-header .clock-img-block {
+  width: 90%;
+  margin: 0 auto;
+}
+.teeth.actor .clock .sheet-header .clock-img-block .clock-img {
+  width: 100%;
+  height: auto;
+  border: none;
+}
+.teeth.actor .clock .sheet-header .clock-info {
+  text-align: center;
+  font-family: "Crimson Text", serif;
+}
+.teeth.actor .clock .sheet-header .clock-info .clear-input {
+  max-width: 20px;
+}
 
 .teeth.item input.all-width {
-  width: 100%; }
+  width: 100%;
+}
 
 .teeth.item .brief-info {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  font-family: "Crimson Text", serif; }
+  font-family: "Crimson Text", serif;
+}
 
 .teeth.item .items-header {
   flex: 100px auto;
@@ -854,39 +1180,53 @@ select.clear-select {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-start;
-  margin-bottom: 10px; }
-  .teeth.item .items-header .item-img {
-    flex: 0 0 100px;
-    height: 100px;
-    margin-right: 10px;
-    border: none; }
-  .teeth.item .items-header .header-fields {
-    flex: 1; }
-    .teeth.item .items-header .header-fields .item-name {
-      height: 35px;
-      padding: 0px;
-      margin: 5px 0;
-      border-bottom: 0;
-      font-family: "Crimson Text", serif;
-      font-weight: 700; }
-      .teeth.item .items-header .header-fields .item-name input {
-        width: 100%;
-        height: 100%;
-        margin: 0; }
-    .teeth.item .items-header .header-fields .brief-info {
-      margin-top: 10px; }
+  margin-bottom: 10px;
+}
+.teeth.item .items-header .item-img {
+  flex: 0 0 100px;
+  height: 100px;
+  margin-right: 10px;
+  border: none;
+}
+.teeth.item .items-header .header-fields {
+  flex: 1;
+}
+.teeth.item .items-header .header-fields .item-name {
+  height: 35px;
+  padding: 0px;
+  margin: 5px 0;
+  border-bottom: 0;
+  font-family: "Crimson Text", serif;
+  font-weight: 700;
+}
+.teeth.item .items-header .header-fields .item-name input {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+.teeth.item .items-header .header-fields .brief-info {
+  margin-top: 10px;
+}
 
 .teeth.item .sheet-body .editor-block {
-  flex: auto; }
+  flex: auto;
+}
 
-.teeth.item .playbook .summary, .teeth.item .outfitType .summary {
+.teeth.item .playbook .summary,
+.teeth.item .outfitType .summary {
   margin-top: 10px;
-  margin-bottom: 0; }
+  margin-bottom: 0;
+}
 
-.teeth.item .playbook .linked-items, .teeth.item .outfitType .linked-items {
-  margin-bottom: 10px; }
-  .teeth.item .playbook .linked-items .link-block, .teeth.item .outfitType .linked-items .link-block {
-    line-height: 1.5; }
+.teeth.item .playbook .linked-items,
+.teeth.item .outfitType .linked-items {
+  margin-bottom: 10px;
+}
+.teeth.item .playbook .linked-items .link-block,
+.teeth.item .outfitType .linked-items .link-block {
+  line-height: 1.5;
+}
 
 .teeth.item .playbook .attribute-block {
-  font-family: "Crimson Text", serif; }
+  font-family: "Crimson Text", serif;
+}

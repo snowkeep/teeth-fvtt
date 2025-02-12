@@ -1,4 +1,26 @@
-  <div class="playbook">
+<form class="{{cssClass}} {{actor.type}} grid-2col" autocomplete="off">
+  <div class="left">
+    <header class="sheet-title">
+      <h1> 
+        {{#if playbook}}
+          {{playbook.name}}
+        {{else}}
+          {{localize 'TYPES.Item.setPlaybook'}}
+        {{/if}}
+      </h1> 
+      <p class="strapline">
+        {{#if playbook}}
+          ⬥ {{playbook.system.summary}} ⬥
+        {{/if}}
+      </p>
+    </header>
+  </div>
+  <div class="right">
+RHS
+  </div>
+
+<div class="earlierstuff">
+  <div class="playbook">  
     <div class="playbook-sidebar flexbox">
       <div>
         <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="100" width="100"/>
@@ -197,4 +219,5 @@
     </div>
 
   </section>
+  </div>
 </form>
