@@ -740,10 +740,6 @@ select.clear-select {
       display: flex;
       align-items: flex-end;
       gap: 0.2em;
-      padding: 0.2em 0.4em;
-      font-size: 2em;
-      line-height: 1em;
-      background-color: var(--grey);
       label {
         color: black;
         font-weight: bold;
@@ -756,15 +752,12 @@ select.clear-select {
       &.magic {
         display: grid;
         grid-column: 1 / span 2;
-        h3 {
+        .sheet-heading {
           grid-column: 1 / span 2;
+        }
+        h3 {
           margin-bottom: 0;
           padding-top: 0.4rem;
-          color: black;
-          font-size: 2rem;
-          font-weight: bold;
-          font-variant: small-caps;
-          border-bottom-width: 0;
         }
         label {
           font-size: 1.2rem;
@@ -772,6 +765,7 @@ select.clear-select {
         }
         .magic-element {
           height: 100%;
+          padding: 0.2em 0.4em;
           ul {
             margin: 0;
             padding-left: 1.5rem;
@@ -789,21 +783,39 @@ select.clear-select {
         }
       }
     }
+    .acquaintances-section {
+      ol {
+        list-style-type: none;
+        margin: 0;
+        padding: 0.2rem 0;
+        li {
+          display: flex;
+          justify-content: space-between;
+          padding: 0.1rem 0;
+          .item-controls {
+            display: flex;
+            gap: 0.4rem;
+            font-size: 0.7rem;
+          }
+        }
+      }
+    }
+    .sheet-heading {
+      font-size: 1.6rem;
+      line-height: 1em;
+      background-color: var(--grey);
+      padding: 0.2em 0.4em;
+      h3 {
+        padding: 0;
+        color: black;
+        font-size: 1.6rem;
+        font-weight: bold;
+        font-variant: small-caps;
+        border-bottom-width: 0;
+      }
+    }
   }
 }
-
-/* .teeth.actor .magic {
-  display: flex;
-  align-items: baseline;
-}
-.teeth.actor .magic .column {
-  flex: 50%;
-  font-size: 150%;
-}
-.teeth.actor .magic li {
-  list-style-type: "⬥";
-  font-style: italic;
-} */
 
 .teeth.actor .playbook {
   display: flex;

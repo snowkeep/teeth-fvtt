@@ -17,24 +17,26 @@
       </p>
     </header>
     <section class="sheet-info grid-2col">
-      <div class="sheet-element">
+      <div class="sheet-element sheet-heading">
         <label for="name">{{localize 'TEETH.Actor.Name'}}:</label> 
         <input class="clear-input" name="name" type="text" value="{{actor.name}}" placeholder="{{localize 'TEETH.Actor.Name'}}"/>
       </div>
-      <div class="sheet-element">
+      <div class="sheet-element sheet-heading">
         <label for="system.outfit">{{localize 'TEETH.OutfitName'}}:</label>
         <input class="clear-input" name="system.outfit" type="text" value="{{system.Outfit}}" placeholder="{{localize 'TEETH.OutfitName'}}"/>
       </div>
-      <div class="sheet-element">
+      <div class="sheet-element sheet-heading">
         <label for="system.background"><a class="item-control set-background" data-tooltip="{{localize 'TEETH.SetBackground'}}">{{localize 'TEETH.Background'}}</a>:</label>
         <input class="prop-input clear-input" type="text" name="system.background" value="{{localize system.background}}" placeholder="{{localize 'TEETH.Background'}}"/>
       </div>
-      <div class="sheet-element">
+      <div class="sheet-element sheet-heading">
         <label for="system.vice"><a class="item-control set-vice" data-tooltip="{{localize 'TEETH.SetVice'}}">{{localize 'TEETH.Vice'}}</a>:</label>
         <input class="prop-input clear-input" type="text" name="system.vice" value="{{localize system.vice}}" placeholder="{{localize 'TEETH.Vice'}}"/>
       </div>
       <div class="sheet-element magic grid-2col">
-        <h3>Magic</h3>
+        <div class="sheet-heading">
+          <h3>Magic</h3>
+        </div>
         <div class="magic-element">
           <label class="prop-label" for="system.magicDisciplines"><a class="item-control add-discipline">{{localize 'TEETH.Disciplines'}}</a>:</label>
           <ul>
@@ -52,12 +54,18 @@
           </ul>
         </div>
       </div>
-      
-    
-      <div>
-        <h3 class="item-header teeth-header contacts-title" data.tooltip="{{localize 'TEETH.Contact.Tooltip'}}">{{localize 'TEETH.Contact.Plural'}}</h3>
+      <div class="acquaintances-section">
+        <div class="sheet-heading">
+          <h3 class="item-header teeth-header contacts-title" data.tooltip="{{localize 'TEETH.Contact.Tooltip'}}">{{localize 'TEETH.Contact.Plural'}}</h3>
+        </div>
         {{> "systems/teeth/templates/actor/parts/contacts.hbs"}}
       </div>
+      
+    
+      {{!-- <div>
+        <h3 class="item-header teeth-header contacts-title" data.tooltip="{{localize 'TEETH.Contact.Tooltip'}}">{{localize 'TEETH.Contact.Plural'}}</h3>
+        {{> "systems/teeth/templates/actor/parts/contacts.hbs"}}
+      </div> --}}
       <div>
         <h3 class="item-header teeth-header contacts-title" data.tooltip="{{localize 'TEETH.Coins'}}">{{localize 'TEETH.Coins'}}</h3>
           <label for="system.coins">{{localize 'TEETH.Coins'}}:</label>
