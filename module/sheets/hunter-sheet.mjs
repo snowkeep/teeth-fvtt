@@ -12,14 +12,15 @@ export class TeethHunterSheet extends TeethActorSheet
   static get defaultOptions() {
     return foundry.utils.mergeObject(super.defaultOptions, {
       classes: ["teeth", "sheet", "actor", "hunter"],
-      width: 750,
-      height: 900,
+      width: "",
+      height: "",
       tabs: [{
         navSelector: ".sheet-tabs",
         contentSelector: ".sheet-body",
         initial: "general"
       }]
-    });
+    }, 
+    {enforceTypes: false});
   }
 
   /** @override */
