@@ -61,21 +61,23 @@
         {{> "systems/teeth/templates/actor/parts/contacts.hbs"}}
       </div>
       
-      <div class="money">
-        <div class="resource coins">
+      <div class="sheet-element carry">
+        <div class="sheet-heading">
           <label for="system.coins">{{localize 'TEETH.Coins'}}:</label>
           <input class="clear-input" type="number" name="system.coins.value" value="{{system.coins.value}}"/>
           <span>/{{system.coins.max}}</span>
         </div>
         <div class="resource stash">
-          <label for="system.stash">{{localize 'TEETH.Stash'}}:</label>
+          <label for="system.stash" class="carry-options">{{localize 'TEETH.Stash'}}:</label>
           <input class="clear-input" type="number" name="system.stash.value" value="{{system.stash.value}}" data-dtype="Number"/>
           <span>/{{system.stash.max}}</span>
         </div>
       </div>
-      <div class="load">
-        <span>{{localize 'TEETH.Load.Title'}}: {{system.load.value}}/{{system.load.max}}</span>
-        <select class="clear-select" name="system.load.max">
+      <div class="sheet-element carry">
+        <div class="sheet-heading">
+          <label for="system.load">{{localize 'TEETH.Load.Title'}}:</label> {{system.load.value}}/{{system.load.max}}
+        </div>
+        <select class="clear-select carry-options" name="system.load.max">
           {{selectOptions config.load selected=system.load.max localize=true}}
         </select>
       </div>

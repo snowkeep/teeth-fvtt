@@ -782,8 +782,21 @@ select.clear-select {
           }
         }
       }
+      &.carry {
+        flex-direction: column;
+        > * {
+          width: 100%;
+        }
+        input[type="number"] {
+          text-align: right;
+        }
+        .carry-options {
+          font-size: 1.1rem;
+        }
+      }
     }
     .acquaintances-section {
+      grid-row-end: span 2;
       ol {
         list-style-type: none;
         margin: 0;
