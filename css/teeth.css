@@ -709,7 +709,7 @@ select.clear-select {
   margin: 0;
   padding: 0;
 }
-
+/* new styles here */
 .teeth.actor {
   --grey: #bbbbbb;
 
@@ -730,6 +730,9 @@ select.clear-select {
       line-height: 1;
       font-weight: bold;
       font-size: 2em;
+      .diamond {
+        font-size: 1rem;
+      }
     }
   }
   .sheet-info {
@@ -748,30 +751,59 @@ select.clear-select {
       }
       input[type="text"] {
         height: 1em;
-        padding-bottom: 0.15em;
         color: var(--color-text-dark-primary);
+      }
+      &.magic {
+        display: grid;
+        grid-column: 1 / span 2;
+        h3 {
+          grid-column: 1 / span 2;
+          margin-bottom: 0;
+          padding-top: 0.4rem;
+          color: black;
+          font-size: 2rem;
+          font-weight: bold;
+          font-variant: small-caps;
+          border-bottom-width: 0;
+        }
+        label {
+          font-size: 1.2rem;
+          letter-spacing: 0.5px;
+        }
+        .magic-element {
+          height: 100%;
+          ul {
+            margin: 0;
+            padding-left: 1.5rem;
+            li {
+              padding-left: 0.5rem;
+              list-style-type: "⬥";
+              font-size: 1.2rem;
+              font-style: italic;
+              &::marker {
+                font-style: normal;
+                font-size: 1rem;
+              }
+            }
+          }
+        }
       }
     }
   }
 }
 
-.teeth.actor .sheet-title,
-.teeth.actor h2.sheet-title,
-.teeth.actor h1.sheet-title {
-  font-weight: bold;
-  font-variant: small-caps;
-  text-align: center;
-  margin: 0;
+/* .teeth.actor .magic {
+  display: flex;
+  align-items: baseline;
 }
-
-.teeth.actor h1.sheet-title {
-  font-size: 500%;
+.teeth.actor .magic .column {
+  flex: 50%;
+  font-size: 150%;
 }
-
-.teeth.actor h2.sheet-title {
-  font-size: 200%;
-  margin: -20px 0 10px 0;
-}
+.teeth.actor .magic li {
+  list-style-type: "⬥";
+  font-style: italic;
+} */
 
 .teeth.actor .playbook {
   display: flex;
@@ -817,19 +849,6 @@ select.clear-select {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-}
-
-.teeth.actor .magic {
-  display: flex;
-  align-items: baseline;
-}
-.teeth.actor .magic .column {
-  flex: 50%;
-  font-size: 150%;
-}
-.teeth.actor .magic li {
-  list-style-type: "⬥";
-  font-style: italic;
 }
 
 .teeth.actor .playbook-body {

@@ -10,7 +10,9 @@
       </h1> 
       <p class="strapline">
         {{#if playbook}}
-          ⬥ {{playbook.system.summary}} ⬥
+        <span class="diamond">⬥</span>
+           {{playbook.system.summary}} 
+        <span class="diamond">⬥</span>
         {{/if}}
       </p>
     </header>
@@ -31,28 +33,27 @@
         <label for="system.vice"><a class="item-control set-vice" data-tooltip="{{localize 'TEETH.SetVice'}}">{{localize 'TEETH.Vice'}}</a>:</label>
         <input class="prop-input clear-input" type="text" name="system.vice" value="{{localize system.vice}}" placeholder="{{localize 'TEETH.Vice'}}"/>
       </div>
-      
-      <div>
-        <h3><label>Magic</label></h3>
-        <div class="magic">
-          <div class="magic column">
-            <label class="prop-label" for="system.magicDisciplines"><a class="item-control add-discipline">{{localize 'TEETH.Disciplines'}}</a>:</label>
-            <ul class="discipline-list">
-              {{#each system.magicDisciplines}}
-                <li class="discipline">{{localize this}}</li>
-              {{/each}}
-            </ul>
-          </div>
-          <div class="magic column">
-            <label class="prop-label" for="system.magicMethods"><a class="item-control add-method">{{localize 'TEETH.Methods'}}</a>:</label>
-            <ul class="method-list">
-              {{#each system.magicMethods}}
-                <li class="method">{{localize this}}</li>
-              {{/each}}
-            </ul>
-          </div>
+      <div class="sheet-element magic grid-2col">
+        <h3>Magic</h3>
+        <div class="magic-element">
+          <label class="prop-label" for="system.magicDisciplines"><a class="item-control add-discipline">{{localize 'TEETH.Disciplines'}}</a>:</label>
+          <ul>
+            {{#each system.magicDisciplines}}
+              <li>{{localize this}}</li>
+            {{/each}}
+          </ul>
+        </div>
+        <div class="magic-element">
+          <label class="prop-label" for="system.magicMethods"><a class="item-control add-method">{{localize 'TEETH.Methods'}}</a>:</label>
+          <ul>
+            {{#each system.magicMethods}}
+              <li>{{localize this}}</li>
+            {{/each}}
+          </ul>
         </div>
       </div>
+      
+    
       <div>
         <h3 class="item-header teeth-header contacts-title" data.tooltip="{{localize 'TEETH.Contact.Tooltip'}}">{{localize 'TEETH.Contact.Plural'}}</h3>
         {{> "systems/teeth/templates/actor/parts/contacts.hbs"}}
