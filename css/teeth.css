@@ -809,6 +809,17 @@ select.clear-select {
       grid-column-end: span 2;
       .all-items {
         gap: 2rem;
+        margin-top: 0.5rem;
+        .sheet-heading {
+          display: flex;
+          justify-content: space-between;
+          > * {
+            display: inline-block;
+          }
+        }
+        .special-items {
+          margin-top: 0.5rem;
+        }
         .item.tool {
           .item-name {
             font-style: italic;
@@ -857,6 +868,15 @@ select.clear-select {
         padding: 0;
         color: black;
         font-size: 1.6rem;
+        font-weight: bold;
+        font-variant: small-caps;
+        border-bottom-width: 0;
+      }
+      h4 {
+        margin: 0;
+        padding: 0;
+        color: black;
+        font-size: 1.2rem;
         font-weight: bold;
         font-variant: small-caps;
         border-bottom-width: 0;
