@@ -83,30 +83,41 @@
       </div>
     </section>
      <div class="general-container actor-grid">
-        <div class="spec-inventory items-block">
-          <div class="item-header teeth-header">
-            <h3>{{localize 'TEETH.InventorySpecial'}}</h3>
-            <a class="item-create" title="{{localize 'TEETH.Item.Add'}}" data-type="tool" data-tooltip="{{localize 'TEETH.AddItem'}}"><i class="fas fa-plus"></i></a>
-          </div>
-          <ol class="items-list">
-            {{#each specInventory as |item id|}}
-              {{> "systems/teeth/templates/actor/parts/inventory.hbs" item=item}}
-            {{/each}}
-          </ol>
-        </div>
+        
 
         <div class="inventory items-block">
           <div class="item-header teeth-header">
             <h3>{{localize 'TEETH.Inventory'}}</h3>
           </div>
-          <ol class="items-list">
-            {{#each inventory as |item id|}}
-              {{> "systems/teeth/templates/actor/parts/inventory.hbs" item=item}}
-            {{/each}}
-          </ol>
-        </div>
-
-       
+          <div class="grid-3col all-items">
+            <ol class="items-list">
+              {{#each splitInventoryA as |item id|}}
+                {{> "systems/teeth/templates/actor/parts/inventory.hbs" item=item}}
+              {{/each}}
+            </ol>
+            <ol class="items-list">
+              {{#each splitInventoryB as |item id|}}
+                {{> "systems/teeth/templates/actor/parts/inventory.hbs" item=item}}
+              {{/each}}
+            </ol>
+            <div>
+              <ol class="items-list">
+                {{#each splitInventoryC as |item id|}}
+                  {{> "systems/teeth/templates/actor/parts/inventory.hbs" item=item}}
+                {{/each}}
+              </ol>
+              <div class="item-header teeth-header">
+                <h3>{{localize 'TEETH.InventorySpecial'}}</h3>
+                <a class="item-create" title="{{localize 'TEETH.Item.Add'}}" data-type="tool" data-tooltip="{{localize 'TEETH.AddItem'}}"><i class="fas fa-plus"></i></a>
+              </div>
+              <ol class="items-list">
+                {{#each specInventory as |item id|}}
+                  {{> "systems/teeth/templates/actor/parts/inventory.hbs" item=item}}
+                {{/each}}
+              </ol>
+            </div>
+          </div>
+          </div>
       </div>
      {{> "systems/teeth/templates/actor/parts/corruption-mutation.hbs"}}
   </div>

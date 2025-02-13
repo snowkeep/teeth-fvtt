@@ -813,6 +813,9 @@ select.clear-select {
         }
       }
     }
+    .all-items {
+      gap: 2rem;
+    }
     .sheet-heading {
       font-size: 1.6rem;
       line-height: 1em;
