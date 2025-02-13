@@ -807,16 +807,30 @@ select.clear-select {
     }
     .inventory {
       grid-column-end: span 2;
+      .sheet-heading {
+        display: flex;
+        justify-content: space-between;
+        > * {
+          display: inline-block;
+        }
+      }
+      h3 {
+        display: inline-block;
+      }
+      .info {
+        font-size: 1.2rem;
+        .diamond {
+          font-size: 1rem;
+        }
+        .caps {
+          font-variant: small-caps;
+          font-weight: bold;
+        }
+      }
       .all-items {
         gap: 2rem;
         margin-top: 0.5rem;
-        .sheet-heading {
-          display: flex;
-          justify-content: space-between;
-          > * {
-            display: inline-block;
-          }
-        }
+
         .special-items {
           margin-top: 0.5rem;
         }
@@ -825,8 +839,10 @@ select.clear-select {
             font-style: italic;
           }
           &.light {
-            &.item-name::after {
-              content: " *";
+            .item-name {
+              &::after {
+                content: " *";
+              }
             }
           }
         }
@@ -858,6 +874,9 @@ select.clear-select {
           }
         }
       }
+      .item-create .fas {
+        font-size: 1.4rem;
+      }
     }
     .sheet-heading {
       font-size: 1.6rem;
@@ -865,6 +884,7 @@ select.clear-select {
       background-color: var(--grey);
       padding: 0.2em 0.4em;
       h3 {
+        margin: 0;
         padding: 0;
         color: black;
         font-size: 1.6rem;

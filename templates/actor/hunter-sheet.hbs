@@ -56,7 +56,7 @@
       </div>
       <div class="acquaintances-section">
         <div class="sheet-heading">
-          <h3 class="item-header teeth-header contacts-title" data.tooltip="{{localize 'TEETH.Contact.Tooltip'}}">{{localize 'TEETH.Contact.Plural'}}</h3>
+          <h3 class="item-header contacts-title" data.tooltip="{{localize 'TEETH.Contact.Tooltip'}}">{{localize 'TEETH.Contact.Plural'}}</h3>
         </div>
         {{> "systems/teeth/templates/actor/parts/contacts.hbs"}}
       </div>
@@ -82,8 +82,8 @@
         </select>
       </div>
         <div class="inventory items-block">
-          <div class="item-header teeth-header sheet-heading">
-            <h3>{{localize 'TEETH.Inventory'}}</h3>
+          <div class="item-header sheet-heading">
+            <h3>{{localize 'TEETH.Inventory'}}</h3><span class="info"><span class="diamond">⬥</span> No <span class="caps">load</span> if starred</span>
           </div>
           <div class="grid-3col all-items">
             <ol class="items-list">
@@ -102,7 +102,7 @@
                   {{> "systems/teeth/templates/actor/parts/inventory.hbs" item=item}}
                 {{/each}}
               </ol>
-              <div class="item-header teeth-header sheet-heading">
+              <div class="item-header sheet-heading">
                 <h4>{{localize 'TEETH.InventorySpecial'}}</h4>
                 <a class="item-create" title="{{localize 'TEETH.Item.Add'}}" data-type="tool" data-tooltip="{{localize 'TEETH.AddItem'}}"><i class="fas fa-plus"></i></a>
               </div>
