@@ -886,10 +886,6 @@ select.clear-select {
   align-items: flex-start;
 }
 
-.teeth.actor li.item {
-  white-space: nowrap;
-}
-
 .teeth.actor .prop-label {
   font-weight: bold;
   font-variant: small-caps;
