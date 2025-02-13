@@ -228,6 +228,29 @@
     {{!-- Owned Playbook Tab --}}
     {{!-- <div class="tab general" data-group="primary" data-tab="general">
       <div class="general-container actor-grid">
+
+      <div class="inventory items-block">
+                  <div class="item-header teeth-header">
+                      <h3>{{localize 'TEETH.Armour'}}</h3>
+                  </div>
+                  <ol class="items-list">
+                      {{#each armour as |item id|}}
+                      {{> "systems/teeth/templates/actor/parts/inventory.hbs" item=item}}
+                      {{/each}}
+                  </ol>
+             </div>
+
+        <div class="inventory items-block">
+            <div class="item-header teeth-header">
+                <h3>{{localize 'TEETH.Inventory'}}</h3>
+            </div>
+            <ol class="items-list">
+                {{#each inventory as |item id|}}
+                {{> "systems/teeth/templates/actor/parts/inventory.hbs" item=item}}
+                {{/each}}
+            </ol>
+       </div>
+
         <div class="spec-inventory items-block">
           <div class="item-header teeth-header">
             <h3>{{localize 'TEETH.InventorySpecial'}}</h3>
@@ -235,17 +258,6 @@
           </div>
           <ol class="items-list">
             {{#each specInventory as |item id|}}
-              {{> "systems/teeth/templates/actor/parts/inventory.hbs" item=item}}
-            {{/each}}
-          </ol>
-        </div>
-
-        <div class="inventory items-block">
-          <div class="item-header teeth-header">
-            <h3>{{localize 'TEETH.Inventory'}}</h3>
-          </div>
-          <ol class="items-list">
-            {{#each inventory as |item id|}}
               {{> "systems/teeth/templates/actor/parts/inventory.hbs" item=item}}
             {{/each}}
           </ol>

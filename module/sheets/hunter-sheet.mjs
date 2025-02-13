@@ -45,6 +45,7 @@ export class TeethHunterSheet extends TeethActorSheet {
     const abilities = []
     const contacts = []
     const inventory = []
+    const armour = []
     const specInventory = []
 
     const splitInventory = []
@@ -65,11 +66,21 @@ export class TeethHunterSheet extends TeethActorSheet {
       } else if (i.type === "tool") {
         if (i.system.type === "common") {
           inventory.push(i)
+        } else if (i.system.type === "armour") {
+          armour.push(i)
         } else {
           specInventory.push(i)
         }
       }
     }
+
+    const sortInventory = inventory.sort(
+      (a, b) =>
+        a.system.name - b.system.name || a.system.loadout - b.system.loadout
+    )
+    const sortArmour = armour.sort(
+      (a, b) => a.system.loadout - b.system.loadout
+    )
 
     const combinedInventory = inventory.concat(specInventory)
     const invQuotient = Math.ceil(combinedInventory.length / 3)
@@ -79,7 +90,8 @@ export class TeethHunterSheet extends TeethActorSheet {
 
     context.abilities = abilities
     context.contacts = contacts
-    context.inventory = inventory
+    context.inventory = sortInventory
+    context.armour = sortArmour
     context.playbook = playbook
     context.specInventory = specInventory
     context.splitInventoryA = splitInventoryA
@@ -150,7 +162,7 @@ export class TeethHunterSheet extends TeethActorSheet {
 
             // clear out old class items
             for (const item of this.actor.items) {
-              if (item._source.folder != defaultFolder && item._source.folder != null) { 
+              if (item._source.folder != defaultFolder && item._source.folder != null) {
                 item.delete();
               }
             }
@@ -164,7 +176,7 @@ export class TeethHunterSheet extends TeethActorSheet {
             // playbook-specific experience
             //const hunterType = this.actor.system.hunterClass.split(".").at(-1);
             //const hunterExp =  game.i18n.localize("TEETH.Experience." + hunterType);
-            
+
             //await this.actor.system.playbook.update({ "system.exp": hunterExp });
             */
             },
@@ -431,7 +443,7 @@ export class TeethHunterSheet extends TeethActorSheet {
   }
 
   /**
-   * Handle removeing mutations.
+   * Handle removing mutations.
    * @param {Event} the originating click event
    * @private
    */
