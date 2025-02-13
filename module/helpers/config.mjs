@@ -18,6 +18,7 @@ export const TEETH = {
   },
   toolType: {
     common: "TEETH.Tool.Common",
+    armour: "TEETH.Tool.Armour",
     special: "TEETH.Tool.Special",
   },
   purchaseType: {

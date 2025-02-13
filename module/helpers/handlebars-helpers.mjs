@@ -1,4 +1,4 @@
-export const registerHandlebarsHelpers = function() {
+export const registerHandlebarsHelpers = function () {
   Handlebars.registerHelper("numLoop", function (num, options) {
     let result = "";
     for (let i = 0, j = num; i < j; i++) {
@@ -37,7 +37,7 @@ export const registerHandlebarsHelpers = function() {
         }
         break;
       default:
-      throw "Unknown operator " + operator;
+        throw "Unknown operator " + operator;
     }
 
     if (bool) {
@@ -58,7 +58,7 @@ export const registerHandlebarsHelpers = function() {
     } else {
       value = value[path];
     }
-    return value
+    return value;
   });
 
   Handlebars.registerHelper("getLocalizeName", function (key) {
@@ -88,7 +88,7 @@ export const registerHandlebarsHelpers = function() {
     const conditions = [
       { condition: data.equipped, className: "active" },
       { condition: data.broken, className: "broken" },
-      { condition: !data.loadout, className: "light" }
+      { condition: !data.loadout, className: "light" },
     ];
     let classes = "";
 
@@ -98,10 +98,10 @@ export const registerHandlebarsHelpers = function() {
       }
     });
 
-    return classes
+    return classes;
   });
 
-  Handlebars.registerHelper("log", function(something) {
+  Handlebars.registerHelper("log", function (something) {
     console.log(something);
   });
-}
+};

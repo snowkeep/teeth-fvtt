@@ -119,7 +119,7 @@
     "AddBehaviour": "Add Erratic Behaviour",
     "CustomBehaviour": "Custom",
     "Behaviours": {
-      "Singing": "Inappropiate folk-signing",
+      "Singing": "Inappropriate folk-signing",
       "Indignance": "Frothing indignance",
       "Dancing": "Compulsive dancing",
       "Grovelling": "Grovelling penitence",
@@ -209,7 +209,7 @@
       "Title": "Rules Reference",
       "Teamwork": {
         "Title": "Teamwork",
-        "Tips": "<span>Take someone else's <b>consequenses</b></span><span>Lead a <b>group action</b></span><span><b>Assist</b> another player</span>"
+        "Tips": "<span>Take someone else's <b>consequences</b></span><span>Lead a <b>group action</b></span><span><b>Assist</b> another player</span>"
       }
     },
 
@@ -231,8 +231,10 @@
     "AddItem": "Add special item",
     "Inventory": "Items",
     "InventorySpecial": "Special Items",
+    "Armour": "Armour",
     "Tool": {
       "Common": "Common",
+      "Armour": "Armour",
       "Special": "Special",
       "Loadout": "Loadout",
       "Equipped": "Equipped",
@@ -357,7 +359,7 @@
       },
       "BonusDescription": {
         "Push": "You suffer {stress} stress.",
-        "StrangersBargain": "The Stranger’s Bargain applies regardles of success or failure.",
+        "StrangersBargain": "The Stranger’s Bargain applies regardless of success or failure.",
         "Assistance": "Character who helps suffer 1 stress and might also suffer any consequences that occur because of the roll."
       },
       "ManifestBehaviour": {
