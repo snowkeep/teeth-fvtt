@@ -597,14 +597,6 @@ select.clear-select {
   padding: 0 5px;
   border: 1px solid #b5b3a4;
 }
-.teeth .items-block {
-  position: relative;
-}
-.teeth .items-block .item-create {
-  position: absolute;
-  top: 2px;
-  right: 5px;
-}
 .teeth .items-block .items-list {
   list-style: none;
   margin: 0;
@@ -813,8 +805,48 @@ select.clear-select {
         }
       }
     }
-    .all-items {
-      gap: 2rem;
+    .inventory {
+      grid-column-end: span 2;
+      .all-items {
+        gap: 2rem;
+        .item.tool {
+          .item-name {
+            font-style: italic;
+          }
+          &.light {
+            &.item-name::after {
+              content: " *";
+            }
+          }
+        }
+        .item-checkbox {
+          display: inline-block;
+          .loadout-box {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+            height: 0.7rem;
+            width: 0.7rem;
+            border: 2px solid black;
+            border-radius: 0;
+            background: white;
+            &:not(:last-child)::after {
+              content: "";
+              position: absolute;
+              top: 0.2rem;
+              right: -0.4rem;
+              width: 0.4rem;
+              height: 2px;
+              background-color: black;
+            }
+          }
+        }
+        .item.tool.active {
+          .loadout-box {
+            background-color: black;
+          }
+        }
+      }
     }
     .sheet-heading {
       font-size: 1.6rem;
