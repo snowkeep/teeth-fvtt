@@ -116,6 +116,16 @@
         </div>
         {{> "systems/teeth/templates/actor/parts/corruption-mutation.hbs"}}
     </section>
+    {{!-- add to inventory --}}
+    <div class="item-header teeth-header">
+      <h3>{{localize 'TEETH.Armour'}}</h3>
+    </div>
+    <ol class="items-list">
+        {{#each armour as |item id|}}
+        {{> "systems/teeth/templates/actor/parts/inventory.hbs" item=item}}
+        {{/each}}
+    </ol>
+    </div>
   </div>
   <div class="right">
  {{> "systems/teeth/templates/actor/parts/stress-behaviour.hbs"}}
