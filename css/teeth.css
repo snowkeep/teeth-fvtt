@@ -878,6 +878,105 @@ select.clear-select {
         font-size: 1.4rem;
       }
     }
+    .corruption-mutation {
+      grid-column-end: span 2;
+      .sheet-heading {
+        display: flex;
+        justify-content: space-between;
+        > * {
+          display: inline-block;
+        }
+      }
+      h3 {
+        display: inline-block;
+      }
+      .angled-track {
+        padding: 1rem 0.5rem;
+        .value-step {
+          position: relative;
+          height: 1.5rem;
+          width: 1.5rem;
+          border: 3px solid black;
+          rotate: 45deg;
+          &:after {
+            content: "";
+            position: absolute;
+            top: 0.5rem;
+            right: -0.4rem;
+            width: 0.4rem;
+            height: 3px;
+            background-color: black;
+          }
+          &:nth-child(even)::after {
+            translate: -0.7rem -0.9rem;
+            rotate: 90deg;
+          }
+          &:nth-child(2) {
+            translate: -0.5rem 1.2rem;
+          }
+          &:nth-child(3) {
+            translate: -1rem 0;
+          }
+          &:nth-child(4) {
+            translate: -1.5rem 1.2rem;
+          }
+          &:nth-child(5) {
+            translate: -2rem 0;
+          }
+          &:nth-child(6) {
+            translate: -2.5rem 1.2rem;
+          }
+          &:nth-child(7) {
+            translate: -3rem 0;
+          }
+          &:nth-child(8) {
+            translate: -3.5rem 1.2rem;
+          }
+          &:nth-child(9) {
+            translate: -4rem 0;
+          }
+          &:nth-child(10) {
+            translate: -4.5rem 1.2rem;
+          }
+          &:nth-child(11) {
+            translate: -5rem 0;
+          }
+          &:nth-child(12) {
+            translate: -5.5rem 1.2rem;
+          }
+          &:nth-child(13) {
+            translate: -6rem 0;
+          }
+          &:nth-child(14) {
+            translate: -6.5rem 1.2rem;
+          }
+          &:nth-child(15) {
+            translate: -7rem 0;
+          }
+          &:nth-child(16) {
+            translate: -7.5rem 1.2rem;
+          }
+          &:last-child:after {
+            display: none;
+          }
+          &:nth-child(4n):before {
+            content: "";
+            position: absolute;
+            top: 0.1rem;
+            left: 0.1rem;
+            width: 0.5rem;
+            height: 0.5rem;
+            border: 0.2rem solid var(--grey);
+          }
+          &.active {
+            background-color: var(--color-dark-4);
+            &:before {
+              border-color: var(--color-dark-3);
+            }
+          }
+        }
+      }
+    }
     .sheet-heading {
       font-size: 1.6rem;
       line-height: 1em;
