@@ -82,11 +82,16 @@ export class TeethHunterSheet extends TeethActorSheet {
       (a, b) => a.system.loadout - b.system.loadout
     )
 
-    const combinedInventory = inventory.concat(specInventory)
-    const invQuotient = Math.ceil(combinedInventory.length / 3)
-    const splitInventoryA = inventory.slice(0, invQuotient)
-    const splitInventoryB = inventory.slice(invQuotient, invQuotient * 2)
-    const splitInventoryC = inventory.slice(invQuotient * 2)
+    const combinedInventory = inventory.concat(specInventory).concat(armour)
+
+    const inv2Quotient = Math.ceil((combinedInventory.length + 4) / 2)
+    const splitInventory2A = inventory.slice(0, inv2Quotient)
+    const splitInventory2B = inventory.slice(inv2Quotient, inv2Quotient * 2)
+
+    const inv3Quotient = Math.ceil((combinedInventory.length + 4) / 3)
+    const splitInventory3A = inventory.slice(0, inv3Quotient)
+    const splitInventory3B = inventory.slice(inv3Quotient, inv3Quotient * 2)
+    const splitInventory3C = inventory.slice(inv3Quotient * 2)
 
     context.abilities = abilities
     context.contacts = contacts
@@ -94,9 +99,11 @@ export class TeethHunterSheet extends TeethActorSheet {
     context.armour = sortArmour
     context.playbook = playbook
     context.specInventory = specInventory
-    context.splitInventoryA = splitInventoryA
-    context.splitInventoryB = splitInventoryB
-    context.splitInventoryC = splitInventoryC
+    context.splitInventory2A = splitInventory2A
+    context.splitInventory2B = splitInventory2B
+    context.splitInventory3A = splitInventory3A
+    context.splitInventory3B = splitInventory3B
+    context.splitInventory3C = splitInventory3C
   }
 
   /* -------------------------------------------- */

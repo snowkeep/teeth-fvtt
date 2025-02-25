@@ -806,6 +806,7 @@ select.clear-select {
       }
     }
     .inventory {
+      container-type: inline-size;
       grid-column-end: span 2;
       .sheet-heading {
         display: flex;
@@ -827,10 +828,20 @@ select.clear-select {
           font-weight: bold;
         }
       }
+      .all-items.grid-3col {
+        display: none;
+      }
+      @container (min-width: 40rem) {
+        .all-items.grid-2col {
+          display: none;
+        }
+        .all-items.grid-3col {
+          display: grid;
+        }
+      }
       .all-items {
         gap: 2rem;
         margin-top: 0.5rem;
-
         .special-items {
           margin-top: 0.5rem;
         }

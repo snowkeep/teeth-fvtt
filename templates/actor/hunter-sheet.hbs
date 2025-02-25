@@ -85,23 +85,20 @@
           <div class="item-header sheet-heading">
             <h3>{{localize 'TEETH.Inventory'}}</h3><span class="info"><span class="diamond">⬥</span> No <span class="caps">load</span> if starred</span>
           </div>
-          <div class="grid-3col all-items">
+          {{!-- 2 column item display on smaller screens --}}
+          <div class="grid-2col all-items">
             <ol class="items-list">
-              {{#each splitInventoryA as |item id|}}
-                {{> "systems/teeth/templates/actor/parts/inventory.hbs" item=item}}
-              {{/each}}
-            </ol>
-            <ol class="items-list">
-              {{#each splitInventoryB as |item id|}}
+              {{#each splitInventory2A as |item id|}}
                 {{> "systems/teeth/templates/actor/parts/inventory.hbs" item=item}}
               {{/each}}
             </ol>
             <div>
               <ol class="items-list">
-                {{#each splitInventoryC as |item id|}}
+                {{#each splitInventory2B as |item id|}}
                   {{> "systems/teeth/templates/actor/parts/inventory.hbs" item=item}}
                 {{/each}}
               </ol>
+              {{!-- add to inventory --}}
               <div class="item-header sheet-heading">
                 <h4>{{localize 'TEETH.InventorySpecial'}}</h4>
                 <a class="item-create" title="{{localize 'TEETH.Item.Add'}}" data-type="tool" data-tooltip="{{localize 'TEETH.AddItem'}}"><i class="fas fa-plus"></i></a>
@@ -111,21 +108,57 @@
                   {{> "systems/teeth/templates/actor/parts/inventory.hbs" item=item}}
                 {{/each}}
               </ol>
+              <div class="item-header sheet-heading">
+                <h4>{{localize 'TEETH.Armour'}}</h4>
+              </div>
+              <ol class="items-list special-items">
+                {{#each armour as |item id|}}
+                  {{> "systems/teeth/templates/actor/parts/inventory.hbs" item=item}}
+                {{/each}}
+              </ol>
+            </div>
+          </div>
+          {{!-- 3 column item display on wider screens --}}
+          <div class="grid-3col all-items">
+            <ol class="items-list">
+              {{#each splitInventory3A as |item id|}}
+                {{> "systems/teeth/templates/actor/parts/inventory.hbs" item=item}}
+              {{/each}}
+            </ol>
+            <ol class="items-list">
+              {{#each splitInventory3B as |item id|}}
+                {{> "systems/teeth/templates/actor/parts/inventory.hbs" item=item}}
+              {{/each}}
+            </ol>
+            <div>
+              <ol class="items-list">
+                {{#each splitInventory3C as |item id|}}
+                  {{> "systems/teeth/templates/actor/parts/inventory.hbs" item=item}}
+                {{/each}}
+              </ol>
+              {{!-- add to inventory --}}
+              <div class="item-header sheet-heading">
+                <h4>{{localize 'TEETH.InventorySpecial'}}</h4>
+                <a class="item-create" title="{{localize 'TEETH.Item.Add'}}" data-type="tool" data-tooltip="{{localize 'TEETH.AddItem'}}"><i class="fas fa-plus"></i></a>
+              </div>
+              <ol class="items-list special-items">
+                {{#each specInventory as |item id|}}
+                  {{> "systems/teeth/templates/actor/parts/inventory.hbs" item=item}}
+                {{/each}}
+              </ol>
+              <div class="item-header sheet-heading">
+                <h4>{{localize 'TEETH.Armour'}}</h4>
+              </div>
+              <ol class="items-list special-items">
+                {{#each armour as |item id|}}
+                  {{> "systems/teeth/templates/actor/parts/inventory.hbs" item=item}}
+                {{/each}}
+              </ol>
             </div>
           </div>
         </div>
         {{> "systems/teeth/templates/actor/parts/corruption-mutation.hbs"}}
     </section>
-    {{!-- add to inventory --}}
-    <div class="item-header teeth-header">
-      <h3>{{localize 'TEETH.Armour'}}</h3>
-    </div>
-    <ol class="items-list">
-        {{#each armour as |item id|}}
-        {{> "systems/teeth/templates/actor/parts/inventory.hbs" item=item}}
-        {{/each}}
-    </ol>
-    </div>
   </div>
   <div class="right">
  {{> "systems/teeth/templates/actor/parts/stress-behaviour.hbs"}}
