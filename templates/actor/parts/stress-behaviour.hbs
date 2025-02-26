@@ -1,12 +1,20 @@
 <div class="stress-behaviour">
-  <div class="stress teeth-header">
-    <a class="item-control add-behaviour" data-tooltip="{{localize 'TEETH.AddBehaviour'}}"><i class="fa-solid fa-plus"></i></a>
-    <h3 class="stress-title rollable" data-roll-type="vice">{{localize 'TEETH.Stress'}}</h3>
+  <div class="stress item-header sheet-heading">
+    <h3 class="stress-title rollable" data-roll-type="vice">{{localize
+        "TEETH.Stress"
+      }}</h3>
+    <a
+      class="item-control add-behaviour"
+      data-tooltip="{{localize 'TEETH.AddBehaviour'}}"
+    ><i class="fa-solid fa-plus"></i></a>
   </div>
-
-  <div class="value-step-block" data-value="{{system.stress.value}}" data-key="system.stress.value">
+  <div
+    class="value-step-block angled-track"
+    data-value="{{system.stress.value}}"
+    data-key="system.stress.value"
+  >
     {{#numLoop system.stress.max}}
-      <span class="value-step value-tooth red-tooth" data-index="{{this}}"></span>
+      <span class="value-step" data-index="{{this}}"></span>
     {{/numLoop}}
   </div>
 

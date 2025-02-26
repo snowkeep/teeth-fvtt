@@ -891,6 +891,33 @@ select.clear-select {
     }
     .corruption-mutation {
       grid-column-end: span 2;
+      .angled-track .value-step {
+        &:nth-child(4n):before {
+          content: "";
+          position: absolute;
+          top: 0.1rem;
+          left: 0.1rem;
+          width: 0.5rem;
+          height: 0.5rem;
+          border: 0.2rem solid var(--grey);
+        }
+      }
+    }
+    .stress-behaviour {
+      .angled-track .value-step {
+        &:last-child:before {
+          content: "";
+          position: absolute;
+          top: 0.1rem;
+          left: 0.1rem;
+          width: 0.5rem;
+          height: 0.5rem;
+          border: 0.2rem solid var(--grey);
+        }
+      }
+    }
+    .corruption-mutation,
+    .stress-behaviour {
       .sheet-heading {
         display: flex;
         justify-content: space-between;
@@ -970,15 +997,7 @@ select.clear-select {
           &:last-child:after {
             display: none;
           }
-          &:nth-child(4n):before {
-            content: "";
-            position: absolute;
-            top: 0.1rem;
-            left: 0.1rem;
-            width: 0.5rem;
-            height: 0.5rem;
-            border: 0.2rem solid var(--grey);
-          }
+
           &.active {
             background-color: var(--color-dark-4);
             &:before {
@@ -988,6 +1007,7 @@ select.clear-select {
         }
       }
     }
+
     .sheet-heading {
       font-size: 1.6rem;
       line-height: 1em;
