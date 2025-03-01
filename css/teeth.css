@@ -506,23 +506,7 @@ select.clear-select {
 .teeth .teeth-header.rollable:focus {
   color: white;
 }
-.teeth .value-step-block {
-  display: inline-block;
-}
-.teeth .value-step-block .value-step {
-  display: inline-block;
-  cursor: pointer;
-}
-.teeth .value-step-block .value-dot {
-  height: 14px;
-  width: 14px;
-  border: 1px solid black;
-  border-radius: 50%;
-  background: white;
-}
-.teeth .value-step-block .value-dot.active {
-  background: black;
-}
+
 .teeth .value-step-block .value-tooth {
   height: 40px;
   width: 14px;
@@ -889,6 +873,13 @@ select.clear-select {
         font-size: 1.4rem;
       }
     }
+    .value-step-block {
+      display: inline-block;
+      .value-step {
+        display: inline-block;
+        cursor: pointer;
+      }
+    }
     .corruption-mutation {
       grid-column-end: span 2;
       .angled-track .value-step {
@@ -1058,6 +1049,62 @@ select.clear-select {
     .diamond {
       font-size: 0.5rem;
       padding: 0 0.25rem;
+    }
+  }
+  .attribute-block {
+    .attribute {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+      border: 2px solid #bbb;
+    }
+    .actions-in-attr {
+      padding: 0.25rem;
+      padding-right: 0;
+      .value-step-block {
+        translate: 0px 4px;
+      }
+    }
+    .attribute-header {
+      display: flex;
+      flex-direction: row-reverse;
+      padding: 0.5rem;
+      padding-right: 0;
+      background-color: #bbb;
+      h3 {
+        writing-mode: vertical-rl;
+        font-size: 1.4rem;
+        text-align: center;
+        font-weight: bold;
+        font-variant: small-caps;
+        text-transform: none;
+      }
+    }
+    .action {
+      margin-bottom: 0.2rem;
+      font-weight: bold;
+      font-variant: small-caps;
+      font-size: 1.1rem;
+    }
+    .value-step-block {
+      padding: 0 0.2rem;
+      .value-dot {
+        height: 0.9rem;
+        width: 0.9rem;
+        margin-bottom: 2px;
+        border: 3px solid black;
+        background: white;
+        rotate: 45deg;
+        &.active {
+          background: black;
+        }
+      }
+    }
+    .exp-block {
+      .value-dot {
+        display: block;
+      }
     }
   }
 }

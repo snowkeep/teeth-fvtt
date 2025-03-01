@@ -1,4 +1,4 @@
-<div class="attribute-block grid-3col">
+<div class="attribute-block">
   {{#each config.attributeLinks as |attribute key|}}
     <div class="attribute {{key}}">
       <div class="attribute-header">
@@ -6,22 +6,23 @@
 
         <div class="value-step-block exp-block" data-value="{{getValue @root.system.attributes (concat key ".exp.value")}}" data-key="system.attributes.{{key}}.exp.value">
           {{#numLoop (getValue @root.system.attributes (concat key ".exp.max"))}}
-            <span class="value-step value-tooth simple-red-tooth" data-index="{{this}}"></span>
+            <span class="value-step value-dot" data-index="{{this}}"></span>
           {{/numLoop}}
 
         </div>
       </div>
-      <div>
-      {{#each attribute as |action|}}
-        <div class="action {{action}}">
-          <div class="value-step-block" data-value="{{getValue @root.system.actions (concat action ".value")}}" data-key="system.actions.{{action}}.value">
-            {{#numLoop (getValue @root.system.actions (concat action ".max"))}}
-              <span class="value-step value-dot" data-index="{{this}}"></span>
-            {{/numLoop}}
+      <div class="actions-in-attr">
+        {{#each attribute as |action|}}
+          <div class="action {{action}}">
+            <div class="value-step-block" data-value="{{getValue @root.system.actions (concat action ".value")}}" data-key="system.actions.{{action}}.value">
+              {{#numLoop (getValue @root.system.actions (concat action ".max"))}}
+                <span class="value-step value-dot" data-index="{{this}}"></span>
+              {{/numLoop}}
+            </div>
+            <label class="action-label rollable" data-roll-type="action" data-roll-note="{{action}}" data-tooltip="{{getLocalizeDescription 'action' action}}">{{getLocalizeName action}}</label>
           </div>
-          <label class="action-label rollable" data-roll-type="action" data-roll-note="{{action}}" data-tooltip="{{getLocalizeDescription 'action' action}}">{{getLocalizeName action}}</label>
-        </div>
-      {{/each}}
+        {{/each}}
+      </div>
     </div>
   {{/each}}
 </div>
