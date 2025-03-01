@@ -1087,6 +1087,13 @@ select.clear-select {
       font-variant: small-caps;
       font-size: 1.1rem;
     }
+    .exp-block {
+      .value-dot {
+        display: block;
+      }
+    }
+  }
+  .attribute-block, .abilities {
     .value-step-block {
       padding: 0 0.2rem;
       .value-dot {
@@ -1101,9 +1108,16 @@ select.clear-select {
         }
       }
     }
-    .exp-block {
-      .value-dot {
-        display: block;
+  }
+  .abilities {
+    .sheet-heading {
+      flex-direction: column;
+      .abilities-heading {
+        display: flex;
+        justify-content: space-between;
+        h3 {
+          display: inline-block;
+        }
       }
     }
   }

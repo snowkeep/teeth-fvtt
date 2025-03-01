@@ -168,12 +168,14 @@
     </section>
     <section class="sheet-info grid-2col">
       <div class="abilities items-block full-size">
-        <div class="item-header teeth-header">
-          <a class="item-create" title="{{localize 'TEETH.Item.Add'}}" data-type="abilityHunter"><i class="fas fa-plus"></i></a>
-          <h3>{{localize 'TEETH.Ability.Special'}}</h3>
+        <div class="item-header sheet-heading">
+          <div class="abilities-heading">
+            <h3>{{localize 'TEETH.Ability.Special'}}</h3>
+            <a class="item-create" title="{{localize 'TEETH.Item.Add'}}" data-type="abilityHunter"><i class="fas fa-plus"></i></a>
+          </div>
           <div class="value-step-block exp-block" data-value="{{system.exp.value}}" data-key="system.exp.value">
             {{#numLoop system.exp.max}}
-              <span class="value-step value-tooth simple-red-tooth" data-index="{{this}}"></span>
+              <span class="value-step value-dot" data-index="{{this}}"></span>
             {{/numLoop}}
           </div>
         </div>
