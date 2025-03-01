@@ -1107,6 +1107,9 @@ select.clear-select {
       }
     }
   }
+  .sheet-tabs {
+    grid-column: span 2;
+  }
 }
 
 .teeth.actor .playbook {

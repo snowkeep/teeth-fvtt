@@ -182,6 +182,16 @@
       {{> "systems/teeth/templates/actor/parts/attributes.hbs"}}
     </section>
   </div>
+  <nav class="sheet-tabs tabs flexrow" data-group="primary">
+    <a class="item" data-tab="general">
+      {{#if playbook}}
+        {{playbook.name}}
+      {{else}}
+        {{localize 'TYPES.Item.playbook'}}
+      {{/if}}
+    </a>
+    <a class="item" data-tab="notes">{{localize 'TEETH.Notes'}}</a>
+  </nav>
 
 <div class="earlierstuff">
   <div class="playbook">  
@@ -196,16 +206,7 @@
 
 
   {{!-- Sheet Tab Navigation --}}
-  <nav class="sheet-tabs tabs flexrow" data-group="primary">
-    <a class="item" data-tab="general">
-      {{#if playbook}}
-        {{playbook.name}}
-      {{else}}
-        {{localize 'TYPES.Item.playbook'}}
-      {{/if}}
-    </a>
-    <a class="item" data-tab="notes">{{localize 'TEETH.Notes'}}</a>
-  </nav>
+  
   </div>
   <div class="tab notes" data-group="primary" data-tab="notes">
     {{> "systems/teeth/templates/actor/parts/hunter-notes.hbs"}}
