@@ -1120,6 +1120,37 @@ select.clear-select {
         }
       }
     }
+    .items-list {
+      margin-top: 0.5rem;
+      .item {
+        .item-description {
+          .item-checkbox {
+            appearance: none;
+            position: relative;
+            top: 0;
+            display: inline-block;
+            cursor: pointer;
+            height: 0.7rem;
+            width: 0.7rem;
+            margin: 0;
+            border: 2px solid black;
+            border-radius: 0;
+            background: white;
+          }
+          .item-name {
+            font-weight: bold;
+            font-variant: small-caps;
+          }
+        }
+        .item-summary {
+          height: fit-content;
+          p {
+            margin: 0;
+            margin-bottom: 0.5rem;
+          }
+        }
+      }
+    }
   }
   .sheet-tabs {
     grid-column: span 2;
