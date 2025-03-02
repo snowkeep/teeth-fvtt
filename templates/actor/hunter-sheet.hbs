@@ -163,7 +163,10 @@
   </div>
   <div class="right">
     <section class="sheet-info">
-      {{> "systems/teeth/templates/actor/parts/stress-behaviour.hbs"}}
+      <div class="rh-top">
+         <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="100" width="100"/>
+        {{> "systems/teeth/templates/actor/parts/stress-behaviour.hbs"}}
+      </div>
       {{> "systems/teeth/templates/actor/parts/injury.hbs"}}
     </section>
     <section class="sheet-info grid-2col">
@@ -194,24 +197,7 @@
     </a>
     <a class="item" data-tab="notes">{{localize 'TEETH.Notes'}}</a>
   </nav>
-
-<div class="earlierstuff">
-  <div class="playbook">  
-    <div class="playbook-sidebar flexbox">
-      <div>
-        <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="100" width="100"/>
-      </div>
-    </div> 
-
-  </div> <!-- playbook -->
-
-
-
-  {{!-- Sheet Tab Navigation --}}
-  
-  </div>
   <div class="tab notes" data-group="primary" data-tab="notes">
-    {{> "systems/teeth/templates/actor/parts/hunter-notes.hbs"}}
-  </div>
+      {{> "systems/teeth/templates/actor/parts/hunter-notes.hbs"}}
   </div>
 </form>
