@@ -712,10 +712,15 @@ select.clear-select {
     }
   }
   .sheet-info {
+    container-type: inline-size;
+    @container (min-width: 40rem) {
+      .sheet-element {
+        display: flex;
+        align-items: flex-end;
+        gap: 0.2em;
+      }
+    }
     .sheet-element {
-      display: flex;
-      align-items: flex-end;
-      gap: 0.2em;
       label {
         color: black;
         font-weight: bold;
