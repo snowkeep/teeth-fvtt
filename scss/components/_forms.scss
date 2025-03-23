@@ -80,7 +80,7 @@
   }
 
   .value-tooth.active {
-    background-image: url("../assets/tooth/tooth-black.svg");
+    background-image: url("../assets/diamond/tooth-black.svg");
   }
 
   .red-tooth.active {
@@ -88,18 +88,18 @@
   }
 
   .simple-tooth, .simple-red-tooth {
-    height: 30px;
-    width: 9px;
-    background-image: url("../assets/tooth/tooth-white.svg");
-    background-size: 9px;
+    height: 20px;
+    width: 20px;
+    background-image: url("../assets/diamond/tooth-white.svg");
+    background-size: 20px;
   }
 
   .simple-tooth.active {
-    background-image: url("../assets/tooth/tooth-black.svg");
+    background-image: url("../assets/diamond/tooth-black.svg");
   }
 
   .simple-red-tooth.active {
-    background-image: url("../assets/tooth/tooth-red.svg");
+    background-image: url("../assets/diamond/tooth-red.svg");
   }
 
   .small-tooth {

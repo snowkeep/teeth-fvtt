@@ -1,5 +1,5 @@
-import { TeethActorSheet } from "./actor-sheet.mjs";
-import { TEETH } from "../helpers/config.mjs";
+import { TeethActorSheet } from "./actor-sheet.mjs"
+import { TEETH } from "../helpers/config.mjs"
 
 /**
  * Extend the TeethActorSheet
@@ -8,28 +8,32 @@ import { TEETH } from "../helpers/config.mjs";
 export class TeethHunterSheet extends TeethActorSheet {
   /** @override */
   static get defaultOptions() {
-    return foundry.utils.mergeObject(super.defaultOptions, {
-      classes: ["teeth", "sheet", "actor", "hunter"],
-      width: 750,
-      height: 900,
-      tabs: [
-        {
-          navSelector: ".sheet-tabs",
-          contentSelector: ".sheet-body",
-          initial: "general",
-        },
-      ],
-    });
+    return foundry.utils.mergeObject(
+      super.defaultOptions,
+      {
+        classes: ["teeth", "sheet", "actor", "hunter"],
+        width: "",
+        height: "",
+        tabs: [
+          {
+            navSelector: ".sheet-tabs",
+            contentSelector: ".sheet-body",
+            initial: "general",
+          },
+        ],
+      },
+      { enforceTypes: false }
+    )
   }
 
   /** @override */
   async getData() {
-    const context = await super.getData();
+    const context = await super.getData()
 
     // Prepare hunter data and items.
-    this._prepareItems(context);
+    this._prepareItems(context)
 
-    return context;
+    return context
   }
 
   /**
@@ -37,78 +41,96 @@ export class TeethHunterSheet extends TeethActorSheet {
    * @return {undefined}
    */
   _prepareItems(context) {
-    let playbook;
-    const abilities = [];
-    const contacts = [];
-    const inventory = [];
-    const armour = [];
-    const specInventory = [];
+    let playbook
+    const abilities = []
+    const contacts = []
+    const inventory = []
+    const armour = []
+    const specInventory = []
 
-    const playbookId = this.actor.system.playbook;
+    const splitInventory = []
+
+    const playbookId = this.actor.system.playbook
 
     for (const i of context.items) {
-      i.img = i.img || DEFAULT_TOKEN;
+      i.img = i.img || DEFAULT_TOKEN
 
       if (i.type === "playbook") {
         if (i._id === playbookId) {
-          playbook = i;
+          playbook = i
         }
       } else if (i.type === "abilityHunter") {
-        abilities.push(i);
+        abilities.push(i)
       } else if (i.type === "contact") {
-        contacts.push(i);
+        contacts.push(i)
       } else if (i.type === "tool") {
         if (i.system.type === "common") {
-          inventory.push(i);
+          inventory.push(i)
         } else if (i.system.type === "armour") {
-          armour.push(i);
+          armour.push(i)
         } else {
-          specInventory.push(i);
+          specInventory.push(i)
         }
       }
     }
 
     const sortInventory = inventory.sort(
       (a, b) =>
-        a.system.name - b.system.name || a.system.loadout - b.system.loadout,
-    );
+        a.system.name - b.system.name || a.system.loadout - b.system.loadout
+    )
     const sortArmour = armour.sort(
-      (a, b) => a.system.loadout - b.system.loadout,
-    );
+      (a, b) => a.system.loadout - b.system.loadout
+    )
 
-    context.abilities = abilities;
-    context.contacts = contacts;
-    context.inventory = sortInventory;
-    context.armour = sortArmour;
-    context.playbook = playbook;
-    context.specInventory = specInventory;
+    const combinedInventory = inventory.concat(specInventory).concat(armour)
+
+    const inv2Quotient = Math.ceil((combinedInventory.length + 4) / 2)
+    const splitInventory2A = inventory.slice(0, inv2Quotient)
+    const splitInventory2B = inventory.slice(inv2Quotient, inv2Quotient * 2)
+
+    const inv3Quotient = Math.ceil((combinedInventory.length + 4) / 3)
+    const splitInventory3A = inventory.slice(0, inv3Quotient)
+    const splitInventory3B = inventory.slice(inv3Quotient, inv3Quotient * 2)
+    const splitInventory3C = inventory.slice(inv3Quotient * 2)
+
+    context.abilities = abilities
+    context.contacts = contacts
+    context.inventory = sortInventory
+    context.armour = sortArmour
+    context.playbook = playbook
+    context.specInventory = specInventory
+    context.splitInventory2A = splitInventory2A
+    context.splitInventory2B = splitInventory2B
+    context.splitInventory3A = splitInventory3A
+    context.splitInventory3B = splitInventory3B
+    context.splitInventory3C = splitInventory3C
   }
 
   /* -------------------------------------------- */
 
   /** @override */
   activateListeners(html) {
-    super.activateListeners(html);
+    super.activateListeners(html)
     // select Vice
-    html.find(".set-vice").click(this._onSetVice.bind(this));
+    html.find(".set-vice").click(this._onSetVice.bind(this))
     // select Background
-    html.find(".set-background").click(this._onSetBackground.bind(this));
+    html.find(".set-background").click(this._onSetBackground.bind(this))
     // select HunterClass
     //html.find(".set-hunter").click(this._onSetHunterClass.bind(this));
     // Add Magic Discipline
-    html.find(".add-discipline").click(this._onAddDiscipline.bind(this));
+    html.find(".add-discipline").click(this._onAddDiscipline.bind(this))
     // Add Magic Method
-    html.find(".add-method").click(this._onAddMethod.bind(this));
+    html.find(".add-method").click(this._onAddMethod.bind(this))
     // Import Dangerous Acquaintances
     //html.find('.import-acquaintances').click(this._onImportAcquaintances.bind(this));
     // Remove a Dangerous Acquaintance
     //html.find('.remove-acquaintance').click(this._onRemoveAcquaintance.bind(this));
     // Roll and add mutation
-    html.find(".add-mutation").click(this._onAddMutation.bind(this));
+    html.find(".add-mutation").click(this._onAddMutation.bind(this))
     // Delete mutation
-    html.find(".delete-mutation").click(this._onDelMutation.bind(this));
+    html.find(".delete-mutation").click(this._onDelMutation.bind(this))
     // Add Erratice Behaviour
-    html.find(".add-behaviour").click(this._onAddBehaviour.bind(this));
+    html.find(".add-behaviour").click(this._onAddBehaviour.bind(this))
   }
 
   /* -------------------------------------------- */
@@ -119,11 +141,11 @@ export class TeethHunterSheet extends TeethActorSheet {
    * @private
    */
   async _onSetHunterClass(event) {
-    const myHunters = TEETH.hunterClasses;
+    const myHunters = TEETH.hunterClasses
     const template = await renderTemplate(
       "systems/teeth/templates/apps/hunter.hbs",
-      { myHunters },
-    );
+      { myHunters }
+    )
 
     const dialog = new Dialog(
       {
@@ -133,8 +155,8 @@ export class TeethHunterSheet extends TeethActorSheet {
           set: {
             label: game.i18n.localize("TEETH.SetClass"),
             callback: async (html) => {
-              const element = Array.from(html.find(".hunter.active"));
-              const hunter = element.map((el) => el.dataset.value);
+              const element = Array.from(html.find(".hunter.active"))
+              const hunter = element.map((el) => el.dataset.value)
 
               /*
             await this.actor.update({ "system.hunterClass": hunter });
@@ -171,16 +193,16 @@ export class TeethHunterSheet extends TeethActorSheet {
         close: () => {},
         render: (html) => {
           html.find(".hunter").on("click", function () {
-            $(this).toggleClass("active");
-          });
+            $(this).toggleClass("active")
+          })
         },
       },
       {
         width: 220,
-      },
-    );
+      }
+    )
 
-    dialog.render(true);
+    dialog.render(true)
   }
   /**
    * Handle background selection.
@@ -188,11 +210,11 @@ export class TeethHunterSheet extends TeethActorSheet {
    * @private
    */
   async _onSetBackground(event) {
-    const myBackgrounds = TEETH.backgrounds;
+    const myBackgrounds = TEETH.backgrounds
     const template = await renderTemplate(
       "systems/teeth/templates/apps/background.hbs",
-      { myBackgrounds },
-    );
+      { myBackgrounds }
+    )
 
     const dialog = new Dialog(
       {
@@ -202,9 +224,9 @@ export class TeethHunterSheet extends TeethActorSheet {
           set: {
             label: game.i18n.localize("TEETH.SetBackground"),
             callback: async (html) => {
-              const element = Array.from(html.find(".background.active"));
-              const background = element.map((el) => el.dataset.value);
-              await this.actor.update({ "system.background": background });
+              const element = Array.from(html.find(".background.active"))
+              const background = element.map((el) => el.dataset.value)
+              await this.actor.update({ "system.background": background })
             },
           },
         },
@@ -212,16 +234,16 @@ export class TeethHunterSheet extends TeethActorSheet {
         close: () => {},
         render: (html) => {
           html.find(".background").on("click", function () {
-            $(this).toggleClass("active");
-          });
+            $(this).toggleClass("active")
+          })
         },
       },
       {
         width: 220,
-      },
-    );
+      }
+    )
 
-    dialog.render(true);
+    dialog.render(true)
   }
 
   /**
@@ -232,16 +254,16 @@ export class TeethHunterSheet extends TeethActorSheet {
   async _onAddDiscipline(event) {
     const currentDisciplines = (
       this.actor.system.magicDisciplines || []
-    ).filter(Boolean);
-    const defaultDisciplines = Object.values(TEETH.disciplines);
+    ).filter(Boolean)
+    const defaultDisciplines = Object.values(TEETH.disciplines)
     const filteredDisciplines = defaultDisciplines.filter(
-      (discipline) => !currentDisciplines.includes(discipline),
-    );
+      (discipline) => !currentDisciplines.includes(discipline)
+    )
 
     const template = await renderTemplate(
       "systems/teeth/templates/apps/discipline.hbs",
-      { currentDisciplines, filteredDisciplines },
-    );
+      { currentDisciplines, filteredDisciplines }
+    )
 
     const dialog = new Dialog(
       {
@@ -251,18 +273,18 @@ export class TeethHunterSheet extends TeethActorSheet {
           add: {
             label: game.i18n.localize("TEETH.AddDiscipline"),
             callback: async (html) => {
-              const elements = Array.from(html.find(".discipline.active"));
-              const newDisciplines = elements.map((el) => el.dataset.value);
+              const elements = Array.from(html.find(".discipline.active"))
+              const newDisciplines = elements.map((el) => el.dataset.value)
 
               const customDiscipline = html.find("input.custom-discipline")[0]
-                .value;
+                .value
               if (customDiscipline) {
-                newDisciplines.push(customDiscipline);
+                newDisciplines.push(customDiscipline)
               }
 
               await this.actor.update({
                 "system.magicDisciplines": newDisciplines,
-              });
+              })
             },
           },
         },
@@ -270,16 +292,16 @@ export class TeethHunterSheet extends TeethActorSheet {
         close: () => {},
         render: (html) => {
           html.find(".discipline").on("click", function () {
-            $(this).toggleClass("active");
-          });
+            $(this).toggleClass("active")
+          })
         },
       },
       {
         width: 220,
-      },
-    );
+      }
+    )
 
-    dialog.render(true);
+    dialog.render(true)
   }
 
   /**
@@ -289,17 +311,17 @@ export class TeethHunterSheet extends TeethActorSheet {
    */
   async _onAddMethod(event) {
     const currentMethods = (this.actor.system.magicMethods || []).filter(
-      Boolean,
-    );
-    const defaultMethods = Object.values(TEETH.methods);
+      Boolean
+    )
+    const defaultMethods = Object.values(TEETH.methods)
     const filteredMethods = defaultMethods.filter(
-      (method) => !currentMethods.includes(method),
-    );
+      (method) => !currentMethods.includes(method)
+    )
 
     const template = await renderTemplate(
       "systems/teeth/templates/apps/method.hbs",
-      { currentMethods, filteredMethods },
-    );
+      { currentMethods, filteredMethods }
+    )
 
     const dialog = new Dialog(
       {
@@ -309,15 +331,15 @@ export class TeethHunterSheet extends TeethActorSheet {
           add: {
             label: game.i18n.localize("TEETH.AddMethod"),
             callback: async (html) => {
-              const elements = Array.from(html.find(".method.active"));
-              const newMethods = elements.map((el) => el.dataset.value);
+              const elements = Array.from(html.find(".method.active"))
+              const newMethods = elements.map((el) => el.dataset.value)
 
-              const customMethod = html.find("input.custom-method")[0].value;
+              const customMethod = html.find("input.custom-method")[0].value
               if (customMethod) {
-                newMethods.push(customMethod);
+                newMethods.push(customMethod)
               }
 
-              await this.actor.update({ "system.magicMethods": newMethods });
+              await this.actor.update({ "system.magicMethods": newMethods })
             },
           },
         },
@@ -325,16 +347,16 @@ export class TeethHunterSheet extends TeethActorSheet {
         close: () => {},
         render: (html) => {
           html.find(".method").on("click", function () {
-            $(this).toggleClass("active");
-          });
+            $(this).toggleClass("active")
+          })
         },
       },
       {
         width: 220,
-      },
-    );
+      }
+    )
 
-    dialog.render(true);
+    dialog.render(true)
   }
 
   /**
@@ -343,11 +365,11 @@ export class TeethHunterSheet extends TeethActorSheet {
    * @private
    */
   async _onSetVice(event) {
-    const myVices = TEETH.vices;
+    const myVices = TEETH.vices
     const template = await renderTemplate(
       "systems/teeth/templates/apps/vice.hbs",
-      { myVices },
-    );
+      { myVices }
+    )
 
     const dialog = new Dialog(
       {
@@ -357,9 +379,9 @@ export class TeethHunterSheet extends TeethActorSheet {
           set: {
             label: game.i18n.localize("TEETH.SetVice"),
             callback: async (html) => {
-              const element = Array.from(html.find(".vice.active"));
-              const vice = element.map((el) => el.dataset.value);
-              await this.actor.update({ "system.vice": vice });
+              const element = Array.from(html.find(".vice.active"))
+              const vice = element.map((el) => el.dataset.value)
+              await this.actor.update({ "system.vice": vice })
             },
           },
         },
@@ -367,16 +389,16 @@ export class TeethHunterSheet extends TeethActorSheet {
         close: () => {},
         render: (html) => {
           html.find(".vice").on("click", function () {
-            $(this).toggleClass("active");
-          });
+            $(this).toggleClass("active")
+          })
         },
       },
       {
         width: 220,
-      },
-    );
+      }
+    )
 
-    dialog.render(true);
+    dialog.render(true)
   }
 
   /**
@@ -385,14 +407,14 @@ export class TeethHunterSheet extends TeethActorSheet {
    * @private
    */
   async _onImportAcquaintances(event) {
-    const hunterClass = this.actor.system.hunterClass.split(".").at(-1);
+    const hunterClass = this.actor.system.hunterClass.split(".").at(-1)
 
-    const npcPack = game.packs.get("teeth.npcs");
-    await npcPack.getIndex();
-    const npcFolder = npcPack.folders.find((p) => p.name === hunterClass)._id;
-    const classNpcs = npcPack.index.filter((p) => p.folder === npcFolder);
+    const npcPack = game.packs.get("teeth.npcs")
+    await npcPack.getIndex()
+    const npcFolder = npcPack.folders.find((p) => p.name === hunterClass)._id
+    const classNpcs = npcPack.index.filter((p) => p.folder === npcFolder)
 
-    await this.actor.update({ "system.contacts": classNpcs });
+    await this.actor.update({ "system.contacts": classNpcs })
   }
 
   /**
@@ -401,11 +423,11 @@ export class TeethHunterSheet extends TeethActorSheet {
    * @private
    */
   async _onRemoveAcquaintance(event) {
-    const rmUuid = $(event.currentTarget).data("uuid");
-    const currentAcqs = this.actor.system.contacts;
-    const newAcqs = currentAcqs.filter((acq) => acq.uuid != rmUuid);
+    const rmUuid = $(event.currentTarget).data("uuid")
+    const currentAcqs = this.actor.system.contacts
+    const newAcqs = currentAcqs.filter((acq) => acq.uuid != rmUuid)
 
-    await this.actor.update({ "system.contacts": newAcqs });
+    await this.actor.update({ "system.contacts": newAcqs })
   }
 
   /**
@@ -414,17 +436,17 @@ export class TeethHunterSheet extends TeethActorSheet {
    * @private
    */
   async _onAddMutation(event) {
-    const tablePack = game.packs.get("teeth.teeth-tables");
-    const table_id = tablePack.index.find((e) => e.name === "Mutations")._id;
-    const table = await tablePack.getDocument(table_id);
-    const rolled = await table.roll();
-    const newMutation = rolled.results[0].text;
+    const tablePack = game.packs.get("teeth.teeth-tables")
+    const table_id = tablePack.index.find((e) => e.name === "Mutations")._id
+    const table = await tablePack.getDocument(table_id)
+    const rolled = await table.roll()
+    const newMutation = rolled.results[0].text
 
-    let currentMutations = (this.actor.system.mutations || []).filter(Boolean);
-    const mutationIdx = currentMutations.length;
-    currentMutations.push({ idx: mutationIdx, text: newMutation });
+    let currentMutations = (this.actor.system.mutations || []).filter(Boolean)
+    const mutationIdx = currentMutations.length
+    currentMutations.push({ idx: mutationIdx, text: newMutation })
 
-    await this.actor.update({ "system.mutations": currentMutations });
+    await this.actor.update({ "system.mutations": currentMutations })
   }
 
   /**
@@ -433,11 +455,11 @@ export class TeethHunterSheet extends TeethActorSheet {
    * @private
    */
   async _onDelMutation(event) {
-    const rmIdx = $(event.currentTarget).data("idx");
-    let currentMutations = (this.actor.system.mutations || []).filter(Boolean);
-    currentMutations.splice(rmIdx, 1);
+    const rmIdx = $(event.currentTarget).data("idx")
+    let currentMutations = (this.actor.system.mutations || []).filter(Boolean)
+    currentMutations.splice(rmIdx, 1)
 
-    await this.actor.update({ "system.mutations": currentMutations });
+    await this.actor.update({ "system.mutations": currentMutations })
   }
 
   /**
@@ -447,17 +469,17 @@ export class TeethHunterSheet extends TeethActorSheet {
    */
   async _onAddBehaviour(event) {
     const currentBehaviours = (this.actor.system.behaviour || []).filter(
-      Boolean,
-    );
-    const defaultBehaviours = TEETH.erraticBehaviours;
+      Boolean
+    )
+    const defaultBehaviours = TEETH.erraticBehaviours
     const filteredBehaviours = defaultBehaviours.filter(
-      (behaviour) => !currentBehaviours.includes(behaviour),
-    );
+      (behaviour) => !currentBehaviours.includes(behaviour)
+    )
 
     const template = await renderTemplate(
       "systems/teeth/templates/apps/behaviour.hbs",
-      { currentBehaviours, filteredBehaviours },
-    );
+      { currentBehaviours, filteredBehaviours }
+    )
 
     const dialog = new Dialog(
       {
@@ -467,16 +489,16 @@ export class TeethHunterSheet extends TeethActorSheet {
           add: {
             label: game.i18n.localize("TEETH.AddBehaviour"),
             callback: async (html) => {
-              const elements = Array.from(html.find(".behaviour.active"));
-              const newBehaviours = elements.map((el) => el.dataset.value);
+              const elements = Array.from(html.find(".behaviour.active"))
+              const newBehaviours = elements.map((el) => el.dataset.value)
 
               const customBehaviour = html.find("input.custom-behaviour")[0]
-                .value;
+                .value
               if (customBehaviour) {
-                newBehaviours.push(customBehaviour);
+                newBehaviours.push(customBehaviour)
               }
 
-              await this.actor.update({ "system.behaviour": newBehaviours });
+              await this.actor.update({ "system.behaviour": newBehaviours })
             },
           },
         },
@@ -484,24 +506,24 @@ export class TeethHunterSheet extends TeethActorSheet {
         close: () => {},
         render: (html) => {
           html.find(".behaviour").on("click", function () {
-            $(this).toggleClass("active");
-          });
+            $(this).toggleClass("active")
+          })
         },
       },
       {
         width: 220,
-      },
-    );
+      }
+    )
 
-    dialog.render(true);
+    dialog.render(true)
   }
 
   /** @override */
   async _onDropActor(event, data) {
-    if (!this.isEditable) return;
-    const cls = getDocumentClass("Actor");
-    const sourceActor = await cls.fromDropData(data);
+    if (!this.isEditable) return
+    const cls = getDocumentClass("Actor")
+    const sourceActor = await cls.fromDropData(data)
 
-    this.actor.addLinkedActor(sourceActor);
+    this.actor.addLinkedActor(sourceActor)
   }
 }

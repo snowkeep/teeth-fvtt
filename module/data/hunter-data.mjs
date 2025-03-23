@@ -7,7 +7,7 @@ export default class HunterData extends foundry.abstract.TypeDataModel {
     const requiredPositiveInteger = {...requiredInteger, min: 0};
 
     return {
-      alias: new fields.StringField(),
+      outfit: new fields.StringField(),
       hunterClass: new fields.StringField(),
       background: new fields.StringField(),
       vice: new fields.StringField(),

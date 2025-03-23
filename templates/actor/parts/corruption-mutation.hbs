@@ -1,27 +1,36 @@
 <div class="corruption-mutation">
-  <div class="corruption teeth-header">
-    <a class="item-control add-mutation" data-tooltip="{{localize 'TEETH.RollMutation'}}"><i class="fa-solid fa-plus"></i></a>
-    <h3 class="corruption-title">{{localize 'TEETH.Corruption'}}</h3>
+  <div class="corruption item-header sheet-heading">
+    <h3 class="corruption-title">{{localize "TEETH.Corruption"}}</h3>
+    <a
+      class="item-control add-mutation"
+      data-tooltip="{{localize 'TEETH.RollMutation'}}"
+    ><i class="fa-solid fa-plus"></i></a>
   </div>
-
-  <div class="value-step-block" data-value="{{system.corruption.value}}" data-key="system.corruption.value">
+  <div
+    class="value-step-block angled-track"
+    data-value="{{system.corruption.value}}"
+    data-key="system.corruption.value"
+  >
     {{#numLoop system.corruption.max}}
-      <span class="value-step value-tooth red-tooth" data-index="{{this}}"></span>
+      <span class="value-step" data-index="{{this}}"></span>
     {{/numLoop}}
   </div>
 </div>
 
-  <div class="mutation-list">
-    <ol>
+<div class="mutation-list">
+  <ol>
     {{#each system.mutations}}
       <li class="mutation" data-index="{{this.idx}}">
         <div class="mutation-text">
           {{this.text}}
         </div>
         <div class="mutation-controls">
-          <a class="mutation-control delete-mutation" title="{{localize 'TEETH.DeleteMutation'}}"><i class="fas fa-trash"></i></a>
+          <a
+            class="mutation-control delete-mutation"
+            title="{{localize 'TEETH.DeleteMutation'}}"
+          ><i class="fas fa-trash"></i></a>
         </div>
       </li>
     {{/each}}
-    </ol>
-  </div>
+  </ol>
+</div>

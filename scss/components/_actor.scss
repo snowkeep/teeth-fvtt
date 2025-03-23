@@ -1,36 +1,101 @@
-input.all-width {
-  width: 100%;
+.sheet-title {
+  font-weight: bold;
+  font-variant: small-caps;
+  text-align: center;
+  margin: 0;
 }
 
-.actor-grid {
-  display: grid;
-  column-gap: $padding-md;
-  grid-template-columns: 220px 1fr;
+h1.sheet-title {
+  @extend .sheet-title;
+  font-size: 500%;
 }
 
-.sheet-header {
-  .money, .storage {
-    input {
-      margin-left: 3px;
-      padding: 0;
-      min-width: 10px;
-      max-width: 15px;
-    }
+h2.sheet-title {
+  @extend .sheet-title;
+  font-size: 200%;
+  margin: -20px 0 10px 0;
+}
 
-    .coins > input {
-      max-width: 10px;
+.playbook {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+
+  h3 {
+    font-size: 200%;
+    white-space: nowrap;
+    background: $grey;
+    margin-top: 15px;
+    margin-bottom: 0;
+
+    label {
+      font-weight: bold;
+      font-variant: small-caps;
     }
   }
 }
 
-.sheet-body {
-  .items-block {
-    position: relative;
+.playbook-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
 
-    .item-add {
-      position: absolute;
-      top: 0;
-      right: 0;
-    }
+  h1,h2,h3 {
+    border-bottom: none;
+  }
+
+  .flexbox {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .profile-img {
+    width: 100%;
+    height: 100%;
+    border: none;
   }
 }
+
+.hunter-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.magic {
+  display: flex;
+  align-items: baseline;
+
+  .column {
+    flex: 50%;
+    font-size: 150%;
+  }
+
+  li {  
+    list-style-type: '⬥';
+    font-style: italic;
+  }
+  
+}
+
+
+.playbook-body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+li.item {
+  white-space: nowrap;
+}
+
+.prop-label {
+  //font-size: 110%;
+  font-weight: bold;
+  font-variant: small-caps;
+}
+

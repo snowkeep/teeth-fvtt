@@ -1,22 +1,28 @@
-<div class="attribute-block grid-3col">
+<div class="attribute-block">
   {{#each config.attributeLinks as |attribute key|}}
     <div class="attribute {{key}}">
+      <div class="attribute-header">
         <h3 class="attribute-name teeth-header rollable" data-roll-type="resistance" data-roll-note="{{key}}" data-tooltip="{{getLocalizeDescription 'attribute' key}}">{{getLocalizeName key}}</h3>
-      <div class="value-step-block exp-block" data-value="{{getValue @root.system.attributes (concat key ".exp.value")}}" data-key="system.attributes.{{key}}.exp.value">
-        {{#numLoop (getValue @root.system.attributes (concat key ".exp.max"))}}
-          <span class="value-step value-tooth simple-red-tooth" data-index="{{this}}"></span>
-        {{/numLoop}}
-      </div>
-      {{#each attribute as |action|}}
-        <div class="action {{action}}">
-          <div class="value-step-block" data-value="{{getValue @root.system.actions (concat action ".value")}}" data-key="system.actions.{{action}}.value">
-            {{#numLoop (getValue @root.system.actions (concat action ".max"))}}
-              <span class="value-step value-dot" data-index="{{this}}"></span>
-            {{/numLoop}}
-          </div>
-          <label class="action-label rollable" data-roll-type="action" data-roll-note="{{action}}" data-tooltip="{{getLocalizeDescription 'action' action}}">{{getLocalizeName action}}</label>
+
+        <div class="value-step-block exp-block" data-value="{{getValue @root.system.attributes (concat key ".exp.value")}}" data-key="system.attributes.{{key}}.exp.value">
+          {{#numLoop (getValue @root.system.attributes (concat key ".exp.max"))}}
+            <span class="value-step value-dot" data-index="{{this}}"></span>
+          {{/numLoop}}
+
         </div>
-      {{/each}}
+      </div>
+      <div class="actions-in-attr">
+        {{#each attribute as |action|}}
+          <div class="action {{action}}">
+            <div class="value-step-block" data-value="{{getValue @root.system.actions (concat action ".value")}}" data-key="system.actions.{{action}}.value">
+              {{#numLoop (getValue @root.system.actions (concat action ".max"))}}
+                <span class="value-step value-dot" data-index="{{this}}"></span>
+              {{/numLoop}}
+            </div>
+            <label class="action-label rollable" data-roll-type="action" data-roll-note="{{action}}" data-tooltip="{{getLocalizeDescription 'action' action}}">{{getLocalizeName action}}</label>
+          </div>
+        {{/each}}
+      </div>
     </div>
   {{/each}}
 </div>
