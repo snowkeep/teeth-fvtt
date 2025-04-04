@@ -2,24 +2,24 @@
   <div class="left">
     {{!-- Sheet Header --}}
     <header class="sheet-title">
-      <h1> 
+      <h1>
         {{#if playbook}}
           {{playbook.name}}
         {{else}}
           {{localize 'TYPES.Item.setPlaybook'}}
         {{/if}}
-      </h1> 
+      </h1>
       <p class="strapline">
         {{#if playbook}}
         <span class="diamond">⬥</span>
-           {{playbook.system.summary}} 
+           {{playbook.system.summary}}
         <span class="diamond">⬥</span>
         {{/if}}
       </p>
     </header>
     <section class="sheet-info grid-2col">
       <div class="sheet-element sheet-heading">
-        <label for="name">{{localize 'TEETH.Actor.Name'}}:</label> 
+        <label for="name">{{localize 'TEETH.Actor.Name'}}:</label>
         <input class="clear-input" name="name" type="text" value="{{actor.name}}" placeholder="{{localize 'TEETH.Actor.Name'}}"/>
       </div>
       <div class="sheet-element sheet-heading">
@@ -57,11 +57,11 @@
       </div>
       <div class="acquaintances-section">
         <div class="sheet-heading">
-          <h3 class="item-header contacts-title" data.tooltip="{{localize 'TEETH.Contact.Tooltip'}}">{{localize 'TEETH.Contact.Plural'}}</h3>
+          <h3 class="item-header contacts-title" data-tooltip="{{localize 'TEETH.Contact.Tooltip'}}">{{localize 'TEETH.Contact.Plural'}}</h3>
         </div>
         {{> "systems/teeth/templates/actor/parts/contacts.hbs"}}
       </div>
-      
+
       <div class="sheet-element carry">
         <div class="sheet-heading">
           <label for="system.coins">{{localize 'TEETH.Coins'}}:</label>

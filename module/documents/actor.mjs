@@ -3,15 +3,14 @@
  * @extends {Actor}
  */
 export default class TeethActor extends Actor {
-
   /** @inheritdoc */
   async _preCreate(data, options, user) {
     await super._preCreate(data, options, user);
 
     const prototypeToken = {
       actorLink: true,
-      disposition: CONST.TOKEN_DISPOSITIONS.NEUTRAL
-    }
+      disposition: CONST.TOKEN_DISPOSITIONS.NEUTRAL,
+    };
 
     if (this.type === "hunter" || this.type === "outfit") {
       prototypeToken.disposition = CONST.TOKEN_DISPOSITIONS.FRIENDLY;
@@ -26,23 +25,40 @@ export default class TeethActor extends Actor {
     super._onCreate(data, options, userId);
 
     this.prototypeToken.actorLink = true;
-
   }
 
-  _onCreateDescendantDocuments(parent, collection, documents, data, options, userId) {
-    super._onCreateDescendantDocuments(parent, collection, documents, data, options, userId);
+  _onCreateDescendantDocuments(
+    parent,
+    collection,
+    documents,
+    data,
+    options,
+    userId,
+  ) {
+    super._onCreateDescendantDocuments(
+      parent,
+      collection,
+      documents,
+      data,
+      options,
+      userId,
+    );
 
     if (game.user.id === userId) {
       const target = {
         actor: "hunter",
         item: "playbook",
-        forLoad: ["abilities", "inventory"]
-      }
+        forLoad: ["abilities", "inventory"],
+      };
 
       if (this.type == "outfit") {
-        target.actor = "outfit",
-        target.item = "outfitType",
-        target.forLoad = ["abilities", "boons", "purchases"]
+        (target.actor = "outfit"),
+          (target.item = "outfitType"),
+          (target.forLoad = ["abilities", "boons", "purchases"]);
+      }
+
+      if (this.type == "npc") {
+        target.summary = "summary";
       }
 
       for (const dataItem of data) {
@@ -68,45 +84,53 @@ export default class TeethActor extends Actor {
     for (const array of forLoad) {
       if (array === "inventory") {
         // Load default items
-        const itemPack = game.packs.get('teeth.items');
+        const itemPack = game.packs.get("teeth.items");
         await itemPack.getIndex();
-        const defaultFolder = itemPack.folders.find(p => p.name === "Default")._id;
-        const defaultItems = itemPack.index.filter(p => p.folder === defaultFolder);
+        const defaultFolder = itemPack.folders.find(
+          (p) => p.name === "Default",
+        )._id;
+        const defaultItems = itemPack.index.filter(
+          (p) => p.folder === defaultFolder,
+        );
 
         for (const [ownerId, permissions] of Object.entries(this.ownership)) {
           if (permissions === 3 && game.userId === ownerId) {
             for (const item of defaultItems) {
               const addItem = await itemPack.getDocument(item._id);
-              this.createEmbeddedDocuments('Item', [addItem]);
+              this.createEmbeddedDocuments("Item", [addItem]);
             }
           }
         }
       }
       if (array === "purchases") {
         // Load purchases
-        const purchasePack = game.packs.get('teeth.purchases');
+        const purchasePack = game.packs.get("teeth.purchases");
         const purchases = await purchasePack.getDocuments();
         for (const [ownerId, permissions] of Object.entries(this.ownership)) {
           if (permissions === 3 && game.userId === ownerId) {
             for (const purchase of purchases) {
               const addPurchase = await purchasePack.getDocument(purchase._id);
-              this.createEmbeddedDocuments('Item', [addPurchase]);
+              this.createEmbeddedDocuments("Item", [addPurchase]);
             }
           }
         }
       }
       if (array === "boons") {
         // Load default items
-        const boonPack = game.packs.get('teeth.boons');
+        const boonPack = game.packs.get("teeth.boons");
         await boonPack.getIndex();
-        const defaultFolder = boonPack.folders.find(p => p.name === "Default")._id;
-        const defaultBoons = boonPack.index.filter(p => p.folder === defaultFolder);
+        const defaultFolder = boonPack.folders.find(
+          (p) => p.name === "Default",
+        )._id;
+        const defaultBoons = boonPack.index.filter(
+          (p) => p.folder === defaultFolder,
+        );
 
         for (const [ownerId, permissions] of Object.entries(this.ownership)) {
           if (permissions === 3 && game.userId === ownerId) {
             for (const boon of defaultBoons) {
               const addBoon = await boonPack.getDocument(boon._id);
-              this.createEmbeddedDocuments('Item', [addBoon]);
+              this.createEmbeddedDocuments("Item", [addBoon]);
             }
           }
         }
@@ -115,14 +139,18 @@ export default class TeethActor extends Actor {
       const idArr = container.system[array];
       for (const itemData of idArr) {
         const item = await fromUuid(itemData.uuid);
-        if (!this.items.find(i => i.name === item.name && i.type === item.type)) {
-          toCreate.push(item)
+        if (
+          !this.items.find((i) => i.name === item.name && i.type === item.type)
+        ) {
+          toCreate.push(item);
         } else {
-          ui.notifications.warn(game.i18n.localize("TEETH.Errors.Item.ExistsName"));
+          ui.notifications.warn(
+            game.i18n.localize("TEETH.Errors.Item.ExistsName"),
+          );
         }
       }
     }
-    this.createEmbeddedDocuments('Item', toCreate)
+    this.createEmbeddedDocuments("Item", toCreate);
 
     for (const contact of container.system.contacts) {
       this.importActor(contact, "contacts");
@@ -147,15 +175,31 @@ export default class TeethActor extends Actor {
     const supported = CONFIG.TEETH.supportedLinks[this.type];
     const key = supported[actor.type];
 
-    if (!key) return ui.notifications.error(game.i18n.format("TEETH.Errors.Actor.NotSupported", { type: localizeType, actor: actor.name }));
+    if (!key)
+      return ui.notifications.error(
+        game.i18n.format("TEETH.Errors.Actor.NotSupported", {
+          type: localizeType,
+          actor: actor.name,
+        }),
+      );
 
     const container = this.system[key];
 
-    const idExist = container.some(existingActor => existingActor.id === actor.id);
-    const nameExist = container.some(existingActor => existingActor.name === actor.name);
+    const idExist = container.some(
+      (existingActor) => existingActor.id === actor.id,
+    );
+    const nameExist = container.some(
+      (existingActor) => existingActor.name === actor.name,
+    );
 
-    if (idExist) return ui.notifications.error(game.i18n.localize("TEETH.Errors.Actor.ExistsId"));
-    if (nameExist) ui.notifications.warn(game.i18n.localize("TEETH.Errors.Actor.ExistsName"));
+    if (idExist)
+      return ui.notifications.error(
+        game.i18n.localize("TEETH.Errors.Actor.ExistsId"),
+      );
+    if (nameExist)
+      ui.notifications.warn(
+        game.i18n.localize("TEETH.Errors.Actor.ExistsName"),
+      );
 
     if (actor.pack) {
       ui.notifications.warn(game.i18n.localize("TEETH.Errors.Actor.InPack"));
@@ -165,42 +209,46 @@ export default class TeethActor extends Actor {
     const link = {
       id: actor.id,
       uuid: actor.uuid,
-      name: actor.name
-    }
+      name: actor.name,
+    };
     if (actor.type === "clock") link.progress = actor.system.progress;
     container.push(link);
 
     const path = "system." + key;
-    await this.update({ [path] : container });
+    await this.update({ [path]: container });
   }
 
   async importActor(sourceActor) {
-    const dialog = new Dialog({
-      title: game.i18n.localize("TEETH.ImportActor.Title"),
-      content: game.i18n.format("TEETH.ImportActor.Description", { actor: sourceActor.name }),
-      buttons: {
-        import: {
-          label: game.i18n.localize("TEETH.ImportActor.Submit"),
-          icon: '<i class="fas fa-check"></i>',
-          callback: async () => {
-            const actor = await TeethActor.create(sourceActor);
-            this.addLinkedActor(actor)
+    const dialog = new Dialog(
+      {
+        title: game.i18n.localize("TEETH.ImportActor.Title"),
+        content: game.i18n.format("TEETH.ImportActor.Description", {
+          actor: sourceActor.name,
+        }),
+        buttons: {
+          import: {
+            label: game.i18n.localize("TEETH.ImportActor.Submit"),
+            icon: '<i class="fas fa-check"></i>',
+            callback: async () => {
+              const actor = await TeethActor.create(sourceActor);
+              this.addLinkedActor(actor);
+            },
+          },
+          cancel: {
+            icon: '<i class="fas fa-times"></i>',
+            label: game.i18n.localize("TEETH.Roll.Cancel"),
+            callback: () => {},
           },
         },
-        cancel: {
-          icon: '<i class="fas fa-times"></i>',
-          label: game.i18n.localize("TEETH.Roll.Cancel"),
-          callback: () => {},
-        },
+        default: "import",
+        close: () => {},
       },
-      default: "import",
-      close: () => {}
-    },
-    {
-      classes: ["dialog", "teeth-import-dialog"],
-      width: 400,
-      height: 100
-    });
+      {
+        classes: ["dialog", "teeth-import-dialog"],
+        width: 400,
+        height: 100,
+      },
+    );
 
     dialog.render(true);
   }

@@ -225,6 +225,7 @@
     "Ability": {
       "Plural": "Abilities",
       "Special": "Special Abilities",
+      "ActionsAttr": "Actions & Attributes",
       "IsActive": "Active"
     },
 

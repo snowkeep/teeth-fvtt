@@ -642,28 +642,7 @@ select.clear-select {
 .teeth .contacts.items-block .item {
   margin: 0;
 }
-.teeth .contacts.items-block .item .item-description .set-relationship {
-  display: inline-block;
-  width: 12px;
-  height: 16px;
-  vertical-align: middle;
-  cursor: pointer;
-  background-size: 12px;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-.teeth .contacts.items-block .item .item-description .set-relationship.rival {
-  background-image: url("/systems/teeth/ui/relationship-icons/caret-down.svg");
-}
-.teeth .contacts.items-block .item .item-description .set-relationship.neutral {
-  background-image: url("/systems/teeth/ui/relationship-icons/minus.svg");
-}
-.teeth .contacts.items-block .item .item-description .set-relationship.friend {
-  background-image: url("/systems/teeth/ui/relationship-icons/caret-up.svg");
-}
-.teeth .contacts.items-block .item .item-description .set-relationship.special {
-  background-image: url("/systems/teeth/ui/relationship-icons/dot-circle.svg");
-}
+
 .teeth .contacts.items-block .item .item-description .item-name {
   font-weight: 700;
 }
@@ -786,6 +765,28 @@ select.clear-select {
           display: flex;
           justify-content: space-between;
           padding: 0.1rem 0;
+          .item-description .set-relationship {
+            display: inline-block;
+            width: 12px;
+            height: 16px;
+            vertical-align: middle;
+            cursor: pointer;
+            background-size: 12px;
+            background-position: center;
+            background-repeat: no-repeat;
+            &.rival {
+              background-image: url("/systems/teeth/ui/relationship-icons/caret-down.svg");
+            }
+            &.neutral {
+              background-image: url("/systems/teeth/ui/relationship-icons/minus.svg");
+            }
+            &.friend {
+              background-image: url("/systems/teeth/ui/relationship-icons/caret-up.svg");
+            }
+            &.special {
+              background-image: url("/systems/teeth/ui/relationship-icons/dot-circle.svg");
+            }
+          }
           .item-controls {
             display: flex;
             gap: 0.4rem;
