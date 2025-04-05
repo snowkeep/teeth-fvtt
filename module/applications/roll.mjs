@@ -388,9 +388,9 @@ async function indulgeVice(rollResult, sheet) {
       rollResult.data.description +=
         "<ul>" +
         game.i18n.localize("TEETH.Roll.IndulgeVice.Trouble") +
-        game.i18n.localize("TEETH.Roll.IndulgeVice.Brag") +
-        game.i18n.localize("TEETH.Roll.IndulgeVice.Lost") +
-        game.i18n.localize("TEETH.Roll.IndulgeVice.Trapped") +
+        game.i18n.localize("TEETH.Roll.IndulgeVice.Missing") +
+        game.i18n.localize("TEETH.Roll.IndulgeVice.Offence") +
+        game.i18n.localize("TEETH.Roll.IndulgeVice.Succumb") +
         "</ul>";
       await sheet.update({ "system.stress.value": 0 });
     } else {
