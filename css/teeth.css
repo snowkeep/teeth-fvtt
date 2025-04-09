@@ -887,27 +887,33 @@ select.clear-select {
       }
     }
     .corruption-mutation {
+      container-type: inline-size;
       position: relative;
       grid-column-end: span 2;
-      .angled-track {
-        position: absolute;
-        top: -1rem;
-        left: 9rem;
-        .value-step {
-          background-color: white;
-          &:nth-child(4n):before {
-            content: "";
-            position: absolute;
-            top: 0.1rem;
-            left: 0.1rem;
-            width: 0.5rem;
-            height: 0.5rem;
-            border: 0.2rem solid var(--grey);
-          }
+      @container (min-width: 600px) {
+        .angled-track {
+          position: absolute;
+          top: -1rem;
+          left: 9rem;
+        }
+      }
+      .angled-track .value-step {
+        background-color: white;
+        &:nth-child(4n):before {
+          content: "";
+          position: absolute;
+          top: 0.1rem;
+          left: 0.1rem;
+          width: 0.5rem;
+          height: 0.5rem;
+          border: 0.2rem solid var(--grey);
         }
       }
       .mutation-list {
         padding-top: 1rem;
+        ol {
+          padding-left: 0;
+        }
         .mutation {
           display: flex;
           justify-content: space-between;
