@@ -14,7 +14,18 @@
       <span class="diamond">⬥</span>
       {{/if}}
     </p>
+    <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="100" width="100"/>
   </header>
+  <nav class="sheet-tabs tabs flexrow" data-group="primary">
+    <a class="item" data-tab="general">
+      {{#if playbook}}
+        {{playbook.name}}
+      {{else}}
+        {{localize 'TYPES.Item.playbook'}}
+      {{/if}}
+    </a>
+    <a class="item" data-tab="notes">{{localize 'TEETH.Notes'}}</a>
+  </nav>
   <div class="left">
     {{!-- Sheet Header --}}
     
@@ -166,7 +177,6 @@
     <div class="tab general" data-group="primary" data-tab="general">
       <section class="sheet-info">
         <div class="rh-top">
-          <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="100" width="100"/>
           {{> "systems/teeth/templates/actor/parts/stress-behaviour.hbs"}}
         </div>
         {{> "systems/teeth/templates/actor/parts/injury.hbs"}}
@@ -193,14 +203,4 @@
       {{> "systems/teeth/templates/actor/parts/hunter-notes.hbs"}}
     </div>
   </div>
-  <nav class="sheet-tabs tabs flexrow" data-group="primary">
-    <a class="item" data-tab="general">
-      {{#if playbook}}
-        {{playbook.name}}
-      {{else}}
-        {{localize 'TYPES.Item.playbook'}}
-      {{/if}}
-    </a>
-    <a class="item" data-tab="notes">{{localize 'TEETH.Notes'}}</a>
-  </nav>
 </form>
