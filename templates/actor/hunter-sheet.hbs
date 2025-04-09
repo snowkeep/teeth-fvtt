@@ -1,22 +1,23 @@
 <form class="{{cssClass}} {{actor.type}} grid-2col" autocomplete="off">
+  <header class="sheet-title">
+    <h1>
+      {{#if playbook}}
+        {{playbook.name}}
+      {{else}}
+        {{localize 'TYPES.Item.setPlaybook'}}
+      {{/if}}
+    </h1>
+    <p class="strapline">
+      {{#if playbook}}
+      <span class="diamond">⬥</span>
+          {{playbook.system.summary}}
+      <span class="diamond">⬥</span>
+      {{/if}}
+    </p>
+  </header>
   <div class="left">
     {{!-- Sheet Header --}}
-    <header class="sheet-title">
-      <h1>
-        {{#if playbook}}
-          {{playbook.name}}
-        {{else}}
-          {{localize 'TYPES.Item.setPlaybook'}}
-        {{/if}}
-      </h1>
-      <p class="strapline">
-        {{#if playbook}}
-        <span class="diamond">⬥</span>
-           {{playbook.system.summary}}
-        <span class="diamond">⬥</span>
-        {{/if}}
-      </p>
-    </header>
+    
     <section class="sheet-info grid-2col">
       <div class="sheet-element sheet-heading">
         <label for="name">{{localize 'TEETH.Actor.Name'}}:</label>

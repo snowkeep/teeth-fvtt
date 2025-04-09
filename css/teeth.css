@@ -445,6 +445,7 @@ select.clear-select {
 
 .teeth.sheet.actor.hunter {
   aspect-ratio: 1.414 / 1;
+  min-width: 70vw;
 }
 
 .teeth.sheet.actor.outfit {
@@ -667,8 +668,8 @@ select.clear-select {
 /* new styles here */
 .teeth.actor {
   --grey: #bbbbbb;
-
   .sheet-title {
+    grid-column: span 2;
     font-variant: small-caps;
     text-align: center;
     letter-spacing: 1px;
