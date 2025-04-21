@@ -715,7 +715,7 @@ select.clear-select {
       /* background-color: red; */
     }
   }
-  .sheet-info {
+  .sheet-info, .notes {
     container-type: inline-size;
     @container (min-width: 40rem) {
       .sheet-element {
