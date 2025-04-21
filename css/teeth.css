@@ -712,7 +712,10 @@ select.clear-select {
       display: grid;
     }
     .notes {
-      /* background-color: red; */
+      font-size: 1rem;
+      .teamwork {
+        margin-top: 1rem;
+      }
     }
   }
   .sheet-info, .notes {
