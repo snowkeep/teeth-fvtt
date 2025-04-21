@@ -18,13 +18,19 @@
   </header>
   <nav class="sheet-tabs tabs flexrow" data-group="primary">
     <a class="item" data-tab="general">
-      {{#if playbook}}
-        {{playbook.name}}
-      {{else}}
-        {{localize 'TYPES.Item.playbook'}}
-      {{/if}}
+      <span class="diamond">⬥</span>
+        {{#if playbook}}
+          {{playbook.name}}
+        {{else}}
+          {{localize 'TYPES.Item.playbook'}}
+        {{/if}}
+      <span class="diamond">⬥</span>
     </a>
-    <a class="item" data-tab="notes">{{localize 'TEETH.Notes'}}</a>
+    <a class="item" data-tab="notes">
+      <span class="diamond">⬥</span>
+      {{localize 'TEETH.Notes'}}
+      <span class="diamond">⬥</span>
+    </a>
   </nav>
   <div class="tab-contents">
     <div class="tab general grid-2col" data-group="primary" data-tab="general">
