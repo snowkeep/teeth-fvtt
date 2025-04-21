@@ -702,6 +702,19 @@ select.clear-select {
       grid-row: 1 / span 2;
     }
   }
+  .cs-form {
+    grid-template-rows: auto auto 1fr;
+  }
+  .tab-contents {
+    display: grid;
+    grid-column: span 2;
+    .tab[data-tab].active {
+      display: grid;
+    }
+    .notes {
+      /* background-color: red; */
+    }
+  }
   .sheet-info {
     container-type: inline-size;
     @container (min-width: 40rem) {

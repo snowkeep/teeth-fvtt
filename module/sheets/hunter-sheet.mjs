@@ -17,7 +17,7 @@ export class TeethHunterSheet extends TeethActorSheet {
         tabs: [
           {
             navSelector: ".sheet-tabs",
-            contentSelector: ".sheet-body",
+            contentSelector: ".tab-contents",
             initial: "general",
           },
         ],
