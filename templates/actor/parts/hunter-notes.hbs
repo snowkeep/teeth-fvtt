@@ -1,8 +1,10 @@
-<div class="actor-grid notes-container">
+<div class="actor-grid notes-container grid-2col">
   <div class="rules">
     <div class="experience">
-      <h3 class="teeth-header">{{localize 'TEETH.Experience.Title'}}</h3>
-      <p>{{localize 'TEETH.Experience.DesperateRoll'}}</p>
+      <div class="sheet-heading">
+        <h3 class="teeth-header">{{localize 'TEETH.Experience.Title'}}</h3>
+      </div>
+      <p>{{{localize 'TEETH.Experience.DesperateRoll'}}}</p>
       <p>{{localize 'TEETH.Experience.HowItWorks'}}</p>
       <ul class="rule-tips">
         <li>{{playbook.system.exp}}</li>
@@ -10,7 +12,9 @@
         <li>{{localize 'TEETH.Experience.Vice'}}</li>
       </ul>
     </div>
-    <h3 class="teeth-header">{{localize 'TEETH.RulesRef.Title'}}</h3>
+    <div class="sheet-heading">
+      <h3 class="teeth-header">{{localize 'TEETH.RulesRef.Title'}}</h3>
+    </div>
     <div class="teamwork">
       <h4>{{localize 'TEETH.RulesRef.Teamwork.Title'}}</h4>
       <div class="grid-2col">
@@ -19,26 +23,9 @@
     </div>
   </div>
   <div class="description">
-    <div class="brief-info">
-      <h3 class="teeth-header">{{localize 'TEETH.Magic'}}</h3>
-      <div class="prop">
-        <label class="prop-label" for="system.magicDisciplines"><a class="item-control add-discipline">{{localize 'TEETH.Disciplines'}}</a>:</label>
-        <div class="discipline-list">
-          {{#each system.magicDisciplines}}
-            <span class="discipline">{{localize this}}</span>
-          {{/each}}
-        </div>
-      </div>
-      <div class="prop">
-        <label class="prop-label" for="system.magicMethods"><a class="item-control add-method">{{localize 'TEETH.Methods'}}</a>:</label>
-        <div class="method-list">
-          {{#each system.magicMethods}}
-            <span class="method">{{localize this}}</span>
-          {{/each}}
-        </div>
-      </div>
+    <div class="sheet-heading">
+      <h3 class="teeth-header">{{localize 'TEETH.Notes'}}</h3>
     </div>
-    <h3 class="teeth-header">{{localize 'TEETH.Notes'}}</h3>
     {{editor enrichedDescription target="system.description" button=true owner=owner editable=editable}}
   </div>
 </div>

@@ -667,21 +667,29 @@ select.clear-select {
 /* new styles here */
 .teeth.actor {
   --grey: #bbbbbb;
-
   .sheet-title {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-column: span 2;
     font-variant: small-caps;
     text-align: center;
     letter-spacing: 1px;
     h1 {
+      grid-column: 2;
+      grid-row: 1;
       margin: 0;
       margin-top: 0.4em;
+      margin-left: -100px;
       border-bottom-width: 0;
       line-height: 1;
       font-weight: bold;
       font-size: 3em;
     }
     .strapline {
+      grid-column: 2;
+      grid-row: 2;
       margin-top: 0;
+      margin-left: -100px;
       line-height: 1;
       font-weight: bold;
       font-size: 2em;
@@ -689,8 +697,69 @@ select.clear-select {
         font-size: 1rem;
       }
     }
+    .profile-img {
+      grid-column: 1;
+      grid-row: 1 / span 2;
+    }
   }
-  .sheet-info {
+  .cs-form {
+    grid-template-rows: auto auto 1fr;
+    .sheet-tabs {
+      border-width: 0;
+      a.item {
+        font-weight: bold;
+        font-variant: small-caps;
+        font-size: 1.5rem;
+        border: 1px solid transparent;
+        border-bottom-color: black;
+        text-shadow: none;
+        transition: opacity 0.5s ease-in;
+        .diamond {
+          display: none;
+          font-size: 0.9rem;
+          vertical-align: middle;
+          &:first-child {
+            padding-right: 4px;
+          }
+          &:last-child {
+            padding-left: 4px;
+          }
+        }
+        &:hover {
+          opacity: 0.6; 
+          transition: opacity 0.3s ease-in;
+        }
+        &.active {
+          background: none;
+          border-color: black;
+          border-bottom-color: transparent;
+          opacity: 1;
+          .diamond {
+            display: inline;
+          }
+        }
+      }
+    }
+  }
+  .tab-contents {
+    display: grid;
+    grid-column: span 2;
+    margin-top: -1rem;
+    padding: 0.5rem;
+    padding-top: 1rem;
+    border: 1px solid black;
+    border-top-width: 0;
+    .tab[data-tab].active {
+      display: grid;
+    }
+    .notes {
+      font-size: 1rem;
+      .teamwork {
+        margin-top: 1rem;
+      }
+    }
+  }
+  .sheet-info, .notes {
     container-type: inline-size;
     @container (min-width: 40rem) {
       .sheet-element {
@@ -887,8 +956,18 @@ select.clear-select {
       }
     }
     .corruption-mutation {
+      container-type: inline-size;
+      position: relative;
       grid-column-end: span 2;
+      @container (min-width: 600px) {
+        .angled-track {
+          position: absolute;
+          top: -1rem;
+          left: 9rem;
+        }
+      }
       .angled-track .value-step {
+        background-color: white;
         &:nth-child(4n):before {
           content: "";
           position: absolute;
@@ -899,10 +978,18 @@ select.clear-select {
           border: 0.2rem solid var(--grey);
         }
       }
-    }
-    .rh-top {
-      display: grid;
-      grid-template-columns: auto 1fr;
+      .mutation-list {
+        padding-top: 1rem;
+        ol {
+          padding-left: 0;
+        }
+        .mutation {
+          display: flex;
+          justify-content: space-between;
+          gap: 1rem;
+          padding-bottom: 0.5rem;
+        }
+      }
     }
     .stress-behaviour {
       position: relative;

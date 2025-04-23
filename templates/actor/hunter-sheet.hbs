@@ -1,203 +1,214 @@
-<form class="{{cssClass}} {{actor.type}} grid-2col" autocomplete="off">
-  <div class="left">
-    {{!-- Sheet Header --}}
-    <header class="sheet-title">
-      <h1>
-        {{#if playbook}}
-          {{playbook.name}}
-        {{else}}
-          {{localize 'TYPES.Item.setPlaybook'}}
-        {{/if}}
-      </h1>
-      <p class="strapline">
-        {{#if playbook}}
-        <span class="diamond">⬥</span>
-           {{playbook.system.summary}}
-        <span class="diamond">⬥</span>
-        {{/if}}
-      </p>
-    </header>
-    <section class="sheet-info grid-2col">
-      <div class="sheet-element sheet-heading">
-        <label for="name">{{localize 'TEETH.Actor.Name'}}:</label>
-        <input class="clear-input" name="name" type="text" value="{{actor.name}}" placeholder="{{localize 'TEETH.Actor.Name'}}"/>
-      </div>
-      <div class="sheet-element sheet-heading">
-        <label for="system.outfit">{{localize 'TEETH.OutfitName'}}:</label>
-        <input class="clear-input" name="system.outfit" type="text" value="{{system.Outfit}}" placeholder="{{localize 'TEETH.OutfitName'}}"/>
-      </div>
-      <div class="sheet-element sheet-heading">
-        <label for="system.background"><a class="item-control set-background" data-tooltip="{{localize 'TEETH.SetBackground'}}">{{localize 'TEETH.Background'}}</a>:</label>
-        <input class="prop-input clear-input" type="text" name="system.background" value="{{localize system.background}}" placeholder="{{localize 'TEETH.Background'}}"/>
-      </div>
-      <div class="sheet-element sheet-heading">
-        <label for="system.vice"><a class="item-control set-vice" data-tooltip="{{localize 'TEETH.SetVice'}}">{{localize 'TEETH.Vice'}}</a>:</label>
-        <input class="prop-input clear-input" type="text" name="system.vice" value="{{localize system.vice}}" placeholder="{{localize 'TEETH.Vice'}}"/>
-      </div>
-      <div class="sheet-element magic grid-2col">
-        <div class="sheet-heading">
-          <h3>Magic</h3>
-        </div>
-        <div class="magic-element">
-          <label class="prop-label" for="system.magicDisciplines"><a class="item-control add-discipline">{{localize 'TEETH.Disciplines'}}</a>:</label>
-          <ul>
-            {{#each system.magicDisciplines}}
-              <li>{{localize this}}</li>
-            {{/each}}
-          </ul>
-        </div>
-        <div class="magic-element">
-          <label class="prop-label" for="system.magicMethods"><a class="item-control add-method">{{localize 'TEETH.Methods'}}</a>:</label>
-          <ul>
-            {{#each system.magicMethods}}
-              <li>{{localize this}}</li>
-            {{/each}}
-          </ul>
-        </div>
-      </div>
-      <div class="acquaintances-section">
-        <div class="sheet-heading">
-          <h3 class="item-header contacts-title" data-tooltip="{{localize 'TEETH.Contact.Tooltip'}}">{{localize 'TEETH.Contact.Plural'}}</h3>
-        </div>
-        {{> "systems/teeth/templates/actor/parts/contacts.hbs"}}
-      </div>
-
-      <div class="sheet-element carry">
-        <div class="sheet-heading">
-          <label for="system.coins">{{localize 'TEETH.Coins'}}:</label>
-          <input class="clear-input" type="number" name="system.coins.value" value="{{system.coins.value}}"/>
-          <span>/{{system.coins.max}}</span>
-        </div>
-        <div class="resource stash">
-          <label for="system.stash" class="carry-options">{{localize 'TEETH.Stash'}}:</label>
-          <input class="clear-input" type="number" name="system.stash.value" value="{{system.stash.value}}" data-dtype="Number"/>
-          <span>/{{system.stash.max}}</span>
-        </div>
-      </div>
-      <div class="sheet-element carry">
-        <div class="sheet-heading">
-          <label for="system.load">{{localize 'TEETH.Load.Title'}}:</label> {{system.load.value}}/{{system.load.max}}
-        </div>
-        <select class="clear-select carry-options" name="system.load.max">
-          {{selectOptions config.load selected=system.load.max localize=true}}
-        </select>
-      </div>
-        <div class="inventory items-block">
-          <div class="item-header sheet-heading">
-            <h3>{{localize 'TEETH.Inventory'}}</h3><span class="info"><span class="diamond">⬥</span> No <span class="caps">load</span> if starred</span>
-          </div>
-          {{!-- 2 column item display on smaller screens --}}
-          <div class="grid-2col all-items">
-            <ol class="items-list">
-              {{#each splitInventory2A as |item id|}}
-                {{> "systems/teeth/templates/actor/parts/inventory.hbs" item=item}}
-              {{/each}}
-            </ol>
-            <div>
-              <ol class="items-list">
-                {{#each splitInventory2B as |item id|}}
-                  {{> "systems/teeth/templates/actor/parts/inventory.hbs" item=item}}
-                {{/each}}
-              </ol>
-              {{!-- add to inventory --}}
-              <div class="item-header sheet-heading">
-                <h4>{{localize 'TEETH.InventorySpecial'}}</h4>
-                <a class="item-create" title="{{localize 'TEETH.Item.Add'}}" data-type="tool" data-tooltip="{{localize 'TEETH.AddItem'}}"><i class="fas fa-plus"></i></a>
-              </div>
-              <ol class="items-list special-items">
-                {{#each specInventory as |item id|}}
-                  {{> "systems/teeth/templates/actor/parts/inventory.hbs" item=item}}
-                {{/each}}
-              </ol>
-              <div class="item-header sheet-heading">
-                <h4>{{localize 'TEETH.Armour'}}</h4>
-              </div>
-              <ol class="items-list special-items">
-                {{#each armour as |item id|}}
-                  {{> "systems/teeth/templates/actor/parts/inventory.hbs" item=item}}
-                {{/each}}
-              </ol>
-            </div>
-          </div>
-          {{!-- 3 column item display on wider screens --}}
-          <div class="grid-3col all-items">
-            <ol class="items-list">
-              {{#each splitInventory3A as |item id|}}
-                {{> "systems/teeth/templates/actor/parts/inventory.hbs" item=item}}
-              {{/each}}
-            </ol>
-            <ol class="items-list">
-              {{#each splitInventory3B as |item id|}}
-                {{> "systems/teeth/templates/actor/parts/inventory.hbs" item=item}}
-              {{/each}}
-            </ol>
-            <div>
-              <ol class="items-list">
-                {{#each splitInventory3C as |item id|}}
-                  {{> "systems/teeth/templates/actor/parts/inventory.hbs" item=item}}
-                {{/each}}
-              </ol>
-              {{!-- add to inventory --}}
-              <div class="item-header sheet-heading">
-                <h4>{{localize 'TEETH.InventorySpecial'}}</h4>
-                <a class="item-create" title="{{localize 'TEETH.Item.Add'}}" data-type="tool" data-tooltip="{{localize 'TEETH.AddItem'}}"><i class="fas fa-plus"></i></a>
-              </div>
-              <ol class="items-list special-items">
-                {{#each specInventory as |item id|}}
-                  {{> "systems/teeth/templates/actor/parts/inventory.hbs" item=item}}
-                {{/each}}
-              </ol>
-              <div class="item-header sheet-heading">
-                <h4>{{localize 'TEETH.Armour'}}</h4>
-              </div>
-              <ol class="items-list special-items">
-                {{#each armour as |item id|}}
-                  {{> "systems/teeth/templates/actor/parts/inventory.hbs" item=item}}
-                {{/each}}
-              </ol>
-            </div>
-          </div>
-        </div>
-        {{> "systems/teeth/templates/actor/parts/corruption-mutation.hbs"}}
-    </section>
-  </div>
-  <div class="right">
-    <section class="sheet-info">
-      <div class="rh-top">
-         <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="100" width="100"/>
-        {{> "systems/teeth/templates/actor/parts/stress-behaviour.hbs"}}
-      </div>
-      {{> "systems/teeth/templates/actor/parts/injury.hbs"}}
-    </section>
-    <section class="sheet-info grid-2col">
-      <div class="abilities items-block full-size">
-        <div class="item-header sheet-heading">
-          <div class="abilities-heading">
-            <h3>{{localize 'TEETH.Ability.Special'}}</h3>
-            <a class="item-create" title="{{localize 'TEETH.Item.Add'}}" data-type="abilityHunter"><i class="fas fa-plus"></i></a>
-          </div>
-          <div class="value-step-block exp-block" data-value="{{system.exp.value}}" data-key="system.exp.value">
-            {{#numLoop system.exp.max}}
-              <span class="value-step value-dot" data-index="{{this}}"></span>
-            {{/numLoop}}
-          </div>
-        </div>
-        {{> "systems/teeth/templates/actor/parts/abilities.hbs"}}
-      </div>
-      {{> "systems/teeth/templates/actor/parts/attributes.hbs"}}
-    </section>
-  </div>
-  <nav class="sheet-tabs tabs flexrow" data-group="primary">
-    <a class="item" data-tab="general">
+<form class="{{cssClass}} {{actor.type}} grid-2col cs-form" autocomplete="off">
+  <header class="sheet-title">
+    <h1>
       {{#if playbook}}
         {{playbook.name}}
       {{else}}
-        {{localize 'TYPES.Item.playbook'}}
+        {{localize 'TYPES.Item.setPlaybook'}}
       {{/if}}
+    </h1>
+    <p class="strapline">
+      {{#if playbook}}
+      <span class="diamond">⬥</span>
+          {{playbook.system.summary}}
+      <span class="diamond">⬥</span>
+      {{/if}}
+    </p>
+    <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="100" width="100"/>
+  </header>
+  <nav class="sheet-tabs tabs flexrow" data-group="primary">
+    <a class="item" data-tab="general">
+      <span class="diamond">⬥</span>
+        {{#if playbook}}
+          {{playbook.name}}
+        {{else}}
+          {{localize 'TYPES.Item.playbook'}}
+        {{/if}}
+      <span class="diamond">⬥</span>
     </a>
-    <a class="item" data-tab="notes">{{localize 'TEETH.Notes'}}</a>
+    <a class="item" data-tab="notes">
+      <span class="diamond">⬥</span>
+      {{localize 'TEETH.Notes'}}
+      <span class="diamond">⬥</span>
+    </a>
   </nav>
-  <div class="tab notes" data-group="primary" data-tab="notes">
+  <div class="tab-contents">
+    <div class="tab general grid-2col" data-group="primary" data-tab="general">
+      <div class="left">
+        {{!-- Sheet Header --}}
+        
+        <section class="sheet-info grid-2col">
+          <div class="sheet-element sheet-heading">
+            <label for="name">{{localize 'TEETH.Actor.Name'}}:</label>
+            <input class="clear-input" name="name" type="text" value="{{actor.name}}" placeholder="{{localize 'TEETH.Actor.Name'}}"/>
+          </div>
+          <div class="sheet-element sheet-heading">
+            <label for="system.outfit">{{localize 'TEETH.OutfitName'}}:</label>
+            <input class="clear-input" name="system.outfit" type="text" value="{{system.Outfit}}" placeholder="{{localize 'TEETH.OutfitName'}}"/>
+          </div>
+          <div class="sheet-element sheet-heading">
+            <label for="system.background"><a class="item-control set-background" data-tooltip="{{localize 'TEETH.SetBackground'}}">{{localize 'TEETH.Background'}}</a>:</label>
+            <input class="prop-input clear-input" type="text" name="system.background" value="{{localize system.background}}" placeholder="{{localize 'TEETH.Background'}}"/>
+          </div>
+          <div class="sheet-element sheet-heading">
+            <label for="system.vice"><a class="item-control set-vice" data-tooltip="{{localize 'TEETH.SetVice'}}">{{localize 'TEETH.Vice'}}</a>:</label>
+            <input class="prop-input clear-input" type="text" name="system.vice" value="{{localize system.vice}}" placeholder="{{localize 'TEETH.Vice'}}"/>
+          </div>
+          <div class="sheet-element magic grid-2col">
+            <div class="sheet-heading">
+              <h3>Magic</h3>
+            </div>
+            <div class="magic-element">
+              <label class="prop-label" for="system.magicDisciplines"><a class="item-control add-discipline">{{localize 'TEETH.Disciplines'}}</a>:</label>
+              <ul>
+                {{#each system.magicDisciplines}}
+                  <li>{{localize this}}</li>
+                {{/each}}
+              </ul>
+            </div>
+            <div class="magic-element">
+              <label class="prop-label" for="system.magicMethods"><a class="item-control add-method">{{localize 'TEETH.Methods'}}</a>:</label>
+              <ul>
+                {{#each system.magicMethods}}
+                  <li>{{localize this}}</li>
+                {{/each}}
+              </ul>
+            </div>
+          </div>
+          <div class="acquaintances-section">
+            <div class="sheet-heading">
+              <h3 class="item-header contacts-title" data-tooltip="{{localize 'TEETH.Contact.Tooltip'}}">{{localize 'TEETH.Contact.Plural'}}</h3>
+            </div>
+            {{> "systems/teeth/templates/actor/parts/contacts.hbs"}}
+          </div>
+
+          <div class="sheet-element carry">
+            <div class="sheet-heading">
+              <label for="system.coins">{{localize 'TEETH.Coins'}}:</label>
+              <input class="clear-input" type="number" name="system.coins.value" value="{{system.coins.value}}"/>
+              <span>/{{system.coins.max}}</span>
+            </div>
+            <div class="resource stash">
+              <label for="system.stash" class="carry-options">{{localize 'TEETH.Stash'}}:</label>
+              <input class="clear-input" type="number" name="system.stash.value" value="{{system.stash.value}}" data-dtype="Number"/>
+              <span>/{{system.stash.max}}</span>
+            </div>
+          </div>
+          <div class="sheet-element carry">
+            <div class="sheet-heading">
+              <label for="system.load">{{localize 'TEETH.Load.Title'}}:</label> {{system.load.value}}/{{system.load.max}}
+            </div>
+            <select class="clear-select carry-options" name="system.load.max">
+              {{selectOptions config.load selected=system.load.max localize=true}}
+            </select>
+          </div>
+            <div class="inventory items-block">
+              <div class="item-header sheet-heading">
+                <h3>{{localize 'TEETH.Inventory'}}</h3><span class="info"><span class="diamond">⬥</span> No <span class="caps">load</span> if starred</span>
+              </div>
+              {{!-- 2 column item display on smaller screens --}}
+              <div class="grid-2col all-items">
+                <ol class="items-list">
+                  {{#each splitInventory2A as |item id|}}
+                    {{> "systems/teeth/templates/actor/parts/inventory.hbs" item=item}}
+                  {{/each}}
+                </ol>
+                <div>
+                  <ol class="items-list">
+                    {{#each splitInventory2B as |item id|}}
+                      {{> "systems/teeth/templates/actor/parts/inventory.hbs" item=item}}
+                    {{/each}}
+                  </ol>
+                  {{!-- add to inventory --}}
+                  <div class="item-header sheet-heading">
+                    <h4>{{localize 'TEETH.InventorySpecial'}}</h4>
+                    <a class="item-create" title="{{localize 'TEETH.Item.Add'}}" data-type="tool" data-tooltip="{{localize 'TEETH.AddItem'}}"><i class="fas fa-plus"></i></a>
+                  </div>
+                  <ol class="items-list special-items">
+                    {{#each specInventory as |item id|}}
+                      {{> "systems/teeth/templates/actor/parts/inventory.hbs" item=item}}
+                    {{/each}}
+                  </ol>
+                  <div class="item-header sheet-heading">
+                    <h4>{{localize 'TEETH.Armour'}}</h4>
+                  </div>
+                  <ol class="items-list special-items">
+                    {{#each armour as |item id|}}
+                      {{> "systems/teeth/templates/actor/parts/inventory.hbs" item=item}}
+                    {{/each}}
+                  </ol>
+                </div>
+              </div>
+              {{!-- 3 column item display on wider screens --}}
+              <div class="grid-3col all-items">
+                <ol class="items-list">
+                  {{#each splitInventory3A as |item id|}}
+                    {{> "systems/teeth/templates/actor/parts/inventory.hbs" item=item}}
+                  {{/each}}
+                </ol>
+                <ol class="items-list">
+                  {{#each splitInventory3B as |item id|}}
+                    {{> "systems/teeth/templates/actor/parts/inventory.hbs" item=item}}
+                  {{/each}}
+                </ol>
+                <div>
+                  <ol class="items-list">
+                    {{#each splitInventory3C as |item id|}}
+                      {{> "systems/teeth/templates/actor/parts/inventory.hbs" item=item}}
+                    {{/each}}
+                  </ol>
+                  {{!-- add to inventory --}}
+                  <div class="item-header sheet-heading">
+                    <h4>{{localize 'TEETH.InventorySpecial'}}</h4>
+                    <a class="item-create" title="{{localize 'TEETH.Item.Add'}}" data-type="tool" data-tooltip="{{localize 'TEETH.AddItem'}}"><i class="fas fa-plus"></i></a>
+                  </div>
+                  <ol class="items-list special-items">
+                    {{#each specInventory as |item id|}}
+                      {{> "systems/teeth/templates/actor/parts/inventory.hbs" item=item}}
+                    {{/each}}
+                  </ol>
+                  <div class="item-header sheet-heading">
+                    <h4>{{localize 'TEETH.Armour'}}</h4>
+                  </div>
+                  <ol class="items-list special-items">
+                    {{#each armour as |item id|}}
+                      {{> "systems/teeth/templates/actor/parts/inventory.hbs" item=item}}
+                    {{/each}}
+                  </ol>
+                </div>
+              </div>
+            </div>
+            {{> "systems/teeth/templates/actor/parts/corruption-mutation.hbs"}}
+        </section>
+      </div>
+      <div class="right">
+        <section class="sheet-info">
+          <div class="rh-top">
+            {{> "systems/teeth/templates/actor/parts/stress-behaviour.hbs"}}
+          </div>
+          {{> "systems/teeth/templates/actor/parts/injury.hbs"}}
+        </section>
+        <section class="sheet-info grid-2col">
+          <div class="abilities items-block full-size">
+            <div class="item-header sheet-heading">
+              <div class="abilities-heading">
+                <h3>{{localize 'TEETH.Ability.Special'}}</h3>
+                <a class="item-create" title="{{localize 'TEETH.Item.Add'}}" data-type="abilityHunter"><i class="fas fa-plus"></i></a>
+              </div>
+              <div class="value-step-block exp-block" data-value="{{system.exp.value}}" data-key="system.exp.value">
+                {{#numLoop system.exp.max}}
+                  <span class="value-step value-dot" data-index="{{this}}"></span>
+                {{/numLoop}}
+              </div>
+            </div>
+            {{> "systems/teeth/templates/actor/parts/abilities.hbs"}}
+          </div>
+          {{> "systems/teeth/templates/actor/parts/attributes.hbs"}}
+        </section>
+      </div>
+    </div>
+    <div class="tab notes" data-group="primary" data-tab="notes"><nav>
       {{> "systems/teeth/templates/actor/parts/hunter-notes.hbs"}}
+    </nav></div>
   </div>
 </form>

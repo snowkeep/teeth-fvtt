@@ -12,12 +12,12 @@ export class TeethHunterSheet extends TeethActorSheet {
       super.defaultOptions,
       {
         classes: ["teeth", "sheet", "actor", "hunter"],
-        width: "",
+        width: 1420,
         height: "",
         tabs: [
           {
             navSelector: ".sheet-tabs",
-            contentSelector: ".sheet-body",
+            contentSelector: ".tab-contents",
             initial: "general",
           },
         ],
