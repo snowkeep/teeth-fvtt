@@ -157,7 +157,7 @@ async function roll(formData, sheet) {
   let diceToRoll = formData.diceNumber + formData.modifier;
 
   if (formData.assistance) diceToRoll++;
-  if (formData.pushDice || formData.strangersBargain) diceToRoll++;
+  if (formData.pushDice || formData.Bargain) diceToRoll++;
   if (formData.horses) diceToRoll++;
   if (formData.prepared) diceToRoll++;
   if (formData.cautious) diceToRoll++;
