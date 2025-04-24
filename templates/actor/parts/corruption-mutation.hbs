@@ -3,7 +3,7 @@
     <h3 class="corruption-title">{{localize "TEETH.Corruption"}}</h3>
     <a
       class="item-control add-mutation"
-      data-tooltip="{{localize 'TEETH.RollMutation'}}"
+      data-tooltip="{{localize 'TEETH.Mutation.Roll'}}"
     ><i class="fa-solid fa-plus"></i></a>
   </div>
   <div
@@ -19,18 +19,16 @@
     <ol>
       {{#each system.mutations}}
         <li class="mutation" data-index="{{this.idx}}">
-          <div class="mutation-text">
+          <div class="item-summary">
             {{this.text}}
           </div>
           <div class="mutation-controls">
-            <a
-              class="mutation-control delete-mutation"
-              title="{{localize 'TEETH.DeleteMutation'}}"
-            ><i class="fas fa-trash"></i></a>
+            <a class="mutation-control mutation-show" data-value="{{this.text}}" title="{{localize 'TEETH.Item.Show'}}" ><i class="fas fa-comment"></i></a>
+            <a class="mutation-control mutation-edit" title="{{localize 'TEETH.Item.Edit'}}" ><i class="fas fa-edit"></i></a>
+            <a class="mutation-control mutation-delete" title="{{localize 'TEETH.Item.Delete'}}" ><i class="fas fa-trash"></i></a>
           </div>
         </li>
       {{/each}}
     </ol>
   </div>
 </div>
-

@@ -4,31 +4,31 @@ import { createRollDialog } from "../applications/roll.mjs";
  * Extend the basic ActorSheet with some very simple modifications
  * @extends {ActorSheet}
  */
-export class TeethActorSheet extends ActorSheet
-{
-
+export class TeethActorSheet extends ActorSheet {
   /** @override */
   static get defaultOptions() {
     return foundry.utils.mergeObject(super.defaultOptions, {
       classes: ["teeth", "sheet", "actor"],
       width: 450,
       height: 450,
-      tabs: [{
-        navSelector: ".sheet-tabs",
-        contentSelector: ".sheet-body",
-        initial: "general"
-      }]
+      tabs: [
+        {
+          navSelector: ".sheet-tabs",
+          contentSelector: ".sheet-body",
+          initial: "general",
+        },
+      ],
     });
   }
 
   /** @override */
   get template() {
     let sheetTemplate = `systems/teeth/templates/actor/${this.actor.type}-sheet.hbs`;
-    if ( !game.user.isGM && this.actor.limited && this.actor.type == "faction" ) {
+    if (!game.user.isGM && this.actor.limited && this.actor.type == "faction") {
       sheetTemplate = `systems/teeth/templates/actor/faction-limited-sheet.hbs`;
     }
 
-    return sheetTemplate
+    return sheetTemplate;
   }
 
   /** @override */
@@ -36,10 +36,13 @@ export class TeethActorSheet extends ActorSheet
     const context = await super.getData();
 
     // Encrich editor content
-    context.enrichedDescription = await TextEditor.enrichHTML(this.object.system.description, {
-      async: true,
-      secrets: this.actor.isOwner
-    })
+    context.enrichedDescription = await TextEditor.enrichHTML(
+      this.object.system.description,
+      {
+        async: true,
+        secrets: this.actor.isOwner,
+      },
+    );
 
     // Add the actor's data to context.data for easier access, as well as flags.
     context.system = context.actor.system;
@@ -54,7 +57,7 @@ export class TeethActorSheet extends ActorSheet
     super.activateListeners(html);
 
     // Count dot
-    html.find('.value-step-block').each(function () {
+    html.find(".value-step-block").each(function () {
       const value = Number(this.dataset.value);
       $(this)
         .find(".value-step")
@@ -66,56 +69,67 @@ export class TeethActorSheet extends ActorSheet
     });
 
     // Calculate relationship
-    html.find('.set-relationship').each(function () {
+    html.find(".set-relationship").each(function () {
       const value = Number(this.dataset.value);
       const classes = CONFIG.TEETH.relationshipClasses;
       this.classList.add(classes[value]);
     });
 
     // Show item summary
-    html.find('.item-name').click(ev => {
+    html.find(".item-name").click((ev) => {
       const button = ev.currentTarget;
       const li = button.closest(".item");
       const summary = li.getElementsByClassName("item-summary")[0];
       if (summary) {
         const contentHeight = summary.scrollHeight;
-        summary.style.height = summary.classList.contains("active") ? "0" : `${contentHeight}px`;
+        summary.style.height = summary.classList.contains("active")
+          ? "0"
+          : `${contentHeight}px`;
         summary.classList.toggle("active");
       }
     });
 
     // Open external link
-    html.on('click', 'a.actor-open[data-uuid]', this._onClickLink.bind(this));
+    html.on("click", "a.actor-open[data-uuid]", this._onClickLink.bind(this));
 
     // Everything below here is only needed if the sheet is editable
     if (!this.options.editable) return;
 
     // Resource dots
-    html.find(".value-step-block > .value-step").click(this._onDotChange.bind(this));
+    html
+      .find(".value-step-block > .value-step")
+      .click(this._onDotChange.bind(this));
 
     // Item checkbox in Actor Sheet
-    html.find('.item-checkbox').click(this._onItemCheckbox.bind(this));
+    html.find(".item-checkbox").click(this._onItemCheckbox.bind(this));
 
     // Add Item
-    html.find('.item-create').click(this._onItemCreate.bind(this));
+    html.find(".item-create").click(this._onItemCreate.bind(this));
 
     // Update Item
-    html.find('.item-edit').click(ev => {
+    html.find(".item-edit").click((ev) => {
       const li = $(ev.currentTarget).parents(".item");
       const item = this.actor.items.get(li.data("itemId"));
       item.sheet.render(true);
     });
 
     // Show items in chat
-    html.find('.item-show').click(ev => {
+    html.find(".item-show").click((ev) => {
       const button = ev.currentTarget;
-      const itemId = button.closest('.item').dataset.itemId;
+      const itemId = button.closest(".item").dataset.itemId;
       const item = this.actor.items.get(itemId);
       if (item) return item.show();
     });
 
+    html.find(".mutation-show").click((ev) => {
+      const button = ev.currentTarget;
+      const text = button.getAttribute("data-value");
+
+      if (text) return this.showMut(text);
+    });
+
     // Delete Item
-    html.find('.item-delete').click(ev => {
+    html.find(".item-delete").click((ev) => {
       const button = ev.currentTarget;
       const li = button.closest(".item");
       const item = this.actor.items.get(li?.dataset.itemId);
@@ -123,21 +137,25 @@ export class TeethActorSheet extends ActorSheet
     });
 
     // Delete external link
-    html.on('click', 'a.actor-delete', this._onRemoveLink.bind(this));
+    html.on("click", "a.actor-delete", this._onRemoveLink.bind(this));
 
     // Roll dice
-    html.find('.rollable').click(this._onRoll.bind(this));
+    html.find(".rollable").click(this._onRoll.bind(this));
 
     // Change contact's relationship
-    html.on('click', 'i.set-relationship', this._onChangeRelationship.bind(this));
+    html.on(
+      "click",
+      "i.set-relationship",
+      this._onChangeRelationship.bind(this),
+    );
 
     // Change status with factions
-    html.on('change', 'select.set-status', this._onChangeStatus.bind(this));
+    html.on("change", "select.set-status", this._onChangeStatus.bind(this));
 
     // Drag events for macros
     if (this.actor.isOwner) {
-      let handler = ev => this._onDragStart(ev);
-      html.find('li.item').each((i, li) => {
+      let handler = (ev) => this._onDragStart(ev);
+      html.find("li.item").each((i, li) => {
         if (li.classList.contains("inventory-header")) return;
         li.setAttribute("draggable", true);
         li.addEventListener("dragstart", handler, false);
@@ -168,7 +186,9 @@ export class TeethActorSheet extends ActorSheet
     const block = button.closest(".items-list");
     const key = block.dataset.array;
     const path = "system." + key;
-    const newArray = this.actor.system[key].filter(link => link.id !== targetId);
+    const newArray = this.actor.system[key].filter(
+      (link) => link.id !== targetId,
+    );
 
     this.actor.update({ [path]: newArray });
   }
@@ -188,13 +208,13 @@ export class TeethActorSheet extends ActorSheet
     const itemData = {
       name: name,
       type: type,
-      data: data
+      data: data,
     };
     // Remove the type from the dataset since it's in the itemData.type prop.
     delete itemData.data["type"];
 
     const cls = getDocumentClass("Item");
-    return cls.create(itemData, {parent: this.actor});
+    return cls.create(itemData, { parent: this.actor });
   }
 
   /**
@@ -207,7 +227,7 @@ export class TeethActorSheet extends ActorSheet
     const element = event.currentTarget;
     const dataset = element.dataset;
 
-    createRollDialog(dataset.rollType, this.actor, dataset.rollNote)
+    createRollDialog(dataset.rollType, this.actor, dataset.rollNote);
   }
 
   /**
@@ -227,7 +247,9 @@ export class TeethActorSheet extends ActorSheet
 
     let value = index + 1;
 
-    const nextElement = (index === steps.length - 1) || !steps[index + 1].classList.contains("active");
+    const nextElement =
+      index === steps.length - 1 ||
+      !steps[index + 1].classList.contains("active");
 
     if (element.classList.contains("active") && nextElement) {
       steps.removeClass("active");
@@ -280,7 +302,7 @@ export class TeethActorSheet extends ActorSheet
     } else {
       contacts[dataset.index].relationship = 0;
     }
-    await this.actor.update({"system.contacts": contacts});
+    await this.actor.update({ "system.contacts": contacts });
 
     const relationship = contacts[dataset.index].relationship;
     element.classList.add(classes[relationship]);
@@ -299,6 +321,26 @@ export class TeethActorSheet extends ActorSheet
     const related = this.actor.system.relatedFactions;
 
     related[index].status = status;
-    await this.actor.update({"system.relatedFactions": related});
-   }
+    await this.actor.update({ "system.relatedFactions": related });
+  }
+
+  async showMut(text) {
+    const renderData = {
+      name: "Mutation",
+      type: "",
+      description: text,
+    };
+
+    const message = await renderTemplate(
+      "systems/teeth/templates/apps/rollItem.hbs",
+      renderData,
+    );
+
+    const chatData = {
+      user: game.user.id,
+      speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+      content: message,
+    };
+    ChatMessage.create(chatData);
+  }
 }

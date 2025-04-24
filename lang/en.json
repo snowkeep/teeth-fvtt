@@ -109,9 +109,10 @@
     },
 
     "Corruption": "Corruption",
-    "Mutation": "Mutation",
-    "RollMutation": "Roll for Mutation",
-    "DeleteMutation": "Delete Mutation",
+    "Mutation": {
+      "name": "Mutation",
+      "Roll": "Roll for Mutation"
+    },
 
     "Stress": "Stress",
     "Behaviour": "Erratic Behaviour",
