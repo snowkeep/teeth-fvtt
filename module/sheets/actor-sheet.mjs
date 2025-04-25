@@ -121,19 +121,21 @@ export class TeethActorSheet extends ActorSheet {
       if (item) return item.show();
     });
 
-    html.find(".mutation-show").click((ev) => {
-      const button = ev.currentTarget;
-      const text = button.getAttribute("data-value");
-
-      if (text) return this.showMut(text);
-    });
-
     // Delete Item
     html.find(".item-delete").click((ev) => {
       const button = ev.currentTarget;
       const li = button.closest(".item");
       const item = this.actor.items.get(li?.dataset.itemId);
       return item.delete();
+    });
+
+    // Show mutations in chat
+    html.find(".mutation-show").click((ev) => {
+      const button = ev.currentTarget;
+      const idx = button.getAttribute("data-value");
+      const text = this.actor.system.mutations[idx].text;
+
+      if (text) return this.showMut(text);
     });
 
     // Delete external link
