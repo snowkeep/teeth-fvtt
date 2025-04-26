@@ -2,7 +2,7 @@
   "id": "teeth",
   "title": "TEETH",
   "description": "TEETH game system by snowkeep, based on Blades in the Dark by GMonline",
-  "version": "0.5.1",
+  "version": "0.6.0",
   "compatibility": {
     "minimum": "11",
     "verified": "12.331",
@@ -130,8 +130,8 @@
   "packFolders": [],
   "socket": true,
   "url": "https://github.com/snowkeep/teeth-fvtt",
-  "manifest": "https://github.com/snowkeep/teeth-fvtt/releases/download/v0.5.1/system.json",
-  "download": "https://github.com/snowkeep/teeth-fvtt/archive/refs/tags/v0.5.1.zip",
+  "manifest": "https://github.com/snowkeep/teeth-fvtt/releases/download/v0.6.0/system.json",
+  "download": "https://github.com/snowkeep/teeth-fvtt/archive/refs/tags/v0.6.0.zip",
   "license": "https://github.com/snowkeep/teeth-fvtt/blob/main/LICENSE.md",
   "changelog": "https://github.com/snowkeep/teeth-fvtt/blob/main/ChangeLog.md",
   "bugs": "https://github.com/snowkeep/teeth-fvtt/issues/new"
