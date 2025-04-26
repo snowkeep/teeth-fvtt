@@ -388,21 +388,40 @@ export class TeethHunterSheet extends TeethActorSheet {
    */
   async _onEditMutation(event) {
     const idx = event.currentTarget.getAttribute("data-value");
-    console.log(idx);
-
     let currentMutations = (this.actor.system.mutations || []).filter(Boolean);
-    console.log(currentMutations);
+    let editMutation = currentMutations[idx];
 
-    let editMutation = currentMutations.find((mut) => mut.idx == idx);
-    console.log(editMutation);
+    const template = await renderTemplate(
+      "systems/teeth/templates/apps/editMut.hbs",
+      { editMutation },
+    );
 
-    //    TextEditor.create({ engine: "prosemirror" }, editMutation.text);
-    let newMut = await TextEditor.enrichHTML(editMutation.text, {
-      async: true,
-    });
-    //currentMutations[idx] = mutation;
+    const dialog = new Dialog(
+      {
+        title: game.i18n.localize("TEETH.Mutation.DescMut"),
+        content: template,
+        buttons: {
+          add: {
+            label: game.i18n.localize("TEETH.Mutation.EditMut"),
+            callback: async (html) => {
+              //const newMut = html.find("textarea.edit-mutation")[0].text;
+              const newMut = html.find("input.edit-mutation")[0].value;
+              currentMutations[idx].text = newMut;
 
-    await this.actor.update({ "system.mutations": currentMutations });
+              await this.actor.update({ "system.mutations": currentMutations });
+            },
+          },
+        },
+        default: "add",
+        close: () => {},
+        render: (html) => {},
+      },
+      {
+        width: 640,
+      },
+    );
+
+    dialog.render(true);
   }
 
   /**

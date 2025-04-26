@@ -112,7 +112,8 @@
     "Mutation": {
       "name": "Mutation",
       "Roll": "Roll for Mutation",
-      "Title": "Mutation Description"
+      "DescMut": "Mutation Description",
+      "EditMut": "Edit Mutation"
     },
 
     "Stress": "Stress",
