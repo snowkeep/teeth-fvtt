@@ -111,7 +111,8 @@
     "Corruption": "Corruption",
     "Mutation": {
       "name": "Mutation",
-      "Roll": "Roll for Mutation"
+      "Roll": "Roll for Mutation",
+      "Title": "Mutation Description"
     },
 
     "Stress": "Stress",

@@ -126,6 +126,8 @@ export class TeethHunterSheet extends TeethActorSheet {
     html.find(".add-method").click(this._onAddMethod.bind(this));
     // Add mutation
     html.find(".add-mutation").click(this._onAddMutation.bind(this));
+    // Edit mutation
+    html.find(".edit-mutation").click(this._onEditMutation.bind(this));
     // Delete mutation
     html.find(".delete-mutation").click(this._onDelMutation.bind(this));
     // Add Erratice Behaviour
@@ -380,12 +382,37 @@ export class TeethHunterSheet extends TeethActorSheet {
   }
 
   /**
+   * Handle editing mutations.
+   * @param {Event} the originating click event
+   * @private
+   */
+  async _onEditMutation(event) {
+    const idx = event.currentTarget.getAttribute("data-value");
+    console.log(idx);
+
+    let currentMutations = (this.actor.system.mutations || []).filter(Boolean);
+    console.log(currentMutations);
+
+    let editMutation = currentMutations.find((mut) => mut.idx == idx);
+    console.log(editMutation);
+
+    //    TextEditor.create({ engine: "prosemirror" }, editMutation.text);
+    let newMut = await TextEditor.enrichHTML(editMutation.text, {
+      async: true,
+    });
+    //currentMutations[idx] = mutation;
+
+    await this.actor.update({ "system.mutations": currentMutations });
+  }
+
+  /**
    * Handle removing mutations.
    * @param {Event} the originating click event
    * @private
    */
   async _onDelMutation(event) {
-    const rmIdx = $(event.currentTarget).data("idx");
+    const rmIdx = event.currentTarget.getAttribute("data-value");
+    console.log(rmIdx);
     let currentMutations = (this.actor.system.mutations || []).filter(Boolean);
     currentMutations.splice(rmIdx, 1);
 
