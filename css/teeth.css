@@ -726,7 +726,7 @@ select.clear-select {
           }
         }
         &:hover {
-          opacity: 0.6; 
+          opacity: 0.6;
           transition: opacity 0.3s ease-in;
         }
         &.active {
@@ -1012,7 +1012,7 @@ select.clear-select {
             border: 0.2rem solid var(--grey);
           }
         }
-      } 
+      }
       .behaviour-list {
         padding: 0.5rem;
       }
@@ -1543,7 +1543,7 @@ select.clear-select {
 .teeth.actor .faction .sheet-body .general .prop-field {
   position: relative;
 }
-.teeth.actor .faction .sheet-body .general .prop-field .prop-lable {
+.teeth.actor .faction .sheet-body .general .prop-field .prop-label {
   font-family: "Crimson Text", serif;
   font-weight: 700;
 }

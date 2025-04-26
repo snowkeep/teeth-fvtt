@@ -1,145 +1,145 @@
 .items-block {
-  position: relative;
+    position: relative;
 
-  .item-create {
-    position: absolute;
-    top: 2px;
-    right: 5px;
-  }
-
-  .items-list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-
-    .item {
-      position: relative;
-      align-items: center;
-      margin-bottom: 5px;
-
-      .item-description {
-        padding-right: 55px;
-
-        .item-name.active {
-          font-weight: bold;
-        }
-
-        .item-tags {
-          font-style: italic;
-        }
-      }
-
-      .item-summary {
-        flex: auto;
-        margin: 0;
-        height: 0;
-        overflow: hidden;
-        transition: height 0.3s ease;
-      }
-
-      .item-controls {
+    .item-create {
         position: absolute;
-        top: 4px;
-        right: 0;
-        display: flex;
-        justify-content: flex-end;
-        a {
-          font-size: 12px;
-          text-align: center;
-          margin: 0 3px;
-        }
-      }
+        top: 2px;
+        right: 5px;
     }
 
-    .item.active {
-      .item-name {
-        font-weight: bold;
-      }
+    .items-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        .item {
+            position: relative;
+            align-items: center;
+            margin-bottom: 5px;
+
+            .item-description {
+                padding-right: 55px;
+
+                .item-name.active {
+                    font-weight: bold;
+                }
+
+                .item-tags {
+                    font-style: italic;
+                }
+            }
+
+            .item-summary {
+                flex: auto;
+                margin: 0;
+                height: 0;
+                overflow: hidden;
+                transition: height 0.3s ease;
+            }
+
+            .item-controls {
+                position: absolute;
+                top: 4px;
+                right: 0;
+                display: flex;
+                justify-content: flex-end;
+                a {
+                    font-size: 12px;
+                    text-align: center;
+                    margin: 0 3px;
+                }
+            }
+        }
+
+        .item.active {
+            .item-name {
+                font-weight: bold;
+            }
+        }
     }
-  }
 }
 
 .items-block.full-size {
-  .item-header {
-    display: flex;
+    .item-header {
+        display: flex;
 
-    .item-create {
-      position: static;
-      margin: 0 3px;
-    }
-  }
-
-  .items-list {
-    .item-checkbox {
-      position: relative;
-      top: 4px;
-      width: 15px;
-      margin: 0;
+        .item-create {
+            position: static;
+            margin: 0 3px;
+        }
     }
 
-    .item-description {
-      .item-name {
-        cursor: pointer;
-        font-family: $font-secondary;
-      }
+    .items-list {
+        .item-checkbox {
+            position: relative;
+            top: 4px;
+            width: 15px;
+            margin: 0;
+        }
+
+        .item-description {
+            .item-name {
+                cursor: pointer;
+                font-family: $font-secondary;
+            }
+        }
     }
-  }
 }
 
 .contacts.items-block {
-  .item {
-    margin: 0;
+    .item {
+        margin: 0;
 
-    .item-description {
-      .set-relationship {
-        display: inline-block;
-        width: 12px;
-        height: 16px;
-        vertical-align: middle;
-        cursor: pointer;
-        background-size: 12px;
-        background-position: center;
-        background-repeat: no-repeat;
-      }
+        .item-description {
+            .set-relationship {
+                display: inline-block;
+                width: 12px;
+                height: 16px;
+                vertical-align: middle;
+                cursor: pointer;
+                background-size: 12px;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
 
-      .set-relationship.rival {
-        background-image: url("/systems/teeth/ui/relationship-icons/caret-down.svg");
-      }
-      .set-relationship.neutral {
-        background-image: url("/systems/teeth/ui/relationship-icons/minus.svg");
-      }
-      .set-relationship.friend {
-        background-image: url("/systems/teeth/ui/relationship-icons/caret-up.svg");
-      }
-      .set-relationship.special {
-        background-image: url("/systems/teeth/ui/relationship-icons/dot-circle.svg");
-      }
+            .set-relationship.rival {
+                background-image: url("/systems/teeth/ui/relationship-icons/caret-down.svg");
+            }
+            .set-relationship.neutral {
+                background-image: url("/systems/teeth/ui/relationship-icons/minus.svg");
+            }
+            .set-relationship.friend {
+                background-image: url("/systems/teeth/ui/relationship-icons/caret-up.svg");
+            }
+            .set-relationship.special {
+                background-image: url("/systems/teeth/ui/relationship-icons/dot-circle.svg");
+            }
 
-      .item-name {
-        font-weight: 700;
-      }
+            .item-name {
+                font-weight: 700;
+            }
 
-      .item-name:not(:last-child)::after {
-        content: ",";
-        font-weight: normal;
-      }
+            .item-name:not(:last-child)::after {
+                content: ",";
+                font-weight: normal;
+            }
+        }
     }
-  }
 }
 
 .related-faction.items-block {
-  .item {
-    .item-description {
-      padding-right: 40px;
+    .item {
+        .item-description {
+            padding-right: 40px;
 
-      .item-name {
-        font-family: $font-secondary;
-      }
+            .item-name {
+                font-family: $font-secondary;
+            }
 
-      .set-status {
-        margin: 0;
-        padding: 0;
-      }
+            .set-status {
+                margin: 0;
+                padding: 0;
+            }
+        }
     }
-  }
 }
