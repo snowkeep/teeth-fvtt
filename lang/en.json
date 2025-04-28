@@ -454,7 +454,7 @@
 
     "ImportActor": {
       "Title": "Import actor",
-      "Description": "Import an actor {actor} from the compendium?",
+      "Description": "Import actors from the compendium?",
       "Submit": "Ok"
     },
 

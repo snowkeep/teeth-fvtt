@@ -152,9 +152,18 @@ export default class TeethActor extends Actor {
     }
     this.createEmbeddedDocuments("Item", toCreate);
 
+    const toImport = [];
     for (const contact of container.system.contacts) {
-      this.importActor(contact, "contacts");
+      const contactActor = await fromUuid(contact.uuid);
+
+      if (contactActor.compendium) {
+        toImport.push(contactActor);
+      } else {
+        this.addLinkedActor(contactActor);
+      }
     }
+
+    if (toImport.length) this.importActors(toImport);
 
     if (container.type === "playbook") {
       for (const action in systemData.actions) {
@@ -218,26 +227,42 @@ export default class TeethActor extends Actor {
     await this.update({ [path]: container });
   }
 
-  async importActor(sourceActor) {
+  async importActors(actors) {
+    if (!game.user.hasPermission("ACTOR_CREATE"))
+      return ui.notifications.warn(
+        game.i18n.localize("TEETH.Errors.Actor.NoPermission"),
+      );
+
+    const template = await renderTemplate(
+      "systems/teeth/templates/apps/importActor.hbs",
+      { actors },
+    );
+
     const dialog = new Dialog(
       {
         title: game.i18n.localize("TEETH.ImportActor.Title"),
-        content: game.i18n.format("TEETH.ImportActor.Description", {
-          actor: sourceActor.name,
-        }),
+        content: template,
         buttons: {
           import: {
             label: game.i18n.localize("TEETH.ImportActor.Submit"),
             icon: '<i class="fas fa-check"></i>',
-            callback: async () => {
-              const actor = await TeethActor.create(sourceActor);
-              this.addLinkedActor(actor);
+            callback: async (html) => {
+              const selectedIds = html
+                .find('input[name="actor"]:checked')
+                .map((_, el) => el.value)
+                .get();
+              const selectedActors = actors.filter((a) =>
+                selectedIds.includes(a.id),
+              );
+              for (const actorData of selectedActors) {
+                const actor = await TeethActor.create(actorData);
+                this.addLinkedActor(actor);
+              }
             },
           },
           cancel: {
             icon: '<i class="fas fa-times"></i>',
             label: game.i18n.localize("TEETH.Roll.Cancel"),
-            callback: () => {},
           },
         },
         default: "import",
@@ -246,7 +271,7 @@ export default class TeethActor extends Actor {
       {
         classes: ["dialog", "teeth-import-dialog"],
         width: 400,
-        height: 100,
+        height: "auto",
       },
     );
 
