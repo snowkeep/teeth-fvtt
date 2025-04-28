@@ -1,8 +1,8 @@
- /**
-  *@return {Promise}
-  */
- export const preloadHandlebarsTemplates = async function() {
-  return loadTemplates([
+/**
+ *@return {Promise}
+ */
+export const preloadHandlebarsTemplates = async function () {
+  return foundry.applications.handlebars.loadTemplates([
     "systems/teeth/templates/actor/parts/abilities.hbs",
     "systems/teeth/templates/actor/parts/attributes.hbs",
     "systems/teeth/templates/actor/parts/boons.hbs",

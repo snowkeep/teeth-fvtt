@@ -51,30 +51,56 @@ Hooks.once("init", async function () {
   };
 
   // Register sheet application classes
-  Actors.unregisterSheet("core", ActorSheet);
-  Actors.registerSheet("teeth", TeethActorSheet, { makeDefault: true });
-  Actors.registerSheet("teeth", TeethHunterSheet, {
-    types: ["hunter"],
+  foundry.documents.collections.Actors.unregisterSheet(
+    "core",
+    foundry.appv1.sheets.ActorSheet,
+  );
+  foundry.documents.collections.Actors.registerSheet("teeth", TeethActorSheet, {
     makeDefault: true,
   });
-  Actors.registerSheet("teeth", TeethOutfitSheet, {
-    types: ["outfit"],
-    makeDefault: true,
-  });
-  Actors.registerSheet("teeth", TeethFactionSheet, {
-    types: ["faction"],
-    makeDefault: true,
-  });
-  Actors.registerSheet("teeth", TeethClockSheet, {
+  foundry.documents.collections.Actors.registerSheet(
+    "teeth",
+    TeethHunterSheet,
+    {
+      types: ["hunter"],
+      makeDefault: true,
+    },
+  );
+  foundry.documents.collections.Actors.registerSheet(
+    "teeth",
+    TeethOutfitSheet,
+    {
+      types: ["outfit"],
+      makeDefault: true,
+    },
+  );
+  foundry.documents.collections.Actors.registerSheet(
+    "teeth",
+    TeethFactionSheet,
+    {
+      types: ["faction"],
+      makeDefault: true,
+    },
+  );
+  foundry.documents.collections.Actors.registerSheet("teeth", TeethClockSheet, {
     types: ["clock"],
     makeDefault: true,
   });
-  Items.unregisterSheet("core", ItemSheet);
-  Items.registerSheet("teeth", TeethItemSheet, { makeDefault: true });
-  Items.registerSheet("teeth", TeethPlaybookSheet, {
-    types: ["playbook", "outfitType"],
+  foundry.documents.collections.Items.unregisterSheet(
+    "core",
+    foundry.appv1.sheets.ItemSheet,
+  );
+  foundry.documents.collections.Items.registerSheet("teeth", TeethItemSheet, {
     makeDefault: true,
   });
+  foundry.documents.collections.Items.registerSheet(
+    "teeth",
+    TeethPlaybookSheet,
+    {
+      types: ["playbook", "outfitType"],
+      makeDefault: true,
+    },
+  );
 
   registerHandlebarsHelpers();
 

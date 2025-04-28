@@ -2,19 +2,20 @@
  * Extend the basic ItemSheet with some very simple modifications
  * @extends {ItemSheet}
  */
-export class TeethItemSheet extends ItemSheet {
-
+export class TeethItemSheet extends foundry.appv1.sheets.ItemSheet {
   /** @override */
   static get defaultOptions() {
     return foundry.utils.mergeObject(super.defaultOptions, {
       classes: ["teeth", "sheet", "item"],
       width: 550,
       height: 550,
-      tabs: [{
-        navSelector: ".sheet-tabs",
-        contentSelector: ".sheet-body",
-        initial: "general"
-      }]
+      tabs: [
+        {
+          navSelector: ".sheet-tabs",
+          contentSelector: ".sheet-body",
+          initial: "general",
+        },
+      ],
     });
   }
 
@@ -30,7 +31,10 @@ export class TeethItemSheet extends ItemSheet {
     // Retrieve base data structure.
     const context = await super.getData();
 
-    context.enrichedDescription = await TextEditor.enrichHTML(this.object.system.description, { async: true });
+    context.enrichedDescription = await TextEditor.enrichHTML(
+      this.object.system.description,
+      { async: true },
+    );
 
     // Use a safe clone of the item data for further operations.
     const itemData = context.item;
@@ -43,7 +47,10 @@ export class TeethItemSheet extends ItemSheet {
     }
 
     // Encrich editor content
-    context.enrichedDescription = await TextEditor.enrichHTML(this.object.system.description, {async: true})
+    context.enrichedDescription = await TextEditor.enrichHTML(
+      this.object.system.description,
+      { async: true },
+    );
 
     // Add the actor's data to context.data for easier access, as well as flags.
     context.system = itemData.system;
@@ -60,7 +67,7 @@ export class TeethItemSheet extends ItemSheet {
     super.activateListeners(html);
 
     // Count dot
-    html.find('.value-step-block').each(function () {
+    html.find(".value-step-block").each(function () {
       const value = Number(this.dataset.value);
       $(this)
         .find(".value-step")
@@ -75,7 +82,9 @@ export class TeethItemSheet extends ItemSheet {
     if (!this.isEditable) return;
 
     // Resource dots
-    html.find(".value-step-block > .value-step").click(this._onDotChange.bind(this));
+    html
+      .find(".value-step-block > .value-step")
+      .click(this._onDotChange.bind(this));
   }
 
   async _onDotChange(event) {
@@ -90,7 +99,9 @@ export class TeethItemSheet extends ItemSheet {
 
     let value = index + 1;
 
-    const nextElement = (index === steps.length - 1) || !steps[index + 1].classList.contains("active");
+    const nextElement =
+      index === steps.length - 1 ||
+      !steps[index + 1].classList.contains("active");
 
     if (element.classList.contains("active") && nextElement) {
       steps.removeClass("active");
