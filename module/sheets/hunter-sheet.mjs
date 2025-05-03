@@ -5,7 +5,7 @@ import { TEETH } from "../helpers/config.mjs";
  * Extend the TeethActorSheet
  * @extends {TeethActorSheet}
  */
-export class TeethHunterSheet extends foundry.appv1.sheets.ActorSheet {
+export class TeethHunterSheet extends TeethActorSheet {
   /** @override */
   static get defaultOptions() {
     return foundry.utils.mergeObject(
