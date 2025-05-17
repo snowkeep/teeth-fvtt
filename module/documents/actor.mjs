@@ -54,7 +54,7 @@ export default class TeethActor extends Actor {
       if (this.type == "outfit") {
         (target.actor = "outfit"),
           (target.item = "outfitType"),
-          (target.forLoad = ["abilities", "boons", "purchases"]);
+          (target.forLoad = [ "boons", "purchases"]);
       }
 
       if (this.type == "npc") {
@@ -136,6 +136,7 @@ export default class TeethActor extends Actor {
         }
       }
 
+      // console.log(array);
       const idArr = container.system[array];
       for (const itemData of idArr) {
         const item = await fromUuid(itemData.uuid);

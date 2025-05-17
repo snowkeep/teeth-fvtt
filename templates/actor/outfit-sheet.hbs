@@ -48,9 +48,12 @@
     <div class="agenda-block">
       <h3 class="teeth-header">{{localize 'TEETH.OutfitAdvance.ShortTitle'}}</h3>
       <p class="teeth-subheader">{{localize 'TEETH.OutfitAdvance.HowItWorks'}}</p>
-      <div class="value-step-block" data-value="{{system.agenda.value}}" data-key="system.agenda.value">
+      <div class="value-step-block angled-track"
+        data-value="{{system.agenda.value}}"
+        data-key="system.agenda.value"
+      >
         {{#numLoop system.agenda.max}}
-          <span class="value-step value-tooth simple-red-tooth" data-index="{{this}}"></span>
+          <span class="value-step" data-index="{{this}}"></span>
         {{/numLoop}}
       </div>
       <ul class="exp-tips">

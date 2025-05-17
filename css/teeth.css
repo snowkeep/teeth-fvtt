@@ -516,7 +516,7 @@ select.clear-select {
   background-repeat: no-repeat;
 }
 .teeth .value-step-block .value-tooth.active {
-  background-image: url("../assets/diamond/tooth-black.svg");
+  background-image: url("../assets/tooth/tooth-black.svg");
 }
 .teeth .value-step-block .red-tooth.active {
   background-image: url("../assets/tooth/tooth-black-red.svg");
@@ -525,14 +525,14 @@ select.clear-select {
 .teeth .value-step-block .simple-red-tooth {
   height: 20px;
   width: 20px;
-  background-image: url("../assets/diamond/tooth-white.svg");
+  background-image: url("../assets/tooth/tooth-white.svg");
   background-size: 20px;
 }
 .teeth .value-step-block .simple-tooth.active {
-  background-image: url("../assets/diamond/tooth-black.svg");
+  background-image: url("../assets/tooth/tooth-black.svg");
 }
 .teeth .value-step-block .simple-red-tooth.active {
-  background-image: url("../assets/diamond/tooth-red.svg");
+  background-image: url("../assets/tooth/tooth-red.svg");
 }
 .teeth .value-step-block .small-tooth {
   height: 20px;
@@ -693,7 +693,7 @@ select.clear-select {
       line-height: 1;
       font-weight: bold;
       font-size: 2em;
-      .diamond {
+      .tooth {
         font-size: 1rem;
       }
     }
@@ -714,7 +714,7 @@ select.clear-select {
         border-bottom-color: black;
         text-shadow: none;
         transition: opacity 0.5s ease-in;
-        .diamond {
+        .tooth {
           display: none;
           font-size: 0.9rem;
           vertical-align: middle;
@@ -734,7 +734,7 @@ select.clear-select {
           border-color: black;
           border-bottom-color: transparent;
           opacity: 1;
-          .diamond {
+          .tooth {
             display: inline;
           }
         }
@@ -879,7 +879,7 @@ select.clear-select {
       }
       .info {
         font-size: 1.2rem;
-        .diamond {
+        .tooth {
           font-size: 1rem;
         }
         .caps {
@@ -1159,7 +1159,7 @@ select.clear-select {
       font-variant: normal;
       font-weight: normal;
     }
-    .diamond {
+    .tooth {
       font-size: 0.5rem;
       padding: 0 0.25rem;
     }

@@ -202,11 +202,11 @@
       "DesperateRoll": "You roll for an <b>Action</b> (or lead a Group Action) in a <b>Desperate Position</b>. You can only use this Experience to advance the <b>Attribute</b> encompassing that same Action.",
       "Character": "You express your beliefs, drives or background. (max 2)",
       "Vice": "Take Action demonstrating your Erratic Behaviour, if you have one. (max 2)",
-      "Bruiser": "Address a challenge with <b>violence</b> or <b>coercion</b>, successful or not.",
-      "Captain": "Address a challenge with <b>charm</b> or <b>authority</b>, successful or not.",
-      "Keeper": "Address a challenge with <b>research</b> or <b>mysticism</b>, successful or not.",
-      "Outrider": "Address a challenge by <b>reconnaissance</b> or <b>tracking</b>, successful or not.",
-      "Sapper": "Address a challenge with <b>technical nous</b> or <b>craft</b>, successful or not."
+      "Bruiser": "Address a challenge with <b>violence</b> or <b>coercion</b>, successful or not. (max 2)",
+      "Captain": "Address a challenge with <b>charm</b> or <b>authority</b>, successful or not. (max 2)",
+      "Keeper": "Address a challenge with <b>research</b> or <b>mysticism</b>, successful or not. (max 2)",
+      "Outrider": "Address a challenge by <b>reconnaissance</b> or <b>tracking</b>, successful or not. (max 2)",
+      "Sapper": "Address a challenge with <b>technical nous</b> or <b>craft</b>, successful or not. (max 2)"
     },
     "RulesRef": {
       "Title": "Rules Reference",

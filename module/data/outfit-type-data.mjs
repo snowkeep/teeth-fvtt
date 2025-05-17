@@ -5,14 +5,6 @@ export default class OutfitTypeData extends foundry.abstract.TypeDataModel {
     const fields = foundry.data.fields;
 
     return {
-      abilities: new fields.ArrayField(new fields.SchemaField({
-        id: new fields.ForeignDocumentField(TeethItem, {idOnly: true}),
-        uuid: new fields.StringField(),
-        name: new fields.StringField(),
-        type: new fields.StringField(),
-        title: new fields.StringField(),
-        docType: new fields.StringField({initial: "Item"})
-      })),
       boons: new fields.ArrayField(new fields.SchemaField({
         id: new fields.ForeignDocumentField(TeethItem, {idOnly: true}),
         uuid: new fields.StringField(),
