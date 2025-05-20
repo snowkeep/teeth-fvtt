@@ -6,9 +6,10 @@
 
 Unofficial system for [TEETH](https://https://teethrpg.itch.io/teeth-rpg)
 
-## WARNING:
+This is a nearly feature complete system fro TEETH.  As of v0.6.0, it contains a beautiful character sheet by [merly267](https://github.com/merly267/teeth-fvtt).
+The only current issue that we are aware of (as of v0.7.1) is that there is no way to track factiosh.
+v0.6 is for Foundry v12.  v0.7 is fro Foundry v13.  
 
-This is usable, but incomplete. Character and outfit sheets look like BitD and need usability improvements.  But all mechanics are supported.
 
 ## Install
 
